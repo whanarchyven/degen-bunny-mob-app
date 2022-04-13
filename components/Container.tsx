@@ -17,192 +17,114 @@ interface equipment{
     }
 }
 
-interface bunnyInterface{
-        id:number,
-        name:string,
-        vitality:number,
-        crt:number,
-        stamina:number,
-        lvl:number,
-
-        stats:{
-            str:number,
-            dex:number,
-            vit:number,
-            int:number,
-            krm:number,
-        },
-
-        base:{
-            rabbit:string,
-            overhead:string,
-            mouth:string,
-            eyes:string,
-
-        },
-
-        equipment:{
-            rightHand:{
-                image:string,
-                name:string,
-                str:number,
-                dex:number,
-                vit:number,
-                int:number,
-                krm:number,
-            },
-            leftHand:{
-                image:string,
-                name:string,
-                str:number,
-                dex:number,
-                vit:number,
-                int:number,
-                krm:number,
-            },
-            hat:{
-                image:string,
-                name:string,
-                str:number,
-                dex:number,
-                vit:number,
-                int:number,
-                krm:number,
-            },
-            clothes:{
-                image:string,
-                name:string,
-                str:number,
-                dex:number,
-                vit:number,
-                int:number,
-                krm:number,
-            },
-            neck:{
-                image:string,
-                name:string,
-                str:number,
-                dex:number,
-                vit:number,
-                int:number,
-                krm:number,
-            },
-            hears:{
-                image:string,
-                name:string,
-                str:number,
-                dex:number,
-                vit:number,
-                int:number,
-                krm:number,
-            },
-        }
-
-}
-
+import {bunnyInterface} from "./bunnyInterface";
 
 
 const Container = ({currentTab}:containerProps) => {
-    const [bunny, setBunny]=useState({
-        id:0,
-        name:'Test Bunny',
-        vitality:5,
-        crt:0.0,
-        stamina:2,
-        lvl:1,
 
-        stats:{
-            str:1,
-            dex:2,
-            vit:3,
-            int:2,
-            krm:0,
-        },
+    const suka:bunnyInterface={
+        bunny:{id:0,
+            name:'test bunny2',
+            vitality:3,
+            crt:2,
+            stamina:2,
+            lvl:3,
 
-        base:{
-            rabbit:'Aluminum_bunny20',
-            overhead:'ETH_icon_g3',
-            mouth:'Rainbow_carrot_m5',
-            eyes:'Divorces_b5',
+            stats:{
+                str:1,
+                dex:1,
+                vit:1,
+                int:1,
+                krm:1,
+            },
 
-        },
+            base:{
+                rabbit:'Blue_bunny40',
+                overhead:undefined,
+                mouth:'Happy_m30',
+                eyes:'Hurts15',
+                bg:undefined,
+                faces:undefined,
+            },
 
-        equipment:{
-            rightHand:{
-                image:'string',
-                name:'string',
-                str:1,
-                dex:1,
-                vit:1,
-                int:1,
-                krm:1,
-            },
-            leftHand:{
-                image:'string',
-                name:'string',
-                str:1,
-                dex:1,
-                vit:1,
-                int:1,
-                krm:1,
-            },
-            hat:{
-                image:'string',
-                name:'string',
-                str:1,
-                dex:1,
-                vit:1,
-                int:1,
-                krm:1,
-            },
-            clothes:{
-                image:'string',
-                name:'string',
-                str:1,
-                dex:1,
-                vit:1,
-                int:1,
-                krm:1,
-            },
-            neck:{
-                image:'string',
-                name:'string',
-                str:1,
-                dex:1,
-                vit:1,
-                int:1,
-                krm:1,
-            },
-            hears:{
-                image:'string',
-                name:'string',
-                str:1,
-                dex:1,
-                vit:1,
-                int:1,
-                krm:1,
-            },
-        }
-    });
+            equipment:{
+                rightHand:{
+                    image:'string',
+                    name:'string',
+                    str:0,
+                    dex:0,
+                    vit:0,
+                    int:0,
+                    krm:0,
+                },
+                leftHand:{
+                    image:'string',
+                    name:'string',
+                    str:0,
+                    dex:0,
+                    vit:0,
+                    int:0,
+                    krm:0,
+                },
+                hat:{
+                    image:'string',
+                    name:'string',
+                    str:0,
+                    dex:0,
+                    vit:0,
+                    int:0,
+                    krm:0,
+                },
+                clothes:{
+                    image:'string',
+                    name:'string',
+                    str:0,
+                    dex:0,
+                    vit:0,
+                    int:0,
+                    krm:0,
+                },
+                neck:{
+                    image:'string',
+                    name:'string',
+                    str:0,
+                    dex:0,
+                    vit:0,
+                    int:0,
+                    krm:0,
+                },
+                hears:{
+                    image:'string',
+                    name:'string',
+                    str:0,
+                    dex:0,
+                    vit:0,
+                    int:0,
+                    krm:0,
+                },
+            }}
+    }
+
+    const [bunny, setBunny]=useState(suka);
 
     const updateStats= (bunny:bunnyInterface)=>{
-        let totalStr=bunny.equipment.hat.str+bunny.equipment.rightHand.str+bunny.equipment.leftHand.str+bunny.equipment.clothes.str+bunny.equipment.neck.str+bunny.equipment.hears.str;
-        let totalDex=bunny.equipment.hat.dex+bunny.equipment.rightHand.dex+bunny.equipment.leftHand.dex+bunny.equipment.clothes.dex+bunny.equipment.neck.dex+bunny.equipment.hears.dex;
-        let totalVit=bunny.equipment.hat.vit+bunny.equipment.rightHand.vit+bunny.equipment.leftHand.vit+bunny.equipment.clothes.vit+bunny.equipment.neck.vit+bunny.equipment.hears.vit;
-        let totalInt=bunny.equipment.hat.int+bunny.equipment.rightHand.int+bunny.equipment.leftHand.int+bunny.equipment.clothes.int+bunny.equipment.neck.int+bunny.equipment.hears.int;
-        let totalKrm=bunny.equipment.hat.krm+bunny.equipment.rightHand.krm+bunny.equipment.leftHand.krm+bunny.equipment.clothes.krm+bunny.equipment.neck.krm+bunny.equipment.hears.krm;
+        let totalStr=bunny.bunny.equipment.hat.str+bunny.bunny.equipment.rightHand.str+bunny.bunny.equipment.leftHand.str+bunny.bunny.equipment.clothes.str+bunny.bunny.equipment.neck.str+bunny.bunny.equipment.hears.str;
+        let totalDex=bunny.bunny.equipment.hat.dex+bunny.bunny.equipment.rightHand.dex+bunny.bunny.equipment.leftHand.dex+bunny.bunny.equipment.clothes.dex+bunny.bunny.equipment.neck.dex+bunny.bunny.equipment.hears.dex;
+        let totalVit=bunny.bunny.equipment.hat.vit+bunny.bunny.equipment.rightHand.vit+bunny.bunny.equipment.leftHand.vit+bunny.bunny.equipment.clothes.vit+bunny.bunny.equipment.neck.vit+bunny.bunny.equipment.hears.vit;
+        let totalInt=bunny.bunny.equipment.hat.int+bunny.bunny.equipment.rightHand.int+bunny.bunny.equipment.leftHand.int+bunny.bunny.equipment.clothes.int+bunny.bunny.equipment.neck.int+bunny.bunny.equipment.hears.int;
+        let totalKrm=bunny.bunny.equipment.hat.krm+bunny.bunny.equipment.rightHand.krm+bunny.bunny.equipment.leftHand.krm+bunny.bunny.equipment.clothes.krm+bunny.bunny.equipment.neck.krm+bunny.bunny.equipment.hears.krm;
         let bunnyCopy=bunny;
-        bunnyCopy.stats.str=totalStr;
-        bunnyCopy.stats.dex=totalDex;
-        bunnyCopy.stats.vit=totalVit;
-        bunnyCopy.stats.int=totalInt;
-        bunnyCopy.stats.krm=totalKrm;
+        bunnyCopy.bunny.stats.str=totalStr;
+        bunnyCopy.bunny.stats.dex=totalDex;
+        bunnyCopy.bunny.stats.vit=totalVit;
+        bunnyCopy.bunny.stats.int=totalInt;
+        bunnyCopy.bunny.stats.krm=totalKrm;
         setBunny(bunnyCopy);
     }
 
     const updateLeftHand = ({item}:equipment)=>{
         let bunnyCopy=bunny;
-        bunnyCopy.equipment.leftHand=item;
+        bunnyCopy.bunny.equipment.leftHand=item;
         setBunny(bunnyCopy);
         updateStats(bunny);
     }
@@ -210,7 +132,7 @@ const Container = ({currentTab}:containerProps) => {
     if(currentTab=='home'){
         return(
             <div className={'w-full h-full bg-cover bg-[url("../public/images/fishbg.png")]'}>
-                <Home bunny={bunny}></Home>
+                <Home bunny={bunny.bunny}></Home>
                 <button onClick={()=>{updateLeftHand({item:{image:'string',
                     name:'string',
                     str:4,

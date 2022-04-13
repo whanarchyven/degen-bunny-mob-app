@@ -26,99 +26,15 @@ const StatIndicator = styled.div<{margin: string}>`
   left: ${props => props.margin};
 `
 
-interface bunnyInterface{
-    bunny:{
-        id:number,
-        name:string,
-        vitality:number,
-        crt:number,
-        stamina:number,
-        lvl:number,
-
-        stats:{
-            str:number,
-            dex:number,
-            vit:number,
-            int:number,
-            krm:number,
-        },
-
-        base:{
-            rabbit:string,
-            overhead:string,
-            mouth:string,
-            eyes:string,
-            bg:string,
-            faces:string,
-        },
-
-        equipment:{
-            rightHand:{
-                image:string,
-                name:string,
-                str:number,
-                dex:number,
-                vit:number,
-                int:number,
-                krm:number,
-            },
-            leftHand:{
-                image:string,
-                name:string,
-                str:number,
-                dex:number,
-                vit:number,
-                int:number,
-                krm:number,
-            },
-            hat:{
-                image:string,
-                name:string,
-                str:number,
-                dex:number,
-                vit:number,
-                int:number,
-                krm:number,
-            },
-            clothes:{
-                image:string,
-                name:string,
-                str:number,
-                dex:number,
-                vit:number,
-                int:number,
-                krm:number,
-            },
-            neck:{
-                image:string,
-                name:string,
-                str:number,
-                dex:number,
-                vit:number,
-                int:number,
-                krm:number,
-            },
-            hears:{
-                image:string,
-                name:string,
-                str:number,
-                dex:number,
-                vit:number,
-                int:number,
-                krm:number,
-            },
-        }
-    }
-
-}
+import {bunnyInterface} from "./bunnyInterface";
 
 
-const Home = ({bunny}:bunnyInterface) => {
+const Home = (bunny:bunnyInterface) => {
 
     return (
         <div className={'w-full h-full'}>
             <div className={'absolute top-[25vw] left-[16vw] w-[48vw] h-[69.3vw]'}>
-                <BunnyGeneration bunny={bunny}></BunnyGeneration>
+                <BunnyGeneration bunny={bunny.bunny}></BunnyGeneration>
             </div>
             <div className={'w-[12vw] h-[12vw] left-[59vw] top-[37vw] absolute inline-block'}>
                 <Image src={'/images/home_module/backpack.svg'} layout={'fill'}></Image>
@@ -133,7 +49,7 @@ const Home = ({bunny}:bunnyInterface) => {
             <div className={'absolute flex items-center top-[84vw] left-[58vw] w-[22vw] h-[9vw]'}>
                 <p className={'inline-block font-josefin font-semibold w-[30%]'}>Lvl</p>
                 <div className={'w-[8vw] h-[8vw] inline-flex bg-[#A8C500] rounded-full'}>
-                    <p className={'w-full text-center font-josefin font-medium text-xl'}>{bunny.lvl}</p>
+                    <p className={'w-full text-center font-josefin font-medium text-xl'}>{bunny.bunny.lvl}</p>
                 </div>
                 <div className={'ml-[2vw] w-[5vw] h-[5vw] inline-flex relative'}>
                     <Image src={'/images/home_module/plus_icon.svg'} layout={'fill'}></Image>
@@ -141,7 +57,7 @@ const Home = ({bunny}:bunnyInterface) => {
             </div>
             <div className={'w-full items-center flex absolute top-[90vw] h-[10vw]'}>
                 <div className={'w-[25%] h-[1px] dashed-line'}></div>
-                <p className={'font-soyuz w-[35%] text-center font-medium text-xl'}>{bunny.name}</p>
+                <p className={'font-soyuz w-[35%] text-center font-medium text-xl'}>{bunny.bunny.name}</p>
                 <div className={'w-[40%] h-[1px] dashed-line'}></div>
             </div>
 
@@ -149,19 +65,19 @@ const Home = ({bunny}:bunnyInterface) => {
                 <p className={'text-lg leading-[110%] font-soyuz w-[35%] text-left font-medium'}>vitality</p>
                 <div className={'w-full flex items-center h-[9vw]'}>
                     <div className={'w-[70%] items-center relative inline-flex h-[2vw]'}>
-                        <StatbarPositive width={bunny.vitality*10+'%'} ></StatbarPositive>
-                        <StatbarNegative width={100-(bunny.vitality*10)+'%'} ></StatbarNegative>
-                        <StatIndicator className={'border-4 border-white w-[4.5vw] bg-[#FFB800] absolute rounded-full h-[4.5vw]'} margin={bunny.vitality*10-2+'%'}></StatIndicator>
+                        <StatbarPositive width={bunny.bunny.vitality*10+'%'} ></StatbarPositive>
+                        <StatbarNegative width={100-(bunny.bunny.vitality*10)+'%'} ></StatbarNegative>
+                        <StatIndicator className={'border-4 border-white w-[4.5vw] bg-[#FFB800] absolute rounded-full h-[4.5vw]'} margin={bunny.bunny.vitality*10-2+'%'}></StatIndicator>
                     </div>
                     <button className={'font-soyuz font-semibold text-[#000] vitality-bar-positive w-[30%] inline-block rounded-full h-[70%] mx-[5%]'}>feed</button>
                 </div>
                 <div className={'w-full h-[10vw] mt-[2vw] border-[1px] p-[5vw] border-white flex items-center rounded-full border-dashed'}>
                     <p className={'text-xl leading-[110%] inline-block font-soyuz w-[50%] text-left font-medium'}>crt</p>
-                    <p className={'text-xl leading-[110%] inline-block font-josefin w-[50%] text-right font-bold'}>{bunny.crt}/12</p>
+                    <p className={'text-xl leading-[110%] inline-block font-josefin w-[50%] text-right font-bold'}>{bunny.bunny.crt}/12</p>
                 </div>
                 <div className={'w-full h-[10vw] mt-[2vw] border-[1px] p-[5vw] border-white flex items-center rounded-full border-dashed'}>
                     <p className={'text-xl leading-[110%] inline-block font-soyuz w-[50%] text-left font-medium'}>stamina</p>
-                    <p className={'text-xl leading-[110%] inline-block font-josefin w-[50%] text-right font-bold'}>{bunny.stamina}/2</p>
+                    <p className={'text-xl leading-[110%] inline-block font-josefin w-[50%] text-right font-bold'}>{bunny.bunny.stamina}/2</p>
                 </div>
                 <button className={'font-soyuz mt-[2vw] font-semibold text-[#000] green-gradient w-[30%] inline-block rounded-full h-[8vw] mx-[35%]'}>work</button>
             </div>
