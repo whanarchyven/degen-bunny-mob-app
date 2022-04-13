@@ -6,13 +6,10 @@ module.exports = {
   theme: {
     extend: {},
     fontFamily: {
-      'gilroy': ['Gilroy', 'system-ui'],
+      'josefin': ['JosefinSans', 'system-ui'],
+      'soyuz': ['Soyuz Grotesk', 'system-ui'],
     },
     colors: {
-      purple: "#7D1ABA",
-      aue:"#b03efc",
-      blue: "#3F65EC",
-      semiblue:"#8952FF",
       white:'#FFFFFF',
     },
   },

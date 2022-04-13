@@ -5,6 +5,8 @@ import Container from "./Container";
 
 const Menu = () => {
     const [currentTab,setCurrentTab]=useState('home');
+    const [balance,setBalance]=useState(135);
+
     return (
         <div className={'w-full h-full'}>
             <div className={'justify-around flex items-center fixed bottom-0 w-full h-[10vh] bg-[#A8C500]'}>
@@ -26,6 +28,25 @@ const Menu = () => {
             </div>
             <div className={'w-full h-[90vh] absolute top-0'}>
                 <Container currentTab={currentTab}></Container>
+            </div>
+            <div className={'w-[30vw] h-[10vw] absolute top-[14vw] right-[6vw]'}>
+                <div className={'absolute top-0 w-full h-full rounded-full wallet-shape-down'}>
+
+                </div>
+                <div className={'absolute top-0 w-full h-full rounded-full wallet-shape-up'}>
+
+                </div>
+                <div className={'absolute top-0 flex justify-around justify-items-center items-center w-full h-full'}>
+                    <div className={'w-[8vw] relative h-[8vw]'}>
+                        <Image src={'/images/wallet_carrot.png'} layout={'fill'}></Image>
+                    </div>
+                    <div className={'w-[8vw] relative h-[8vw]'}>
+                        <p className={'w-full text-white text-center font-josefin font-light text-[20px]'}>{balance}</p>
+                    </div>
+                    <div className={'w-[8vw] relative h-[5vw]'}>
+                        <Image src={'/images/wallet_icon.svg'} layout={'fill'}></Image>
+                    </div>
+                </div>
             </div>
         </div>
     );
