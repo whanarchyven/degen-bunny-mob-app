@@ -1,8 +1,8 @@
 # Diff Summary
 
-Date : 2022-04-13 22:07:19
+Date : 2022-04-14 00:40:50
 
-Directory c:\Users\Иван Забурдаев\Desktop\degen-bunny\degen-bunny\components
+Directory c:\Users\Иван Забурдаев\Desktop\degen-bunny\degen-bunny\pages
 
 Total : 0 files,  0 codes, 0 comments, 0 blanks, all 0 lines
 

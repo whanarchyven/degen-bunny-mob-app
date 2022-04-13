@@ -1,33 +1,34 @@
-Date : 2022-04-13 22:07:19
+Date : 2022-04-14 00:39:57
 Directory : c:\Users\Иван Забурдаев\Desktop\degen-bunny\degen-bunny\components
-Total : 8 files,  701 codes, 94 comments, 72 blanks, all 867 lines
+Total : 9 files,  915 codes, 249 comments, 82 blanks, all 1246 lines
 
 Languages
 +------------------+------------+------------+------------+------------+------------+
 | language         | files      | code       | comment    | blank      | total      |
 +------------------+------------+------------+------------+------------+------------+
-| TypeScript React |          6 |        609 |         94 |         66 |        769 |
-| TypeScript       |          2 |         92 |          0 |          6 |         98 |
+| TypeScript React |          7 |        820 |        249 |         76 |      1,145 |
+| TypeScript       |          2 |         95 |          0 |          6 |        101 |
 +------------------+------------+------------+------------+------------+------------+
 
 Directories
 +----------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
 | path                                                                                         | files      | code       | comment    | blank      | total      |
 +----------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
-| .                                                                                            |          8 |        701 |         94 |         72 |        867 |
+| .                                                                                            |          9 |        915 |        249 |         82 |      1,246 |
 +----------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
 
 Files
 +----------------------------------------------------------------------------------------------+------------------+------------+------------+------------+------------+
 | filename                                                                                     | language         | code       | comment    | blank      | total      |
 +----------------------------------------------------------------------------------------------+------------------+------------+------------+------------+------------+
-| c:\Users\Иван Забурдаев\Desktop\degen-bunny\degen-bunny\components\Bunny.tsx                 | TypeScript React |        187 |         73 |         25 |        285 |
+| c:\Users\Иван Забурдаев\Desktop\degen-bunny\degen-bunny\components\Bunny.tsx                 | TypeScript React |        178 |         85 |         25 |        288 |
 | c:\Users\Иван Забурдаев\Desktop\degen-bunny\degen-bunny\components\BunnyGeneration.tsx       | TypeScript React |         46 |          0 |          4 |         50 |
-| c:\Users\Иван Забурдаев\Desktop\degen-bunny\degen-bunny\components\Container.tsx             | TypeScript React |        199 |          0 |         14 |        213 |
+| c:\Users\Иван Забурдаев\Desktop\degen-bunny\degen-bunny\components\Container.tsx             | TypeScript React |         59 |        143 |         11 |        213 |
 | c:\Users\Иван Забурдаев\Desktop\degen-bunny\degen-bunny\components\Home.tsx                  | TypeScript React |         82 |          0 |         11 |         93 |
-| c:\Users\Иван Забурдаев\Desktop\degen-bunny\degen-bunny\components\Inventory.tsx             | TypeScript React |         45 |         21 |          7 |         73 |
+| c:\Users\Иван Забурдаев\Desktop\degen-bunny\degen-bunny\components\Inventory.tsx             | TypeScript React |         53 |         21 |          6 |         80 |
+| c:\Users\Иван Забурдаев\Desktop\degen-bunny\degen-bunny\components\InventoryCards.tsx        | TypeScript React |        352 |          0 |         14 |        366 |
 | c:\Users\Иван Забурдаев\Desktop\degen-bunny\degen-bunny\components\Menu.tsx                  | TypeScript React |         50 |          0 |          5 |         55 |
 | c:\Users\Иван Забурдаев\Desktop\degen-bunny\degen-bunny\components\bunnyInterface.ts         | TypeScript       |         83 |          0 |          6 |         89 |
-| c:\Users\Иван Забурдаев\Desktop\degen-bunny\degen-bunny\components\equipmentItemInterface.ts | TypeScript       |          9 |          0 |          0 |          9 |
-| Total                                                                                        |                  |        701 |         94 |         72 |        867 |
+| c:\Users\Иван Забурдаев\Desktop\degen-bunny\degen-bunny\components\equipmentItemInterface.ts | TypeScript       |         12 |          0 |          0 |         12 |
+| Total                                                                                        |                  |        915 |        249 |         82 |      1,246 |
 +----------------------------------------------------------------------------------------------+------------------+------------+------------+------------+------------+

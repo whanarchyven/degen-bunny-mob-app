@@ -1,25 +1,22 @@
 # Diff Summary
 
-Date : 2022-04-13 22:07:32
+Date : 2022-04-14 00:39:57
 
-Directory c:\Users\Иван Забурдаев\Desktop\degen-bunny\degen-bunny\pages
+Directory c:\Users\Иван Забурдаев\Desktop\degen-bunny\degen-bunny\components
 
-Total : 11 files,  -663 codes, -81 comments, -60 blanks, all -804 lines
+Total : 5 files,  214 codes, 155 comments, 10 blanks, all 379 lines
 
 [Summary](results.md) / [Details](details.md) / Diff Summary / [Diff Details](diff-details.md)
 
 ## Languages
 | language | files | code | comment | blank | total |
 | :--- | ---: | ---: | ---: | ---: | ---: |
-| TypeScript | 3 | -82 | 1 | -3 | -84 |
-| TypeScript React | 8 | -581 | -82 | -57 | -720 |
+| TypeScript React | 4 | 211 | 155 | 10 | 376 |
+| TypeScript | 1 | 3 | 0 | 0 | 3 |
 
 ## Directories
 | path | files | code | comment | blank | total |
 | :--- | ---: | ---: | ---: | ---: | ---: |
-| . | 11 | -663 | -81 | -60 | -804 |
-| .. | 8 | -701 | -94 | -72 | -867 |
-| ..\components | 8 | -701 | -94 | -72 | -867 |
-| api | 1 | 10 | 1 | 3 | 14 |
+| . | 5 | 214 | 155 | 10 | 379 |
 
 [Summary](results.md) / [Details](details.md) / Diff Summary / [Diff Details](diff-details.md)
