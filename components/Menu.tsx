@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import Image from "next/image";
 import Container from "./Container";
-
+import Bunny from "./Bunny";
 
 const Menu = () => {
     const [currentTab,setCurrentTab]=useState('home');
@@ -17,7 +17,7 @@ const Menu = () => {
                     {currentTab=='equipment'?<Image src={'/images/equipment_button_active.svg'} layout={'fill'}></Image>:<Image src={'/images/equipment_button.svg'} layout={'fill'}></Image>}
                 </div>
                 <div className={'align-middle relative inline-block w-[18%] h-[8vh]'} onClick={()=>{setCurrentTab('home')}}>
-                    {currentTab=='home'?<Image src={'/images/home_button_active.svg'} layout={'fill'}></Image>:<Image src={'/images/home_button.svg'} layout={'fill'}></Image>}
+                    {currentTab=='home'||currentTab=='inventory'?<Image src={'/images/home_button_active.svg'} layout={'fill'}></Image>:<Image src={'/images/home_button.svg'} layout={'fill'}></Image>}
                 </div>
                 <div className={'align-middle relative inline-block w-[18%] h-[8vh]'} onClick={()=>{setCurrentTab('market')}}>
                     {currentTab=='market'?<Image src={'/images/market_button_active.svg'} layout={'fill'}></Image>:<Image src={'/images/market_button.svg'} layout={'fill'}></Image>}
@@ -27,7 +27,7 @@ const Menu = () => {
                 </div>
             </div>
             <div className={'w-full h-[90vh] absolute top-0'}>
-                <Container currentTab={currentTab}></Container>
+                <Bunny currentTab={currentTab}></Bunny>
             </div>
             <div className={'w-[30vw] h-[10vw] absolute top-[14vw] right-[6vw]'}>
                 <div className={'absolute top-0 w-full h-full rounded-full wallet-shape-down'}>

@@ -28,15 +28,19 @@ const StatIndicator = styled.div<{margin: string}>`
 
 import {bunnyInterface} from "./bunnyInterface";
 
+interface homeModuleInterface extends bunnyInterface{
+    openInventory: ()=>any
+}
 
-const Home = (bunny:bunnyInterface) => {
+
+const Home = (bunny:homeModuleInterface) => {
 
     return (
         <div className={'w-full h-full'}>
             <div className={'absolute top-[25vw] left-[16vw] w-[48vw] h-[69.3vw]'}>
                 <BunnyGeneration bunny={bunny.bunny}></BunnyGeneration>
             </div>
-            <div className={'w-[12vw] h-[12vw] left-[59vw] top-[37vw] absolute inline-block'}>
+            <div className={'w-[12vw] h-[12vw] left-[59vw] top-[37vw] absolute inline-block'} onClick={()=>{bunny.openInventory()}}>
                 <Image src={'/images/home_module/backpack.svg'} layout={'fill'}></Image>
             </div>
             <div className={'w-[28vw] top-[43vw] h-[1px] dashed-line absolute right-0'}></div>
@@ -77,7 +81,7 @@ const Home = (bunny:bunnyInterface) => {
                 </div>
                 <div className={'w-full h-[10vw] mt-[2vw] border-[1px] p-[5vw] border-white flex items-center rounded-full border-dashed'}>
                     <p className={'text-xl leading-[110%] inline-block font-soyuz w-[50%] text-left font-medium'}>stamina</p>
-                    <p className={'text-xl leading-[110%] inline-block font-josefin w-[50%] text-right font-bold'}>{bunny.bunny.stamina}/2</p>
+                    <p className={'text-xl leading-[110%] inline-block font-josefin w-[50%] text-right font-bold'}>{bunny.bunny.stats.krm}/2</p>
                 </div>
                 <button className={'font-soyuz mt-[2vw] font-semibold text-[#000] green-gradient w-[30%] inline-block rounded-full h-[8vw] mx-[35%]'}>work</button>
             </div>

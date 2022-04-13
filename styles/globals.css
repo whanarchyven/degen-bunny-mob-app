@@ -25,6 +25,20 @@
         background: #404040;
         box-shadow: inset 0px 1.63985px 1.63985px rgba(0, 0, 0, 0.66);
     }
+    .inventory-active-tab{
+        background: rgba(197, 230, 11, 0.37);
+    }
+    .inventory-card-bg{
+        background: rgba(180, 180, 180, 0.22);
+        box-shadow: inset 0px 1.64603px 2.88055px rgba(0, 0, 0, 0.7);
+    }
+    .inventory-card-bg-active{
+        background: rgba(180, 180, 180, 0.22);
+        box-shadow: inset 0px 1.64603px 2.88055px rgba(0, 0, 0, 0.7);
+        border-color: chartreuse;
+        border-width: 2px;
+    }
+
 
 }
 

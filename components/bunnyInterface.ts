@@ -25,7 +25,7 @@ export interface bunnyInterface{
         },
 
         equipment:{
-            rightHand:{
+            rightHand?:{
                 image:string,
                 name:string,
                 str:number,
@@ -34,7 +34,7 @@ export interface bunnyInterface{
                 int:number,
                 krm:number,
             },
-            leftHand:{
+            leftHand?:{
                 image:string,
                 name:string,
                 str:number,
@@ -43,7 +43,7 @@ export interface bunnyInterface{
                 int:number,
                 krm:number,
             },
-            hat:{
+            hat?:{
                 image:string,
                 name:string,
                 str:number,
@@ -52,7 +52,7 @@ export interface bunnyInterface{
                 int:number,
                 krm:number,
             },
-            clothes:{
+            clothes?:{
                 image:string,
                 name:string,
                 str:number,
@@ -61,7 +61,7 @@ export interface bunnyInterface{
                 int:number,
                 krm:number,
             },
-            neck:{
+            neck?:{
                 image:string,
                 name:string,
                 str:number,
@@ -70,7 +70,7 @@ export interface bunnyInterface{
                 int:number,
                 krm:number,
             },
-            hears:{
+            hears?:{
                 image:string,
                 name:string,
                 str:number,
@@ -79,7 +79,10 @@ export interface bunnyInterface{
                 int:number,
                 krm:number,
             },
-        }
-    }
+        },
+        isInventoryOpen:boolean,
+        currentInventoryTab:string,
+    },
+
 
 }
