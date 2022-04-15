@@ -16,7 +16,7 @@ interface inventoryCards extends  bunnyInterface{
     closeInventory:()=>any,
 }
 
-const InventoryCards = ({currentInventoryTab, bunny, closeInventory, updateEars, updateHat, updateLeftHand, updateRightHand, updateNeck, updateClothes}:inventoryCards) => {
+const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars, updateHat, updateLeftHand, updateRightHand, updateNeck, updateClothes}:inventoryCards) => {
 
     const itemsSuka=[
         {
@@ -606,7 +606,7 @@ const InventoryCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                 {itemsSuka.map(item=> {
                     if(item.type=='clothes'){
                         return(
-                          <div className={'w-[28%] mt-[4vw] relative h-[15vh] inventory-card-bg rounded-[2vw]'}  key={item.id}>
+                          <div className={'w-[28%] mt-[4vw] relative h-[15vh] inventory-card-bg rounded-[2vw]'}  key={item.id} onClick={()=>{updateClothes(item)}}>
                               {bunny.equipment.clothes?.name==item.name?
                                   <div className={'w-full absolute top-0 border-2 border-[#D5F908] rounded-[2vw] h-full'}>
                                       <Image src={'/images/bunny_generation/Clothes/'+item.image+'.png'} layout={'fill'}></Image>
@@ -638,7 +638,7 @@ const InventoryCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                 {itemsSuka.map(item=> {
                     if(item.type=='hat'){
                         return(
-                            <div className={'w-[28%] mt-[4vw] relative h-[15vh] inventory-card-bg rounded-[2vw]'}  key={item.id}>
+                            <div className={'w-[28%] mt-[4vw] relative h-[15vh] inventory-card-bg rounded-[2vw]'}  key={item.id} onClick={()=>{updateHat(item)}}>
                                 {bunny.equipment.hat?.name==item.name?
                                     <div className={'w-full absolute top-0 border-2 border-[#D5F908] rounded-[2vw] h-full'}>
                                         <Image src={'/images/bunny_generation/Hats/'+item.image+'.png'} layout={'fill'}></Image>
@@ -670,7 +670,7 @@ const InventoryCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                 {itemsSuka.map(item=> {
                     if(item.type=='left hand'){
                         return(
-                            <div className={'w-[28%] mt-[4vw] relative h-[15vh] inventory-card-bg rounded-[2vw]'}  key={item.id}>
+                            <div className={'w-[28%] mt-[4vw] relative h-[15vh] inventory-card-bg rounded-[2vw]'}  key={item.id} onClick={()=>{updateLeftHand(item)}}>
                                 {bunny.equipment.leftHand?.name==item.name?
                                     <div className={'w-full absolute top-0 border-2 border-[#D5F908] rounded-[2vw] h-full'}>
                                         <Image src={'/images/bunny_generation/Left hand/'+item.image+'.png'} layout={'fill'}></Image>
@@ -702,7 +702,7 @@ const InventoryCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                 {itemsSuka.map(item=> {
                     if(item.type=='right hand'){
                         return(
-                            <div className={'w-[28%] mt-[4vw] relative h-[15vh] inventory-card-bg rounded-[2vw]'}  key={item.id}>
+                            <div className={'w-[28%] mt-[4vw] relative h-[15vh] inventory-card-bg rounded-[2vw]'}  key={item.id} onClick={()=>{updateRightHand(item)}}>
                                 {bunny.equipment.rightHand?.name==item.name?
                                     <div className={'w-full absolute top-0 border-2 border-[#D5F908] rounded-[2vw] h-full'}>
                                         <Image src={'/images/bunny_generation/Right hand/'+item.image+'.png'} layout={'fill'}></Image>
@@ -734,7 +734,7 @@ const InventoryCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                 {itemsSuka.map(item=> {
                     if(item.type=='neck'){
                         return(
-                            <div className={'w-[28%] mt-[4vw] relative h-[15vh] inventory-card-bg rounded-[2vw]'}  key={item.id}>
+                            <div className={'w-[28%] mt-[4vw] relative h-[15vh] inventory-card-bg rounded-[2vw]'}  key={item.id} onClick={()=>{updateNeck(item)}}>
                                 {bunny.equipment.neck?.name==item.name?
                                     <div className={'w-full absolute top-0 border-2 border-[#D5F908] rounded-[2vw] h-full'}>
                                         <Image src={'/images/bunny_generation/Necklace/'+item.image+'.png'} layout={'fill'}></Image>
@@ -766,7 +766,7 @@ const InventoryCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                 {itemsSuka.map(item=> {
                     if(item.type=='ears'){
                         return(
-                            <div className={'w-[28%] mt-[4vw] relative h-[15vh] inventory-card-bg rounded-[2vw]'}  key={item.id}>
+                            <div className={'w-[28%] mt-[4vw] relative h-[15vh] inventory-card-bg rounded-[2vw]'}  key={item.id} onClick={()=>{updateEars(item)}}>
                                 {bunny.equipment.hears?.name==item.name?
                                     <div className={'w-full absolute top-0 border-2 border-[#D5F908] rounded-[2vw] h-full'}>
                                         <Image src={'/images/bunny_generation/Ears/'+item.image+'.png'} layout={'fill'}></Image>
@@ -799,4 +799,4 @@ const InventoryCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
     );
 };
 
-export default InventoryCards;
+export default EquipmentCards;

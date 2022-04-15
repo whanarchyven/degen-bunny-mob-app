@@ -26,7 +26,7 @@ const Menu = () => {
                     {currentTab=='job'?<Image src={'/images/job_button_active.svg'} layout={'fill'}></Image>:<Image src={'/images/job_button.svg'} layout={'fill'}></Image>}
                 </div>
             </div>
-            <div className={'w-full h-[90vh] absolute top-0'}>
+            <div className={'w-full h-[90vh] overflow-x-hidden absolute top-0'}>
                 <Bunny currentTab={currentTab}></Bunny>
             </div>
             <div className={'w-[30vw] h-[10vw] absolute top-[14vw] right-[6vw]'}>

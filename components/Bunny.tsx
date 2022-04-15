@@ -4,6 +4,7 @@ import Home from "./Home";
 import {bunnyInterface} from "./bunnyInterface";
 import {equipment} from "./equipmentItemInterface";
 import Inventory from "./Inventory";
+import Equipment from "./Equipment";
 
 class Bunny extends Component <any,bunnyInterface> {
     // private Init: () => void;
@@ -272,8 +273,8 @@ class Bunny extends Component <any,bunnyInterface> {
         }
         else if(this.props.currentTab=='equipment'){
             return(
-                <div className={'w-full h-full bg-[#FF2424]'}>
-                    EQUIPMENT
+                <div className={'w-full h-full bg-cover bg-[url("../public/images/fishbg.png")]'}>
+                    <Equipment  updateClothes={this.changeClothes} updateHat={this.changeHat} updateNeck={this.changeNeck} updateEars={this.changeEars} updateRightHand={this.changeRightHand} updateLeftHand={this.changeLeftHand} bunny={this.state.bunny}></Equipment>
                 </div>
             );
         }
