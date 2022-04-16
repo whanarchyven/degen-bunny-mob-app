@@ -13,9 +13,10 @@ interface inventoryTabInterface extends bunnyInterface{
     updateClothes: (item: equipment) => any,
     updateEars: (item: equipment) => any,
     closeInventory:()=>any,
+    updateStats:()=>any,
 
 }
-const EquipPopUp = ({inventoryTab,updateClothes,updateEars,updateHat,updateLeftHand,updateNeck,updateRightHand, closeInventory, bunny}:inventoryTabInterface) => {
+const EquipPopUp = ({inventoryTab,updateClothes,updateEars,updateHat,updateLeftHand,updateNeck,updateRightHand, closeInventory, bunny, updateStats}:inventoryTabInterface) => {
     return (
         <div className={'w-full h-full bg-cover bg-[url("../public/images/fishbg.png")]'}>
             <p className={'font-soyuz text-white text-3xl absolute left-[10vw] top-[19vh]'}>{inventoryTab}</p>
@@ -26,7 +27,7 @@ const EquipPopUp = ({inventoryTab,updateClothes,updateEars,updateHat,updateLeftH
 
             <div className={'flex-wrap w-[84%] absolute inline-flex h-[58vh] left-[8%] bottom-[5vh] '}>
                 <div className={'w-[100%] relative block mt-[5vw] h-[47vh]'}>
-                    <EquipmentCards currentInventoryTab={inventoryTab} bunny={bunny} closeInventory={closeInventory} updateLeftHand={updateLeftHand} updateRightHand={updateRightHand} updateEars={updateEars} updateNeck={updateNeck} updateHat={updateHat} updateClothes={updateClothes}></EquipmentCards>
+                    <EquipmentCards updateStats={updateStats} currentInventoryTab={inventoryTab} bunny={bunny} closeInventory={closeInventory} updateLeftHand={updateLeftHand} updateRightHand={updateRightHand} updateEars={updateEars} updateNeck={updateNeck} updateHat={updateHat} updateClothes={updateClothes}></EquipmentCards>
                 </div>
             </div>
 

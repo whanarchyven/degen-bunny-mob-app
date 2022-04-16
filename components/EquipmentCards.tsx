@@ -14,9 +14,10 @@ interface inventoryCards extends  bunnyInterface{
     updateClothes: (item: equipment) => any,
     updateEars: (item: equipment) => any,
     closeInventory:()=>any,
+    updateStats:()=>any,
 }
 
-const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars, updateHat, updateLeftHand, updateRightHand, updateNeck, updateClothes}:inventoryCards) => {
+const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars, updateHat, updateLeftHand, updateRightHand, updateNeck, updateClothes, updateStats}:inventoryCards) => {
 
     const itemsSuka=[
         {
@@ -162,11 +163,10 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
             int:4,
             krm:5,
         },
-
         {
             id:340,
-            image:'Tape_pinck10',
-            name:'Tape_pinck10',
+            image:'Business_suit10',
+            name:'Business_suit10',
             type:'clothes',
             str:4,
             dex:4,
@@ -176,8 +176,8 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
         },
         {
             id:310,
-            image:'Hoody10',
-            name:'Hoody10',
+            image:'Pajama_green10',
+            name:'Pajama_green10',
             type:'clothes',
             str:2,
             dex:1,
@@ -187,8 +187,8 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
         },
         {
             id:120,
-            image:'Police10',
-            name:'Police10',
+            image:'Batman3',
+            name:'Batman3',
             type:'clothes',
             str:3,
             dex:2,
@@ -198,8 +198,8 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
         },
         {
             id:110,
-            image:'Rainbow_fur3',
-            name:'Rainbow_fur3',
+            image:'Right_ring_g10',
+            name:'Right_ring_g10',
             type:'ears',
             str:2,
             dex:1,
@@ -209,8 +209,8 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
         },
         {
             id:720,
-            image:'Gold_fur5',
-            name:'Gold_fur5',
+            image:'Right_ring_s10',
+            name:'Right_ring_s10',
             type:'ears',
             str:2,
             dex:1,
@@ -220,8 +220,8 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
         },
         {
             id:210,
-            image:'Axe_l5',
-            name:'Axe_l5',
+            image:'Hummer_l5',
+            name:'Hummer_l5',
             type:'left hand',
             str:2,
             dex:1,
@@ -231,8 +231,8 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
         },
         {
             id:220,
-            image:'Bit_l5',
-            name:'Bit_l5',
+            image:'Ice_cream_l5',
+            name:'Ice_cream_l5',
             type:'left hand',
             str:2,
             dex:1,
@@ -242,8 +242,8 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
         },
         {
             id:410,
-            image:'Machine_r5',
-            name:'Machine_r5',
+            image:'Chain_g_r10',
+            name:'Chain_g_r10',
             type:'right hand',
             str:2,
             dex:1,
@@ -253,8 +253,8 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
         },
         {
             id:430,
-            image:'Health_bracelet_r5',
-            name:'Health_bracelet_r5',
+            image:'Whatch_r10',
+            name:'Whatch_r10',
             type:'right hand',
             str:2,
             dex:1,
@@ -264,8 +264,8 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
         },
         {
             id:510,
-            image:'Carrot_gold_n5',
-            name:'Carrot_gold_n5',
+            image:'ETH_gold_n5',
+            name:'ETH_gold_n5',
             type:'neck',
             str:2,
             dex:1,
@@ -275,8 +275,8 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
         },
         {
             id:540,
-            image:'Carrot_silver_n5',
-            name:'Carrot_silver_n5',
+            image:'Playboy_gold10',
+            name:'Playboy_gold10',
             type:'neck',
             str:2,
             dex:1,
@@ -286,8 +286,8 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
         },
         {
             id:610,
-            image:'Mask_b3',
-            name:'Mask_b3',
+            image:'Crown_g10',
+            name:'Crown_g10',
             type:'hat',
             str:2,
             dex:1,
@@ -297,153 +297,8 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
         },
         {
             id:10,
-            image:'Mask_g3',
-            name:'Mask_g3',
-            type:'hat',
-            str:2,
-            dex:1,
-            vit:5,
-            int:4,
-            krm:5,
-        },
-        //asdsadsadsad
-
-        {
-            id:348,
-            image:'Tape_pinck10',
-            name:'Tape_pinck10',
-            type:'clothes',
-            str:4,
-            dex:4,
-            vit:4,
-            int:4,
-            krm:5,
-        },
-        {
-            id:318,
-            image:'Hoody10',
-            name:'Hoody10',
-            type:'clothes',
-            str:2,
-            dex:1,
-            vit:5,
-            int:4,
-            krm:5,
-        },
-        {
-            id:128,
-            image:'Police10',
-            name:'Police10',
-            type:'clothes',
-            str:3,
-            dex:2,
-            vit:4,
-            int:4,
-            krm:1,
-        },
-        {
-            id:118,
-            image:'Rainbow_fur3',
-            name:'Rainbow_fur3',
-            type:'ears',
-            str:2,
-            dex:1,
-            vit:5,
-            int:4,
-            krm:5,
-        },
-        {
-            id:728,
-            image:'Gold_fur5',
-            name:'Gold_fur5',
-            type:'ears',
-            str:2,
-            dex:1,
-            vit:5,
-            int:4,
-            krm:5,
-        },
-        {
-            id:218,
-            image:'Axe_l5',
-            name:'Axe_l5',
-            type:'left hand',
-            str:2,
-            dex:1,
-            vit:5,
-            int:4,
-            krm:5,
-        },
-        {
-            id:228,
-            image:'Bit_l5',
-            name:'Bit_l5',
-            type:'left hand',
-            str:2,
-            dex:1,
-            vit:5,
-            int:4,
-            krm:5,
-        },
-        {
-            id:418,
-            image:'Machine_r5',
-            name:'Machine_r5',
-            type:'right hand',
-            str:2,
-            dex:1,
-            vit:5,
-            int:4,
-            krm:5,
-        },
-        {
-            id:438,
-            image:'Health_bracelet_r5',
-            name:'Health_bracelet_r5',
-            type:'right hand',
-            str:2,
-            dex:1,
-            vit:5,
-            int:4,
-            krm:5,
-        },
-        {
-            id:518,
-            image:'Carrot_gold_n5',
-            name:'Carrot_gold_n5',
-            type:'neck',
-            str:2,
-            dex:1,
-            vit:5,
-            int:4,
-            krm:5,
-        },
-        {
-            id:548,
-            image:'Carrot_silver_n5',
-            name:'Carrot_silver_n5',
-            type:'neck',
-            str:2,
-            dex:1,
-            vit:5,
-            int:4,
-            krm:5,
-        },
-        {
-            id:618,
-            image:'Mask_b3',
-            name:'Mask_b3',
-            type:'hat',
-            str:2,
-            dex:1,
-            vit:5,
-            int:4,
-            krm:5,
-        },
-        {
-            id:18,
-            image:'Mask_g3',
-            name:'Mask_g3',
+            image:'White_hat_carrot10',
+            name:'White_hat_carrot10',
             type:'hat',
             str:2,
             dex:1,
@@ -452,151 +307,6 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
             krm:5,
         },
 
-        //asddddddddddddddddddddddd
-
-        {
-            id:349,
-            image:'Tape_pinck10',
-            name:'Tape_pinck10',
-            type:'clothes',
-            str:4,
-            dex:4,
-            vit:4,
-            int:4,
-            krm:5,
-        },
-        {
-            id:319,
-            image:'Hoody10',
-            name:'Hoody10',
-            type:'clothes',
-            str:2,
-            dex:1,
-            vit:5,
-            int:4,
-            krm:5,
-        },
-        {
-            id:129,
-            image:'Police10',
-            name:'Police10',
-            type:'clothes',
-            str:3,
-            dex:2,
-            vit:4,
-            int:4,
-            krm:1,
-        },
-        {
-            id:119,
-            image:'Rainbow_fur3',
-            name:'Rainbow_fur3',
-            type:'ears',
-            str:2,
-            dex:1,
-            vit:5,
-            int:4,
-            krm:5,
-        },
-        {
-            id:729,
-            image:'Gold_fur5',
-            name:'Gold_fur5',
-            type:'ears',
-            str:2,
-            dex:1,
-            vit:5,
-            int:4,
-            krm:5,
-        },
-        {
-            id:219,
-            image:'Axe_l5',
-            name:'Axe_l5',
-            type:'left hand',
-            str:2,
-            dex:1,
-            vit:5,
-            int:4,
-            krm:5,
-        },
-        {
-            id:229,
-            image:'Bit_l5',
-            name:'Bit_l5',
-            type:'left hand',
-            str:2,
-            dex:1,
-            vit:5,
-            int:4,
-            krm:5,
-        },
-        {
-            id:419,
-            image:'Machine_r5',
-            name:'Machine_r5',
-            type:'right hand',
-            str:2,
-            dex:1,
-            vit:5,
-            int:4,
-            krm:5,
-        },
-        {
-            id:439,
-            image:'Health_bracelet_r5',
-            name:'Health_bracelet_r5',
-            type:'right hand',
-            str:2,
-            dex:1,
-            vit:5,
-            int:4,
-            krm:5,
-        },
-        {
-            id:519,
-            image:'Carrot_gold_n5',
-            name:'Carrot_gold_n5',
-            type:'neck',
-            str:2,
-            dex:1,
-            vit:5,
-            int:4,
-            krm:5,
-        },
-        {
-            id:549,
-            image:'Carrot_silver_n5',
-            name:'Carrot_silver_n5',
-            type:'neck',
-            str:2,
-            dex:1,
-            vit:5,
-            int:4,
-            krm:5,
-        },
-        {
-            id:619,
-            image:'Mask_b3',
-            name:'Mask_b3',
-            type:'hat',
-            str:2,
-            dex:1,
-            vit:5,
-            int:4,
-            krm:5,
-        },
-        {
-            id:19,
-            image:'Mask_g3',
-            name:'Mask_g3',
-            type:'hat',
-            str:2,
-            dex:1,
-            vit:5,
-            int:4,
-            krm:5,
-        },
 
     ];
 
@@ -606,7 +316,7 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                 {itemsSuka.map(item=> {
                     if(item.type=='clothes'){
                         return(
-                          <div className={'w-[28%] mt-[4vw] relative h-[15vh] inventory-card-bg rounded-[2vw]'}  key={item.id} onClick={()=>{updateClothes(item)}}>
+                          <div className={'w-[28%] mt-[4vw] relative h-[15vh] inventory-card-bg rounded-[2vw]'}  key={item.id} onClick={()=>{updateClothes(item);updateStats()}}>
                               {bunny.equipment.clothes?.name==item.name?
                                   <div className={'w-full absolute top-0 border-2 border-[#D5F908] rounded-[2vw] h-full'}>
                                       <Image src={'/images/bunny_generation/Clothes/'+item.image+'.png'} layout={'fill'}></Image>
@@ -638,7 +348,7 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                 {itemsSuka.map(item=> {
                     if(item.type=='hat'){
                         return(
-                            <div className={'w-[28%] mt-[4vw] relative h-[15vh] inventory-card-bg rounded-[2vw]'}  key={item.id} onClick={()=>{updateHat(item)}}>
+                            <div className={'w-[28%] mt-[4vw] relative h-[15vh] inventory-card-bg rounded-[2vw]'}  key={item.id} onClick={()=>{updateHat(item);updateStats()}}>
                                 {bunny.equipment.hat?.name==item.name?
                                     <div className={'w-full absolute top-0 border-2 border-[#D5F908] rounded-[2vw] h-full'}>
                                         <Image src={'/images/bunny_generation/Hats/'+item.image+'.png'} layout={'fill'}></Image>
@@ -670,7 +380,7 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                 {itemsSuka.map(item=> {
                     if(item.type=='left hand'){
                         return(
-                            <div className={'w-[28%] mt-[4vw] relative h-[15vh] inventory-card-bg rounded-[2vw]'}  key={item.id} onClick={()=>{updateLeftHand(item)}}>
+                            <div className={'w-[28%] mt-[4vw] relative h-[15vh] inventory-card-bg rounded-[2vw]'}  key={item.id} onClick={()=>{updateLeftHand(item);updateStats()}}>
                                 {bunny.equipment.leftHand?.name==item.name?
                                     <div className={'w-full absolute top-0 border-2 border-[#D5F908] rounded-[2vw] h-full'}>
                                         <Image src={'/images/bunny_generation/Left hand/'+item.image+'.png'} layout={'fill'}></Image>
@@ -702,7 +412,7 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                 {itemsSuka.map(item=> {
                     if(item.type=='right hand'){
                         return(
-                            <div className={'w-[28%] mt-[4vw] relative h-[15vh] inventory-card-bg rounded-[2vw]'}  key={item.id} onClick={()=>{updateRightHand(item)}}>
+                            <div className={'w-[28%] mt-[4vw] relative h-[15vh] inventory-card-bg rounded-[2vw]'}  key={item.id} onClick={()=>{updateRightHand(item);updateStats()}}>
                                 {bunny.equipment.rightHand?.name==item.name?
                                     <div className={'w-full absolute top-0 border-2 border-[#D5F908] rounded-[2vw] h-full'}>
                                         <Image src={'/images/bunny_generation/Right hand/'+item.image+'.png'} layout={'fill'}></Image>
@@ -734,7 +444,7 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                 {itemsSuka.map(item=> {
                     if(item.type=='neck'){
                         return(
-                            <div className={'w-[28%] mt-[4vw] relative h-[15vh] inventory-card-bg rounded-[2vw]'}  key={item.id} onClick={()=>{updateNeck(item)}}>
+                            <div className={'w-[28%] mt-[4vw] relative h-[15vh] inventory-card-bg rounded-[2vw]'}  key={item.id} onClick={()=>{updateNeck(item);updateStats()}}>
                                 {bunny.equipment.neck?.name==item.name?
                                     <div className={'w-full absolute top-0 border-2 border-[#D5F908] rounded-[2vw] h-full'}>
                                         <Image src={'/images/bunny_generation/Necklace/'+item.image+'.png'} layout={'fill'}></Image>
@@ -766,7 +476,7 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                 {itemsSuka.map(item=> {
                     if(item.type=='ears'){
                         return(
-                            <div className={'w-[28%] mt-[4vw] relative h-[15vh] inventory-card-bg rounded-[2vw]'}  key={item.id} onClick={()=>{updateEars(item)}}>
+                            <div className={'w-[28%] mt-[4vw] relative h-[15vh] inventory-card-bg rounded-[2vw]'}  key={item.id} onClick={()=>{updateEars(item);updateStats()}}>
                                 {bunny.equipment.hears?.name==item.name?
                                     <div className={'w-full absolute top-0 border-2 border-[#D5F908] rounded-[2vw] h-full'}>
                                         <Image src={'/images/bunny_generation/Ears/'+item.image+'.png'} layout={'fill'}></Image>
