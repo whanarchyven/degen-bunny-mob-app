@@ -15,7 +15,7 @@ const Marketplace = ({bunny,pushToInventory,balance,changeBalance}:inventoryTabI
     const [buyingTab,setBuyingTab]=useState('buy');
     return (
         <div className={'w-full h-full bg-cover bg-[url("../public/images/fishbg.png")]'}>
-            <p className={'font-soyuz text-white text-3xl absolute left-[10vw] top-[19vh]'}>marketplace</p>
+            <p className={'font-soyuz text-white text-3xl absolute left-[10vw] top-[10vh]'}>marketplace</p>
             {/*<button onClick={()=>{updateHat({image:'Crown_g10',*/}
             {/*    name:'string',*/}
             {/*    str:4,*/}
