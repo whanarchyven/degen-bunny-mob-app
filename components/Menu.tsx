@@ -8,7 +8,7 @@ const Menu = () => {
     const [balance,setBalance]=useState(135);
 
     return (
-        <div className={'w-full h-full'}>
+        <div className={'w-full h-full sm:w-[375px] sm:h-[662px]'}>
             <div className={'justify-around flex items-center fixed bottom-0 w-full h-[10vh] bg-[#A8C500]'}>
                 <div className={'align-middle relative inline-block w-[18%] h-[8vh]'} onClick={()=>{setCurrentTab('history')}}>
                     {currentTab=='history'?<Image src={'/images/history_button_active.svg'} layout={'fill'}></Image>:<Image src={'/images/history_button.svg'} layout={'fill'}></Image>}
@@ -26,7 +26,7 @@ const Menu = () => {
                     {currentTab=='job'?<Image src={'/images/job_button_active.svg'} layout={'fill'}></Image>:<Image src={'/images/job_button.svg'} layout={'fill'}></Image>}
                 </div>
             </div>
-            <div className={'w-full h-[90vh] overflow-x-hidden absolute top-0'}>
+            <div className={'w-full h-[90vh] overflow-x-hidden fixed  top-0'}>
                 <Bunny currentTab={currentTab} balance={balance} changeBalance={setBalance}></Bunny>
             </div>
             <div className={'w-[30vw] h-[10vw] absolute top-[14vw] right-[6vw]'}>

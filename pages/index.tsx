@@ -14,7 +14,7 @@ const Home: NextPage = () => {
       </Head>
 
       <main className={styles.main}>
-          <div className={'w-full h-full'}>
+          <div className={'w-full h-full sm:w-[375px] sm:h-[662px]'}>
               <Menu></Menu>
           </div>
 
