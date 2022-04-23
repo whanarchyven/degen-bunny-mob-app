@@ -27,7 +27,7 @@ const Menu = () => {
                 </div>
             </div>
             <div className={'w-full h-[90vh] overflow-x-hidden absolute top-0'}>
-                <Bunny currentTab={currentTab}></Bunny>
+                <Bunny currentTab={currentTab} balance={balance} changeBalance={setBalance}></Bunny>
             </div>
             <div className={'w-[30vw] h-[10vw] absolute top-[14vw] right-[6vw]'}>
                 <div className={'absolute top-0 w-full h-full rounded-full wallet-shape-down'}>

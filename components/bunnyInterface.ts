@@ -1,3 +1,4 @@
+import {equipment} from "./equipmentItemInterface";
 export interface bunnyInterface{
     bunny:{
         id:number,
@@ -82,6 +83,17 @@ export interface bunnyInterface{
         },
         isInventoryOpen:boolean,
         currentInventoryTab:string,
+        inventory:{
+            id:number,
+            image:string,
+            name:string,
+            type:string,
+            str:number,
+            dex:number,
+            vit:number,
+            int:number,
+            krm:number,
+        }[],
     },
 
 

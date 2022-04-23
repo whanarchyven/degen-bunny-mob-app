@@ -17,6 +17,8 @@ interface inventoryTabInterface extends bunnyInterface{
 
 }
 const Inventory = ({inventoryTab,updateClothes,updateEars,updateHat,updateLeftHand,updateNeck,updateRightHand, closeInventory, bunny, updateInventoryTab}:inventoryTabInterface) => {
+
+
     return (
         <div className={'w-full h-full bg-cover bg-[url("../public/images/fishbg.png")]'}>
             <p className={'font-soyuz text-white text-3xl absolute left-[10vw] top-[19vh]'}>inventory</p>
@@ -68,7 +70,7 @@ const Inventory = ({inventoryTab,updateClothes,updateEars,updateHat,updateLeftHa
                     </div>
                 </div>
                 <div className={'w-[100%] relative block mt-[5vw] h-[47vh]'}>
-                    <InventoryCards currentInventoryTab={inventoryTab} bunny={bunny} closeInventory={closeInventory} updateLeftHand={updateLeftHand} updateRightHand={updateRightHand} updateEars={updateEars} updateNeck={updateNeck} updateHat={updateHat} updateClothes={updateClothes}></InventoryCards>
+                    <InventoryCards inventory={bunny.inventory} currentInventoryTab={inventoryTab} bunny={bunny} closeInventory={closeInventory} updateLeftHand={updateLeftHand} updateRightHand={updateRightHand} updateEars={updateEars} updateNeck={updateNeck} updateHat={updateHat} updateClothes={updateClothes}></InventoryCards>
                 </div>
             </div>
 
