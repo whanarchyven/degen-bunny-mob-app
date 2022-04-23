@@ -21,9 +21,9 @@ const Inventory = ({inventoryTab,updateClothes,updateEars,updateHat,updateLeftHa
 
     return (
         <div className={'w-full h-full bg-cover bg-[url("../public/images/fishbg.png")]'}>
-            <p className={'font-soyuz text-white text-3xl absolute left-[10vw] top-[19vh]'}>inventory</p>
-            <button className={'font-soyuz absolute left-[49vw] top-[20.5vh] w-[21vw] h-[4vh] font-semibold text-[#000] green-gradient w-[30%] inline-block rounded-full h-[8vw]'}>combine</button>
-            <div className={'w-[3vh] h-[3vh] absolute right-[15vw] top-[20.7vh]'} onClick={()=>{closeInventory()}}>
+            <p className={'font-soyuz text-white text-3xl absolute left-[10vw] top-[10vh]'}>inventory</p>
+            <button className={'font-soyuz absolute left-[49vw] top-[11.5vh] w-[21vw] h-[4vh] font-semibold text-[#000] green-gradient w-[30%] inline-block rounded-full h-[8vw]'}>combine</button>
+            <div className={'w-[3vh] h-[3vh] absolute right-[15vw] top-[11.7vh]'} onClick={()=>{closeInventory()}}>
                 <Image src={'/images/close_icon.svg'} layout={'fill'}></Image>
             </div>
             {/*<button onClick={()=>{updateHat({image:'Crown_g10',*/}
