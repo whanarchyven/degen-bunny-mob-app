@@ -30,7 +30,7 @@ const Menu = () => {
                     {currentTab=='job'?<Image src={'/images/job_button_active.svg'} layout={'fill'}></Image>:<Image src={'/images/job_button.svg'} layout={'fill'}></Image>}
                 </div>
             </div>
-            <div className={'w-[30vw] h-[10vw] fixed top-[14vw] right-[6vw]'}>
+            <div className={'w-[30vw] h-[10vw] fixed top-[8vw] right-[6vw]'}>
                 <div className={'absolute top-0 w-full h-full rounded-full wallet-shape-down'}>
 
                 </div>

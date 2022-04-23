@@ -37,7 +37,7 @@ const Home = (bunny:homeModuleInterface) => {
 
     return (
         <div className={'w-full h-full'}>
-            <div className={'absolute top-[25vw] left-[16vw] w-[48vw] h-[69.3vw]'}>
+            <div className={'absolute top-[5vh] left-[16vw] w-[48vw] h-[69.3vw]'}>
                 <BunnyGeneration bunny={bunny.bunny}></BunnyGeneration>
             </div>
             <div className={'w-[12vw] h-[12vw] left-[59vw] top-[37vw] absolute inline-block'} onClick={()=>{bunny.openInventory()}}>
@@ -50,7 +50,7 @@ const Home = (bunny:homeModuleInterface) => {
             <div className={'w-[6vw] h-[6vw] right-[6vw] top-[65vw] absolute inline-block'}>
                 <Image src={'/images/home_module/faq_icon.svg'} layout={'fill'}></Image>
             </div>
-            <div className={'absolute flex items-center top-[84vw] left-[58vw] w-[22vw] h-[9vw]'}>
+            <div className={'absolute flex items-center top-[35vh] left-[58vw] w-[22vw] h-[9vw]'}>
                 <p className={'inline-block font-josefin font-semibold w-[30%]'}>Lvl</p>
                 <div className={'w-[8vw] h-[8vw] inline-flex bg-[#A8C500] rounded-full'}>
                     <p className={'w-full text-center font-josefin font-medium text-xl'}>{bunny.bunny.lvl}</p>
@@ -59,7 +59,7 @@ const Home = (bunny:homeModuleInterface) => {
                     <Image src={'/images/home_module/plus_icon.svg'} layout={'fill'}></Image>
                 </div>
             </div>
-            <div className={'w-full items-center flex absolute top-[90vw] h-[10vw]'}>
+            <div className={'w-full items-center flex absolute top-[42vh] h-[10vw]'}>
                 <div className={'w-[25%] h-[1px] dashed-line'}></div>
                 <p className={'font-soyuz w-[35%] text-center font-medium text-xl'}>{bunny.bunny.name}</p>
                 <div className={'w-[40%] h-[1px] dashed-line'}></div>
