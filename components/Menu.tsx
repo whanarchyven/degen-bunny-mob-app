@@ -9,7 +9,11 @@ const Menu = () => {
 
     return (
         <div className={'w-full h-full sm:w-[375px] sm:h-[662px]'}>
-            <div className={'justify-around flex items-center fixed bottom-[10vh] w-full h-[10vh] bg-[#A8C500]'}>
+
+            <div className={'w-full h-[80vh] overflow-x-hidden fixed  top-0'}>
+                <Bunny currentTab={currentTab} balance={balance} changeBalance={setBalance}></Bunny>
+            </div>
+            <div className={'justify-around flex items-center fixed bottom-0 z-[999] w-full h-[10vh] bg-[#A8C500]'}>
                 <div className={'align-middle relative inline-block w-[18%] h-[8vh]'} onClick={()=>{setCurrentTab('history')}}>
                     {currentTab=='history'?<Image src={'/images/history_button_active.svg'} layout={'fill'}></Image>:<Image src={'/images/history_button.svg'} layout={'fill'}></Image>}
                 </div>
@@ -25,9 +29,6 @@ const Menu = () => {
                 <div className={'align-middle relative inline-block w-[18%] h-[8vh]'} onClick={()=>{setCurrentTab('job')}}>
                     {currentTab=='job'?<Image src={'/images/job_button_active.svg'} layout={'fill'}></Image>:<Image src={'/images/job_button.svg'} layout={'fill'}></Image>}
                 </div>
-            </div>
-            <div className={'w-full h-[80vh] overflow-x-hidden fixed  top-0'}>
-                <Bunny currentTab={currentTab} balance={balance} changeBalance={setBalance}></Bunny>
             </div>
             <div className={'w-[30vw] h-[10vw] fixed top-[14vw] right-[6vw]'}>
                 <div className={'absolute top-0 w-full h-full rounded-full wallet-shape-down'}>
