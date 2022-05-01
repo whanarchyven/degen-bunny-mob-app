@@ -6,6 +6,7 @@ import {equipment} from "./equipmentItemInterface";
 import Inventory from "./Inventory";
 import Equipment from "./Equipment";
 import Marketplace from "./Marketplace";
+import Work from "./Work";
 
 class Bunny extends Component <any,bunnyInterface> {
     // private Init: () => void;
@@ -567,8 +568,8 @@ class Bunny extends Component <any,bunnyInterface> {
         }
         else if(this.props.currentTab=='job'){
             return(
-                <div className={'w-full h-full bg-[#FF2424]'}>
-                    JOB
+                <div className={'w-full h-full'}>
+                    <Work></Work>
                 </div>
             );
         }

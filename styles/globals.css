@@ -38,6 +38,9 @@
         border-color: chartreuse;
         border-width: 2px;
     }
+    .work-active-tab{
+        background: rgba(197, 230, 11, 1);
+    }
 
 
 }

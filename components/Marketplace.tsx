@@ -13,6 +13,8 @@ interface inventoryTabInterface extends bunnyInterface{
 const Marketplace = ({bunny,pushToInventory,balance,changeBalance}:inventoryTabInterface) => {
     const [marketplaceTab,setMarketplaceTab]=useState('looks');
     const [buyingTab,setBuyingTab]=useState('buy');
+
+
     return (
         <div className={'w-full h-full bg-cover bg-[url("../public/images/fishbg.png")]'}>
             <p className={'font-soyuz text-white text-3xl absolute left-[10vw] top-[10vh]'}>marketplace</p>
@@ -52,12 +54,15 @@ const Marketplace = ({bunny,pushToInventory,balance,changeBalance}:inventoryTabI
                 </div>
                 <div className={'w-[80%] mt-[2.5vh] mx-[10%] relative h-[4vh] inline-flex justify-between'}>
                     <div className={'border-[1px] inventory-active-tab text-center border-white w-[45%] h-full rounded-full'}>
-                        sort by
+                        <select className={'w-full h-fulltext-center  font-josefin bg-[transparent]'}>
+                            <option disabled={true} defaultChecked={true} className={'text-center bg-[#000]'}>sort by</option>
+                            <option className={'text-center bg-[#000]'} value={'price'}>price</option>
+                            <option className={'text-center bg-[#000]'} value={'name'}>name</option>
+                        </select>
                     </div>
                     <div className={'border-[1px] border-white w-[45%] h-full rounded-full'}>
                         {buyingTab=='buy'?<div className={'font-josefin inline-block align-top font-medium rounded-l-full h-full text-[2vh] text-center w-[50%] inventory-active-tab'} onClick={()=>{setBuyingTab('buy')}}>Buy</div>:<div className={'font-josefin inline-block align-top h-full text-[2vh] font-medium rounded-l-full text-center w-[50%]'} onClick={()=>{setBuyingTab('buy')}}>Buy</div>}
                         {buyingTab=='rent'?<div className={'font-josefin inline-block align-top font-medium rounded-r-full h-full text-[2vh] text-center w-[50%] inventory-active-tab'} onClick={()=>{setBuyingTab('rent')}}>Rent</div>:<div className={'font-josefin inline-block align-top h-full text-[2vh] font-medium rounded-r-full text-center w-[50%]'} onClick={()=>{setBuyingTab('rent')}}>Rent</div>}
-
                     </div>
                 </div>
                 <div className={'w-[100%] relative block mt-[5vw] h-[47vh]'}>
