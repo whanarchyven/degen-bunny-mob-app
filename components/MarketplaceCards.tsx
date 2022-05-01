@@ -554,7 +554,6 @@ const MarketplaceCards = ({currentMarketplace,currentBuyingTab,pushToInventory, 
     if(currentMarketplace=='looks'){
         return (
             <div className={'w-full h-full overflow-y-scroll overflow-x-hidden p-[2vw] flex justify-around flex-wrap'}>
-                <button onClick={()=>{sortByName();console.log(marketplaceItems)}}>SUKA</button>
                 {marketplaceItems.map(item=> {
                     if(item.type=='clothes'||item.type=='ears'||item.type=='left hand'||item.type=='hat'||item.type=='right hand'||item.type=='neck'){
                         if(checkItemInInventory(item.id)==false){
