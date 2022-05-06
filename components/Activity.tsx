@@ -101,7 +101,7 @@ const Activity = ({bunny,changeActiveTask,goToWorkScreen}:activityInterface) => 
                         {bunny.work?.map(item=>{
                             if(item.workItem.id!=bunny.activeTask?.workItem.id){
                                 return(
-                                    <div className={'w-full h-[13vh] relative mt-[4vh] border-[1px] border-white rounded-[1vh]'} onClick={()=>{setOpenPop(true);setActivityInPop(item)}}>
+                                    <div className={'w-full h-[13vh] relative mt-[4vh] border-[1px] border-white rounded-[1vh]'} onClick={()=>{}}>
                                         <p className={'backdrop-blur-xl absolute text-white font-soyuz text-[3vh] left-[3vw] top-[-2.7vh] inline-block'}>{item.workItem.workName}</p>
                                         <div className={'w-[80%] mx-[10%] mt-[6.3vh] items-center relative inline-flex h-[2vw]'}>
                                             <StatbarPositive color={item.workItem.color} width={((item.progress/item.workItem.goal)*100)+'%'} ></StatbarPositive>

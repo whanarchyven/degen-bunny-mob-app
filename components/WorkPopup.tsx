@@ -108,7 +108,7 @@ const WorkPopup = ({workItem,closePop,pushToWork}:workPopUp) => {
                     </div>
                 </div>
             </div>
-            <button className={'font-soyuz right-[8vw] h-[5vh] w-[30vw] top-[64vh] absolute font-semibold text-[#000] green-gradient inline-block rounded-full'} onClick={()=>{pushToWork(itemToPush)}}>start</button>
+            <button className={'font-soyuz right-[8vw] h-[5vh] w-[30vw] top-[64vh] absolute font-semibold text-[#000] green-gradient inline-block rounded-full'} onClick={()=>{pushToWork(itemToPush);}}>start</button>
             {/*<div className={'dashed-line absolute inline-block w-[17vw] top-[54vh] left-[36vw] h-[1px] border-white'}></div>*/}
             {/*<div className={'dashed-line absolute inline-block w-[5vw] top-[67vh] left-[48vw] h-[1px] border-white'}></div>*/}
             {/*<div className={'dashed-line rotate-90 absolute inline-block w-[30vw] top-[57vh] left-[38vw] h-[1px] border-white'}></div>*/}

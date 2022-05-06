@@ -572,7 +572,7 @@ const MarketplaceCards = ({currentMarketplace,currentBuyingTab,pushToInventory, 
                                             </div>
                                         </div>
                                     </div>
-                                    {currentBuyingTab=='rent'?<div className={'w-full mt-[2vh] flex px-[0.3vw] justify-between h-[4vh]'}>
+                                    {currentBuyingTab=='buy'?<div className={'w-full mt-[2vh] flex px-[0.3vw] justify-between h-[4vh]'}>
                                             <div className={'w-[38%] h-full'}>
                                                 <p className={'inline-block align-middle w-[50%]'}>{item.rentPrice}</p>
                                                 <div className={'w-[50%] align-middle inline-block relative h-full'}>
@@ -580,16 +580,11 @@ const MarketplaceCards = ({currentMarketplace,currentBuyingTab,pushToInventory, 
                                                 </div>
                                             </div>
                                             <div className={'w-[60%] font-soyuz text-center rounded-full h-full text-[#000] text-[2.5vh] vitality-bar-positive'} onClick={()=>{RentItem(item)}}>
-                                                rent
+                                                buy
                                             </div>
                                         </div>:
                                         <div className={'w-full mt-[2vh] flex px-[1vw] justify-between h-[4vh]'}>
-                                            <div className={'w-[35%] h-full'}>
-                                                {item.buyPrice}$
-                                            </div>
-                                            <div className={'w-[60%] font-soyuz text-center rounded-full h-full text-[#000] text-[2.5vh] vitality-bar-positive'}>
-                                                buy
-                                            </div>
+                                            <p>Coming soon</p>
                                         </div>}
                                 </div>
                             );
@@ -624,65 +619,13 @@ const MarketplaceCards = ({currentMarketplace,currentBuyingTab,pushToInventory, 
 
     else if(currentMarketplace=='instruments'){
         return (
-            <div className={'w-full h-full overflow-y-scroll overflow-x-hidden p-[2vw] flex justify-around flex-wrap'}>
-                {/*{inventory.map(item=> {*/}
-                {/*    if(item.type=='hat'){*/}
-                {/*        return(*/}
-                {/*            <div className={'w-[28%] mt-[4vw] relative h-[15vh] inventory-card-bg rounded-[2vw]'}  key={item.id}>*/}
-                {/*                {bunny.equipment.hat?.name==item.name?*/}
-                {/*                    <div className={'w-full absolute top-0 border-2 border-[#D5F908] rounded-[2vw] h-full'}>*/}
-                {/*                        <Image src={'/images/bunny_generation/Hats/'+item.image+'.png'} layout={'fill'}></Image>*/}
-                {/*                    </div>*/}
-                {/*                    :*/}
-                {/*                    <div className={'w-full absolute rounded-[2vw] top-0 h-full'}>*/}
-                {/*                        <Image src={'/images/bunny_generation/Hats/'+item.image+'.png'} layout={'fill'}></Image>*/}
-                {/*                    </div>*/}
-                {/*                }*/}
-                {/*                <div className={'w-full absolute top-[-1.5vh] h-[3vh]'}>*/}
-                {/*                    <div className={'text-sm leading-[100%] justify-center text-[#000] font-soyuz inline-flex align-top w-[22%] rounded-full bg-[#FFC634] h-[3vh]'}>*/}
-                {/*                        {item.id}*/}
-                {/*                    </div>*/}
-                {/*                    <div className={'text-[1.8vh] leading-[158%] w-[78%] text-white font-soyuz inline-block align-top rounded-full h-[3vh]'}>*/}
-                {/*                        {item.name}*/}
-                {/*                    </div>*/}
-                {/*                </div>*/}
-                {/*            </div>*/}
-                {/*        );*/}
-                {/*    }*/}
-                {/*})}*/}
-            </div>
+            <div className={'w-full h-full overflow-y-scroll overflow-x-hidden p-[2vw] flex justify-around flex-wrap'}><h2 className={'text-white absolute font-soyuz text-[4.6vh] top-[19vh] left-[2vw] w-[96vw] text-center'}>Coming soon</h2></div>
         );
     }
 
     else if(currentMarketplace=='houses'){
         return (
-            <div className={'w-full h-full overflow-y-scroll overflow-x-hidden p-[2vw] flex justify-around flex-wrap'}>
-                {/*{inventory.map(item=> {*/}
-                {/*    if(item.type=='left hand'){*/}
-                {/*        return(*/}
-                {/*            <div className={'w-[28%] mt-[4vw] relative h-[15vh] inventory-card-bg rounded-[2vw]'}  key={item.id}>*/}
-                {/*                {bunny.equipment.leftHand?.name==item.name?*/}
-                {/*                    <div className={'w-full absolute top-0 border-2 border-[#D5F908] rounded-[2vw] h-full'}>*/}
-                {/*                        <Image src={'/images/bunny_generation/Left hand/'+item.image+'.png'} layout={'fill'}></Image>*/}
-                {/*                    </div>*/}
-                {/*                    :*/}
-                {/*                    <div className={'w-full absolute rounded-[2vw] top-0 h-full'}>*/}
-                {/*                        <Image src={'/images/bunny_generation/Left hand/'+item.image+'.png'} layout={'fill'}></Image>*/}
-                {/*                    </div>*/}
-                {/*                }*/}
-                {/*                <div className={'w-full absolute top-[-1.5vh] h-[3vh]'}>*/}
-                {/*                    <div className={'text-sm leading-[100%] justify-center text-[#000] font-soyuz inline-flex align-top w-[22%] rounded-full bg-[#FFC634] h-[3vh]'}>*/}
-                {/*                        {item.id}*/}
-                {/*                    </div>*/}
-                {/*                    <div className={'text-[1.8vh] leading-[158%] w-[78%] text-white font-soyuz inline-block align-top rounded-full h-[3vh]'}>*/}
-                {/*                        {item.name}*/}
-                {/*                    </div>*/}
-                {/*                </div>*/}
-                {/*            </div>*/}
-                {/*        );*/}
-                {/*    }*/}
-                {/*})}*/}
-            </div>
+            <div className={'w-full h-full overflow-y-scroll overflow-x-hidden p-[2vw] flex justify-around flex-wrap'}><h2 className={'text-white absolute font-soyuz text-[4.6vh] top-[19vh] left-[2vw] w-[96vw] text-center'}>Coming soon</h2></div>
         );
     }
 

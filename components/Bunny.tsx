@@ -64,11 +64,11 @@ class Bunny extends Component <any,bunnyInterface> {
                 lvl:3,
 
                 stats:{
-                    str:10,
-                    dex:10,
-                    vit:10,
-                    int:10,
-                    krm:10,
+                    str:1,
+                    dex:1,
+                    vit:1,
+                    int:1,
+                    krm:1,
                 },
 
                 base:{
@@ -554,6 +554,7 @@ class Bunny extends Component <any,bunnyInterface> {
             }
             this.state.bunny.work?.push(temp);
             this.changeActiveTask(temp);
+            alert('you succesfuly take this job, see activity screen!')
         }
 
         this.increaseActiveTask=(increase)=>{
