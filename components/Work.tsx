@@ -1,8 +1,14 @@
 import React, {useState} from 'react';
 import WorkItem from "./WorkItem";
 import WorkPopup from "./WorkPopup";
+import {workItemInterface} from "./workItemInterface";
+import {bunnyInterface} from "./bunnyInterface";
 
-const Work = () => {
+interface workModuleInterface extends bunnyInterface{
+    pushToWork:(item:workItemInterface)=>any
+}
+
+const Work = ({pushToWork, bunny}:workModuleInterface) => {
     const [workRadio,setWorkRadio]=useState('work');
     const[workInPop,setWorkInPop]=useState(        {
         id:1,
@@ -11,6 +17,8 @@ const Work = () => {
         description:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
         task:'walk 10km',
         profit:35,
+        goal:10,
+        color:'#000000',
         requirements: {
             str:0,
             dex:3,
@@ -37,6 +45,8 @@ const Work = () => {
             description:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
             task:'walk 10km',
             profit:35,
+            goal:10,
+            color:'#F97A55',
             requirements: {
                 str:0,
                 dex:3,
@@ -60,6 +70,8 @@ const Work = () => {
             description:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
             task:'tap 1000 times',
             profit:30,
+            goal:10,
+            color:'#B0CC0B',
             requirements: {
                 str:2,
                 dex:0,
@@ -78,6 +90,8 @@ const Work = () => {
             description:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
             task:'tap 1000 times',
             profit:50,
+            goal:10,
+            color:'#FFB800',
             requirements: {
                 str:0,
                 dex:0,
@@ -96,6 +110,8 @@ const Work = () => {
             description:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
             task:'tap 1000 times',
             profit:50,
+            goal:10,
+            color:'#E680FF',
             requirements: {
                 str:0,
                 dex:0,
@@ -123,14 +139,16 @@ const Work = () => {
             </div>
             <div className={'overflow-y-scroll absolute w-[90%] top-[30vh] h-[50vh] mx-[5%]'}>
                 {workItems.map(item=>{
-                    return(
-                        <div key={item.id} className={'w-full my-[3.3vh]'} onClick={()=>{closePop();setWorkInPop(item)}}>
-                            <WorkItem workItem={item}></WorkItem>
-                        </div>
-                    );
+                    if(bunny.work?.find(index=>index.workItem.id==item.id)==undefined){
+                        return(
+                            <div key={item.id} className={'w-full my-[3.3vh]'} onClick={()=>{closePop();setWorkInPop(item)}}>
+                                <WorkItem workItem={item}></WorkItem>
+                            </div>
+                        );
+                    }
                 })}
             </div>
-            {openPop?<WorkPopup closePop={closePop} workItem={workInPop}></WorkPopup>:<div></div>}
+            {openPop?<WorkPopup pushToWork={pushToWork} closePop={closePop} workItem={workInPop}></WorkPopup>:<div></div>}
         </div>
     );
 };

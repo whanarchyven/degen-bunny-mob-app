@@ -3,10 +3,17 @@ import Home from "./Home";
 
 import {bunnyInterface} from "./bunnyInterface";
 import {equipment} from "./equipmentItemInterface";
+import {workItemInterface} from "./workItemInterface";
 import Inventory from "./Inventory";
 import Equipment from "./Equipment";
 import Marketplace from "./Marketplace";
 import Work from "./Work";
+import {number} from "prop-types";
+import Activity from "./Activity";
+
+interface activityItemInterface extends workItemInterface{
+    progress:number
+}
 
 class Bunny extends Component <any,bunnyInterface> {
     // private Init: () => void;
@@ -24,6 +31,9 @@ class Bunny extends Component <any,bunnyInterface> {
     private changeHat: (item:equipment)=>void;
     private changeInventoryTab:(item:string)=>void;
     private inventoryPush:(item:equipment)=>void;
+    private workPush:(item:workItemInterface)=>void;
+    private increaseActiveTask:(increase:number)=>void;
+    private changeActiveTask:(item:activityItemInterface)=>void;
 
 
 
@@ -54,11 +64,11 @@ class Bunny extends Component <any,bunnyInterface> {
                 lvl:3,
 
                 stats:{
-                    str:1,
-                    dex:1,
-                    vit:1,
-                    int:1,
-                    krm:1,
+                    str:10,
+                    dex:10,
+                    vit:10,
+                    int:10,
+                    krm:10,
                 },
 
                 base:{
@@ -420,6 +430,9 @@ class Bunny extends Component <any,bunnyInterface> {
 
                 ],
 
+                work:[
+
+                ],
             },
 
         };
@@ -510,6 +523,63 @@ class Bunny extends Component <any,bunnyInterface> {
             this.state.bunny.inventory.push(item);
         }
 
+        this.workPush=(item:workItemInterface)=>{
+
+            if(this.state.bunny.stats.str<item.workItem.requirements.str){
+                alert('It seems that you have no much STR to take this job! Try to take another, or increase stats.');
+                return 0;
+            }
+
+            else if(this.state.bunny.stats.dex<item.workItem.requirements.dex){
+                alert('It seems that you have no much DEX to take this job! Try to take another, or increase stats.');
+                return 0;
+            }
+            else if(this.state.bunny.stats.vit<item.workItem.requirements.vit){
+                alert('It seems that you have no much VIT to take this job! Try to take another, or increase stats.');
+                return 0;
+            }
+            else if(this.state.bunny.stats.krm<item.workItem.requirements.krm){
+                alert('It seems that you have no much KRM to take this job! Try to take another, or increase stats.');
+                return 0;
+            }
+            else if(this.state.bunny.stats.int<item.workItem.requirements.int){
+                alert('It seems that you have no much INT to take this job! Try to take another, or increase stats.');
+                return 0;
+            }
+
+
+            let temp={
+                workItem:item.workItem,
+                progress:0,
+            }
+            this.state.bunny.work?.push(temp);
+            this.changeActiveTask(temp);
+        }
+
+        this.increaseActiveTask=(increase)=>{
+            if(this.state.bunny.activeTask?.progress){
+                this.state.bunny.activeTask.progress+=increase;
+            }
+        }
+
+        this.changeActiveTask=(item:activityItemInterface)=>{
+            // console.log('SUKA1');
+            if((this.state.bunny.work?.find(some=>some.workItem.id==this.state.bunny.activeTask?.workItem.id))){
+                if(this.state.bunny.activeTask?.progress!=undefined){
+                    let ind=this.state.bunny.work?.findIndex(some=>some.workItem.id==this.state.bunny.activeTask?.workItem.id);
+                    // console.log(this.state.bunny.work[ind].progress);
+                    // console.log(this.state.bunny.activeTask.progress);
+                    this.state.bunny.work[ind].progress=this.state.bunny.activeTask?.progress;
+
+                }
+            }
+            this.state.bunny.activeTask=item;
+            // let ind=this.state.bunny.work?.findIndex(some=>some.workItem.id==this.state.bunny.activeTask?.workItem.id)
+            // if(ind){
+            //     this.state.bunny.work?.splice(ind,1);
+            // }
+        }
+
         // this.openInventory=()=>{
         //     this.setState(prevState => ({
         //         bunny:{
@@ -527,7 +597,9 @@ class Bunny extends Component <any,bunnyInterface> {
         this.changeNeck=this.changeNeck.bind(this);
         this.changeHat=this.changeHat.bind(this);
         this.inventoryPush=this.inventoryPush.bind(this);
-
+        this.workPush=this.workPush.bind(this);
+        this.changeActiveTask=this.changeActiveTask.bind(this);
+        this.increaseActiveTask=this.increaseActiveTask.bind(this);
 
     };
 
@@ -554,8 +626,8 @@ class Bunny extends Component <any,bunnyInterface> {
 
         else if(this.props.currentTab=='history'){
             return(
-                <div className={'w-full h-full bg-[#FF2424]'}>
-                    HISTORY
+                <div className={'w-full h-full'}>
+                    <Activity goToWorkScreen={this.props.changeTab} increaseActiveTask={this.increaseActiveTask} bunny={this.state.bunny} changeActiveTask={this.changeActiveTask}></Activity>
                 </div>
             );
         }
@@ -569,7 +641,7 @@ class Bunny extends Component <any,bunnyInterface> {
         else if(this.props.currentTab=='job'){
             return(
                 <div className={'w-full h-full'}>
-                    <Work></Work>
+                    <Work bunny={this.state.bunny} pushToWork={this.workPush}></Work>
                 </div>
             );
         }

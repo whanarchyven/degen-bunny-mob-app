@@ -11,7 +11,7 @@ const Menu = () => {
         <div className={'w-full h-full sm:w-[375px] sm:h-[662px]'}>
 
             <div className={'w-full h-[80vh] overflow-x-hidden fixed  top-0'}>
-                <Bunny currentTab={currentTab} balance={balance} changeBalance={setBalance}></Bunny>
+                <Bunny currentTab={currentTab} balance={balance} changeBalance={setBalance} changeTab={setCurrentTab}></Bunny>
             </div>
             <div className={'justify-around flex items-center fixed bottom-0 z-[999] w-full h-[10vh] bg-[#A8C500]'}>
                 <div className={'align-middle relative inline-block w-[18%] h-[8vh]'} onClick={()=>{setCurrentTab('history')}}>

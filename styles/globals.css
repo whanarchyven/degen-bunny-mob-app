@@ -41,7 +41,10 @@
     .work-active-tab{
         background: rgba(197, 230, 11, 1);
     }
-
+    .activity-tab{
+        background: rgba(180, 180, 180, 0.22);
+        box-shadow: inset 0px 3.63283px 6.35746px rgba(0, 0, 0, 0.54);
+    }
 
 }
 

@@ -1,4 +1,12 @@
 import {equipment} from "./equipmentItemInterface";
+import {workItemInterface} from "./workItemInterface";
+
+interface activeTask extends  workItemInterface{
+    progress:number;
+}
+
+
+
 export interface bunnyInterface{
     bunny:{
         id:number,
@@ -94,6 +102,10 @@ export interface bunnyInterface{
             int:number,
             krm:number,
         }[],
+
+        work?:Array<activeTask>,
+
+        activeTask?:activeTask,
     },
 
 

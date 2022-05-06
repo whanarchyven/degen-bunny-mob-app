@@ -57,7 +57,7 @@ const Equipment = ({bunny,updateClothes,updateEars,updateHat,updateLeftHand,upda
     const initTotalStr=()=>{
         const allStrDemo=[bunny.equipment.hat?.str,bunny.equipment.clothes?.str,bunny.equipment.neck?.str,bunny.equipment.hears?.str,bunny.equipment.leftHand?.str,bunny.equipment.rightHand?.str];
         const allStr:number[]=[];
-        let total=0;
+        let total=0+bunny.stats.str;
         allStrDemo.map(item=>{
             if(item!=undefined){
                 allStr.push(item);
@@ -67,6 +67,7 @@ const Equipment = ({bunny,updateClothes,updateEars,updateHat,updateLeftHand,upda
             total+=item;
         })
         setTotalStr(total);
+        bunny.stats.str=total;
     }
 
     useEffect(()=>{
@@ -76,7 +77,7 @@ const Equipment = ({bunny,updateClothes,updateEars,updateHat,updateLeftHand,upda
     const initTotalDex=()=>{
         const allDexDemo=[bunny.equipment.hat?.dex,bunny.equipment.clothes?.dex,bunny.equipment.neck?.dex,bunny.equipment.hears?.dex,bunny.equipment.leftHand?.dex,bunny.equipment.rightHand?.dex];
         const allDex:number[]=[];
-        let total=0;
+        let total=0+bunny.stats.dex;
         allDexDemo.map(item=>{
             if(item!=undefined){
                 allDex.push(item);
@@ -86,12 +87,13 @@ const Equipment = ({bunny,updateClothes,updateEars,updateHat,updateLeftHand,upda
             total+=item;
         })
         setTotalDex(total);
+        bunny.stats.dex=total;
     }
 
     const initTotalVit=()=>{
         const allVitDemo=[bunny.equipment.hat?.vit,bunny.equipment.clothes?.vit,bunny.equipment.neck?.vit,bunny.equipment.hears?.vit,bunny.equipment.leftHand?.vit,bunny.equipment.rightHand?.vit];
         const allVit:number[]=[];
-        let total=0;
+        let total=0+bunny.stats.vit;
         allVitDemo.map(item=>{
             if(item!=undefined){
                 allVit.push(item);
@@ -101,12 +103,13 @@ const Equipment = ({bunny,updateClothes,updateEars,updateHat,updateLeftHand,upda
             total+=item;
         })
         setTotalVit(total);
+        bunny.stats.vit=total;
     }
 
     const initTotalInt=()=>{
         const allIntDemo=[bunny.equipment.hat?.int,bunny.equipment.clothes?.int,bunny.equipment.neck?.int,bunny.equipment.hears?.int,bunny.equipment.leftHand?.int,bunny.equipment.rightHand?.int];
         const allInt:number[]=[];
-        let total=0;
+        let total=0+bunny.stats.int;
         allIntDemo.map(item=>{
             if(item!=undefined){
                 allInt.push(item);
@@ -116,13 +119,14 @@ const Equipment = ({bunny,updateClothes,updateEars,updateHat,updateLeftHand,upda
             total+=item;
         })
         setTotalInt(total);
+        bunny.stats.int=total;
     }
 
 
     const initTotalKrm=()=>{
         const allKrmDemo=[bunny.equipment.hat?.krm,bunny.equipment.clothes?.krm,bunny.equipment.neck?.krm,bunny.equipment.hears?.krm,bunny.equipment.leftHand?.krm,bunny.equipment.rightHand?.krm];
         const allKrm:number[]=[];
-        let total=0;
+        let total=0+bunny.stats.krm;
         allKrmDemo.map(item=>{
             if(item!=undefined){
                 allKrm.push(item);
@@ -132,6 +136,7 @@ const Equipment = ({bunny,updateClothes,updateEars,updateHat,updateLeftHand,upda
             total+=item;
         })
         setTotalKrm(total);
+        bunny.stats.krm=total;
     }
 
 
@@ -296,45 +301,45 @@ const Equipment = ({bunny,updateClothes,updateEars,updateHat,updateLeftHand,upda
                 <div className={'w-full block flex items-center px-[8vw] h-[9vw]'}>
                     <p className={'w-[20%] font-josefin uppercase font-medium text-xl]'}>STR</p>
                     <div className={'w-[50%] items-center relative inline-flex h-[2vw]'}>
-                        <StatbarPositive color={'#AEC700'} width={(totalStr)*2.5+'%'} ></StatbarPositive>
-                        <StatbarNegative width={100-(totalStr*2.5)+'%'} ></StatbarNegative>
-                        <StatIndicator className={'border-4 border-white w-[4.5vw] bg-[#AEC700] absolute rounded-full h-[4.5vw]'} margin={totalStr*2.5-2+'%'}></StatIndicator>
+                        <StatbarPositive color={'#AEC700'} width={(bunny.stats.str)*2.5+'%'} ></StatbarPositive>
+                        <StatbarNegative width={100-(bunny.stats.str*2.5)+'%'} ></StatbarNegative>
+                        <StatIndicator className={'border-4 border-white w-[4.5vw] bg-[#AEC700] absolute rounded-full h-[4.5vw]'} margin={bunny.stats.str*2.5-2+'%'}></StatIndicator>
                     </div>
                     <button className={'font-soyuz font-semibold text-[#000] green-gradient w-[30%] inline-block rounded-[1vh] h-[70%] mx-[5%]'}>show more</button>
                 </div>
                 <div className={'w-full block flex items-center px-[8vw] h-[9vw]'}>
                     <p className={'w-[20%] font-josefin uppercase font-medium text-xl]'}>Dex</p>
                     <div className={'w-[50%] items-center relative inline-flex h-[2vw]'}>
-                        <StatbarPositive color={'#FFB800'} width={(totalDex)*2.5+'%'} ></StatbarPositive>
-                        <StatbarNegative width={100-(totalDex*2.5)+'%'} ></StatbarNegative>
-                        <StatIndicator className={'border-4 border-white w-[4.5vw] bg-[#FFB800] absolute rounded-full h-[4.5vw]'} margin={totalDex*2.5-2+'%'}></StatIndicator>
+                        <StatbarPositive color={'#FFB800'} width={(bunny.stats.dex)*2.5+'%'} ></StatbarPositive>
+                        <StatbarNegative width={100-(bunny.stats.dex*2.5)+'%'} ></StatbarNegative>
+                        <StatIndicator className={'border-4 border-white w-[4.5vw] bg-[#FFB800] absolute rounded-full h-[4.5vw]'} margin={bunny.stats.dex*2.5-2+'%'}></StatIndicator>
                     </div>
                     <button className={'font-soyuz font-semibold text-[#000] green-gradient w-[30%] inline-block rounded-[1vh] h-[70%] mx-[5%]'}>show more</button>
                 </div>
                 <div className={'w-full block flex items-center px-[8vw] h-[9vw]'}>
                     <p className={'w-[20%] font-josefin uppercase font-medium text-xl]'}>Vit</p>
                     <div className={'w-[50%] items-center relative inline-flex h-[2vw]'}>
-                        <StatbarPositive color={'#EC43FF'} width={(totalVit)*2.5+'%'} ></StatbarPositive>
-                        <StatbarNegative width={100-(totalVit*2.5)+'%'} ></StatbarNegative>
-                        <StatIndicator className={'border-4 border-white w-[4.5vw] bg-[#EC43FF] absolute rounded-full h-[4.5vw]'} margin={totalVit*2.5-2+'%'}></StatIndicator>
+                        <StatbarPositive color={'#EC43FF'} width={(bunny.stats.vit)*2.5+'%'} ></StatbarPositive>
+                        <StatbarNegative width={100-(bunny.stats.vit*2.5)+'%'} ></StatbarNegative>
+                        <StatIndicator className={'border-4 border-white w-[4.5vw] bg-[#EC43FF] absolute rounded-full h-[4.5vw]'} margin={bunny.stats.vit*2.5-2+'%'}></StatIndicator>
                     </div>
                     <button className={'font-soyuz font-semibold text-[#000] green-gradient w-[30%] inline-block rounded-[1vh] h-[70%] mx-[5%]'}>show more</button>
                 </div>
                 <div className={'w-full block flex items-center px-[8vw] h-[9vw]'}>
                     <p className={'w-[20%] font-josefin uppercase font-medium text-xl]'}>Int</p>
                     <div className={'w-[50%] items-center relative inline-flex h-[2vw]'}>
-                        <StatbarPositive color={'#F97A55'} width={(totalInt)*2.5+'%'} ></StatbarPositive>
-                        <StatbarNegative width={100-(totalInt*2.5)+'%'} ></StatbarNegative>
-                        <StatIndicator className={'border-4 border-white w-[4.5vw] bg-[#F97A55] absolute rounded-full h-[4.5vw]'} margin={totalInt*2.5-2+'%'}></StatIndicator>
+                        <StatbarPositive color={'#F97A55'} width={(bunny.stats.int)*2.5+'%'} ></StatbarPositive>
+                        <StatbarNegative width={100-(bunny.stats.int*2.5)+'%'} ></StatbarNegative>
+                        <StatIndicator className={'border-4 border-white w-[4.5vw] bg-[#F97A55] absolute rounded-full h-[4.5vw]'} margin={bunny.stats.int*2.5-2+'%'}></StatIndicator>
                     </div>
                     <button className={'font-soyuz font-semibold text-[#000] green-gradient w-[30%] inline-block rounded-[1vh] h-[70%] mx-[5%]'}>show more</button>
                 </div>
                 <div className={'w-full block flex items-center px-[8vw] h-[9vw]'}>
                     <p className={'w-[20%] font-josefin uppercase font-medium text-xl]'}>Krm</p>
                     <div className={'w-[50%] items-center relative inline-flex h-[2vw]'}>
-                        <StatbarPositive color={'#595AD0'} width={(totalKrm)*2.5+'%'} ></StatbarPositive>
-                        <StatbarNegative width={100-(totalKrm*2.5)+'%'} ></StatbarNegative>
-                        <StatIndicator className={'border-4 border-white w-[4.5vw] bg-[#595AD0] absolute rounded-full h-[4.5vw]'} margin={totalKrm*2.5-2+'%'}></StatIndicator>
+                        <StatbarPositive color={'#595AD0'} width={(bunny.stats.krm)*2.5+'%'} ></StatbarPositive>
+                        <StatbarNegative width={100-(bunny.stats.krm*2.5)+'%'} ></StatbarNegative>
+                        <StatIndicator className={'border-4 border-white w-[4.5vw] bg-[#595AD0] absolute rounded-full h-[4.5vw]'} margin={bunny.stats.krm*2.5-2+'%'}></StatIndicator>
                     </div>
                     <button className={'font-soyuz font-semibold text-[#000] green-gradient w-[30%] inline-block rounded-[1vh] h-[70%] mx-[5%]'}>show more</button>
                 </div>

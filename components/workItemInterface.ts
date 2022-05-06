@@ -6,6 +6,8 @@ export interface workItemInterface{
         description:string,
         task:string,
         profit:number,
+        goal:number,
+        color:string,
         requirements: {
             str:number,
             dex:number,
