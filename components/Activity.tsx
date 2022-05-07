@@ -33,46 +33,18 @@ const StatIndicator = styled.div<{margin: string,color:string}>`
 `
 
 
-interface activityItemInterface extends workItemInterface{
-    progress:number
-}
+
+import {activeTask} from "./activeTaskInterface";
 
 interface activityInterface extends bunnyInterface{
-    changeActiveTask:(item:activityItemInterface)=>void
+    changeActiveTask:(item:activeTask)=>void
     increaseActiveTask:(increase:number)=>void
     goToWorkScreen:(item:string)=>void
 }
 
 const Activity = ({bunny,changeActiveTask,goToWorkScreen}:activityInterface) => {
     const [openPop,setOpenPop]=useState(false);
-    const[activityInPop,setActivityInPop]=useState({
-        workItem:{
-            id:1,
-            chiefName:'SCP-123',
-            workName:'seed carrot',
-            description:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-            task:'walk 10km',
-            profit:35,
-            goal:10,
-            color:'#000000',
-            requirements: {
-                str:0,
-                dex:3,
-                vit:0,
-                int:0,
-                krm:0,
-                skills:[
-                    {
-                        name:'butcher',
-                        image:'/asddjasf',
-                        color:'F97A55'
-                    },
-
-                ]
-            },
-        },
-        progress:0,
-    });
+    const[activityInPop,setActivityInPop]=useState(bunny.activeTask);
     if(bunny.activeTask!=undefined){
         return (
             <div className={'w-full h-full bg-cover bg-[url("../public/images/fishbg.png")]'}>
@@ -80,7 +52,7 @@ const Activity = ({bunny,changeActiveTask,goToWorkScreen}:activityInterface) => 
                 <div className={'w-[28px] h-[28px] right-[16vw] top-[21vh] absolute'}>
                     <Image src={'/images/activity_icon.svg'} layout={'fill'}></Image>
                 </div>
-                <div className={'absolute left-[12%] w-[72%] top-[29vh] h-[50vh]'}>
+                <div className={'absolute left-[12%] w-[72%] top-[29vh] h-[50vh]'} onClick={()=>{}}>
                     <div className={'w-full h-[13vh] relative activity-tab rounded-[1vh]'}>
                         <p className={'absolute text-white font-soyuz text-[3vh] left-[3vw] top-[-2.2vh] inline-block'}>{bunny.activeTask.workItem.workName}</p>
                         <div className={'w-[80%] mx-[10%] mt-[6.3vh] items-center relative inline-flex h-[2vw]'}>
@@ -101,7 +73,7 @@ const Activity = ({bunny,changeActiveTask,goToWorkScreen}:activityInterface) => 
                         {bunny.work?.map(item=>{
                             if(item.workItem.id!=bunny.activeTask?.workItem.id){
                                 return(
-                                    <div className={'w-full h-[13vh] relative mt-[4vh] border-[1px] border-white rounded-[1vh]'} onClick={()=>{}}>
+                                    <div key={item.workItem.id} className={'w-full h-[13vh] relative mt-[4vh] border-[1px] border-white rounded-[1vh]'} onClick={()=>{setOpenPop(true);setActivityInPop(item)}}>
                                         <p className={'backdrop-blur-xl absolute text-white font-soyuz text-[3vh] left-[3vw] top-[-2.7vh] inline-block'}>{item.workItem.workName}</p>
                                         <div className={'w-[80%] mx-[10%] mt-[6.3vh] items-center relative inline-flex h-[2vw]'}>
                                             <StatbarPositive color={item.workItem.color} width={((item.progress/item.workItem.goal)*100)+'%'} ></StatbarPositive>
@@ -116,7 +88,7 @@ const Activity = ({bunny,changeActiveTask,goToWorkScreen}:activityInterface) => 
                         })}
                     </div>
                 </div>
-                {openPop?<ActivityPopup activityItem={activityInPop} closePop={()=>{setOpenPop(false)}} changeActiveItem={changeActiveTask} workItem={activityInPop.workItem} progress={activityInPop.progress}></ActivityPopup>:<div></div>}
+                {openPop&&activityInPop?<ActivityPopup activityItem={activityInPop} closePop={()=>{setOpenPop(false)}} changeActiveItem={changeActiveTask} workItem={activityInPop.workItem} progress={activityInPop.progress}></ActivityPopup>:<div></div>}
             </div>
         );
     }

@@ -26,7 +26,7 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                 {bunny.inventory.map(item=> {
                     if(item.type=='clothes'){
                         return(
-                          <div className={'w-[28%] mt-[4vw] relative h-[15vh] inventory-card-bg rounded-[2vw]'}  key={item.id} onClick={()=>{updateClothes(item);updateStats()}}>
+                          <div className={'w-[28%] mt-[4vw] relative h-[15vh] inventory-card-bg rounded-[2vw]'}  key={item.id} onClick={()=>{updateClothes(item);console.log('checked');updateStats()}}>
                               {bunny.equipment.clothes?.name==item.name?
                                   <div className={'w-full absolute top-0 border-2 border-[#D5F908] rounded-[2vw] h-full'}>
                                       <Image src={'/images/bunny_generation/Clothes/'+item.image+'.png'} layout={'fill'}></Image>

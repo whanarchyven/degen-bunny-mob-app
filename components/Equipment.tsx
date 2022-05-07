@@ -30,6 +30,7 @@ import {bunnyInterface} from "./bunnyInterface";
 import EquipPopUp from "./EquipPopUp";
 import {equipment} from "./equipmentItemInterface";
 import {number} from "prop-types";
+import EquipmentCards from "./EquipmentCards";
 
 interface homeModuleInterface extends bunnyInterface{
     updateLeftHand: (item: equipment) => any,
@@ -57,7 +58,7 @@ const Equipment = ({bunny,updateClothes,updateEars,updateHat,updateLeftHand,upda
     const initTotalStr=()=>{
         const allStrDemo=[bunny.equipment.hat?.str,bunny.equipment.clothes?.str,bunny.equipment.neck?.str,bunny.equipment.hears?.str,bunny.equipment.leftHand?.str,bunny.equipment.rightHand?.str];
         const allStr:number[]=[];
-        let total=0+bunny.stats.str;
+        let total=0;
         allStrDemo.map(item=>{
             if(item!=undefined){
                 allStr.push(item);
@@ -72,12 +73,12 @@ const Equipment = ({bunny,updateClothes,updateEars,updateHat,updateLeftHand,upda
 
     useEffect(()=>{
         initTotalStats();
-    })
+    });
 
     const initTotalDex=()=>{
         const allDexDemo=[bunny.equipment.hat?.dex,bunny.equipment.clothes?.dex,bunny.equipment.neck?.dex,bunny.equipment.hears?.dex,bunny.equipment.leftHand?.dex,bunny.equipment.rightHand?.dex];
         const allDex:number[]=[];
-        let total=0+bunny.stats.dex;
+        let total=0;
         allDexDemo.map(item=>{
             if(item!=undefined){
                 allDex.push(item);
@@ -93,7 +94,7 @@ const Equipment = ({bunny,updateClothes,updateEars,updateHat,updateLeftHand,upda
     const initTotalVit=()=>{
         const allVitDemo=[bunny.equipment.hat?.vit,bunny.equipment.clothes?.vit,bunny.equipment.neck?.vit,bunny.equipment.hears?.vit,bunny.equipment.leftHand?.vit,bunny.equipment.rightHand?.vit];
         const allVit:number[]=[];
-        let total=0+bunny.stats.vit;
+        let total=0;
         allVitDemo.map(item=>{
             if(item!=undefined){
                 allVit.push(item);
@@ -109,7 +110,7 @@ const Equipment = ({bunny,updateClothes,updateEars,updateHat,updateLeftHand,upda
     const initTotalInt=()=>{
         const allIntDemo=[bunny.equipment.hat?.int,bunny.equipment.clothes?.int,bunny.equipment.neck?.int,bunny.equipment.hears?.int,bunny.equipment.leftHand?.int,bunny.equipment.rightHand?.int];
         const allInt:number[]=[];
-        let total=0+bunny.stats.int;
+        let total=0;
         allIntDemo.map(item=>{
             if(item!=undefined){
                 allInt.push(item);
@@ -126,7 +127,7 @@ const Equipment = ({bunny,updateClothes,updateEars,updateHat,updateLeftHand,upda
     const initTotalKrm=()=>{
         const allKrmDemo=[bunny.equipment.hat?.krm,bunny.equipment.clothes?.krm,bunny.equipment.neck?.krm,bunny.equipment.hears?.krm,bunny.equipment.leftHand?.krm,bunny.equipment.rightHand?.krm];
         const allKrm:number[]=[];
-        let total=0+bunny.stats.krm;
+        let total=0;
         allKrmDemo.map(item=>{
             if(item!=undefined){
                 allKrm.push(item);
@@ -138,6 +139,7 @@ const Equipment = ({bunny,updateClothes,updateEars,updateHat,updateLeftHand,upda
         setTotalKrm(total);
         bunny.stats.krm=total;
     }
+
 
 
     const initTotalStats=()=>{

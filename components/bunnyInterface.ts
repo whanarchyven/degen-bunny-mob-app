@@ -1,10 +1,7 @@
 import {equipment} from "./equipmentItemInterface";
 import {workItemInterface} from "./workItemInterface";
 
-interface activeTask extends  workItemInterface{
-    progress:number;
-}
-
+import {activeTask} from "./activeTaskInterface";
 
 
 export interface bunnyInterface{
