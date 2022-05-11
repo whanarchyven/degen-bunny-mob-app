@@ -26,22 +26,22 @@ const BunnyGeneration = (bunny:bunnyInterface) => {
                 {bunny.bunny.base.overhead==undefined?<div></div> : <Image src={'/images/bunny_generation/Over head/'+bunny.bunny.base.overhead+'.png'} layout={'fill'}></Image>}
             </div>
             <div className={'w-full absolute top-0 left-0 h-full'}>
-                {bunny.bunny.equipment.hat==undefined?<div></div> : <Image src={'/images/bunny_generation/Hats/'+bunny.bunny.equipment.hat.image+'.png'} layout={'fill'}></Image>}
+                {bunny.bunny.equipment.hat==undefined?<div></div> : <Image src={'/images/bunny_generation/Hats/'+bunny.bunny.equipment.hat.name+'.png'} layout={'fill'}></Image>}
             </div>
             <div className={'w-full absolute top-0 left-0 h-full'}>
-                {bunny.bunny.equipment.clothes==undefined?<div></div> : <Image src={'/images/bunny_generation/Clothes/'+bunny.bunny.equipment.clothes.image+'.png'} layout={'fill'}></Image>}
+                {bunny.bunny.equipment.clothes==undefined?<div></div> : <Image src={'/images/bunny_generation/Clothes/'+bunny.bunny.equipment.clothes.name+'.png'} layout={'fill'}></Image>}
             </div>
             <div className={'w-full absolute top-0 left-0 h-full'}>
-                {bunny.bunny.equipment.leftHand==undefined?<div></div> : <Image src={'/images/bunny_generation/Left hand/'+bunny.bunny.equipment.leftHand.image+'.png'} layout={'fill'}></Image>}
+                {bunny.bunny.equipment.leftHand==undefined?<div></div> : <Image src={'/images/bunny_generation/Left hand/'+bunny.bunny.equipment.leftHand.name+'.png'} layout={'fill'}></Image>}
             </div>
             <div className={'w-full absolute top-0 left-0 h-full'}>
-                {bunny.bunny.equipment.rightHand==undefined?<div></div> : <Image src={'/images/bunny_generation/Right hand/'+bunny.bunny.equipment.rightHand.image+'.png'} layout={'fill'}></Image>}
+                {bunny.bunny.equipment.rightHand==undefined?<div></div> : <Image src={'/images/bunny_generation/Right hand/'+bunny.bunny.equipment.rightHand.name+'.png'} layout={'fill'}></Image>}
             </div>
             <div className={'w-full absolute top-0 left-0 h-full'}>
-                {bunny.bunny.equipment.hears==undefined?<div></div> : <Image src={'/images/bunny_generation/Ears/'+bunny.bunny.equipment.hears.image+'.png'} layout={'fill'}></Image>}
+                {bunny.bunny.equipment.hears==undefined?<div></div> : <Image src={'/images/bunny_generation/Ears/'+bunny.bunny.equipment.hears.name+'.png'} layout={'fill'}></Image>}
             </div>
             <div className={'w-full absolute top-0 left-0 h-full'}>
-                {bunny.bunny.equipment.neck==undefined?<div></div> : <Image src={'/images/bunny_generation/Necklace/'+bunny.bunny.equipment.neck.image+'.png'} layout={'fill'}></Image>}
+                {bunny.bunny.equipment.neck==undefined?<div></div> : <Image src={'/images/bunny_generation/Necklace/'+bunny.bunny.equipment.neck.name+'.png'} layout={'fill'}></Image>}
             </div>
         </div>
     );

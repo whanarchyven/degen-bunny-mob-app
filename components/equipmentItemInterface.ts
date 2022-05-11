@@ -1,6 +1,6 @@
 export interface equipment{
         id:number,
-        image:string,
+        rarity:string
         name:string,
         type:string,
         miniature?:string
@@ -9,4 +9,11 @@ export interface equipment{
         vit:number,
         int:number,
         krm:number,
+        requirements?:{
+                str?:number,
+                dex?:number,
+                vit?:number,
+                int?:number,
+                krm?:number,
+        }
 }

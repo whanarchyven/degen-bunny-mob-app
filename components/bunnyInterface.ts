@@ -32,65 +32,107 @@ export interface bunnyInterface{
 
         equipment:{
             rightHand?:{
-                image:string,
+                rarity:string,
                 name:string,
                 str:number,
                 dex:number,
                 vit:number,
                 int:number,
                 krm:number,
+                requirements?:{
+                    str?:number,
+                    vit?:number,
+                    int?:number,
+                    krm?:number,
+                    dex?:number,
+                }
             },
             leftHand?:{
-                image:string,
+                rarity:string,
                 name:string,
                 str:number,
                 dex:number,
                 vit:number,
                 int:number,
                 krm:number,
+                requirements?:{
+                    str?:number,
+                    vit?:number,
+                    int?:number,
+                    krm?:number,
+                    dex?:number,
+                }
             },
             hat?:{
-                image:string,
+                rarity:string,
                 name:string,
                 str:number,
                 dex:number,
                 vit:number,
                 int:number,
                 krm:number,
+                requirements?:{
+                    str?:number,
+                    vit?:number,
+                    int?:number,
+                    krm?:number,
+                    dex?:number,
+                }
             },
             clothes?:{
-                image:string,
+                rarity:string,
                 name:string,
                 str:number,
                 dex:number,
                 vit:number,
                 int:number,
                 krm:number,
+                requirements?:{
+                    str?:number,
+                    vit?:number,
+                    int?:number,
+                    krm?:number,
+                    dex?:number,
+                }
             },
             neck?:{
-                image:string,
+                rarity:string,
                 name:string,
                 str:number,
                 dex:number,
                 vit:number,
                 int:number,
                 krm:number,
+                requirements?:{
+                    str?:number,
+                    vit?:number,
+                    int?:number,
+                    krm?:number,
+                    dex?:number,
+                }
             },
             hears?:{
-                image:string,
+                rarity:string,
                 name:string,
                 str:number,
                 dex:number,
                 vit:number,
                 int:number,
                 krm:number,
+                requirements?:{
+                    str?:number,
+                    vit?:number,
+                    int?:number,
+                    krm?:number,
+                    dex?:number,
+                }
             },
         },
         isInventoryOpen:boolean,
         currentInventoryTab:string,
         inventory:{
             id:number,
-            image:string,
+            rarity:string,
             name:string,
             type:string,
             str:number,
@@ -98,6 +140,13 @@ export interface bunnyInterface{
             vit:number,
             int:number,
             krm:number,
+            requirements?:{
+                str?:number,
+                dex?:number,
+                vit?:number,
+                int?:number,
+                krm?:number,
+            }
         }[],
 
         work?:Array<activeTask>,

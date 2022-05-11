@@ -185,7 +185,7 @@ const Equipment = ({bunny,updateClothes,updateEars,updateHat,updateLeftHand,upda
                                 <Image src={'/images/equipment_module/equip_tab_active.svg'} layout={'fill'}></Image>
                             </div>
                             <div className={'w-[5vh] h-[5vh] rotate-180 left-0 left-[4vw] top-[4vw] absolute'}>
-                                <Image src={'/images/bunny_generation/Hats/'+bunny.equipment.hat.image+'.png'} layout={'fill'}></Image>
+                                <Image src={'/images/miniatures/Hats/'+bunny.equipment.hat.name+'.png'} layout={'fill'}></Image>
                             </div>
                         </div>
                     }
@@ -206,7 +206,7 @@ const Equipment = ({bunny,updateClothes,updateEars,updateHat,updateLeftHand,upda
                                 <Image src={'/images/equipment_module/equip_tab_active.svg'} layout={'fill'}></Image>
                             </div>
                             <div className={'w-[5vh] h-[5vh] rotate-180 left-0 left-[4vw] top-[4vw] absolute'}>
-                                <Image src={'/images/bunny_generation/Clothes/'+bunny.equipment.clothes.image+'.png'} layout={'fill'}></Image>
+                                <Image src={'/images/miniatures/Clothes/'+bunny.equipment.clothes.name+'.png'} layout={'fill'}></Image>
                             </div>
                         </div>
                     }
@@ -227,7 +227,7 @@ const Equipment = ({bunny,updateClothes,updateEars,updateHat,updateLeftHand,upda
                                 <Image src={'/images/equipment_module/equip_tab_active.svg'} layout={'fill'}></Image>
                             </div>
                             <div className={'w-[5vh] h-[5vh] rotate-180 left-0 left-[4vw] top-[4vw] absolute'}>
-                                <Image src={'/images/bunny_generation/Left hand/'+bunny.equipment.leftHand.image+'.png'} layout={'fill'}></Image>
+                                <Image src={'/images/miniatures/Left hand/'+bunny.equipment.leftHand.name+'.png'} layout={'fill'}></Image>
                             </div>
                         </div>
                     }
@@ -248,7 +248,7 @@ const Equipment = ({bunny,updateClothes,updateEars,updateHat,updateLeftHand,upda
                                 <Image src={'/images/equipment_module/equip_tab_active.svg'} layout={'fill'}></Image>
                             </div>
                             <div className={'w-[5vh] h-[5vh] left-0 left-[4vw] top-[4vw] absolute'}>
-                                <Image src={'/images/bunny_generation/Ears/'+bunny.equipment.hears.image+'.png'} layout={'fill'}></Image>
+                                <Image src={'/images/miniatures/Ears/'+bunny.equipment.hears.name+'.png'} layout={'fill'}></Image>
                             </div>
                         </div>
                     }
@@ -269,7 +269,7 @@ const Equipment = ({bunny,updateClothes,updateEars,updateHat,updateLeftHand,upda
                                 <Image src={'/images/equipment_module/equip_tab_active.svg'} layout={'fill'}></Image>
                             </div>
                             <div className={'w-[5vh] h-[5vh] left-0 left-[4vw] top-[4vw] absolute'}>
-                                <Image src={'/images/bunny_generation/Necklace/'+bunny.equipment.neck.image+'.png'} layout={'fill'}></Image>
+                                <Image src={'/images/miniatures/Necklace/'+bunny.equipment.neck.name+'.png'} layout={'fill'}></Image>
                             </div>
                         </div>
                     }
@@ -290,7 +290,7 @@ const Equipment = ({bunny,updateClothes,updateEars,updateHat,updateLeftHand,upda
                                 <Image src={'/images/equipment_module/equip_tab_active.svg'} layout={'fill'}></Image>
                             </div>
                             <div className={'w-[5vh] h-[5vh] left-0 left-[4vw] top-[4vw] absolute'}>
-                                <Image src={'/images/bunny_generation/Right hand/'+bunny.equipment.rightHand.image+'.png'} layout={'fill'}></Image>
+                                <Image src={'/images/miniatures/Right hand/'+bunny.equipment.rightHand.name+'.png'} layout={'fill'}></Image>
                             </div>
                         </div>
                     }

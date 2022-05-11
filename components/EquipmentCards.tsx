@@ -29,11 +29,11 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                           <div className={'w-[28%] mt-[4vw] relative h-[15vh] inventory-card-bg rounded-[2vw]'}  key={item.id} onClick={()=>{updateClothes(item);console.log('checked');updateStats()}}>
                               {bunny.equipment.clothes?.name==item.name?
                                   <div className={'w-full absolute top-0 border-2 border-[#D5F908] rounded-[2vw] h-full'}>
-                                      <Image src={'/images/bunny_generation/Clothes/'+item.image+'.png'} layout={'fill'}></Image>
+                                      <Image src={'/images/bunny_generation/Clothes/'+item.name+'.png'} layout={'fill'}></Image>
                                   </div>
                                   :
                                   <div className={'w-full absolute rounded-[2vw] top-0 h-full'}>
-                                      <Image src={'/images/bunny_generation/Clothes/'+item.image+'.png'} layout={'fill'}></Image>
+                                      <Image src={'/images/bunny_generation/Clothes/'+item.name+'.png'} layout={'fill'}></Image>
                                   </div>
                               }
                               <div className={'w-full absolute top-[-1.5vh] h-[3vh]'}>
@@ -61,11 +61,11 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                             <div className={'w-[28%] mt-[4vw] relative h-[15vh] inventory-card-bg rounded-[2vw]'}  key={item.id} onClick={()=>{updateHat(item);updateStats()}}>
                                 {bunny.equipment.hat?.name==item.name?
                                     <div className={'w-full absolute top-0 border-2 border-[#D5F908] rounded-[2vw] h-full'}>
-                                        <Image src={'/images/bunny_generation/Hats/'+item.image+'.png'} layout={'fill'}></Image>
+                                        <Image src={'/images/bunny_generation/Hats/'+item.name+'.png'} layout={'fill'}></Image>
                                     </div>
                                     :
                                     <div className={'w-full absolute rounded-[2vw] top-0 h-full'}>
-                                        <Image src={'/images/bunny_generation/Hats/'+item.image+'.png'} layout={'fill'}></Image>
+                                        <Image src={'/images/bunny_generation/Hats/'+item.name+'.png'} layout={'fill'}></Image>
                                     </div>
                                 }
                                 <div className={'w-full absolute top-[-1.5vh] h-[3vh]'}>
@@ -93,11 +93,11 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                             <div className={'w-[28%] mt-[4vw] relative h-[15vh] inventory-card-bg rounded-[2vw]'}  key={item.id} onClick={()=>{updateLeftHand(item);updateStats()}}>
                                 {bunny.equipment.leftHand?.name==item.name?
                                     <div className={'w-full absolute top-0 border-2 border-[#D5F908] rounded-[2vw] h-full'}>
-                                        <Image src={'/images/bunny_generation/Left hand/'+item.image+'.png'} layout={'fill'}></Image>
+                                        <Image src={'/images/bunny_generation/Left hand/'+item.name+'.png'} layout={'fill'}></Image>
                                     </div>
                                     :
                                     <div className={'w-full absolute rounded-[2vw] top-0 h-full'}>
-                                        <Image src={'/images/bunny_generation/Left hand/'+item.image+'.png'} layout={'fill'}></Image>
+                                        <Image src={'/images/bunny_generation/Left hand/'+item.name+'.png'} layout={'fill'}></Image>
                                     </div>
                                 }
                                 <div className={'w-full absolute top-[-1.5vh] h-[3vh]'}>
@@ -125,11 +125,11 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                             <div className={'w-[28%] mt-[4vw] relative h-[15vh] inventory-card-bg rounded-[2vw]'}  key={item.id} onClick={()=>{updateRightHand(item);updateStats()}}>
                                 {bunny.equipment.rightHand?.name==item.name?
                                     <div className={'w-full absolute top-0 border-2 border-[#D5F908] rounded-[2vw] h-full'}>
-                                        <Image src={'/images/bunny_generation/Right hand/'+item.image+'.png'} layout={'fill'}></Image>
+                                        <Image src={'/images/bunny_generation/Right hand/'+item.name+'.png'} layout={'fill'}></Image>
                                     </div>
                                     :
                                     <div className={'w-full absolute rounded-[2vw] top-0 h-full'}>
-                                        <Image src={'/images/bunny_generation/Right hand/'+item.image+'.png'} layout={'fill'}></Image>
+                                        <Image src={'/images/bunny_generation/Right hand/'+item.name+'.png'} layout={'fill'}></Image>
                                     </div>
                                 }
                                 <div className={'w-full absolute top-[-1.5vh] h-[3vh]'}>
@@ -157,11 +157,11 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                             <div className={'w-[28%] mt-[4vw] relative h-[15vh] inventory-card-bg rounded-[2vw]'}  key={item.id} onClick={()=>{updateNeck(item);updateStats()}}>
                                 {bunny.equipment.neck?.name==item.name?
                                     <div className={'w-full absolute top-0 border-2 border-[#D5F908] rounded-[2vw] h-full'}>
-                                        <Image src={'/images/bunny_generation/Necklace/'+item.image+'.png'} layout={'fill'}></Image>
+                                        <Image src={'/images/bunny_generation/Necklace/'+item.name+'.png'} layout={'fill'}></Image>
                                     </div>
                                     :
                                     <div className={'w-full absolute rounded-[2vw] top-0 h-full'}>
-                                        <Image src={'/images/bunny_generation/Necklace/'+item.image+'.png'} layout={'fill'}></Image>
+                                        <Image src={'/images/bunny_generation/Necklace/'+item.name+'.png'} layout={'fill'}></Image>
                                     </div>
                                 }
                                 <div className={'w-full absolute top-[-1.5vh] h-[3vh]'}>
@@ -189,11 +189,11 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                             <div className={'w-[28%] mt-[4vw] relative h-[15vh] inventory-card-bg rounded-[2vw]'}  key={item.id} onClick={()=>{updateEars(item);updateStats()}}>
                                 {bunny.equipment.hears?.name==item.name?
                                     <div className={'w-full absolute top-0 border-2 border-[#D5F908] rounded-[2vw] h-full'}>
-                                        <Image src={'/images/bunny_generation/Ears/'+item.image+'.png'} layout={'fill'}></Image>
+                                        <Image src={'/images/bunny_generation/Ears/'+item.name+'.png'} layout={'fill'}></Image>
                                     </div>
                                     :
                                     <div className={'w-full absolute rounded-[2vw] top-0 h-full'}>
-                                        <Image src={'/images/bunny_generation/Ears/'+item.image+'.png'} layout={'fill'}></Image>
+                                        <Image src={'/images/bunny_generation/Ears/'+item.name+'.png'} layout={'fill'}></Image>
                                     </div>
                                 }
                                 <div className={'w-full absolute top-[-1.5vh] h-[3vh]'}>

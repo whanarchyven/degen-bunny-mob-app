@@ -9,7 +9,7 @@ interface marketplaceCards extends  bunnyInterface{
     currentMarketplace:string,
     inventory:{
         id:number,
-        image:string,
+        rarity:string,
         name:string,
         type:string,
         str:number,
@@ -17,6 +17,13 @@ interface marketplaceCards extends  bunnyInterface{
         vit:number,
         int:number,
         krm:number,
+        requirements?:{
+            str?:number,
+            dex?:number,
+            vit?:number,
+            int?:number,
+            krm?:number,
+        }
     }[],
     currentBuyingTab:string,
     pushToInventory:(item:equipment)=>void;
@@ -45,7 +52,7 @@ const MarketplaceCards = ({currentMarketplace,currentBuyingTab,pushToInventory, 
     const [marketplaceItems,setMarketplaceItems]=useState([
         {
             id:40,
-            image:'Tape_black10',
+            rarity:'Tape_black10',
             name:'Tape_black10',
             type:'clothes',
             str:4,
@@ -58,7 +65,7 @@ const MarketplaceCards = ({currentMarketplace,currentBuyingTab,pushToInventory, 
 
         },{
             id:42,
-            image:'Tape_Gray10',
+            rarity:'Tape_Gray10',
             name:'Tape_Gray10',
             type:'clothes',
             str:4,
@@ -72,7 +79,7 @@ const MarketplaceCards = ({currentMarketplace,currentBuyingTab,pushToInventory, 
         },
         {
             id:44,
-            image:'Iron_man_icon3',
+            rarity:'Iron_man_icon3',
             name:'Iron_man_icon3',
             type:'clothes',
             str:4,
@@ -86,7 +93,7 @@ const MarketplaceCards = ({currentMarketplace,currentBuyingTab,pushToInventory, 
         },
         {
             id:45,
-            image:'00710',
+            rarity:'00710',
             name:'00710',
             type:'clothes',
             str:4,
@@ -100,7 +107,7 @@ const MarketplaceCards = ({currentMarketplace,currentBuyingTab,pushToInventory, 
         },
         {
             id:46,
-            image:'Gray_fur5',
+            rarity:'Gray_fur5',
             name:'Gray_fur5',
             type:'ears',
             str:4,
@@ -114,7 +121,7 @@ const MarketplaceCards = ({currentMarketplace,currentBuyingTab,pushToInventory, 
         },
         {
             id:47,
-            image:'Health_bracelet_r5',
+            rarity:'Health_bracelet_r5',
             name:'Health_bracelet_r5',
             type:'right hand',
             str:4,
@@ -128,7 +135,7 @@ const MarketplaceCards = ({currentMarketplace,currentBuyingTab,pushToInventory, 
         },
         {
             id:48,
-            image:'Whip_l5',
+            rarity:'Whip_l5',
             name:'Whip_l5',
             type:'left hand',
             str:4,
@@ -142,7 +149,7 @@ const MarketplaceCards = ({currentMarketplace,currentBuyingTab,pushToInventory, 
         },
         {
             id:34,
-            image:'Tape_pinck10',
+            rarity:'Tape_pinck10',
             name:'Tape_pinck10',
             type:'clothes',
             str:4,
@@ -156,7 +163,7 @@ const MarketplaceCards = ({currentMarketplace,currentBuyingTab,pushToInventory, 
         },
         {
             id:31,
-            image:'Hoody10',
+            rarity:'Hoody10',
             name:'Hoody10',
             type:'clothes',
             str:2,
@@ -169,7 +176,7 @@ const MarketplaceCards = ({currentMarketplace,currentBuyingTab,pushToInventory, 
         },
         {
             id:12,
-            image:'Police10',
+            rarity:'Police10',
             name:'Police10',
             type:'clothes',
             str:3,
@@ -182,7 +189,7 @@ const MarketplaceCards = ({currentMarketplace,currentBuyingTab,pushToInventory, 
         },
         {
             id:11,
-            image:'Rainbow_fur3',
+            rarity:'Rainbow_fur3',
             name:'Rainbow_fur3',
             type:'ears',
             str:2,
@@ -195,7 +202,7 @@ const MarketplaceCards = ({currentMarketplace,currentBuyingTab,pushToInventory, 
         },
         {
             id:72,
-            image:'Gold_fur5',
+            rarity:'Gold_fur5',
             name:'Gold_fur5',
             type:'ears',
             str:2,
@@ -208,7 +215,7 @@ const MarketplaceCards = ({currentMarketplace,currentBuyingTab,pushToInventory, 
         },
         {
             id:21,
-            image:'Axe_l5',
+            rarity:'Axe_l5',
             name:'Axe_l5',
             type:'left hand',
             str:2,
@@ -221,7 +228,7 @@ const MarketplaceCards = ({currentMarketplace,currentBuyingTab,pushToInventory, 
         },
         {
             id:22,
-            image:'Bit_l5',
+            rarity:'Bit_l5',
             name:'Bit_l5',
             type:'left hand',
             str:2,
@@ -234,7 +241,7 @@ const MarketplaceCards = ({currentMarketplace,currentBuyingTab,pushToInventory, 
         },
         {
             id:41,
-            image:'Machine_r5',
+            rarity:'Machine_r5',
             name:'Machine_r5',
             type:'right hand',
             str:2,
@@ -247,7 +254,7 @@ const MarketplaceCards = ({currentMarketplace,currentBuyingTab,pushToInventory, 
         },
         {
             id:51,
-            image:'Carrot_gold_n5',
+            rarity:'Carrot_gold_n5',
             name:'Carrot_gold_n5',
             type:'neck',
             str:2,
@@ -260,7 +267,7 @@ const MarketplaceCards = ({currentMarketplace,currentBuyingTab,pushToInventory, 
         },
         {
             id:54,
-            image:'Carrot_silver_n5',
+            rarity:'Carrot_silver_n5',
             name:'Carrot_silver_n5',
             type:'neck',
             str:2,
@@ -273,7 +280,7 @@ const MarketplaceCards = ({currentMarketplace,currentBuyingTab,pushToInventory, 
         },
         {
             id:61,
-            image:'Mask_b3',
+            rarity:'Mask_b3',
             name:'Mask_b3',
             type:'hat',
             str:2,
@@ -286,7 +293,7 @@ const MarketplaceCards = ({currentMarketplace,currentBuyingTab,pushToInventory, 
         },
         {
             id:1,
-            image:'Mask_g3',
+            rarity:'Mask_g3',
             name:'Mask_g3',
             type:'hat',
             str:2,
@@ -299,7 +306,7 @@ const MarketplaceCards = ({currentMarketplace,currentBuyingTab,pushToInventory, 
         },
         {
             id:340,
-            image:'Business_suit10',
+            rarity:'Business_suit10',
             name:'Business_suit10',
             type:'clothes',
             str:4,
@@ -312,7 +319,7 @@ const MarketplaceCards = ({currentMarketplace,currentBuyingTab,pushToInventory, 
         },
         {
             id:310,
-            image:'Pajama_green10',
+            rarity:'Pajama_green10',
             name:'Pajama_green10',
             type:'clothes',
             str:2,
@@ -325,7 +332,7 @@ const MarketplaceCards = ({currentMarketplace,currentBuyingTab,pushToInventory, 
         },
         {
             id:120,
-            image:'Batman3',
+            rarity:'Batman3',
             name:'Batman3',
             type:'clothes',
             str:3,
@@ -338,7 +345,7 @@ const MarketplaceCards = ({currentMarketplace,currentBuyingTab,pushToInventory, 
         },
         {
             id:110,
-            image:'Right_ring_g10',
+            rarity:'Right_ring_g10',
             name:'Right_ring_g10',
             type:'ears',
             str:2,
@@ -351,7 +358,7 @@ const MarketplaceCards = ({currentMarketplace,currentBuyingTab,pushToInventory, 
         },
         {
             id:720,
-            image:'Right_ring_s10',
+            rarity:'Right_ring_s10',
             name:'Right_ring_s10',
             type:'ears',
             str:2,
@@ -364,7 +371,7 @@ const MarketplaceCards = ({currentMarketplace,currentBuyingTab,pushToInventory, 
         },
         {
             id:210,
-            image:'Hummer_l5',
+            rarity:'Hummer_l5',
             name:'Hummer_l5',
             type:'left hand',
             str:2,
@@ -377,7 +384,7 @@ const MarketplaceCards = ({currentMarketplace,currentBuyingTab,pushToInventory, 
         },
         {
             id:220,
-            image:'Ice_cream_l5',
+            rarity:'Ice_cream_l5',
             name:'Ice_cream_l5',
             type:'left hand',
             str:2,
@@ -390,7 +397,7 @@ const MarketplaceCards = ({currentMarketplace,currentBuyingTab,pushToInventory, 
         },
         {
             id:410,
-            image:'Chain_g_r10',
+            rarity:'Chain_g_r10',
             name:'Chain_g_r10',
             type:'right hand',
             str:2,
@@ -403,7 +410,7 @@ const MarketplaceCards = ({currentMarketplace,currentBuyingTab,pushToInventory, 
         },
         {
             id:430,
-            image:'Whatch_r10',
+            rarity:'Whatch_r10',
             name:'Whatch_r10',
             type:'right hand',
             str:2,
@@ -416,7 +423,7 @@ const MarketplaceCards = ({currentMarketplace,currentBuyingTab,pushToInventory, 
         },
         {
             id:510,
-            image:'ETH_gold_n5',
+            rarity:'ETH_gold_n5',
             name:'ETH_gold_n5',
             type:'neck',
             str:2,
@@ -429,7 +436,7 @@ const MarketplaceCards = ({currentMarketplace,currentBuyingTab,pushToInventory, 
         },
         {
             id:540,
-            image:'Playboy_gold10',
+            rarity:'Playboy_gold10',
             name:'Playboy_gold10',
             type:'neck',
             str:2,
@@ -442,7 +449,7 @@ const MarketplaceCards = ({currentMarketplace,currentBuyingTab,pushToInventory, 
         },
         {
             id:610,
-            image:'Crown_g10',
+            rarity:'Crown_g10',
             name:'Crown_g10',
             type:'hat',
             str:2,
@@ -455,7 +462,7 @@ const MarketplaceCards = ({currentMarketplace,currentBuyingTab,pushToInventory, 
         },
         {
             id:10,
-            image:'White_hat_carrot10',
+            rarity:'White_hat_carrot10',
             name:'White_hat_carrot10',
             type:'hat',
             str:2,
@@ -471,7 +478,7 @@ const MarketplaceCards = ({currentMarketplace,currentBuyingTab,pushToInventory, 
 
     const RentItem=(item:{
         id:number,
-        image:string,
+        rarity:string,
         name:string,
         type:string,
         str:number,
@@ -481,10 +488,17 @@ const MarketplaceCards = ({currentMarketplace,currentBuyingTab,pushToInventory, 
         krm:number,
         rentPrice:number,
         buyPrice:number,
+        requirements?:{
+            str?:number,
+            dex?:number,
+            vit?:number,
+            int?:number,
+            krm?:number,
+        }
     },)=>{
         let newItem={
             id:item.id,
-            image:item.image,
+            rarity:item.rarity,
             name:item.name,
             type:item.type,
             str:item.str,
@@ -492,6 +506,7 @@ const MarketplaceCards = ({currentMarketplace,currentBuyingTab,pushToInventory, 
             vit:item.vit,
             int:item.int,
             krm:item.krm,
+            requirements:item.requirements,
         }
         if(balance>=item.rentPrice){
             changeBalance(balance-item.rentPrice);
@@ -513,11 +528,6 @@ const MarketplaceCards = ({currentMarketplace,currentBuyingTab,pushToInventory, 
     }
 
 
-    const sortByName=()=>{
-        let temp=marketplaceItems.sort(SortArray);
-        setMarketplaceItems(temp);
-
-    }
 
     function SortArray(x:{
         id:number,
@@ -561,7 +571,7 @@ const MarketplaceCards = ({currentMarketplace,currentBuyingTab,pushToInventory, 
                                 <div className={'w-[28%] mt-[10vw]'} key={item.name}>
                                     <div className={'w-full relative h-[15vh] inventory-card-bg rounded-[2vw]'}  key={item.id}>
                                         <div className={'w-full absolute rounded-[2vw] top-0 h-full'}>
-                                            <Image src={'/images/bunny_generation/'+ucFirst(item.type)+'/'+item.image+'.png'} layout={'fill'}></Image>
+                                            <Image src={'/images/bunny_generation/'+ucFirst(item.type)+'/'+item.name+'.png'} layout={'fill'}></Image>
                                         </div>
                                         <div className={'w-full absolute top-[-1.5vh] h-[3vh]'}>
                                             <div className={'text-sm leading-[100%] justify-center text-[#000] font-soyuz inline-flex align-top w-[22%] rounded-full bg-[#FFC634] h-[3vh]'}>
@@ -594,7 +604,7 @@ const MarketplaceCards = ({currentMarketplace,currentBuyingTab,pushToInventory, 
                                 <div className={'w-[28%] mt-[10vw] relative'} key={item.name}>
                                     <div className={'w-full relative h-[15vh] inventory-card-bg rounded-[2vw]'}>
                                         <div className={'w-full absolute rounded-[2vw] top-0 h-full'}>
-                                            <Image src={'/images/bunny_generation/'+ucFirst(item.type)+'/'+item.image+'.png'} layout={'fill'}></Image>
+                                            <Image src={'/images/bunny_generation/'+ucFirst(item.type)+'/'+item.name+'.png'} layout={'fill'}></Image>
                                         </div>
                                     </div>
                                     <div className={'w-full h-[15vh]  rounded-[2vw] absolute top-0 left-0 backdrop-blur-sm flex justify-center items-center align-middle'}>
