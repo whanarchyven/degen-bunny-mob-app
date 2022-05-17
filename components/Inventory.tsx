@@ -69,7 +69,7 @@ const Inventory = ({inventoryTab,updateClothes,updateEars,updateHat,updateLeftHa
                         {inventoryTab=='ears'?<div className={'rounded-r-full w-full h-full flex justify-center items-center font-soyuz inventory-active-tab text-white text-center leading-[100%] text-sm'}>ears</div>:<div className={'rounded-r-full w-full h-full flex justify-center items-center font-soyuz text-white text-center leading-[100%] text-sm'}>ears</div>}
                     </div>
                 </div>
-                <div className={'w-[100%] relative block mt-[5vw] h-[47vh]'}>
+                <div className={'w-[100%] relative block mt-[5vw] h-[52vh]'}>
                     <InventoryCards inventory={bunny.inventory} currentInventoryTab={inventoryTab} bunny={bunny} closeInventory={closeInventory} updateLeftHand={updateLeftHand} updateRightHand={updateRightHand} updateEars={updateEars} updateNeck={updateNeck} updateHat={updateHat} updateClothes={updateClothes}></InventoryCards>
                 </div>
             </div>

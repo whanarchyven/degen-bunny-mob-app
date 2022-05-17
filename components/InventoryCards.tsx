@@ -44,7 +44,7 @@ const InventoryCards = ({currentInventoryTab, bunny,inventory, closeInventory, u
                     if(item.type=='clothes'){
                         if(item.rarity=='common'){
                             return(
-                                <div className={'w-[48%] mt-[4vw] relative h-[23vh] inventory-card-bg rounded-[2vw]'}  key={item.id}>
+                                <div className={'w-[48%] mt-[4vw] relative h-[23vh] rounded-[2vw]'}  key={item.id}>
                                     <div className={'w-full absolute top-0 rounded-[2vw] h-full'}>
                                         <Image src={'/images/card_generation/common/bg.svg'} layout={'fill'}></Image>
                                     </div>
@@ -144,7 +144,7 @@ const InventoryCards = ({currentInventoryTab, bunny,inventory, closeInventory, u
                         }
                         else if(item.rarity=='uncommon'){
                             return(
-                                <div className={'w-[48%] mt-[4vw] relative h-[23vh] inventory-card-bg rounded-[2vw]'}  key={item.id}>
+                                <div className={'w-[48%] mt-[4vw] relative h-[23vh] rounded-[2vw]'}  key={item.id}>
                                     <div className={'w-full absolute top-0 rounded-[2vw] h-full'}>
                                         <Image src={'/images/card_generation/uncommon/bg.svg'} layout={'fill'}></Image>
                                     </div>
@@ -245,7 +245,7 @@ const InventoryCards = ({currentInventoryTab, bunny,inventory, closeInventory, u
 
                         else if(item.rarity=='epic'){
                             return(
-                                <div className={'w-[48%] mt-[4vw] relative h-[23vh] inventory-card-bg rounded-[2vw]'}  key={item.id}>
+                                <div className={'w-[48%] mt-[4vw] relative h-[23vh] rounded-[2vw]'}  key={item.id}>
                                     <div className={'w-full absolute top-0 rounded-[2vw] h-full'}>
                                         <Image src={'/images/card_generation/epic/bg.svg'} layout={'fill'}></Image>
                                     </div>
@@ -419,7 +419,7 @@ const InventoryCards = ({currentInventoryTab, bunny,inventory, closeInventory, u
 
                         else if(item.rarity=='legendary'){
                             return(
-                                <div className={'w-[48%] mt-[4vw] relative h-[23vh] inventory-card-bg rounded-[2vw]'}  key={item.id}>
+                                <div className={'w-[48%] mt-[4vw] relative h-[23vh] rounded-[2vw]'}  key={item.id}>
                                     <div className={'w-full absolute top-0 rounded-[2vw] h-full'}>
                                         <Image src={'/images/card_generation/legendary/bg.svg'} layout={'fill'}></Image>
                                     </div>
@@ -604,7 +604,7 @@ const InventoryCards = ({currentInventoryTab, bunny,inventory, closeInventory, u
                     if(item.type=='hat'){
                         if(item.rarity=='common'){
                             return(
-                                <div className={'w-[48%] mt-[4vw] relative h-[23vh] inventory-card-bg rounded-[2vw]'}  key={item.id}>
+                                <div className={'w-[48%] mt-[4vw] relative h-[23vh] rounded-[2vw]'}  key={item.id}>
                                     <div className={'w-full absolute top-0 rounded-[2vw] h-full'}>
                                         <Image src={'/images/card_generation/common/bg.svg'} layout={'fill'}></Image>
                                     </div>
@@ -704,7 +704,7 @@ const InventoryCards = ({currentInventoryTab, bunny,inventory, closeInventory, u
                         }
                         else if(item.rarity=='uncommon'){
                             return(
-                                <div className={'w-[48%] mt-[4vw] relative h-[23vh] inventory-card-bg rounded-[2vw]'}  key={item.id}>
+                                <div className={'w-[48%] mt-[4vw] relative h-[23vh] rounded-[2vw]'}  key={item.id}>
                                     <div className={'w-full absolute top-0 rounded-[2vw] h-full'}>
                                         <Image src={'/images/card_generation/uncommon/bg.svg'} layout={'fill'}></Image>
                                     </div>
@@ -805,7 +805,7 @@ const InventoryCards = ({currentInventoryTab, bunny,inventory, closeInventory, u
 
                         else if(item.rarity=='epic'){
                             return(
-                                <div className={'w-[48%] mt-[4vw] relative h-[23vh] inventory-card-bg rounded-[2vw]'}  key={item.id}>
+                                <div className={'w-[48%] mt-[4vw] relative h-[23vh] rounded-[2vw]'}  key={item.id}>
                                     <div className={'w-full absolute top-0 rounded-[2vw] h-full'}>
                                         <Image src={'/images/card_generation/epic/bg.svg'} layout={'fill'}></Image>
                                     </div>
@@ -979,7 +979,7 @@ const InventoryCards = ({currentInventoryTab, bunny,inventory, closeInventory, u
 
                         else if(item.rarity=='legendary'){
                             return(
-                                <div className={'w-[48%] mt-[4vw] relative h-[23vh] inventory-card-bg rounded-[2vw]'}  key={item.id}>
+                                <div className={'w-[48%] mt-[4vw] relative h-[23vh] rounded-[2vw]'}  key={item.id}>
                                     <div className={'w-full absolute top-0 rounded-[2vw] h-full'}>
                                         <Image src={'/images/card_generation/legendary/bg.svg'} layout={'fill'}></Image>
                                     </div>
@@ -1164,7 +1164,7 @@ const InventoryCards = ({currentInventoryTab, bunny,inventory, closeInventory, u
                     if(item.type=='left hand'){
                         if(item.rarity=='common'){
                             return(
-                                <div className={'w-[48%] mt-[4vw] relative h-[23vh] inventory-card-bg rounded-[2vw]'}  key={item.id}>
+                                <div className={'w-[48%] mt-[4vw] relative h-[23vh] rounded-[2vw]'}  key={item.id}>
                                     <div className={'w-full absolute top-0 rounded-[2vw] h-full'}>
                                         <Image src={'/images/card_generation/common/bg.svg'} layout={'fill'}></Image>
                                     </div>
@@ -1172,7 +1172,7 @@ const InventoryCards = ({currentInventoryTab, bunny,inventory, closeInventory, u
                                         <Image src={'/images/miniatures/Left hand/'+item.name+'.png'} layout={'fill'}></Image>
                                     </div>
                                     <div className={'w-[2vh] h-[2vh] absolute top-[1vh] left-[1vh]'}>
-                                        <Image src={'/images/equipment_module/left_hand.svg'} layout={'fill'}></Image>
+                                        <Image src={'/images/equipment_module/left hand.svg'} layout={'fill'}></Image>
                                     </div>
                                     <p className={'text-white font-josefin text-[1.8vh] text-right absolute top-[1vh] right-[1vh]'}>ID: {item.id}</p>
                                     <p className={'w-full text-white font-soyuz text-[1.8vh] text-center'}>{item.name}</p>
@@ -1264,7 +1264,7 @@ const InventoryCards = ({currentInventoryTab, bunny,inventory, closeInventory, u
                         }
                         else if(item.rarity=='uncommon'){
                             return(
-                                <div className={'w-[48%] mt-[4vw] relative h-[23vh] inventory-card-bg rounded-[2vw]'}  key={item.id}>
+                                <div className={'w-[48%] mt-[4vw] relative h-[23vh] rounded-[2vw]'}  key={item.id}>
                                     <div className={'w-full absolute top-0 rounded-[2vw] h-full'}>
                                         <Image src={'/images/card_generation/uncommon/bg.svg'} layout={'fill'}></Image>
                                     </div>
@@ -1272,7 +1272,7 @@ const InventoryCards = ({currentInventoryTab, bunny,inventory, closeInventory, u
                                         <Image src={'/images/miniatures/Left hand/'+item.name+'.png'} layout={'fill'}></Image>
                                     </div>
                                     <div className={'w-[2vh] h-[2vh] absolute top-[1vh] left-[1vh]'}>
-                                        <Image src={'/images/equipment_module/left_hand.svg'} layout={'fill'}></Image>
+                                        <Image src={'/images/equipment_module/left hand.svg'} layout={'fill'}></Image>
                                     </div>
                                     <p className={'text-white font-josefin text-[1.8vh] text-right absolute top-[1vh] right-[1vh]'}>ID: {item.id}</p>
                                     <p className={'w-full text-white font-soyuz text-[1.8vh] text-center'}>{item.name}</p>
@@ -1365,7 +1365,7 @@ const InventoryCards = ({currentInventoryTab, bunny,inventory, closeInventory, u
 
                         else if(item.rarity=='epic'){
                             return(
-                                <div className={'w-[48%] mt-[4vw] relative h-[23vh] inventory-card-bg rounded-[2vw]'}  key={item.id}>
+                                <div className={'w-[48%] mt-[4vw] relative h-[23vh] rounded-[2vw]'}  key={item.id}>
                                     <div className={'w-full absolute top-0 rounded-[2vw] h-full'}>
                                         <Image src={'/images/card_generation/epic/bg.svg'} layout={'fill'}></Image>
                                     </div>
@@ -1373,7 +1373,7 @@ const InventoryCards = ({currentInventoryTab, bunny,inventory, closeInventory, u
                                         <Image src={'/images/miniatures/Left hand/'+item.name+'.png'} layout={'fill'}></Image>
                                     </div>
                                     <div className={'w-[2vh] h-[2vh] absolute top-[1vh] left-[1vh]'}>
-                                        <Image src={'/images/equipment_module/left_hand.svg'} layout={'fill'}></Image>
+                                        <Image src={'/images/equipment_module/left hand.svg'} layout={'fill'}></Image>
                                     </div>
                                     <p className={'text-white font-josefin text-[1.8vh] text-right absolute top-[1vh] right-[1vh]'}>ID: {item.id}</p>
                                     <p className={'w-full text-white font-soyuz text-[1.8vh] text-center'}>{item.name}</p>
@@ -1539,7 +1539,7 @@ const InventoryCards = ({currentInventoryTab, bunny,inventory, closeInventory, u
 
                         else if(item.rarity=='legendary'){
                             return(
-                                <div className={'w-[48%] mt-[4vw] relative h-[23vh] inventory-card-bg rounded-[2vw]'}  key={item.id}>
+                                <div className={'w-[48%] mt-[4vw] relative h-[23vh] rounded-[2vw]'}  key={item.id}>
                                     <div className={'w-full absolute top-0 rounded-[2vw] h-full'}>
                                         <Image src={'/images/card_generation/legendary/bg.svg'} layout={'fill'}></Image>
                                     </div>
@@ -1547,7 +1547,7 @@ const InventoryCards = ({currentInventoryTab, bunny,inventory, closeInventory, u
                                         <Image src={'/images/miniatures/Left hand/'+item.name+'.png'} layout={'fill'}></Image>
                                     </div>
                                     <div className={'w-[2vh] h-[2vh] absolute top-[1vh] left-[1vh]'}>
-                                        <Image src={'/images/equipment_module/left_hand.svg'} layout={'fill'}></Image>
+                                        <Image src={'/images/equipment_module/left hand.svg'} layout={'fill'}></Image>
                                     </div>
                                     <p className={'text-white font-josefin text-[1.8vh] text-right absolute top-[1vh] right-[1vh]'}>ID: {item.id}</p>
                                     <p className={'w-full text-white font-soyuz text-[1.8vh] text-center'}>{item.name}</p>
@@ -1724,7 +1724,7 @@ const InventoryCards = ({currentInventoryTab, bunny,inventory, closeInventory, u
                     if(item.type=='right hand'){
                         if(item.rarity=='common'){
                             return(
-                                <div className={'w-[48%] mt-[4vw] relative h-[23vh] inventory-card-bg rounded-[2vw]'}  key={item.id}>
+                                <div className={'w-[48%] mt-[4vw] relative h-[23vh] rounded-[2vw]'}  key={item.id}>
                                     <div className={'w-full absolute top-0 rounded-[2vw] h-full'}>
                                         <Image src={'/images/card_generation/common/bg.svg'} layout={'fill'}></Image>
                                     </div>
@@ -1732,7 +1732,7 @@ const InventoryCards = ({currentInventoryTab, bunny,inventory, closeInventory, u
                                         <Image src={'/images/miniatures/Right hand/'+item.name+'.png'} layout={'fill'}></Image>
                                     </div>
                                     <div className={'w-[2vh] h-[2vh] absolute top-[1vh] left-[1vh]'}>
-                                        <Image src={'/images/equipment_module/right_hand.svg'} layout={'fill'}></Image>
+                                        <Image src={'/images/equipment_module/right hand.svg'} layout={'fill'}></Image>
                                     </div>
                                     <p className={'text-white font-josefin text-[1.8vh] text-right absolute top-[1vh] right-[1vh]'}>ID: {item.id}</p>
                                     <p className={'w-full text-white font-soyuz text-[1.8vh] text-center'}>{item.name}</p>
@@ -1824,7 +1824,7 @@ const InventoryCards = ({currentInventoryTab, bunny,inventory, closeInventory, u
                         }
                         else if(item.rarity=='uncommon'){
                             return(
-                                <div className={'w-[48%] mt-[4vw] relative h-[23vh] inventory-card-bg rounded-[2vw]'}  key={item.id}>
+                                <div className={'w-[48%] mt-[4vw] relative h-[23vh] rounded-[2vw]'}  key={item.id}>
                                     <div className={'w-full absolute top-0 rounded-[2vw] h-full'}>
                                         <Image src={'/images/card_generation/uncommon/bg.svg'} layout={'fill'}></Image>
                                     </div>
@@ -1832,7 +1832,7 @@ const InventoryCards = ({currentInventoryTab, bunny,inventory, closeInventory, u
                                         <Image src={'/images/miniatures/Right hand/'+item.name+'.png'} layout={'fill'}></Image>
                                     </div>
                                     <div className={'w-[2vh] h-[2vh] absolute top-[1vh] left-[1vh]'}>
-                                        <Image src={'/images/equipment_module/right_hand.svg'} layout={'fill'}></Image>
+                                        <Image src={'/images/equipment_module/right hand.svg'} layout={'fill'}></Image>
                                     </div>
                                     <p className={'text-white font-josefin text-[1.8vh] text-right absolute top-[1vh] right-[1vh]'}>ID: {item.id}</p>
                                     <p className={'w-full text-white font-soyuz text-[1.8vh] text-center'}>{item.name}</p>
@@ -1925,7 +1925,7 @@ const InventoryCards = ({currentInventoryTab, bunny,inventory, closeInventory, u
 
                         else if(item.rarity=='epic'){
                             return(
-                                <div className={'w-[48%] mt-[4vw] relative h-[23vh] inventory-card-bg rounded-[2vw]'}  key={item.id}>
+                                <div className={'w-[48%] mt-[4vw] relative h-[23vh] rounded-[2vw]'}  key={item.id}>
                                     <div className={'w-full absolute top-0 rounded-[2vw] h-full'}>
                                         <Image src={'/images/card_generation/epic/bg.svg'} layout={'fill'}></Image>
                                     </div>
@@ -1933,7 +1933,7 @@ const InventoryCards = ({currentInventoryTab, bunny,inventory, closeInventory, u
                                         <Image src={'/images/miniatures/Right hand/'+item.name+'.png'} layout={'fill'}></Image>
                                     </div>
                                     <div className={'w-[2vh] h-[2vh] absolute top-[1vh] left-[1vh]'}>
-                                        <Image src={'/images/equipment_module/right_hand.svg'} layout={'fill'}></Image>
+                                        <Image src={'/images/equipment_module/right hand.svg'} layout={'fill'}></Image>
                                     </div>
                                     <p className={'text-white font-josefin text-[1.8vh] text-right absolute top-[1vh] right-[1vh]'}>ID: {item.id}</p>
                                     <p className={'w-full text-white font-soyuz text-[1.8vh] text-center'}>{item.name}</p>
@@ -2099,7 +2099,7 @@ const InventoryCards = ({currentInventoryTab, bunny,inventory, closeInventory, u
 
                         else if(item.rarity=='legendary'){
                             return(
-                                <div className={'w-[48%] mt-[4vw] relative h-[23vh] inventory-card-bg rounded-[2vw]'}  key={item.id}>
+                                <div className={'w-[48%] mt-[4vw] relative h-[23vh] rounded-[2vw]'}  key={item.id}>
                                     <div className={'w-full absolute top-0 rounded-[2vw] h-full'}>
                                         <Image src={'/images/card_generation/legendary/bg.svg'} layout={'fill'}></Image>
                                     </div>
@@ -2107,7 +2107,7 @@ const InventoryCards = ({currentInventoryTab, bunny,inventory, closeInventory, u
                                         <Image src={'/images/miniatures/Right hand/'+item.name+'.png'} layout={'fill'}></Image>
                                     </div>
                                     <div className={'w-[2vh] h-[2vh] absolute top-[1vh] left-[1vh]'}>
-                                        <Image src={'/images/equipment_module/right_hand.svg'} layout={'fill'}></Image>
+                                        <Image src={'/images/equipment_module/right hand.svg'} layout={'fill'}></Image>
                                     </div>
                                     <p className={'text-white font-josefin text-[1.8vh] text-right absolute top-[1vh] right-[1vh]'}>ID: {item.id}</p>
                                     <p className={'w-full text-white font-soyuz text-[1.8vh] text-center'}>{item.name}</p>
@@ -2284,7 +2284,7 @@ const InventoryCards = ({currentInventoryTab, bunny,inventory, closeInventory, u
                     if(item.type=='neck'){
                         if(item.rarity=='common'){
                             return(
-                                <div className={'w-[48%] mt-[4vw] relative h-[23vh] inventory-card-bg rounded-[2vw]'}  key={item.id}>
+                                <div className={'w-[48%] mt-[4vw] relative h-[23vh] rounded-[2vw]'}  key={item.id}>
                                     <div className={'w-full absolute top-0 rounded-[2vw] h-full'}>
                                         <Image src={'/images/card_generation/common/bg.svg'} layout={'fill'}></Image>
                                     </div>
@@ -2384,7 +2384,7 @@ const InventoryCards = ({currentInventoryTab, bunny,inventory, closeInventory, u
                         }
                         else if(item.rarity=='uncommon'){
                             return(
-                                <div className={'w-[48%] mt-[4vw] relative h-[23vh] inventory-card-bg rounded-[2vw]'}  key={item.id}>
+                                <div className={'w-[48%] mt-[4vw] relative h-[23vh] rounded-[2vw]'}  key={item.id}>
                                     <div className={'w-full absolute top-0 rounded-[2vw] h-full'}>
                                         <Image src={'/images/card_generation/uncommon/bg.svg'} layout={'fill'}></Image>
                                     </div>
@@ -2485,7 +2485,7 @@ const InventoryCards = ({currentInventoryTab, bunny,inventory, closeInventory, u
 
                         else if(item.rarity=='epic'){
                             return(
-                                <div className={'w-[48%] mt-[4vw] relative h-[23vh] inventory-card-bg rounded-[2vw]'}  key={item.id}>
+                                <div className={'w-[48%] mt-[4vw] relative h-[23vh] rounded-[2vw]'}  key={item.id}>
                                     <div className={'w-full absolute top-0 rounded-[2vw] h-full'}>
                                         <Image src={'/images/card_generation/epic/bg.svg'} layout={'fill'}></Image>
                                     </div>
@@ -2659,7 +2659,7 @@ const InventoryCards = ({currentInventoryTab, bunny,inventory, closeInventory, u
 
                         else if(item.rarity=='legendary'){
                             return(
-                                <div className={'w-[48%] mt-[4vw] relative h-[23vh] inventory-card-bg rounded-[2vw]'}  key={item.id}>
+                                <div className={'w-[48%] mt-[4vw] relative h-[23vh] rounded-[2vw]'}  key={item.id}>
                                     <div className={'w-full absolute top-0 rounded-[2vw] h-full'}>
                                         <Image src={'/images/card_generation/legendary/bg.svg'} layout={'fill'}></Image>
                                     </div>
@@ -2844,7 +2844,7 @@ const InventoryCards = ({currentInventoryTab, bunny,inventory, closeInventory, u
                     if(item.type=='ears'){
                         if(item.rarity=='common'){
                             return(
-                                <div className={'w-[48%] mt-[4vw] relative h-[23vh] inventory-card-bg rounded-[2vw]'}  key={item.id}>
+                                <div className={'w-[48%] mt-[4vw] relative h-[23vh] rounded-[2vw]'}  key={item.id}>
                                     <div className={'w-full absolute top-0 rounded-[2vw] h-full'}>
                                         <Image src={'/images/card_generation/common/bg.svg'} layout={'fill'}></Image>
                                     </div>
@@ -2944,7 +2944,7 @@ const InventoryCards = ({currentInventoryTab, bunny,inventory, closeInventory, u
                         }
                         else if(item.rarity=='uncommon'){
                             return(
-                                <div className={'w-[48%] mt-[4vw] relative h-[23vh] inventory-card-bg rounded-[2vw]'}  key={item.id}>
+                                <div className={'w-[48%] mt-[4vw] relative h-[23vh] rounded-[2vw]'}  key={item.id}>
                                     <div className={'w-full absolute top-0 rounded-[2vw] h-full'}>
                                         <Image src={'/images/card_generation/uncommon/bg.svg'} layout={'fill'}></Image>
                                     </div>
@@ -3045,7 +3045,7 @@ const InventoryCards = ({currentInventoryTab, bunny,inventory, closeInventory, u
 
                         else if(item.rarity=='epic'){
                             return(
-                                <div className={'w-[48%] mt-[4vw] relative h-[23vh] inventory-card-bg rounded-[2vw]'}  key={item.id}>
+                                <div className={'w-[48%] mt-[4vw] relative h-[23vh] rounded-[2vw]'}  key={item.id}>
                                     <div className={'w-full absolute top-0 rounded-[2vw] h-full'}>
                                         <Image src={'/images/card_generation/epic/bg.svg'} layout={'fill'}></Image>
                                     </div>
@@ -3219,7 +3219,7 @@ const InventoryCards = ({currentInventoryTab, bunny,inventory, closeInventory, u
 
                         else if(item.rarity=='legendary'){
                             return(
-                                <div className={'w-[48%] mt-[4vw] relative h-[23vh] inventory-card-bg rounded-[2vw]'}  key={item.id}>
+                                <div className={'w-[48%] mt-[4vw] relative h-[23vh] rounded-[2vw]'}  key={item.id}>
                                     <div className={'w-full absolute top-0 rounded-[2vw] h-full'}>
                                         <Image src={'/images/card_generation/legendary/bg.svg'} layout={'fill'}></Image>
                                     </div>

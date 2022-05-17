@@ -218,7 +218,7 @@ const Equipment = ({bunny,updateClothes,updateEars,updateHat,updateLeftHand,upda
                                 <Image src={'/images/equipment_module/equip_tab.svg'} layout={'fill'}></Image>
                             </div>
                             <div className={'w-[5vh] h-[5vh] rotate-180 left-0 left-[4vw] top-[4vw] absolute'}>
-                                <Image src={'/images/equipment_module/left_hand.svg'} layout={'fill'}></Image>
+                                <Image src={'/images/equipment_module/left hand.svg'} layout={'fill'}></Image>
                             </div>
                         </div>
                         :
@@ -281,7 +281,7 @@ const Equipment = ({bunny,updateClothes,updateEars,updateHat,updateLeftHand,upda
                                 <Image src={'/images/equipment_module/equip_tab.svg'} layout={'fill'}></Image>
                             </div>
                             <div className={'w-[5vh] h-[5vh] left-0 left-[4vw] top-[4vw] absolute'}>
-                                <Image src={'/images/equipment_module/right_hand.svg'} layout={'fill'}></Image>
+                                <Image src={'/images/equipment_module/right hand.svg'} layout={'fill'}></Image>
                             </div>
                         </div>
                         :

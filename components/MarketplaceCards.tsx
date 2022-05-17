@@ -51,429 +51,88 @@ const MarketplaceCards = ({currentMarketplace,currentBuyingTab,pushToInventory, 
 
     const [marketplaceItems,setMarketplaceItems]=useState([
         {
-            id:40,
-            rarity:'Tape_black10',
-            name:'Tape_black10',
-            type:'clothes',
-            str:4,
-            dex:4,
-            vit:4,
-            int:4,
-            krm:5,
-            rentPrice:5,
-            buyPrice:99,
-
-        },{
-            id:42,
-            rarity:'Tape_Gray10',
-            name:'Tape_Gray10',
-            type:'clothes',
-            str:4,
-            dex:4,
-            vit:4,
-            int:4,
-            krm:5,
-            rentPrice:5,
-            buyPrice:99,
-
-        },
-        {
-            id:44,
-            rarity:'Iron_man_icon3',
-            name:'Iron_man_icon3',
-            type:'clothes',
-            str:4,
-            dex:4,
-            vit:4,
-            int:4,
-            krm:5,
-            rentPrice:5,
-            buyPrice:99,
-
-        },
-        {
-            id:45,
-            rarity:'00710',
-            name:'00710',
-            type:'clothes',
-            str:4,
-            dex:4,
-            vit:4,
-            int:4,
-            krm:5,
-            rentPrice:5,
-            buyPrice:99,
-
-        },
-        {
-            id:46,
-            rarity:'Gray_fur5',
-            name:'Gray_fur5',
-            type:'ears',
-            str:4,
-            dex:4,
-            vit:4,
-            int:4,
-            krm:5,
-            rentPrice:5,
-            buyPrice:99,
-
-        },
-        {
-            id:47,
-            rarity:'Health_bracelet_r5',
-            name:'Health_bracelet_r5',
-            type:'right hand',
-            str:4,
-            dex:4,
-            vit:4,
-            int:4,
-            krm:5,
-            rentPrice:50,
-            buyPrice:99,
-
-        },
-        {
-            id:48,
-            rarity:'Whip_l5',
-            name:'Whip_l5',
-            type:'left hand',
-            str:4,
-            dex:4,
-            vit:4,
-            int:4,
-            krm:5,
-            rentPrice:99,
-            buyPrice:99,
-
-        },
-        {
-            id:34,
-            rarity:'Tape_pinck10',
-            name:'Tape_pinck10',
-            type:'clothes',
-            str:4,
-            dex:4,
-            vit:4,
-            int:4,
-            krm:5,
-            rentPrice:5,
-            buyPrice:99,
-
-        },
-        {
             id:31,
-            rarity:'Hoody10',
+            rarity:'common',
             name:'Hoody10',
             type:'clothes',
-            str:2,
-            dex:1,
-            vit:5,
+            str:0,
+            dex:0,
+            vit:1,
             int:4,
             krm:5,
-            rentPrice:5,
-            buyPrice:99,
+            rentPrice:15,
+            buyPrice:15,
+            requirements:{
+                int:2,
+                str:3,
+            }
         },
-        {
-            id:12,
-            rarity:'Police10',
-            name:'Police10',
-            type:'clothes',
-            str:3,
-            dex:2,
-            vit:4,
-            int:4,
-            krm:1,
-            rentPrice:5,
-            buyPrice:99,
-        },
-        {
-            id:11,
-            rarity:'Rainbow_fur3',
-            name:'Rainbow_fur3',
-            type:'ears',
-            str:2,
-            dex:1,
-            vit:5,
-            int:4,
-            krm:5,
-            rentPrice:5,
-            buyPrice:99,
-        },
-        {
-            id:72,
-            rarity:'Gold_fur5',
-            name:'Gold_fur5',
-            type:'ears',
-            str:2,
-            dex:1,
-            vit:5,
-            int:4,
-            krm:5,
-            rentPrice:5,
-            buyPrice:99,
-        },
-        {
-            id:21,
-            rarity:'Axe_l5',
-            name:'Axe_l5',
-            type:'left hand',
-            str:2,
-            dex:1,
-            vit:5,
-            int:4,
-            krm:5,
-            rentPrice:5,
-            buyPrice:99,
-        },
-        {
-            id:22,
-            rarity:'Bit_l5',
-            name:'Bit_l5',
-            type:'left hand',
-            str:2,
-            dex:1,
-            vit:5,
-            int:4,
-            krm:5,
-            rentPrice:5,
-            buyPrice:99,
-        },
-        {
-            id:41,
-            rarity:'Machine_r5',
-            name:'Machine_r5',
-            type:'right hand',
-            str:2,
-            dex:1,
-            vit:5,
-            int:4,
-            krm:5,
-            rentPrice:5,
-            buyPrice:99,
-        },
-        {
-            id:51,
-            rarity:'Carrot_gold_n5',
-            name:'Carrot_gold_n5',
-            type:'neck',
-            str:2,
-            dex:1,
-            vit:5,
-            int:4,
-            krm:5,
-            rentPrice:5,
-            buyPrice:99,
-        },
-        {
-            id:54,
-            rarity:'Carrot_silver_n5',
-            name:'Carrot_silver_n5',
-            type:'neck',
-            str:2,
-            dex:1,
-            vit:5,
-            int:4,
-            krm:5,
-            rentPrice:5,
-            buyPrice:99,
-        },
-        {
-            id:61,
-            rarity:'Mask_b3',
-            name:'Mask_b3',
-            type:'hat',
-            str:2,
-            dex:1,
-            vit:5,
-            int:4,
-            krm:5,
-            rentPrice:5,
-            buyPrice:99,
-        },
-        {
-            id:1,
-            rarity:'Mask_g3',
-            name:'Mask_g3',
-            type:'hat',
-            str:2,
-            dex:1,
-            vit:5,
-            int:4,
-            krm:5,
-            rentPrice:5,
-            buyPrice:99,
-        },
-        {
-            id:340,
-            rarity:'Business_suit10',
-            name:'Business_suit10',
-            type:'clothes',
-            str:4,
-            dex:4,
-            vit:4,
-            int:4,
-            krm:5,
-            rentPrice:5,
-            buyPrice:99,
-        },
-        {
-            id:310,
-            rarity:'Pajama_green10',
-            name:'Pajama_green10',
-            type:'clothes',
-            str:2,
-            dex:1,
-            vit:5,
-            int:4,
-            krm:5,
-            rentPrice:5,
-            buyPrice:99,
-        },
-        {
-            id:120,
-            rarity:'Batman3',
-            name:'Batman3',
-            type:'clothes',
-            str:3,
-            dex:2,
-            vit:4,
-            int:4,
-            krm:1,
-            rentPrice:5,
-            buyPrice:99,
-        },
-        {
-            id:110,
-            rarity:'Right_ring_g10',
-            name:'Right_ring_g10',
-            type:'ears',
-            str:2,
-            dex:1,
-            vit:5,
-            int:4,
-            krm:5,
-            rentPrice:5,
-            buyPrice:99,
-        },
-        {
-            id:720,
-            rarity:'Right_ring_s10',
-            name:'Right_ring_s10',
-            type:'ears',
-            str:2,
-            dex:1,
-            vit:5,
-            int:4,
-            krm:5,
-            rentPrice:5,
-            buyPrice:99,
-        },
-        {
-            id:210,
-            rarity:'Hummer_l5',
-            name:'Hummer_l5',
-            type:'left hand',
-            str:2,
-            dex:1,
-            vit:5,
-            int:4,
-            krm:5,
-            rentPrice:5,
-            buyPrice:99,
-        },
+
         {
             id:220,
-            rarity:'Ice_cream_l5',
+            rarity:'epic',
             name:'Ice_cream_l5',
             type:'left hand',
             str:2,
             dex:1,
             vit:5,
-            int:4,
-            krm:5,
-            rentPrice:5,
-            buyPrice:99,
+            int:0,
+            krm:0,
+            rentPrice:15,
+            buyPrice:15,
+            requirements:{
+                vit:4,
+            }
         },
         {
             id:410,
-            rarity:'Chain_g_r10',
-            name:'Chain_g_r10',
+            rarity:'uncommon',
+            name:'Chain_s_r10',
             type:'right hand',
             str:2,
             dex:1,
-            vit:5,
-            int:4,
-            krm:5,
-            rentPrice:5,
-            buyPrice:99,
+            vit:0,
+            int:0,
+            krm:0,
+            rentPrice:15,
+            buyPrice:15,
         },
         {
             id:430,
-            rarity:'Whatch_r10',
-            name:'Whatch_r10',
+            rarity:'legendary',
+            name:'Health_bracelet_r5',
             type:'right hand',
             str:2,
             dex:1,
             vit:5,
-            int:4,
-            krm:5,
-            rentPrice:5,
-            buyPrice:99,
+            int:0,
+            krm:0,
+            rentPrice:15,
+            buyPrice:15,
+            requirements:{
+                krm:4,
+                dex:1,
+            }
         },
-        {
-            id:510,
-            rarity:'ETH_gold_n5',
-            name:'ETH_gold_n5',
-            type:'neck',
-            str:2,
-            dex:1,
-            vit:5,
-            int:4,
-            krm:5,
-            rentPrice:5,
-            buyPrice:99,
-        },
-        {
-            id:540,
-            rarity:'Playboy_gold10',
-            name:'Playboy_gold10',
-            type:'neck',
-            str:2,
-            dex:1,
-            vit:5,
-            int:4,
-            krm:5,
-            rentPrice:5,
-            buyPrice:99,
-        },
+
+
         {
             id:610,
-            rarity:'Crown_g10',
+            rarity:'epic',
             name:'Crown_g10',
             type:'hat',
             str:2,
             dex:1,
-            vit:5,
-            int:4,
+            vit:0,
+            int:0,
             krm:5,
-            rentPrice:5,
-            buyPrice:99,
+            rentPrice:15,
+            buyPrice:15,
+            requirements:{
+                str:4,
+                vit:1,
+            }
         },
-        {
-            id:10,
-            rarity:'White_hat_carrot10',
-            name:'White_hat_carrot10',
-            type:'hat',
-            str:2,
-            dex:1,
-            vit:5,
-            int:4,
-            krm:5,
-            rentPrice:5,
-            buyPrice:99,
-        },
-
     ]);
 
     const RentItem=(item:{
@@ -567,59 +226,611 @@ const MarketplaceCards = ({currentMarketplace,currentBuyingTab,pushToInventory, 
                 {marketplaceItems.map(item=> {
                     if(item.type=='clothes'||item.type=='ears'||item.type=='left hand'||item.type=='hat'||item.type=='right hand'||item.type=='neck'){
                         if(checkItemInInventory(item.id)==false){
-                            return(
-                                <div className={'w-[28%] mt-[10vw]'} key={item.name}>
-                                    <div className={'w-full relative h-[15vh] inventory-card-bg rounded-[2vw]'}  key={item.id}>
-                                        <div className={'w-full absolute rounded-[2vw] top-0 h-full'}>
-                                            <Image src={'/images/bunny_generation/'+ucFirst(item.type)+'/'+item.name+'.png'} layout={'fill'}></Image>
-                                        </div>
-                                        <div className={'w-full absolute top-[-1.5vh] h-[3vh]'}>
-                                            <div className={'text-sm leading-[100%] justify-center text-[#000] font-soyuz inline-flex align-top w-[22%] rounded-full bg-[#FFC634] h-[3vh]'}>
-                                                {item.id}
-                                            </div>
-                                            <div className={'text-[1.8vh] pl-[1vw] leading-[158%] w-[78%] text-white font-soyuz inline-block align-top rounded-full h-[3vh]'}>
-                                                {item.name}
-                                            </div>
-                                        </div>
-                                    </div>
-                                    {currentBuyingTab=='buy'?<div className={'w-full mt-[2vh] flex px-[0.3vw] justify-between h-[4vh]'}>
-                                            <div className={'w-[38%] h-full'}>
-                                                <p className={'inline-block align-middle w-[50%]'}>{item.rentPrice}</p>
-                                                <div className={'w-[50%] align-middle inline-block relative h-full'}>
-                                                    <Image src={'/images/wallet_carrot.png'} layout={'fill'}></Image>
+                                if(item.rarity=='common'){
+                                    return(
+                                        <div className={'w-[48%] mb-[2vh] mt-[2vh]'}>
+                                            <div className={'w-full relative h-[23vh] rounded-[2vw]'}  key={item.id}>
+                                                <div className={'w-full absolute top-0 rounded-[2vw] h-full'}>
+                                                    <Image src={'/images/card_generation/common/bg.svg'} layout={'fill'}></Image>
+                                                </div>
+                                                <div className={'w-[8vh] h-[8vh] relative mx-auto mt-[1.5vh]'}>
+                                                    <Image src={'/images/miniatures/'+ucFirst(item.type)+'/'+item.name+'.png'} layout={'fill'}></Image>
+                                                </div>
+                                                <div className={'w-[2vh] h-[2vh] absolute top-[1vh] left-[1vh]'}>
+                                                    <Image src={'/images/equipment_module/'+item.type+'.svg'} layout={'fill'}></Image>
+                                                </div>
+                                                <p className={'text-white font-josefin text-[1.8vh] text-right absolute top-[1vh] right-[1vh]'}>ID: {item.id}</p>
+                                                <p className={'w-full text-white font-soyuz text-[1.8vh] text-center'}>{item.name}</p>
+                                                <div className={'relative w-[70%] mx-auto border-[#000]'}>
+                                                    {item.dex!=0?
+                                                        <div className={'w-full relative flex justify-between items-center'}>
+                                                            <div className={'w-[2vh] h-[2vh] relative inline-block'}>
+                                                                <Image src={'/images/card_generation/common/dex.svg'} layout={'fill'}></Image>
+                                                            </div>
+                                                            <div className={'dashed-line mx-[5%] w-[60%] h-[1px]'}>
+
+                                                            </div>
+                                                            <p className={'text-white font-soyuz text-[2vh] mt-[-0.4vh] text-center'}>
+                                                                +{item.dex}
+                                                            </p>
+                                                        </div>
+                                                        :
+                                                        <div className={'hidden'}>
+
+                                                        </div>}
+                                                    {item.str!=0?
+                                                        <div className={'w-full relative flex justify-between items-center'}>
+                                                            <div className={'w-[2vh] h-[2vh] relative inline-block'}>
+                                                                <Image src={'/images/card_generation/common/str.svg'} layout={'fill'}></Image>
+                                                            </div>
+                                                            <div className={'dashed-line mx-[5%] w-[60%] h-[1px]'}>
+
+                                                            </div>
+                                                            <p className={'text-white font-soyuz text-[2vh] mt-[-0.4vh] text-center'}>
+                                                                +{item.str}
+                                                            </p>
+                                                        </div>
+                                                        :
+                                                        <div className={'hidden'}>
+
+                                                        </div>}
+                                                    {item.vit!=0?
+                                                        <div className={'w-full relative flex justify-between items-center'}>
+                                                            <div className={'w-[2vh] h-[2vh] relative inline-block'}>
+                                                                <Image src={'/images/card_generation/common/vit.svg'} layout={'fill'}></Image>
+                                                            </div>
+                                                            <div className={'dashed-line mx-[5%] w-[60%] h-[1px]'}>
+
+                                                            </div>
+                                                            <p className={'text-white font-soyuz text-[2vh] mt-[-0.4vh] text-center'}>
+                                                                +{item.vit}
+                                                            </p>
+                                                        </div>
+                                                        :
+                                                        <div className={'hidden'}>
+
+                                                        </div>}
+                                                    {item.int!=0?
+                                                        <div className={'w-full relative flex justify-between items-center'}>
+                                                            <div className={'w-[2vh] h-[2vh] relative inline-block'}>
+                                                                <Image src={'/images/card_generation/common/int.svg'} layout={'fill'}></Image>
+                                                            </div>
+                                                            <div className={'dashed-line mx-[5%] w-[60%] h-[1px]'}>
+
+                                                            </div>
+                                                            <p className={'text-white font-soyuz text-[2vh] mt-[-0.4vh] text-center'}>
+                                                                +{item.int}
+                                                            </p>
+                                                        </div>
+                                                        :
+                                                        <div className={'hidden'}>
+
+                                                        </div>}
+                                                    {item.krm!=0?
+                                                        <div className={'w-full relative flex justify-between items-center'}>
+                                                            <div className={'w-[2vh] h-[2vh] relative inline-block'}>
+                                                                <Image src={'/images/card_generation/common/krm.svg'} layout={'fill'}></Image>
+                                                            </div>
+                                                            <div className={'dashed-line mx-[5%] w-[60%] h-[1px]'}>
+
+                                                            </div>
+                                                            <p className={'text-white font-soyuz text-[2vh] mt-[-0.4vh] text-center'}>
+                                                                +{item.krm}
+                                                            </p>
+                                                        </div>
+                                                        :
+                                                        <div className={'hidden'}>
+
+                                                        </div>}
+
                                                 </div>
                                             </div>
-                                            <div className={'w-[60%] font-soyuz text-center rounded-full h-full text-[#000] text-[2.5vh] vitality-bar-positive'} onClick={()=>{RentItem(item)}}>
-                                                buy
+                                            <div className={'w-[80%] mx-auto mt-[1vh] flex justify-between'}>
+                                                <div className={'w-[50%] inline-block'}>
+                                                    <p className={'text-white inline-block align-top text-[2.5vh] font-bold font-josefin'}>{item.rentPrice}</p>
+                                                    <div className={'w-[3.5vh] h-[3.5vh] align-top ml-[10%] inline-block relative'}>
+                                                        <Image src={'/images/wallet_carrot.png'} layout={'fill'}></Image>
+                                                    </div>
+                                                </div>
+                                                <button className={'w-[50%] bg-[#E9E9E9] h-[3.5vh] rounded-full text-white inline-block align-top text-[2.5vh] text-[#000] font-bold font-soyuz'} onClick={()=>{RentItem(item)}}>
+                                                    buy
+                                                </button>
                                             </div>
-                                        </div>:
-                                        <div className={'w-full mt-[2vh] flex px-[1vw] justify-between h-[4vh]'}>
-                                            <p>Coming soon</p>
-                                        </div>}
-                                </div>
-                            );
+                                        </div>
+                                    );
+                                }
+                                else if(item.rarity=='uncommon'){
+                                    return(
+                                        <div className={'w-[48%] mt-[2vh] mb-[2vh]'}>
+                                            <div className={'w-full relative h-[23vh] rounded-[2vw]'}  key={item.id}>
+                                                <div className={'w-full absolute top-0 rounded-[2vw] h-full'}>
+                                                    <Image src={'/images/card_generation/uncommon/bg.svg'} layout={'fill'}></Image>
+                                                </div>
+                                                <div className={'w-[8vh] h-[8vh] relative mx-auto mt-[1.5vh]'}>
+                                                    <Image src={'/images/miniatures/'+ucFirst(item.type)+'/'+item.name+'.png'} layout={'fill'}></Image>
+                                                </div>
+                                                <div className={'w-[2vh] h-[2vh] absolute top-[1vh] left-[1vh]'}>
+                                                    <Image src={'/images/equipment_module/'+item.type+'.svg'} layout={'fill'}></Image>
+                                                </div>
+                                                <p className={'text-white font-josefin text-[1.8vh] text-right absolute top-[1vh] right-[1vh]'}>ID: {item.id}</p>
+                                                <p className={'w-full text-white font-soyuz text-[1.8vh] text-center'}>{item.name}</p>
+                                                <div className={'relative w-[70%] mx-auto border-[#000]'}>
+                                                    {item.dex!=0?
+                                                        <div className={'w-full relative flex justify-between items-center'}>
+                                                            <div className={'w-[2vh] h-[2vh] relative inline-block'}>
+                                                                <Image src={'/images/card_generation/uncommon/dex.svg'} layout={'fill'}></Image>
+                                                            </div>
+                                                            <div className={'dashed-line mx-[5%] w-[60%] h-[1px]'}>
+
+                                                            </div>
+                                                            <p className={'text-white font-soyuz text-[2vh] mt-[-0.4vh] text-center'}>
+                                                                +{item.dex}
+                                                            </p>
+                                                        </div>
+                                                        :
+                                                        <div className={'hidden'}>
+
+                                                        </div>}
+                                                    {item.str!=0?
+                                                        <div className={'w-full relative flex justify-between items-center'}>
+                                                            <div className={'w-[2vh] h-[2vh] relative inline-block'}>
+                                                                <Image src={'/images/card_generation/uncommon/str.svg'} layout={'fill'}></Image>
+                                                            </div>
+                                                            <div className={'dashed-line mx-[5%] w-[60%] h-[1px]'}>
+
+                                                            </div>
+                                                            <p className={'text-white font-soyuz text-[2vh] mt-[-0.4vh] text-center'}>
+                                                                +{item.str}
+                                                            </p>
+                                                        </div>
+                                                        :
+                                                        <div className={'hidden'}>
+
+                                                        </div>}
+                                                    {item.vit!=0?
+                                                        <div className={'w-full relative flex justify-between items-center'}>
+                                                            <div className={'w-[2vh] h-[2vh] relative inline-block'}>
+                                                                <Image src={'/images/card_generation/uncommon/vit.svg'} layout={'fill'}></Image>
+                                                            </div>
+                                                            <div className={'dashed-line mx-[5%] w-[60%] h-[1px]'}>
+
+                                                            </div>
+                                                            <p className={'text-white font-soyuz text-[2vh] mt-[-0.4vh] text-center'}>
+                                                                +{item.vit}
+                                                            </p>
+                                                        </div>
+                                                        :
+                                                        <div className={'hidden'}>
+
+                                                        </div>}
+                                                    {item.int!=0?
+                                                        <div className={'w-full relative flex justify-between items-center'}>
+                                                            <div className={'w-[2vh] h-[2vh] relative inline-block'}>
+                                                                <Image src={'/images/card_generation/uncommon/int.svg'} layout={'fill'}></Image>
+                                                            </div>
+                                                            <div className={'dashed-line mx-[5%] w-[60%] h-[1px]'}>
+
+                                                            </div>
+                                                            <p className={'text-white font-soyuz text-[2vh] mt-[-0.4vh] text-center'}>
+                                                                +{item.int}
+                                                            </p>
+                                                        </div>
+                                                        :
+                                                        <div className={'hidden'}>
+
+                                                        </div>}
+                                                    {item.krm!=0?
+                                                        <div className={'w-full relative flex justify-between items-center'}>
+                                                            <div className={'w-[2vh] h-[2vh] relative inline-block'}>
+                                                                <Image src={'/images/card_generation/uncommon/krm.svg'} layout={'fill'}></Image>
+                                                            </div>
+                                                            <div className={'dashed-line mx-[5%] w-[60%] h-[1px]'}>
+
+                                                            </div>
+                                                            <p className={'text-white font-soyuz text-[2vh] mt-[-0.4vh] text-center'}>
+                                                                +{item.krm}
+                                                            </p>
+                                                        </div>
+                                                        :
+                                                        <div className={'hidden'}>
+
+                                                        </div>}
+
+                                                </div>
+                                            </div>
+                                            <div className={'w-[80%] mx-auto mt-[1vh] flex justify-between'}>
+                                                <div className={'w-[50%] inline-block'}>
+                                                    <p className={'text-white inline-block align-top text-[2.5vh] font-bold font-josefin'}>{item.rentPrice}</p>
+                                                    <div className={'w-[3.5vh] h-[3.5vh] align-top ml-[10%] inline-block relative'}>
+                                                        <Image src={'/images/wallet_carrot.png'} layout={'fill'}></Image>
+                                                    </div>
+                                                </div>
+                                                <button className={'w-[50%] bg-[#DCF646] h-[3.5vh] rounded-full text-white inline-block align-top text-[2.5vh] text-[#000] font-bold font-soyuz'} onClick={()=>{RentItem(item)}}>
+                                                    buy
+                                                </button>
+                                            </div>
+                                        </div>
+                                    );
+                                }
+
+                                else if(item.rarity=='epic'){
+                                    return(
+                                        <div className={'w-[48%] mt-[2vh] mb-[2vh]'}>
+                                            <div className={'w-full relative h-[23vh] rounded-[2vw]'}  key={item.id}>
+                                                <div className={'w-full absolute top-0 rounded-[2vw] h-full'}>
+                                                    <Image src={'/images/card_generation/epic/bg.svg'} layout={'fill'}></Image>
+                                                </div>
+                                                <div className={'w-[8vh] h-[8vh] relative mx-auto mt-[1.5vh]'}>
+                                                    <Image src={'/images/miniatures/'+ucFirst(item.type)+'/'+item.name+'.png'} layout={'fill'}></Image>
+                                                </div>
+                                                <div className={'w-[2vh] h-[2vh] absolute top-[1vh] left-[1vh]'}>
+                                                    <Image src={'/images/equipment_module/'+item.type+'.svg'} layout={'fill'}></Image>
+                                                </div>
+                                                <p className={'text-white font-josefin text-[1.8vh] text-right absolute top-[1vh] right-[1vh]'}>ID: {item.id}</p>
+                                                <p className={'w-full text-white font-soyuz text-[1.8vh] text-center'}>{item.name}</p>
+                                                <div className={'relative w-[40%] inline-block mx-[2%] ml-[8%]'}>
+                                                    {item.dex!=0?
+                                                        <div className={'w-full relative flex justify-between items-center'}>
+                                                            <div className={'w-[2vh] h-[2vh] relative inline-block'}>
+                                                                <Image src={'/images/card_generation/epic/dex.svg'} layout={'fill'}></Image>
+                                                            </div>
+                                                            <div className={'dashed-line mx-[5%] w-[40%] h-[1px]'}>
+
+                                                            </div>
+                                                            <p className={'text-white font-soyuz text-[2vh] mt-[-0.4vh] text-center'}>
+                                                                +{item.dex}
+                                                            </p>
+                                                        </div>
+                                                        :
+                                                        <div className={'hidden'}>
+
+                                                        </div>}
+                                                    {item.str!=0?
+                                                        <div className={'w-full relative flex justify-between items-center'}>
+                                                            <div className={'w-[2vh] h-[2vh] relative inline-block'}>
+                                                                <Image src={'/images/card_generation/epic/str.svg'} layout={'fill'}></Image>
+                                                            </div>
+                                                            <div className={'dashed-line mx-[5%] w-[40%] h-[1px]'}>
+
+                                                            </div>
+                                                            <p className={'text-white font-soyuz text-[2vh] mt-[-0.4vh] text-center'}>
+                                                                +{item.str}
+                                                            </p>
+                                                        </div>
+                                                        :
+                                                        <div className={'hidden'}>
+
+                                                        </div>}
+                                                    {item.vit!=0?
+                                                        <div className={'w-full relative flex justify-between items-center'}>
+                                                            <div className={'w-[2vh] h-[2vh] relative inline-block'}>
+                                                                <Image src={'/images/card_generation/epic/vit.svg'} layout={'fill'}></Image>
+                                                            </div>
+                                                            <div className={'dashed-line mx-[5%] w-[40%] h-[1px]'}>
+
+                                                            </div>
+                                                            <p className={'text-white font-soyuz text-[2vh] mt-[-0.4vh] text-center'}>
+                                                                +{item.vit}
+                                                            </p>
+                                                        </div>
+                                                        :
+                                                        <div className={'hidden'}>
+
+                                                        </div>}
+                                                    {item.int!=0?
+                                                        <div className={'w-full relative flex justify-between items-center'}>
+                                                            <div className={'w-[2vh] h-[2vh] relative inline-block'}>
+                                                                <Image src={'/images/card_generation/epic/int.svg'} layout={'fill'}></Image>
+                                                            </div>
+                                                            <div className={'dashed-line mx-[5%] w-[40%] h-[1px]'}>
+
+                                                            </div>
+                                                            <p className={'text-white font-soyuz text-[2vh] mt-[-0.4vh] text-center'}>
+                                                                +{item.int}
+                                                            </p>
+                                                        </div>
+                                                        :
+                                                        <div className={'hidden'}>
+
+                                                        </div>}
+                                                    {item.krm!=0?
+                                                        <div className={'w-full relative flex justify-between items-center'}>
+                                                            <div className={'w-[2vh] h-[2vh] relative inline-block'}>
+                                                                <Image src={'/images/card_generation/epic/krm.svg'} layout={'fill'}></Image>
+                                                            </div>
+                                                            <div className={'dashed-line mx-[5%] w-[40%] h-[1px]'}>
+
+                                                            </div>
+                                                            <p className={'text-white font-soyuz text-[2vh] mt-[-0.4vh] text-center'}>
+                                                                +{item.krm}
+                                                            </p>
+                                                        </div>
+                                                        :
+                                                        <div className={'hidden'}>
+
+                                                        </div>}
+
+                                                </div>
+                                                <div className={'align-top relative w-[40%] inline-block ml-[2%] mr-[8%]'}>
+                                                    <p className={'w-full relative text-white text-center font-medium font-josefin text-[1vh]'}>Requierements</p>
+                                                    {item.requirements?.dex!=0&&item.requirements?.dex!=undefined?
+                                                        <div className={'w-full relative flex justify-center items-center'}>
+                                                            <div className={'w-[2vh] mx-[1vh] h-[2vh] relative inline-block'}>
+                                                                <Image src={'/images/card_generation/epic/dex.svg'} layout={'fill'}></Image>
+                                                            </div>
+
+                                                            <p className={'text-white font-soyuz text-[2vh] mt-[-0.4vh] text-center'}>{item.requirements.dex}
+                                                            </p>
+                                                        </div>
+                                                        :
+                                                        <div className={'hidden'}>
+
+                                                        </div>}
+                                                    {item.requirements?.str!=0&&item.requirements?.str!=undefined?
+                                                        <div className={'w-full relative flex justify-center items-center'}>
+                                                            <div className={'w-[2vh] h-[2vh] mx-[1vh] relative inline-block'}>
+                                                                <Image src={'/images/card_generation/epic/str.svg'} layout={'fill'}></Image>
+                                                            </div>
+
+                                                            <p className={'text-white font-soyuz text-[2vh] mt-[-0.4vh] text-center'}>
+                                                                {item.requirements.str}
+                                                            </p>
+                                                        </div>
+                                                        :
+                                                        <div className={'hidden'}>
+
+                                                        </div>}
+                                                    {item.requirements?.vit!=0&&item.requirements?.vit!=undefined?
+                                                        <div className={'w-full relative flex justify-center items-center'}>
+                                                            <div className={'w-[2vh] h-[2vh] mx-[1vh] relative inline-block'}>
+                                                                <Image src={'/images/card_generation/epic/vit.svg'} layout={'fill'}></Image>
+                                                            </div>
+
+                                                            <p className={'text-white font-soyuz text-[2vh] mt-[-0.4vh] text-center'}>
+                                                                {item.requirements.vit}
+                                                            </p>
+                                                        </div>
+                                                        :
+                                                        <div className={'hidden'}>
+
+                                                        </div>}
+                                                    {item.requirements?.int!=0&&item.requirements?.int!=undefined?
+                                                        <div className={'w-full relative flex justify-center items-center'}>
+                                                            <div className={'w-[2vh] h-[2vh] mx-[1vh] relative inline-block'}>
+                                                                <Image src={'/images/card_generation/epic/int.svg'} layout={'fill'}></Image>
+                                                            </div>
+
+                                                            <p className={'text-white font-soyuz text-[2vh] mt-[-0.4vh] text-center'}>
+                                                                {item.requirements.int}
+                                                            </p>
+                                                        </div>
+                                                        :
+                                                        <div className={'hidden'}>
+
+                                                        </div>}
+                                                    {item.requirements?.krm!=0&&item.requirements?.krm!=undefined?
+                                                        <div className={'w-full relative flex justify-center items-center'}>
+                                                            <div className={'w-[2vh] h-[2vh] mx-[1vh] relative inline-block'}>
+                                                                <Image src={'/images/card_generation/epic/krm.svg'} layout={'fill'}></Image>
+                                                            </div>
+
+                                                            <p className={'text-white font-soyuz text-[2vh] mt-[-0.4vh] text-center'}>
+                                                                {item.requirements.krm}
+                                                            </p>
+                                                        </div>
+                                                        :
+                                                        <div className={'hidden'}>
+
+                                                        </div>}
+                                                </div>
+                                            </div>
+                                            <div className={'w-[80%] mx-auto mt-[1vh] flex justify-between'}>
+                                                <div className={'w-[50%] inline-block'}>
+                                                    <p className={'text-white inline-block align-top text-[2.5vh] font-bold font-josefin'}>{item.rentPrice}</p>
+                                                    <div className={'w-[3.5vh] h-[3.5vh] align-top ml-[10%] inline-block relative'}>
+                                                        <Image src={'/images/wallet_carrot.png'} layout={'fill'}></Image>
+                                                    </div>
+                                                </div>
+                                                <button className={'w-[50%] bg-[#C463FF] h-[3.5vh] rounded-full text-white inline-block align-top text-[2.5vh] text-[#000] font-bold font-soyuz'} onClick={()=>{RentItem(item)}}>
+                                                    buy
+                                                </button>
+                                            </div>
+                                        </div>
+                                    );
+                                }
+
+
+                                else if(item.rarity=='legendary'){
+                                    return(
+                                        <div className={'w-[48%] mt-[2vh] mb-[2vh]'}>
+                                            <div className={'w-full relative h-[23vh] rounded-[2vw]'}  key={item.id}>
+                                                <div className={'w-full absolute top-0 rounded-[2vw] h-full'}>
+                                                    <Image src={'/images/card_generation/legendary/bg.svg'} layout={'fill'}></Image>
+                                                </div>
+                                                <div className={'w-[8vh] h-[8vh] relative mx-auto mt-[1.5vh]'}>
+                                                    <Image src={'/images/miniatures/'+ucFirst(item.type)+'/'+item.name+'.png'} layout={'fill'}></Image>
+                                                </div>
+                                                <div className={'w-[2vh] h-[2vh] absolute top-[1vh] left-[1vh]'}>
+                                                    <Image src={'/images/equipment_module/'+item.type+'.svg'} layout={'fill'}></Image>
+                                                </div>
+                                                <p className={'text-white font-josefin text-[1.8vh] text-right absolute top-[1vh] right-[1vh]'}>ID: {item.id}</p>
+                                                <p className={'w-full text-white font-soyuz text-[1.8vh] text-center'}>{item.name}</p>
+                                                <div className={'relative w-[40%] inline-block mx-[2%] ml-[8%]'}>
+                                                    {item.dex!=0?
+                                                        <div className={'w-full relative flex justify-between items-center'}>
+                                                            <div className={'w-[2vh] h-[2vh] relative inline-block'}>
+                                                                <Image src={'/images/card_generation/legendary/dex.svg'} layout={'fill'}></Image>
+                                                            </div>
+                                                            <div className={'dashed-line mx-[5%] w-[40%] h-[1px]'}>
+
+                                                            </div>
+                                                            <p className={'text-white font-soyuz text-[2vh] mt-[-0.4vh] text-center'}>
+                                                                +{item.dex}
+                                                            </p>
+                                                        </div>
+                                                        :
+                                                        <div className={'hidden'}>
+
+                                                        </div>}
+                                                    {item.str!=0?
+                                                        <div className={'w-full relative flex justify-between items-center'}>
+                                                            <div className={'w-[2vh] h-[2vh] relative inline-block'}>
+                                                                <Image src={'/images/card_generation/legendary/str.svg'} layout={'fill'}></Image>
+                                                            </div>
+                                                            <div className={'dashed-line mx-[5%] w-[40%] h-[1px]'}>
+
+                                                            </div>
+                                                            <p className={'text-white font-soyuz text-[2vh] mt-[-0.4vh] text-center'}>
+                                                                +{item.str}
+                                                            </p>
+                                                        </div>
+                                                        :
+                                                        <div className={'hidden'}>
+
+                                                        </div>}
+                                                    {item.vit!=0?
+                                                        <div className={'w-full relative flex justify-between items-center'}>
+                                                            <div className={'w-[2vh] h-[2vh] relative inline-block'}>
+                                                                <Image src={'/images/card_generation/legendary/vit.svg'} layout={'fill'}></Image>
+                                                            </div>
+                                                            <div className={'dashed-line mx-[5%] w-[40%] h-[1px]'}>
+
+                                                            </div>
+                                                            <p className={'text-white font-soyuz text-[2vh] mt-[-0.4vh] text-center'}>
+                                                                +{item.vit}
+                                                            </p>
+                                                        </div>
+                                                        :
+                                                        <div className={'hidden'}>
+
+                                                        </div>}
+                                                    {item.int!=0?
+                                                        <div className={'w-full relative flex justify-between items-center'}>
+                                                            <div className={'w-[2vh] h-[2vh] relative inline-block'}>
+                                                                <Image src={'/images/card_generation/legendary/int.svg'} layout={'fill'}></Image>
+                                                            </div>
+                                                            <div className={'dashed-line mx-[5%] w-[40%] h-[1px]'}>
+
+                                                            </div>
+                                                            <p className={'text-white font-soyuz text-[2vh] mt-[-0.4vh] text-center'}>
+                                                                +{item.int}
+                                                            </p>
+                                                        </div>
+                                                        :
+                                                        <div className={'hidden'}>
+
+                                                        </div>}
+                                                    {item.krm!=0?
+                                                        <div className={'w-full relative flex justify-between items-center'}>
+                                                            <div className={'w-[2vh] h-[2vh] relative inline-block'}>
+                                                                <Image src={'/images/card_generation/legendary/krm.svg'} layout={'fill'}></Image>
+                                                            </div>
+                                                            <div className={'dashed-line mx-[5%] w-[40%] h-[1px]'}>
+
+                                                            </div>
+                                                            <p className={'text-white font-soyuz text-[2vh] mt-[-0.4vh] text-center'}>
+                                                                +{item.krm}
+                                                            </p>
+                                                        </div>
+                                                        :
+                                                        <div className={'hidden'}>
+
+                                                        </div>}
+
+                                                </div>
+                                                <div className={'align-top relative w-[40%] inline-block ml-[2%] mr-[8%]'}>
+                                                    <p className={'w-full relative text-white text-center font-medium font-josefin text-[1vh]'}>Requierements</p>
+                                                    {item.requirements?.dex!=0&&item.requirements?.dex!=undefined?
+                                                        <div className={'w-full relative flex justify-center items-center'}>
+                                                            <div className={'w-[2vh] mx-[1vh] h-[2vh] relative inline-block'}>
+                                                                <Image src={'/images/card_generation/legendary/dex.svg'} layout={'fill'}></Image>
+                                                            </div>
+
+                                                            <p className={'text-white font-soyuz text-[2vh] mt-[-0.4vh] text-center'}>{item.requirements.dex}
+                                                            </p>
+                                                        </div>
+                                                        :
+                                                        <div className={'hidden'}>
+
+                                                        </div>}
+                                                    {item.requirements?.str!=0&&item.requirements?.str!=undefined?
+                                                        <div className={'w-full relative flex justify-center items-center'}>
+                                                            <div className={'w-[2vh] h-[2vh] mx-[1vh] relative inline-block'}>
+                                                                <Image src={'/images/card_generation/legendary/str.svg'} layout={'fill'}></Image>
+                                                            </div>
+
+                                                            <p className={'text-white font-soyuz text-[2vh] mt-[-0.4vh] text-center'}>
+                                                                {item.requirements.str}
+                                                            </p>
+                                                        </div>
+                                                        :
+                                                        <div className={'hidden'}>
+
+                                                        </div>}
+                                                    {item.requirements?.vit!=0&&item.requirements?.vit!=undefined?
+                                                        <div className={'w-full relative flex justify-center items-center'}>
+                                                            <div className={'w-[2vh] h-[2vh] mx-[1vh] relative inline-block'}>
+                                                                <Image src={'/images/card_generation/legendary/vit.svg'} layout={'fill'}></Image>
+                                                            </div>
+
+                                                            <p className={'text-white font-soyuz text-[2vh] mt-[-0.4vh] text-center'}>
+                                                                {item.requirements.vit}
+                                                            </p>
+                                                        </div>
+                                                        :
+                                                        <div className={'hidden'}>
+
+                                                        </div>}
+                                                    {item.requirements?.int!=0&&item.requirements?.int!=undefined?
+                                                        <div className={'w-full relative flex justify-center items-center'}>
+                                                            <div className={'w-[2vh] h-[2vh] mx-[1vh] relative inline-block'}>
+                                                                <Image src={'/images/card_generation/legendary/int.svg'} layout={'fill'}></Image>
+                                                            </div>
+
+                                                            <p className={'text-white font-soyuz text-[2vh] mt-[-0.4vh] text-center'}>
+                                                                {item.requirements.int}
+                                                            </p>
+                                                        </div>
+                                                        :
+                                                        <div className={'hidden'}>
+
+                                                        </div>}
+                                                    {item.requirements?.krm!=0&&item.requirements?.krm!=undefined?
+                                                        <div className={'w-full relative flex justify-center items-center'}>
+                                                            <div className={'w-[2vh] h-[2vh] mx-[1vh] relative inline-block'}>
+                                                                <Image src={'/images/card_generation/legendary/krm.svg'} layout={'fill'}></Image>
+                                                            </div>
+
+                                                            <p className={'text-white font-soyuz text-[2vh] mt-[-0.4vh] text-center'}>
+                                                                {item.requirements.krm}
+                                                            </p>
+                                                        </div>
+                                                        :
+                                                        <div className={'hidden'}>
+
+                                                        </div>}
+                                                    <p className={'w-[90%] relative text-white text-[1.2vh] ml-[10%] font-medium font-josefin mt-[0.3vh]'}>Status: <span className={'font-bold text-[1.5vh]'}>Elite</span> </p>
+
+                                                </div>
+                                            </div>
+                                            <div className={'w-[80%] mx-auto mt-[1vh] flex justify-between'}>
+                                                <div className={'w-[50%] inline-block'}>
+                                                    <p className={'text-white inline-block align-top text-[2.5vh] font-bold font-josefin'}>{item.rentPrice}</p>
+                                                    <div className={'w-[3.5vh] h-[3.5vh] align-top ml-[10%] inline-block relative'}>
+                                                        <Image src={'/images/wallet_carrot.png'} layout={'fill'}></Image>
+                                                    </div>
+                                                </div>
+                                                <button className={'w-[50%] bg-[#FAC642] h-[3.5vh] rounded-full text-white inline-block align-top text-[2.5vh] text-[#000] font-bold font-soyuz'} onClick={()=>{RentItem(item)}}>
+                                                    buy
+                                                </button>
+                                            </div>
+                                        </div>
+                                    );
+                                }
+
                         }
                         else{
-                            return(
-                                <div className={'w-[28%] mt-[10vw] relative'} key={item.name}>
-                                    <div className={'w-full relative h-[15vh] inventory-card-bg rounded-[2vw]'}>
-                                        <div className={'w-full absolute rounded-[2vw] top-0 h-full'}>
-                                            <Image src={'/images/bunny_generation/'+ucFirst(item.type)+'/'+item.name+'.png'} layout={'fill'}></Image>
-                                        </div>
-                                    </div>
-                                    <div className={'w-full h-[15vh]  rounded-[2vw] absolute top-0 left-0 backdrop-blur-sm flex justify-center items-center align-middle'}>
-                                        <p className={'text-white text-center inline-block absolute items-center font-soyuz text-[5vw]'}>Already minted</p>
-                                    </div>
-                                    <div className={'w-full absolute top-[-1.5vh] h-[3vh]'}>
-                                        <div className={'text-sm leading-[100%] justify-center text-[#000] font-soyuz inline-flex align-top w-[22%] rounded-full bg-[#FFC634] h-[3vh]'}>
-                                            {item.id}
-                                        </div>
-                                        <div className={'text-[1.8vh] pl-[1vw] leading-[158%] w-[78%] text-white font-soyuz inline-block align-top rounded-full h-[3vh]'}>
-                                            {item.name}
-                                        </div>
-                                    </div>
-                                </div>
-                            );
+
                         }
                     }
                 })}

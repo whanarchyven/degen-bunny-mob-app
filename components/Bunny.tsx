@@ -141,18 +141,18 @@ class Bunny extends Component <any,bunnyInterface> {
                 currentInventoryTab:'hat',
                 inventory:[
                     {
-                        id:31,
-                        rarity:'epic',
-                        name:'Hoody10',
-                        type:'clothes',
-                        str:0,
-                        dex:0,
-                        vit:1,
-                        int:4,
+                        id:10,
+                        rarity:'legendary',
+                        name:'White_hat_carrot10',
+                        type:'hat',
+                        str:2,
+                        dex:1,
+                        vit:5,
+                        int:0,
                         krm:5,
                         requirements:{
-                            krm:2,
-                            str:3,
+                            vit:4,
+                            dex:1,
                         }
                     },
                     {
@@ -258,78 +258,6 @@ class Bunny extends Component <any,bunnyInterface> {
                         vit:0,
                         int:0,
                         krm:5,
-                    },
-                    {
-                        id:220,
-                        rarity:'epic',
-                        name:'Ice_cream_l5',
-                        type:'left hand',
-                        str:2,
-                        dex:1,
-                        vit:5,
-                        int:0,
-                        krm:0,
-                        requirements:{
-                            vit:4,
-                        }
-                    },
-                    {
-                        id:410,
-                        rarity:'uncommon',
-                        name:'Chain_s_r10',
-                        type:'right hand',
-                        str:2,
-                        dex:1,
-                        vit:0,
-                        int:0,
-                        krm:0,
-                    },
-                    {
-                        id:430,
-                        rarity:'epic',
-                        name:'Health_bracelet_r5',
-                        type:'right hand',
-                        str:2,
-                        dex:1,
-                        vit:5,
-                        int:0,
-                        krm:0,
-                        requirements:{
-                            krm:4,
-                            dex:1,
-                        }
-                    },
-
-
-                    {
-                        id:610,
-                        rarity:'epic',
-                        name:'Crown_g10',
-                        type:'hat',
-                        str:2,
-                        dex:1,
-                        vit:0,
-                        int:0,
-                        krm:5,
-                        requirements:{
-                            str:4,
-                            vit:1,
-                        }
-                    },
-                    {
-                        id:10,
-                        rarity:'legendary',
-                        name:'White_hat_carrot10',
-                        type:'hat',
-                        str:2,
-                        dex:1,
-                        vit:5,
-                        int:0,
-                        krm:5,
-                        requirements:{
-                            vit:4,
-                            dex:1,
-                        }
                     },
 
 
