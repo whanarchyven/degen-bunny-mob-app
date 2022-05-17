@@ -213,7 +213,7 @@ class Bunny extends Component <any,bunnyInterface> {
                     },
                     {
                         id:340,
-                        rarity:'common',
+                        rarity:'epic',
                         name:'Business_suit10',
                         type:'clothes',
                         str:0,

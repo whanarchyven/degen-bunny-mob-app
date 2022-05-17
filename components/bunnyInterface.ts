@@ -32,6 +32,7 @@ export interface bunnyInterface{
 
         equipment:{
             rightHand?:{
+                id:number,
                 rarity:string,
                 name:string,
                 str:number,
@@ -48,6 +49,7 @@ export interface bunnyInterface{
                 }
             },
             leftHand?:{
+                id:number,
                 rarity:string,
                 name:string,
                 str:number,
@@ -64,6 +66,7 @@ export interface bunnyInterface{
                 }
             },
             hat?:{
+                id:number,
                 rarity:string,
                 name:string,
                 str:number,
@@ -80,6 +83,7 @@ export interface bunnyInterface{
                 }
             },
             clothes?:{
+                id:number,
                 rarity:string,
                 name:string,
                 str:number,
@@ -96,6 +100,7 @@ export interface bunnyInterface{
                 }
             },
             neck?:{
+                id:number,
                 rarity:string,
                 name:string,
                 str:number,
@@ -112,6 +117,7 @@ export interface bunnyInterface{
                 }
             },
             hears?:{
+                id:number,
                 rarity:string,
                 name:string,
                 str:number,
