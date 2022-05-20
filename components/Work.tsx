@@ -132,16 +132,16 @@ const Work = ({pushToWork, bunny}:workModuleInterface) => {
 
     return (
         <div className={'w-full h-full bg-[url(../public/images/fishbg.png)] bg-cover'}>
-            <h2 className={'absolute top-[17vh] left-[13vw] text-white font-soyuz text-[5vh] leading-[100%]'}>Works</h2>
-            <div className={'absolute top-[23vh] left-[13vw] w-[31vw] h-[3.5vh] border-2 border-white rounded-full'}>
-                {workRadio=='daily'?<div className={'font-josefin inline-block align-top font-bold rounded-l-full h-full text-[2vh] text-center w-[50%] work-active-tab'} onClick={()=>{setWorkRadio('daily')}}>Daily</div>:<div className={'font-josefin inline-block align-top h-full text-[2vh] font-bold rounded-l-full text-center w-[50%]'} onClick={()=>{setWorkRadio('daily')}}>Daily</div>}
-                {workRadio=='work'?<div className={'font-josefin inline-block align-top font-bold rounded-r-full h-full text-[2vh] text-center w-[50%] work-active-tab'} onClick={()=>{setWorkRadio('work')}}>Work</div>:<div className={'font-josefin inline-block align-top h-full text-[2vh] font-bold rounded-r-full text-center w-[50%]'} onClick={()=>{setWorkRadio('work')}}>Work</div>}
+            <h2 className={'absolute top-[17vh] left-[13vw] text-white font-soyuz text-[5vh] leading-[100%] sm:top-[2vw] sm:text-[4vw]'}>Works</h2>
+            <div className={'absolute top-[23vh] left-[13vw] w-[31vw] h-[3.5vh] border-2 border-white rounded-full sm:h-[2.5vw] sm:top-[7vw]'}>
+                {workRadio=='daily'?<div className={'font-josefin cursor-pointer inline-block align-top font-bold rounded-l-full h-full text-[2vh] sm:text-[1.5vw] text-center w-[50%] work-active-tab'} onClick={()=>{setWorkRadio('daily')}}>Daily</div>:<div className={'font-josefin cursor-pointer inline-block align-top h-full text-[2vh] sm:text-[1.5vw] font-bold rounded-l-full text-center w-[50%]'} onClick={()=>{setWorkRadio('daily')}}>Daily</div>}
+                {workRadio=='work'?<div className={'font-josefin cursor-pointer inline-block align-top font-bold rounded-r-full h-full text-[2vh] sm:text-[1.5vw] text-center w-[50%] work-active-tab'} onClick={()=>{setWorkRadio('work')}}>Work</div>:<div className={'font-josefin cursor-pointer inline-block align-top h-full text-[2vh] sm:text-[1.5vw] font-bold rounded-r-full text-center w-[50%]'} onClick={()=>{setWorkRadio('work')}}>Work</div>}
             </div>
-            <div className={'overflow-y-scroll absolute w-[90%] top-[30vh] h-[50vh] mx-[5%]'}>
+            <div className={'overflow-y-scroll absolute w-[90%] top-[30vh] h-[50vh] mx-[5%] sm:top-[10vw] sm:h-[31vw]'}>
                 {workItems.map(item=>{
                     if(bunny.work?.find(index=>index.workItem.id==item.id)==undefined){
                         return(
-                            <div key={item.id} className={'w-full my-[3.3vh]'} onClick={()=>{closePop();setWorkInPop(item)}}>
+                            <div key={item.id} className={'w-full my-[3.3vh] cursor-pointer sm:my-[4.5vw] sm:ml-[5%] sm:w-[45%]'} onClick={()=>{closePop();setWorkInPop(item)}}>
                                 <WorkItem workItem={item}></WorkItem>
                             </div>
                         );

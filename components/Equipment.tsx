@@ -165,194 +165,194 @@ const Equipment = ({bunny,updateClothes,updateEars,updateHat,updateLeftHand,upda
 
     return (
         <div className={'w-full h-full'}>
-            <div className={'w-full items-center flex absolute bottom-[34vh] h-[40vh]'}>
-                <div className={'absolute top-[4vw] left-[26vw] w-[48vw] h-[69.3vw]'}>
+            <div className={'w-full items-center flex absolute bottom-[34vh] h-[40vh] sm:bottom-0 sm:top-[4vw]'}>
+                <div className={'absolute top-[4vw] left-[26vw] w-[48vw] h-[69.3vw] sm:w-[24vw] sm:h-[33.3vw] sm:top-[0vw] sm:left-[38vw]'}>
                     <BunnyGeneration bunny={bunny}></BunnyGeneration>
                 </div>
-                <div className={'w-[36vw] h-[9.4vh] top-[4vh]  absolute left-0'}>
+                <div className={'w-[36vw] h-[9.4vh] top-[4vh]  absolute left-0 sm:w-[20vw] sm:h-[10vw] sm:top-[0vw] cursor-pointer'}>
                     {bunny.equipment.hat==undefined?
-                        <div className={'rotate-180 left-[-50%] relative h-full'} onClick={()=>{setCurrentInventoryItem('hat');ClosePop();}}>
-                            <div className={'w-full absolute h-full'}>
+                        <div className={'left-[-20%] relative h-full'} onClick={()=>{setCurrentInventoryItem('hat');ClosePop();}}>
+                            <div className={'w-full rotate-180 absolute h-full'}>
                                 <Image src={'/images/equipment_module/equip_tab.svg'} layout={'fill'}></Image>
                             </div>
-                            <div className={'w-[5vh] h-[5vh] rotate-180 left-0 left-[4vw] top-[4vw] absolute'}>
+                            <div className={'w-[4vh] h-[4vh] left-[23vw] top-[3vh] sm:right-[2.85vw] sm:left-auto sm:top-[3vw] sm:w-[4vw] sm:h-[4vw] absolute'}>
                                 <Image src={'/images/equipment_module/hat.svg'} layout={'fill'}></Image>
                             </div>
                         </div>
                         :
-                        <div className={'rotate-180 left-[-20%] relative w-full h-full'} onClick={()=>{setCurrentInventoryItem('hat');ClosePop();}}>
-                            <div className={'w-full h-full'}>
+                        <div className={'left-[-20%] relative h-full'} onClick={()=>{setCurrentInventoryItem('hat');ClosePop();}}>
+                            <div className={'w-full rotate-180 absolute h-full'}>
                                 <Image src={'/images/equipment_module/equip_tab_active.svg'} layout={'fill'}></Image>
                             </div>
-                            <div className={'w-[5vh] h-[5vh] rotate-180 left-0 left-[4vw] top-[4vw] absolute'}>
+                            <div className={'w-[4vh] h-[4vh] left-[23vw] top-[3vh] sm:right-[2.85vw] sm:left-auto sm:top-[3vw] sm:w-[4vw] sm:h-[4vw] absolute'}>
                                 <Image src={'/images/miniatures/Hats/'+bunny.equipment.hat.name+'.png'} layout={'fill'}></Image>
                             </div>
                         </div>
                     }
                 </div>
-                <div className={'w-[36vw] h-[9.4vh] top-[14.8vh]  absolute left-0'}>
+                <div className={'w-[36vw] h-[9.4vh] top-[15vh]  absolute left-0 sm:w-[20vw] sm:h-[10vw] sm:top-[10vw] cursor-pointer'}>
                     {bunny.equipment.clothes==undefined?
-                        <div className={'rotate-180 left-[-50%] relative h-full'} onClick={()=>{setCurrentInventoryItem('clothes');ClosePop();}}>
-                            <div className={'w-full h-full'}>
+                        <div className={'left-[-20%] relative h-full'} onClick={()=>{setCurrentInventoryItem('clothes');ClosePop();}}>
+                            <div className={'w-full rotate-180 absolute h-full'}>
                                 <Image src={'/images/equipment_module/equip_tab.svg'} layout={'fill'}></Image>
                             </div>
-                            <div className={'w-[5vh] h-[5vh] rotate-180 left-0 left-[4vw] top-[4vw] absolute'}>
+                            <div className={'w-[4vh] h-[4vh] left-[23vw] top-[3vh] sm:right-[2.85vw] sm:left-auto sm:top-[3vw] sm:w-[4vw] sm:h-[4vw] absolute'}>
                                 <Image src={'/images/equipment_module/clothes.svg'} layout={'fill'}></Image>
                             </div>
                         </div>
                         :
-                        <div className={'rotate-180 left-[-20%] relative w-full h-full'} onClick={()=>{setCurrentInventoryItem('clothes');ClosePop();}}>
-                            <div className={'w-full h-full'}>
+                        <div className={'left-[-20%] relative h-full'} onClick={()=>{setCurrentInventoryItem('clothes');ClosePop();}}>
+                            <div className={'w-full rotate-180 absolute h-full'}>
                                 <Image src={'/images/equipment_module/equip_tab_active.svg'} layout={'fill'}></Image>
                             </div>
-                            <div className={'w-[5vh] h-[5vh] rotate-180 left-0 left-[4vw] top-[4vw] absolute'}>
+                            <div className={'w-[4vh] h-[4vh] left-[23vw] top-[3vh] sm:right-[2.85vw] sm:left-auto sm:top-[3vw] sm:w-[4vw] sm:h-[4vw] absolute'}>
                                 <Image src={'/images/miniatures/Clothes/'+bunny.equipment.clothes.name+'.png'} layout={'fill'}></Image>
                             </div>
                         </div>
                     }
                 </div>
-                <div className={'w-[36vw] h-[9.4vh] top-[25.5vh]  absolute left-0'}>
+                <div className={'w-[36vw] h-[9.4vh] top-[26vh] absolute left-0 sm:w-[20vw] sm:h-[10vw] sm:top-[20vw] cursor-pointer'}>
                     {bunny.equipment.leftHand==undefined?
-                        <div className={'rotate-180 left-[-50%] relative h-full'} onClick={()=>{setCurrentInventoryItem('left hand');ClosePop();}}>
-                            <div className={'w-full h-full'}>
+                        <div className={'left-[-20%] relative h-full'} onClick={()=>{setCurrentInventoryItem('left hand');ClosePop();}}>
+                            <div className={'w-full rotate-180 absolute h-full'}>
                                 <Image src={'/images/equipment_module/equip_tab.svg'} layout={'fill'}></Image>
                             </div>
-                            <div className={'w-[5vh] h-[5vh] rotate-180 left-0 left-[4vw] top-[4vw] absolute'}>
+                            <div className={'w-[4vh] h-[4vh] left-[23vw] top-[3vh] sm:right-[2.85vw] sm:left-auto sm:top-[3vw] sm:w-[4vw] sm:h-[4vw] absolute'}>
                                 <Image src={'/images/equipment_module/left hand.svg'} layout={'fill'}></Image>
                             </div>
                         </div>
                         :
-                        <div className={'rotate-180 left-[-20%] relative w-full h-full'} onClick={()=>{setCurrentInventoryItem('left hand');ClosePop();}}>
-                            <div className={'w-full h-full'}>
+                        <div className={'left-[-20%] relative h-full'} onClick={()=>{setCurrentInventoryItem('left hand');ClosePop();}}>
+                            <div className={'w-full rotate-180 absolute h-full'}>
                                 <Image src={'/images/equipment_module/equip_tab_active.svg'} layout={'fill'}></Image>
                             </div>
-                            <div className={'w-[5vh] h-[5vh] rotate-180 left-0 left-[4vw] top-[4vw] absolute'}>
+                            <div className={'w-[4vh] h-[4vh] left-[23vw] top-[3vh] sm:right-[2.85vw] sm:left-auto sm:top-[3vw] sm:w-[4vw] sm:h-[4vw] absolute'}>
                                 <Image src={'/images/miniatures/Left hand/'+bunny.equipment.leftHand.name+'.png'} layout={'fill'}></Image>
                             </div>
                         </div>
                     }
                 </div>
-                <div className={'w-[36vw] h-[9.4vh] top-[4vh]  absolute right-0'}>
+                <div className={'w-[36vw] h-[9.4vh] top-[4vh] absolute right-0 sm:w-[20vw] sm:h-[10vw] sm:top-[0vw] cursor-pointer'}>
                     {bunny.equipment.hears==undefined?
-                        <div className={'w-full right-[-50%] relative h-full'} onClick={()=>{setCurrentInventoryItem('ears');ClosePop();}}>
-                            <div className={'w-full h-full'}>
+                        <div className={'right-[-20%] relative h-full'} onClick={()=>{setCurrentInventoryItem('ears');ClosePop();}}>
+                            <div className={'w-full absolute h-full'}>
                                 <Image src={'/images/equipment_module/equip_tab.svg'} layout={'fill'}></Image>
                             </div>
-                            <div className={'w-[5vh] h-[5vh] left-0 left-[4vw] top-[4vw] absolute'}>
+                            <div className={'w-[4vh] h-[4vh] right-[23vw] top-[3vh] sm:right-[13.4vw] sm:top-[3vw] sm:w-[4vw] sm:h-[4vw] absolute'}>
                                 <Image src={'/images/equipment_module/ears.svg'} layout={'fill'}></Image>
                             </div>
                         </div>
                         :
-                        <div className={'w-full right-[-20%] relative h-full'}>
-                            <div className={'w-full h-full'} onClick={()=>{setCurrentInventoryItem('ears');ClosePop();}}>
+                        <div className={'right-[-20%] relative h-full'}>
+                            <div className={'w-full absolute h-full'} onClick={()=>{setCurrentInventoryItem('ears');ClosePop();}}>
                                 <Image src={'/images/equipment_module/equip_tab_active.svg'} layout={'fill'}></Image>
                             </div>
-                            <div className={'w-[5vh] h-[5vh] left-0 left-[4vw] top-[4vw] absolute'}>
+                            <div className={'w-[4vh] h-[4vh]  right-[4vw] top-[4vw] sm:right-[13.4vw] sm:top-[3vw] sm:w-[4vw] sm:h-[4vw] absolute'}>
                                 <Image src={'/images/miniatures/Ears/'+bunny.equipment.hears.name+'.png'} layout={'fill'}></Image>
                             </div>
                         </div>
                     }
                 </div>
-                <div className={'w-[36vw] h-[9.4vh] top-[14.8vh]  absolute right-0'}>
+                <div className={'w-[36vw] h-[9.4vh] top-[15vh]  absolute right-0 sm:w-[20vw] sm:h-[10vw] sm:top-[10vw] cursor-pointer'}>
                     {bunny.equipment.neck==undefined?
-                        <div className={'w-full right-[-50%] relative h-full'} onClick={()=>{setCurrentInventoryItem('neck');ClosePop();}}>
-                            <div className={'w-full h-full'}>
+                        <div className={'right-[-20%] relative h-full'} onClick={()=>{setCurrentInventoryItem('neck');ClosePop();}}>
+                            <div className={'w-full absolute h-full'}>
                                 <Image src={'/images/equipment_module/equip_tab.svg'} layout={'fill'}></Image>
                             </div>
-                            <div className={'w-[5vh] h-[5vh] left-0 left-[4vw] top-[4vw] absolute'}>
+                            <div className={'w-[4vh] h-[4vh] right-[23vw] top-[3vh] sm:right-[13.4vw] sm:top-[3vw] sm:w-[4vw] sm:h-[4vw] absolute'}>
                                 <Image src={'/images/equipment_module/neck.svg'} layout={'fill'}></Image>
                             </div>
                         </div>
                         :
-                        <div className={'w-full right-[-20%] relative h-full'} onClick={()=>{setCurrentInventoryItem('neck');ClosePop();}}>
-                            <div className={'w-full h-full'}>
+                        <div className={'right-[-20%] relative h-full'} onClick={()=>{setCurrentInventoryItem('neck');ClosePop();}}>
+                            <div className={'w-full absolute h-full'}>
                                 <Image src={'/images/equipment_module/equip_tab_active.svg'} layout={'fill'}></Image>
                             </div>
-                            <div className={'w-[5vh] h-[5vh] left-0 left-[4vw] top-[4vw] absolute'}>
+                            <div className={'w-[4vh] h-[4vh]  right-[4vw] top-[4vw] sm:right-[13.4vw] sm:top-[3vw] sm:w-[4vw] sm:h-[4vw] absolute'}>
                                 <Image src={'/images/miniatures/Necklace/'+bunny.equipment.neck.name+'.png'} layout={'fill'}></Image>
                             </div>
                         </div>
                     }
                 </div>
-                <div className={'w-[36vw] h-[9.4vh] top-[25.5vh]  absolute right-0'}>
+                <div className={'w-[36vw] h-[9.4vh] top-[26vh]  absolute right-0 sm:w-[20vw] sm:h-[10vw] sm:top-[20vw] cursor-pointer'}>
                     {bunny.equipment.rightHand==undefined?
-                        <div className={'w-full right-[-50%] relative h-full'} onClick={()=>{setCurrentInventoryItem('right hand');ClosePop();}}>
-                            <div className={'w-full h-full'}>
+                        <div className={'right-[-20%] relative h-full'} onClick={()=>{setCurrentInventoryItem('right hand');ClosePop();}}>
+                            <div className={'w-full absolute h-full'}>
                                 <Image src={'/images/equipment_module/equip_tab.svg'} layout={'fill'}></Image>
                             </div>
-                            <div className={'w-[5vh] h-[5vh] left-0 left-[4vw] top-[4vw] absolute'}>
+                            <div className={'w-[4vh] h-[4vh] right-[23vw] top-[3vh] sm:right-[13.4vw] sm:top-[3vw] sm:w-[4vw] sm:h-[4vw] absolute'}>
                                 <Image src={'/images/equipment_module/right hand.svg'} layout={'fill'}></Image>
                             </div>
                         </div>
                         :
-                        <div className={'w-full right-[-20%] relative  h-full'} onClick={()=>{setCurrentInventoryItem('right hand');ClosePop();}}>
-                            <div className={'w-full h-full'}>
+                        <div className={'right-[-20%] relative h-full'} onClick={()=>{setCurrentInventoryItem('right hand');ClosePop();}}>
+                            <div className={'w-full absolute h-full'}>
                                 <Image src={'/images/equipment_module/equip_tab_active.svg'} layout={'fill'}></Image>
                             </div>
-                            <div className={'w-[5vh] h-[5vh] left-0 left-[4vw] top-[4vw] absolute'}>
+                            <div className={'w-[4vh] h-[4vh] right-[23vw] top-[3vh] sm:right-[13.4vw] sm:top-[3vw] sm:w-[4vw] sm:h-[4vw] absolute'}>
                                 <Image src={'/images/miniatures/Right hand/'+bunny.equipment.rightHand.name+'.png'} layout={'fill'}></Image>
                             </div>
                         </div>
                     }
                 </div>
             </div>
-            <div className={'w-full items-center flex absolute bottom-[30vh] h-[4vh]'}>
-                <p className={'font-soyuz w-full text-center font-medium text-xl'}>{bunny.name}</p>
+            <div className={'w-full items-center flex absolute bottom-[30vh] h-[4vh] sm:bottom-auto sm:top-[2vw] '}>
+                <p className={'font-soyuz w-full text-center font-medium text-xl sm:text-[3vw]'}>{bunny.name}</p>
             </div>
-            <div className={'w-full flex-wrap items-center flex absolute bottom-[2vh] h-[28vh]'}>
-                <div className={'w-full block flex items-center px-[8vw] h-[9vw]'}>
-                    <p className={'w-[20%] font-josefin uppercase font-medium text-xl]'}>STR</p>
-                    <div className={'w-[50%] items-center relative inline-flex h-[2vw]'}>
+            <div className={'w-full flex-wrap items-center justify-center flex absolute bottom-[2vh] h-[28vh] sm:h-[10vw] sm:bottom-[3vw]'}>
+                <div className={'w-full sm:w-[32%] block flex items-center px-[8vw] sm:px-[2vw] h-[9vw] sm:h-[3vw] sm:h-[3vw]'}>
+                    <p className={'w-[20%] font-josefin uppercase font-medium text-xl sm:text-[2vw]'}>STR</p>
+                    <div className={'w-[50%] items-center sm:h-[1vw] relative inline-flex h-[2vw]'}>
                         <StatbarPositive color={'#AEC700'} width={(bunny.stats.str)*2.5+'%'} ></StatbarPositive>
                         <StatbarNegative width={100-(bunny.stats.str*2.5)+'%'} ></StatbarNegative>
-                        <StatIndicator className={'border-4 border-white w-[4.5vw] bg-[#AEC700] absolute rounded-full h-[4.5vw]'} margin={bunny.stats.str*2.5-2+'%'}></StatIndicator>
+                        <StatIndicator className={'border-4 sm:ml-[-4%] border-white w-[4.5vw] sm:w-[2vw] sm:h-[2vw] bg-[#AEC700] absolute rounded-full h-[4.5vw]'} margin={bunny.stats.str*2.5-2+'%'}></StatIndicator>
                     </div>
-                    <button className={'font-soyuz font-semibold text-[#000] green-gradient w-[30%] inline-block rounded-[1vh] h-[70%] mx-[5%]'}>show more</button>
+                    <button className={'font-soyuz font-semibold text-[#000] green-gradient w-[30%] inline-block rounded-[1vh] h-[70%] sm:text-[1vw] mx-[5%]'}>show more</button>
                 </div>
-                <div className={'w-full block flex items-center px-[8vw] h-[9vw]'}>
-                    <p className={'w-[20%] font-josefin uppercase font-medium text-xl]'}>Dex</p>
-                    <div className={'w-[50%] items-center relative inline-flex h-[2vw]'}>
+                <div className={'w-full sm:w-[32%] block flex items-center px-[8vw] sm:px-[2vw] h-[9vw] sm:h-[3vw]'}>
+                    <p className={'w-[20%] font-josefin uppercase font-medium text-xl sm:text-[2vw]'}>Dex</p>
+                    <div className={'w-[50%] items-center sm:h-[1vw] relative inline-flex h-[2vw]'}>
                         <StatbarPositive color={'#FFB800'} width={(bunny.stats.dex)*2.5+'%'} ></StatbarPositive>
                         <StatbarNegative width={100-(bunny.stats.dex*2.5)+'%'} ></StatbarNegative>
-                        <StatIndicator className={'border-4 border-white w-[4.5vw] bg-[#FFB800] absolute rounded-full h-[4.5vw]'} margin={bunny.stats.dex*2.5-2+'%'}></StatIndicator>
+                        <StatIndicator className={'border-4 sm:ml-[-4%] border-white w-[4.5vw] sm:w-[2vw] sm:h-[2vw] bg-[#FFB800] absolute rounded-full h-[4.5vw]'} margin={bunny.stats.dex*2.5-2+'%'}></StatIndicator>
                     </div>
-                    <button className={'font-soyuz font-semibold text-[#000] green-gradient w-[30%] inline-block rounded-[1vh] h-[70%] mx-[5%]'}>show more</button>
+                    <button className={'font-soyuz font-semibold text-[#000] green-gradient w-[30%] inline-block rounded-[1vh] h-[70%] sm:text-[1vw] mx-[5%]'}>show more</button>
                 </div>
-                <div className={'w-full block flex items-center px-[8vw] h-[9vw]'}>
-                    <p className={'w-[20%] font-josefin uppercase font-medium text-xl]'}>Vit</p>
-                    <div className={'w-[50%] items-center relative inline-flex h-[2vw]'}>
+                <div className={'w-full sm:w-[32%] block flex items-center px-[8vw] sm:px-[2vw] h-[9vw] sm:h-[3vw]'}>
+                    <p className={'w-[20%] font-josefin uppercase font-medium text-xl sm:text-[2vw]'}>Vit</p>
+                    <div className={'w-[50%] items-center sm:h-[1vw] relative inline-flex h-[2vw]'}>
                         <StatbarPositive color={'#EC43FF'} width={(bunny.stats.vit)*2.5+'%'} ></StatbarPositive>
                         <StatbarNegative width={100-(bunny.stats.vit*2.5)+'%'} ></StatbarNegative>
-                        <StatIndicator className={'border-4 border-white w-[4.5vw] bg-[#EC43FF] absolute rounded-full h-[4.5vw]'} margin={bunny.stats.vit*2.5-2+'%'}></StatIndicator>
+                        <StatIndicator className={'border-4 sm:ml-[-4%] border-white w-[4.5vw] sm:w-[2vw] sm:h-[2vw] bg-[#EC43FF] absolute rounded-full h-[4.5vw]'} margin={bunny.stats.vit*2.5-2+'%'}></StatIndicator>
                     </div>
-                    <button className={'font-soyuz font-semibold text-[#000] green-gradient w-[30%] inline-block rounded-[1vh] h-[70%] mx-[5%]'}>show more</button>
+                    <button className={'font-soyuz font-semibold text-[#000] green-gradient w-[30%] inline-block rounded-[1vh] h-[70%] sm:text-[1vw] mx-[5%]'}>show more</button>
                 </div>
-                <div className={'w-full block flex items-center px-[8vw] h-[9vw]'}>
-                    <p className={'w-[20%] font-josefin uppercase font-medium text-xl]'}>Int</p>
-                    <div className={'w-[50%] items-center relative inline-flex h-[2vw]'}>
+                <div className={'w-full sm:w-[32%] block flex items-center px-[8vw] sm:px-[2vw] h-[9vw] sm:h-[3vw]'}>
+                    <p className={'w-[20%] font-josefin uppercase font-medium text-xl sm:text-[2vw]'}>Int</p>
+                    <div className={'w-[50%] items-center sm:h-[1vw] relative inline-flex h-[2vw]'}>
                         <StatbarPositive color={'#F97A55'} width={(bunny.stats.int)*2.5+'%'} ></StatbarPositive>
                         <StatbarNegative width={100-(bunny.stats.int*2.5)+'%'} ></StatbarNegative>
-                        <StatIndicator className={'border-4 border-white w-[4.5vw] bg-[#F97A55] absolute rounded-full h-[4.5vw]'} margin={bunny.stats.int*2.5-2+'%'}></StatIndicator>
+                        <StatIndicator className={'border-4 sm:ml-[-4%] border-white w-[4.5vw] sm:w-[2vw] sm:h-[2vw] bg-[#F97A55] absolute rounded-full h-[4.5vw]'} margin={bunny.stats.int*2.5-2+'%'}></StatIndicator>
                     </div>
-                    <button className={'font-soyuz font-semibold text-[#000] green-gradient w-[30%] inline-block rounded-[1vh] h-[70%] mx-[5%]'}>show more</button>
+                    <button className={'font-soyuz font-semibold text-[#000] green-gradient w-[30%] inline-block rounded-[1vh] h-[70%] sm:text-[1vw] mx-[5%]'}>show more</button>
                 </div>
-                <div className={'w-full block flex items-center px-[8vw] h-[9vw]'}>
-                    <p className={'w-[20%] font-josefin uppercase font-medium text-xl]'}>Krm</p>
-                    <div className={'w-[50%] items-center relative inline-flex h-[2vw]'}>
+                <div className={'w-full sm:w-[32%] block flex items-center px-[8vw] sm:px-[2vw] h-[9vw] sm:h-[3vw]'}>
+                    <p className={'w-[20%] font-josefin uppercase font-medium text-xl sm:text-[2vw]'}>Krm</p>
+                    <div className={'w-[50%] items-center sm:h-[1vw] relative inline-flex h-[2vw]'}>
                         <StatbarPositive color={'#595AD0'} width={(bunny.stats.krm)*2.5+'%'} ></StatbarPositive>
                         <StatbarNegative width={100-(bunny.stats.krm*2.5)+'%'} ></StatbarNegative>
-                        <StatIndicator className={'border-4 border-white w-[4.5vw] bg-[#595AD0] absolute rounded-full h-[4.5vw]'} margin={bunny.stats.krm*2.5-2+'%'}></StatIndicator>
+                        <StatIndicator className={'border-4 sm:ml-[-4%] border-white w-[4.5vw] sm:w-[2vw] sm:h-[2vw] bg-[#595AD0] absolute rounded-full h-[4.5vw]'} margin={bunny.stats.krm*2.5-2+'%'}></StatIndicator>
                     </div>
-                    <button className={'font-soyuz font-semibold text-[#000] green-gradient w-[30%] inline-block rounded-[1vh] h-[70%] mx-[5%]'}>show more</button>
+                    <button className={'font-soyuz font-semibold text-[#000] green-gradient w-[30%] inline-block rounded-[1vh] h-[70%] sm:text-[1vw] mx-[5%]'}>show more</button>
                 </div>
             </div>
 
             {/*<div className={'w-[70%] absolute left-[15%] p-[1vw] inline-block h-[53vw] bottom-[2vw] '}>*/}
-            {/*    <div className={'w-full flex items-center h-[9vw]'}>*/}
-            {/*        <div className={'w-[70%] items-center relative inline-flex h-[2vw]'}>*/}
+            {/*    <div className={'w-full sm:w-[32%] flex items-center h-[9vw] sm:h-[3vw]'}>*/}
+            {/*        <div className={'w-[70%] items-center relative inl sm:text-[2vw]ne-flex h-[2vw]'}>*/}
             {/*            <StatbarPositive width={bunny.vitality*2.5+'%'} ></StatbarPositive>*/}
             {/*            <StatbarNegative width={100-(bunny.vitality*2.5)+'%'} ></StatbarNegative>*/}
-            {/*            <StatIndicator className={'border-4 border-white w-[4.5vw] bg-[#FFB800] absolute rounded-full h-[4.5vw]'} margin={bunny.vitality*2.5-2+'%'}></StatIndicator>*/}
+            {/*            <StatIndicator className={'border-4 sm:ml-[-4%] border-white w-[4.5vw] sm:w-[2vw] sm:h-[2vw] bg-[#FFB800] absolute rounded-full h-[4.5vw]'} margin={bunny.vitality*2.5-2+'%'}></StatIndicator>*/}
             {/*        </div>*/}
             {/*    </div>*/}
             {/*</div>*/}
