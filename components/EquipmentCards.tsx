@@ -28,28 +28,28 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                         if(item.rarity=='common'){
                             if(bunny.equipment.clothes?.id==item.id){
                                 return(
-                                    <div className={'w-[48%] sm:w-[23%] sm:h-[23.5vw] mt-[4vw] relative h-[23vh] border-2 border-[#FFF] border-dashed rounded-[2vw]'}  key={item.id}> sm:rounded-[1vw]
+                                    <div className={'w-[48%] sm:w-[45%] sm:h-[14.2vw] mt-[4vw] sm:mt-[2vw] relative h-[23vh] border-2 border-[#FFF] border-dashed rounded-[2vw]'}  key={item.id}> sm:rounded-[1vw]
                                         <div className={'w-full absolute top-0 rounded-[2vw] h-full'}>
                                             <Image src={'/images/card_generation/common/bg.svg'} layout={'fill'}></Image>
                                         </div>
-                                        <div className={'w-[8vh] h-[8vh] sm:w-[8vw] sm:h-[8vw] relative mx-auto mt-[1.5vh]'}>
+                                        <div className={'w-[8vh] h-[8vh] sm:w-[4vw] sm:h-[4vw] relative mx-auto mt-[1.5vh]'}>
                                             <Image src={'/images/miniatures/Clothes/'+item.name+'.png'} layout={'fill'}></Image>
                                         </div>
-                                        <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] absolute top-[1vh] left-[1vh]'}>
+                                        <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] absolute top-[1vh] left-[1vh]'}>
                                             <Image src={'/images/equipment_module/'+item.type+'.svg'} layout={'fill'}></Image>
                                         </div>
-                                        <p className={'text-white font-josefin text-[1.8vh] sm:text-[2vw] text-right absolute top-[1vh] right-[1vh]'}>ID: {item.id}</p>
-                                        <p className={'w-full text-white font-soyuz text-[1.8vh] sm:text-[2vw] text-center'}>{item.name}</p>
+                                        <p className={'text-white font-josefin text-[1.8vh] sm:text-[1vw] text-right absolute top-[1vh] right-[1vh]'}>ID: {item.id}</p>
+                                        <p className={'w-full text-white font-soyuz text-[1.8vh] sm:text-[1vw] text-center'}>{item.name}</p>
                                         <div className={'relative w-[70%] mx-auto border-[#000]'}>
                                             {item.dex!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/common/dex.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[60%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.dex}
                                                     </p>
                                                 </div>
@@ -59,13 +59,13 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.str!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/common/str.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[60%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.str}
                                                     </p>
                                                 </div>
@@ -75,13 +75,13 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.vit!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/common/vit.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[60%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.vit}
                                                     </p>
                                                 </div>
@@ -91,13 +91,13 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.int!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/common/int.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[60%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.int}
                                                     </p>
                                                 </div>
@@ -107,13 +107,13 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.krm!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/common/krm.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[60%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.krm}
                                                     </p>
                                                 </div>
@@ -128,28 +128,28 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                             }
                             else {
                                 return(
-                                    <div className={'w-[48%] sm:w-[23%] sm:h-[23.5vw] mt-[4vw] relative h-[23vh] rounded-[2vw] cursor-pointer'}  key={item.id} onClick={()=>{updateClothes(item);updateStats()}}>
+                                    <div className={'w-[48%] sm:w-[45%] sm:h-[14.2vw] mt-[4vw] sm:mt-[2vw] relative h-[23vh] rounded-[2vw] cursor-pointer'}  key={item.id} onClick={()=>{updateClothes(item);updateStats()}}>
                                         <div className={'w-full absolute top-0 rounded-[2vw] h-full'}>
                                             <Image src={'/images/card_generation/common/bg.svg'} layout={'fill'}></Image>
                                         </div>
-                                        <div className={'w-[8vh] h-[8vh] sm:w-[8vw] sm:h-[8vw] relative mx-auto mt-[1.5vh]'}>
+                                        <div className={'w-[8vh] h-[8vh] sm:w-[4vw] sm:h-[4vw] relative mx-auto mt-[1.5vh]'}>
                                             <Image src={'/images/miniatures/Clothes/'+item.name+'.png'} layout={'fill'}></Image>
                                         </div>
-                                        <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] absolute top-[1vh] left-[1vh]'}>
+                                        <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] absolute top-[1vh] left-[1vh]'}>
                                             <Image src={'/images/equipment_module/'+item.type+'.svg'} layout={'fill'}></Image>
                                         </div>
-                                        <p className={'text-white font-josefin text-[1.8vh] sm:text-[2vw] text-right absolute top-[1vh] right-[1vh]'}>ID: {item.id}</p>
-                                        <p className={'w-full text-white font-soyuz text-[1.8vh] sm:text-[2vw] text-center'}>{item.name}</p>
+                                        <p className={'text-white font-josefin text-[1.8vh] sm:text-[1vw] text-right absolute top-[1vh] right-[1vh]'}>ID: {item.id}</p>
+                                        <p className={'w-full text-white font-soyuz text-[1.8vh] sm:text-[1vw] text-center'}>{item.name}</p>
                                         <div className={'relative w-[70%] mx-auto border-[#000]'}>
                                             {item.dex!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/common/dex.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[60%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.dex}
                                                     </p>
                                                 </div>
@@ -159,13 +159,13 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.str!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/common/str.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[60%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.str}
                                                     </p>
                                                 </div>
@@ -175,13 +175,13 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.vit!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/common/vit.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[60%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.vit}
                                                     </p>
                                                 </div>
@@ -191,13 +191,13 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.int!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/common/int.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[60%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.int}
                                                     </p>
                                                 </div>
@@ -207,13 +207,13 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.krm!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/common/krm.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[60%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.krm}
                                                     </p>
                                                 </div>
@@ -231,28 +231,28 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                         else if(item.rarity=='uncommon'){
                             if(bunny.equipment.clothes?.id==item.id){
                                 return(
-                                    <div className={'w-[48%] sm:w-[23%] sm:h-[23.5vw] mt-[4vw] border-2 border-[#FFF] border-dashed relative h-[23vh] rounded-[2vw] sm:rounded-[1vw]'}  key={item.id}>
+                                    <div className={'w-[48%] sm:w-[45%] sm:h-[14.2vw] mt-[4vw] sm:mt-[2vw] border-2 border-[#FFF] border-dashed relative h-[23vh] rounded-[2vw] sm:rounded-[1vw]'}  key={item.id}>
                                         <div className={'w-full absolute top-0 rounded-[2vw] h-full'}>
                                             <Image src={'/images/card_generation/uncommon/bg.svg'} layout={'fill'}></Image>
                                         </div>
-                                        <div className={'w-[8vh] h-[8vh] sm:w-[8vw] sm:h-[8vw] relative mx-auto mt-[1.5vh]'}>
+                                        <div className={'w-[8vh] h-[8vh] sm:w-[4vw] sm:h-[4vw] relative mx-auto mt-[1.5vh]'}>
                                             <Image src={'/images/miniatures/Clothes/'+item.name+'.png'} layout={'fill'}></Image>
                                         </div>
-                                        <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] absolute top-[1vh] left-[1vh]'}>
+                                        <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] absolute top-[1vh] left-[1vh]'}>
                                             <Image src={'/images/equipment_module/'+item.type+'.svg'} layout={'fill'}></Image>
                                         </div>
-                                        <p className={'text-white font-josefin text-[1.8vh] sm:text-[2vw] text-right absolute top-[1vh] right-[1vh]'}>ID: {item.id}</p>
-                                        <p className={'w-full text-white font-soyuz text-[1.8vh] sm:text-[2vw] text-center'}>{item.name}</p>
+                                        <p className={'text-white font-josefin text-[1.8vh] sm:text-[1vw] text-right absolute top-[1vh] right-[1vh]'}>ID: {item.id}</p>
+                                        <p className={'w-full text-white font-soyuz text-[1.8vh] sm:text-[1vw] text-center'}>{item.name}</p>
                                         <div className={'relative w-[70%] mx-auto border-[#000]'}>
                                             {item.dex!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/uncommon/dex.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[60%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.dex}
                                                     </p>
                                                 </div>
@@ -262,13 +262,13 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.str!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/uncommon/str.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[60%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.str}
                                                     </p>
                                                 </div>
@@ -278,13 +278,13 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.vit!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/uncommon/vit.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[60%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.vit}
                                                     </p>
                                                 </div>
@@ -294,13 +294,13 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.int!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/uncommon/int.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[60%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.int}
                                                     </p>
                                                 </div>
@@ -310,13 +310,13 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.krm!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/uncommon/krm.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[60%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.krm}
                                                     </p>
                                                 </div>
@@ -331,28 +331,28 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                             }
                             else {
                                 return(
-                                    <div className={'w-[48%] sm:w-[23%] sm:h-[23.5vw] mt-[4vw] relative h-[23vh] rounded-[2vw] cursor-pointer'}  key={item.id} onClick={()=>{updateClothes(item);updateStats()}}>
+                                    <div className={'w-[48%] sm:w-[45%] sm:h-[14.2vw] mt-[4vw] sm:mt-[2vw] relative h-[23vh] rounded-[2vw] cursor-pointer'}  key={item.id} onClick={()=>{updateClothes(item);updateStats()}}>
                                         <div className={'w-full absolute top-0 rounded-[2vw] h-full'}>
                                             <Image src={'/images/card_generation/uncommon/bg.svg'} layout={'fill'}></Image>
                                         </div>
-                                        <div className={'w-[8vh] h-[8vh] sm:w-[8vw] sm:h-[8vw] relative mx-auto mt-[1.5vh]'}>
+                                        <div className={'w-[8vh] h-[8vh] sm:w-[4vw] sm:h-[4vw] relative mx-auto mt-[1.5vh]'}>
                                             <Image src={'/images/miniatures/Clothes/'+item.name+'.png'} layout={'fill'}></Image>
                                         </div>
-                                        <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] absolute top-[1vh] left-[1vh]'}>
+                                        <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] absolute top-[1vh] left-[1vh]'}>
                                             <Image src={'/images/equipment_module/'+item.type+'.svg'} layout={'fill'}></Image>
                                         </div>
-                                        <p className={'text-white font-josefin text-[1.8vh] sm:text-[2vw] text-right absolute top-[1vh] right-[1vh]'}>ID: {item.id}</p>
-                                        <p className={'w-full text-white font-soyuz text-[1.8vh] sm:text-[2vw] text-center'}>{item.name}</p>
+                                        <p className={'text-white font-josefin text-[1.8vh] sm:text-[1vw] text-right absolute top-[1vh] right-[1vh]'}>ID: {item.id}</p>
+                                        <p className={'w-full text-white font-soyuz text-[1.8vh] sm:text-[1vw] text-center'}>{item.name}</p>
                                         <div className={'relative w-[70%] mx-auto border-[#000]'}>
                                             {item.dex!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/uncommon/dex.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[60%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.dex}
                                                     </p>
                                                 </div>
@@ -362,13 +362,13 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.str!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/uncommon/str.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[60%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.str}
                                                     </p>
                                                 </div>
@@ -378,13 +378,13 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.vit!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/uncommon/vit.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[60%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.vit}
                                                     </p>
                                                 </div>
@@ -394,13 +394,13 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.int!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/uncommon/int.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[60%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.int}
                                                     </p>
                                                 </div>
@@ -410,13 +410,13 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.krm!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/uncommon/krm.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[60%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.krm}
                                                     </p>
                                                 </div>
@@ -435,28 +435,28 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                         else if(item.rarity=='epic'){
                             if(bunny.equipment.clothes?.id==item.id){
                                 return(
-                                    <div className={'w-[48%] sm:w-[23%] sm:h-[23.5vw] border-2 border-[#FFF] border-dashed mt-[4vw] relative h-[23vh] roun sm:rounded-[1vw]ded-[2vw]'}  key={item.id}>
+                                    <div className={'w-[48%] sm:w-[45%] sm:h-[14.2vw] border-2 border-[#FFF] border-dashed mt-[4vw] sm:mt-[2vw] relative h-[23vh] roun sm:rounded-[1vw]ded-[2vw]'}  key={item.id}>
                                         <div className={'w-full absolute top-0 rounded-[2vw] h-full'}>
                                             <Image src={'/images/card_generation/epic/bg.svg'} layout={'fill'}></Image>
                                         </div>
-                                        <div className={'w-[8vh] h-[8vh] sm:w-[8vw] sm:h-[8vw] relative mx-auto mt-[1.5vh]'}>
+                                        <div className={'w-[8vh] h-[8vh] sm:w-[4vw] sm:h-[4vw] relative mx-auto mt-[1.5vh]'}>
                                             <Image src={'/images/miniatures/Clothes/'+item.name+'.png'} layout={'fill'}></Image>
                                         </div>
-                                        <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] absolute top-[1vh] left-[1vh]'}>
+                                        <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] absolute top-[1vh] left-[1vh]'}>
                                             <Image src={'/images/equipment_module/'+item.type+'.svg'} layout={'fill'}></Image>
                                         </div>
-                                        <p className={'text-white font-josefin text-[1.8vh] sm:text-[2vw] text-right absolute top-[1vh] right-[1vh]'}>ID: {item.id}</p>
-                                        <p className={'w-full text-white font-soyuz text-[1.8vh] sm:text-[2vw] text-center'}>{item.name}</p>
+                                        <p className={'text-white font-josefin text-[1.8vh] sm:text-[1vw] text-right absolute top-[1vh] right-[1vh]'}>ID: {item.id}</p>
+                                        <p className={'w-full text-white font-soyuz text-[1.8vh] sm:text-[1vw] text-center'}>{item.name}</p>
                                         <div className={'relative w-[40%] inline-block mx-[2%] ml-[8%]'}>
                                             {item.dex!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/epic/dex.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[40%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.dex}
                                                     </p>
                                                 </div>
@@ -466,13 +466,13 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.str!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/epic/str.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[40%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.str}
                                                     </p>
                                                 </div>
@@ -482,13 +482,13 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.vit!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/epic/vit.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[40%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.vit}
                                                     </p>
                                                 </div>
@@ -498,13 +498,13 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.int!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/epic/int.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[40%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.int}
                                                     </p>
                                                 </div>
@@ -514,13 +514,13 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.krm!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/epic/krm.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[40%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.krm}
                                                     </p>
                                                 </div>
@@ -531,14 +531,14 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
 
                                         </div>
                                         <div className={'align-top relative w-[40%] inline-block ml-[2%] mr-[8%]'}>
-                                            <p className={'w-full relative text-white text-center font-medium font-josefin text-[1vh] sm:text-[1vw]'}>Requierements</p>
+                                            <p className={'w-full relative text-white text-center font-medium font-josefin text-[1vh] sm:text-[0.7vw]'}>Requierements</p>
                                             {item.requirements?.dex!=0&&item.requirements?.dex!=undefined?
                                                 <div className={'w-full relative flex justify-center items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] mx-[1vh] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] mx-[1vh] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/epic/dex.svg'} layout={'fill'}></Image>
                                                     </div>
 
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>{item.requirements.dex}
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>{item.requirements.dex}
                                                     </p>
                                                 </div>
                                                 :
@@ -547,11 +547,11 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.requirements?.str!=0&&item.requirements?.str!=undefined?
                                                 <div className={'w-full relative flex justify-center items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] mx-[1vh] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] mx-[1vh] relative inline-block'}>
                                                         <Image src={'/images/card_generation/epic/str.svg'} layout={'fill'}></Image>
                                                     </div>
 
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         {item.requirements.str}
                                                     </p>
                                                 </div>
@@ -561,11 +561,11 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.requirements?.vit!=0&&item.requirements?.vit!=undefined?
                                                 <div className={'w-full relative flex justify-center items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] mx-[1vh] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] mx-[1vh] relative inline-block'}>
                                                         <Image src={'/images/card_generation/epic/vit.svg'} layout={'fill'}></Image>
                                                     </div>
 
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         {item.requirements.vit}
                                                     </p>
                                                 </div>
@@ -575,11 +575,11 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.requirements?.int!=0&&item.requirements?.int!=undefined?
                                                 <div className={'w-full relative flex justify-center items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] mx-[1vh] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] mx-[1vh] relative inline-block'}>
                                                         <Image src={'/images/card_generation/epic/int.svg'} layout={'fill'}></Image>
                                                     </div>
 
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         {item.requirements.int}
                                                     </p>
                                                 </div>
@@ -589,11 +589,11 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.requirements?.krm!=0&&item.requirements?.krm!=undefined?
                                                 <div className={'w-full relative flex justify-center items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] mx-[1vh] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] mx-[1vh] relative inline-block'}>
                                                         <Image src={'/images/card_generation/epic/krm.svg'} layout={'fill'}></Image>
                                                     </div>
 
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         {item.requirements.krm}
                                                     </p>
                                                 </div>
@@ -607,28 +607,28 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                             }
                             else{
                                 return(
-                                    <div className={'w-[48%] sm:w-[23%] sm:h-[23.5vw] mt-[4vw] relative h-[23vh] rounded-[2vw] cursor-pointer'}  key={item.id} onClick={()=>{updateClothes(item);updateStats()}}>
+                                    <div className={'w-[48%] sm:w-[45%] sm:h-[14.2vw] mt-[4vw] sm:mt-[2vw] relative h-[23vh] rounded-[2vw] cursor-pointer'}  key={item.id} onClick={()=>{updateClothes(item);updateStats()}}>
                                         <div className={'w-full absolute top-0 rounded-[2vw] h-full'}>
                                             <Image src={'/images/card_generation/epic/bg.svg'} layout={'fill'}></Image>
                                         </div>
-                                        <div className={'w-[8vh] h-[8vh] sm:w-[8vw] sm:h-[8vw] relative mx-auto mt-[1.5vh]'}>
+                                        <div className={'w-[8vh] h-[8vh] sm:w-[4vw] sm:h-[4vw] relative mx-auto mt-[1.5vh]'}>
                                             <Image src={'/images/miniatures/Clothes/'+item.name+'.png'} layout={'fill'}></Image>
                                         </div>
-                                        <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] absolute top-[1vh] left-[1vh]'}>
+                                        <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] absolute top-[1vh] left-[1vh]'}>
                                             <Image src={'/images/equipment_module/'+item.type+'.svg'} layout={'fill'}></Image>
                                         </div>
-                                        <p className={'text-white font-josefin text-[1.8vh] sm:text-[2vw] text-right absolute top-[1vh] right-[1vh]'}>ID: {item.id}</p>
-                                        <p className={'w-full text-white font-soyuz text-[1.8vh] sm:text-[2vw] text-center'}>{item.name}</p>
+                                        <p className={'text-white font-josefin text-[1.8vh] sm:text-[1vw] text-right absolute top-[1vh] right-[1vh]'}>ID: {item.id}</p>
+                                        <p className={'w-full text-white font-soyuz text-[1.8vh] sm:text-[1vw] text-center'}>{item.name}</p>
                                         <div className={'relative w-[40%] inline-block mx-[2%] ml-[8%]'}>
                                             {item.dex!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/epic/dex.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[40%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.dex}
                                                     </p>
                                                 </div>
@@ -638,13 +638,13 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.str!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/epic/str.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[40%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.str}
                                                     </p>
                                                 </div>
@@ -654,13 +654,13 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.vit!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/epic/vit.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[40%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.vit}
                                                     </p>
                                                 </div>
@@ -670,13 +670,13 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.int!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/epic/int.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[40%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.int}
                                                     </p>
                                                 </div>
@@ -686,13 +686,13 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.krm!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/epic/krm.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[40%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.krm}
                                                     </p>
                                                 </div>
@@ -703,14 +703,14 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
 
                                         </div>
                                         <div className={'align-top relative w-[40%] inline-block ml-[2%] mr-[8%]'}>
-                                            <p className={'w-full relative text-white text-center font-medium font-josefin text-[1vh] sm:text-[1vw]'}>Requierements</p>
+                                            <p className={'w-full relative text-white text-center font-medium font-josefin text-[1vh] sm:text-[0.7vw]'}>Requierements</p>
                                             {item.requirements?.dex!=0&&item.requirements?.dex!=undefined?
                                                 <div className={'w-full relative flex justify-center items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] mx-[1vh] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] mx-[1vh] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/epic/dex.svg'} layout={'fill'}></Image>
                                                     </div>
 
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>{item.requirements.dex}
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>{item.requirements.dex}
                                                     </p>
                                                 </div>
                                                 :
@@ -719,11 +719,11 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.requirements?.str!=0&&item.requirements?.str!=undefined?
                                                 <div className={'w-full relative flex justify-center items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] mx-[1vh] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] mx-[1vh] relative inline-block'}>
                                                         <Image src={'/images/card_generation/epic/str.svg'} layout={'fill'}></Image>
                                                     </div>
 
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         {item.requirements.str}
                                                     </p>
                                                 </div>
@@ -733,11 +733,11 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.requirements?.vit!=0&&item.requirements?.vit!=undefined?
                                                 <div className={'w-full relative flex justify-center items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] mx-[1vh] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] mx-[1vh] relative inline-block'}>
                                                         <Image src={'/images/card_generation/epic/vit.svg'} layout={'fill'}></Image>
                                                     </div>
 
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         {item.requirements.vit}
                                                     </p>
                                                 </div>
@@ -747,11 +747,11 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.requirements?.int!=0&&item.requirements?.int!=undefined?
                                                 <div className={'w-full relative flex justify-center items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] mx-[1vh] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] mx-[1vh] relative inline-block'}>
                                                         <Image src={'/images/card_generation/epic/int.svg'} layout={'fill'}></Image>
                                                     </div>
 
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         {item.requirements.int}
                                                     </p>
                                                 </div>
@@ -761,11 +761,11 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.requirements?.krm!=0&&item.requirements?.krm!=undefined?
                                                 <div className={'w-full relative flex justify-center items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] mx-[1vh] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] mx-[1vh] relative inline-block'}>
                                                         <Image src={'/images/card_generation/epic/krm.svg'} layout={'fill'}></Image>
                                                     </div>
 
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         {item.requirements.krm}
                                                     </p>
                                                 </div>
@@ -784,28 +784,28 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                         else if(item.rarity=='legendary'){
                             if(bunny.equipment.clothes?.id==item.id){
                                 return(
-                                    <div className={'w-[48%] sm:w-[23%] sm:h-[23.5vw] border-2 border-[#FFF] border-dashed mt-[4vw] relative h-[23vh] roun sm:rounded-[1vw]ded-[2vw]'}  key={item.id}>
+                                    <div className={'w-[48%] sm:w-[45%] sm:h-[14.2vw] border-2 border-[#FFF] border-dashed mt-[4vw] sm:mt-[2vw] relative h-[23vh] roun sm:rounded-[1vw]ded-[2vw]'}  key={item.id}>
                                         <div className={'w-full absolute top-0 rounded-[2vw] h-full'}>
                                             <Image src={'/images/card_generation/legendary/bg.svg'} layout={'fill'}></Image>
                                         </div>
-                                        <div className={'w-[8vh] h-[8vh] sm:w-[8vw] sm:h-[8vw] relative mx-auto mt-[1.5vh]'}>
+                                        <div className={'w-[8vh] h-[8vh] sm:w-[4vw] sm:h-[4vw] relative mx-auto mt-[1.5vh]'}>
                                             <Image src={'/images/miniatures/Clothes/'+item.name+'.png'} layout={'fill'}></Image>
                                         </div>
-                                        <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] absolute top-[1vh] left-[1vh]'}>
+                                        <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] absolute top-[1vh] left-[1vh]'}>
                                             <Image src={'/images/equipment_module/'+item.type+'.svg'} layout={'fill'}></Image>
                                         </div>
-                                        <p className={'text-white font-josefin text-[1.8vh] sm:text-[2vw] text-right absolute top-[1vh] right-[1vh]'}>ID: {item.id}</p>
-                                        <p className={'w-full text-white font-soyuz text-[1.8vh] sm:text-[2vw] text-center'}>{item.name}</p>
+                                        <p className={'text-white font-josefin text-[1.8vh] sm:text-[1vw] text-right absolute top-[1vh] right-[1vh]'}>ID: {item.id}</p>
+                                        <p className={'w-full text-white font-soyuz text-[1.8vh] sm:text-[1vw] text-center'}>{item.name}</p>
                                         <div className={'relative w-[40%] inline-block mx-[2%] ml-[8%]'}>
                                             {item.dex!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/legendary/dex.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[40%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.dex}
                                                     </p>
                                                 </div>
@@ -815,13 +815,13 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.str!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/legendary/str.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[40%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.str}
                                                     </p>
                                                 </div>
@@ -831,13 +831,13 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.vit!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/legendary/vit.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[40%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.vit}
                                                     </p>
                                                 </div>
@@ -847,13 +847,13 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.int!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/legendary/int.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[40%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.int}
                                                     </p>
                                                 </div>
@@ -863,13 +863,13 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.krm!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/legendary/krm.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[40%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.krm}
                                                     </p>
                                                 </div>
@@ -880,14 +880,14 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
 
                                         </div>
                                         <div className={'align-top relative w-[40%] inline-block ml-[2%] mr-[8%]'}>
-                                            <p className={'w-full relative text-white text-center font-medium font-josefin text-[1vh] sm:text-[1vw]'}>Requierements</p>
+                                            <p className={'w-full relative text-white text-center font-medium font-josefin text-[1vh] sm:text-[0.7vw]'}>Requierements</p>
                                             {item.requirements?.dex!=0&&item.requirements?.dex!=undefined?
                                                 <div className={'w-full relative flex justify-center items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] mx-[1vh] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] mx-[1vh] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/legendary/dex.svg'} layout={'fill'}></Image>
                                                     </div>
 
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>{item.requirements.dex}
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>{item.requirements.dex}
                                                     </p>
                                                 </div>
                                                 :
@@ -896,11 +896,11 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.requirements?.str!=0&&item.requirements?.str!=undefined?
                                                 <div className={'w-full relative flex justify-center items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] mx-[1vh] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] mx-[1vh] relative inline-block'}>
                                                         <Image src={'/images/card_generation/legendary/str.svg'} layout={'fill'}></Image>
                                                     </div>
 
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         {item.requirements.str}
                                                     </p>
                                                 </div>
@@ -910,11 +910,11 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.requirements?.vit!=0&&item.requirements?.vit!=undefined?
                                                 <div className={'w-full relative flex justify-center items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] mx-[1vh] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] mx-[1vh] relative inline-block'}>
                                                         <Image src={'/images/card_generation/legendary/vit.svg'} layout={'fill'}></Image>
                                                     </div>
 
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         {item.requirements.vit}
                                                     </p>
                                                 </div>
@@ -924,11 +924,11 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.requirements?.int!=0&&item.requirements?.int!=undefined?
                                                 <div className={'w-full relative flex justify-center items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] mx-[1vh] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] mx-[1vh] relative inline-block'}>
                                                         <Image src={'/images/card_generation/legendary/int.svg'} layout={'fill'}></Image>
                                                     </div>
 
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         {item.requirements.int}
                                                     </p>
                                                 </div>
@@ -938,11 +938,11 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.requirements?.krm!=0&&item.requirements?.krm!=undefined?
                                                 <div className={'w-full relative flex justify-center items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] mx-[1vh] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] mx-[1vh] relative inline-block'}>
                                                         <Image src={'/images/card_generation/legendary/krm.svg'} layout={'fill'}></Image>
                                                     </div>
 
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         {item.requirements.krm}
                                                     </p>
                                                 </div>
@@ -950,7 +950,7 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 <div className={'hidden'}>
 
                                                 </div>}
-                                            <p className={'w-[90%] relative text-white text-[1.2vh] ml-[10%] font-medium font-josefin mt-[0.3vh] sm:text-[1vw]'}>Status: <span className={'font-bold text-[1.5vh] sm:text-[1.5vw]'}>Elite</span> </p>
+                                            <p className={'w-[90%] relative text-white text-[1.2vh] ml-[10%] font-medium font-josefin mt-[0.3vh] sm:text-[0.7vw]'}>Status: <span className={'font-bold text-[1.5vh] sm:text-[1vw]'}>Elite</span> </p>
 
                                         </div>
                                     </div>
@@ -958,28 +958,28 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                             }
                             else{
                                 return(
-                                    <div className={'w-[48%] sm:w-[23%] sm:h-[23.5vw] mt-[4vw] relative h-[23vh] rounded-[2vw] cursor-pointer'}  key={item.id} onClick={()=>{updateClothes(item);updateStats()}}>
+                                    <div className={'w-[48%] sm:w-[45%] sm:h-[14.2vw] mt-[4vw] sm:mt-[2vw] relative h-[23vh] rounded-[2vw] cursor-pointer'}  key={item.id} onClick={()=>{updateClothes(item);updateStats()}}>
                                         <div className={'w-full absolute top-0 rounded-[2vw] h-full'}>
                                             <Image src={'/images/card_generation/legendary/bg.svg'} layout={'fill'}></Image>
                                         </div>
-                                        <div className={'w-[8vh] h-[8vh] sm:w-[8vw] sm:h-[8vw] relative mx-auto mt-[1.5vh]'}>
+                                        <div className={'w-[8vh] h-[8vh] sm:w-[4vw] sm:h-[4vw] relative mx-auto mt-[1.5vh]'}>
                                             <Image src={'/images/miniatures/Clothes/'+item.name+'.png'} layout={'fill'}></Image>
                                         </div>
-                                        <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] absolute top-[1vh] left-[1vh]'}>
+                                        <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] absolute top-[1vh] left-[1vh]'}>
                                             <Image src={'/images/equipment_module/'+item.type+'.svg'} layout={'fill'}></Image>
                                         </div>
-                                        <p className={'text-white font-josefin text-[1.8vh] sm:text-[2vw] text-right absolute top-[1vh] right-[1vh]'}>ID: {item.id}</p>
-                                        <p className={'w-full text-white font-soyuz text-[1.8vh] sm:text-[2vw] text-center'}>{item.name}</p>
+                                        <p className={'text-white font-josefin text-[1.8vh] sm:text-[1vw] text-right absolute top-[1vh] right-[1vh]'}>ID: {item.id}</p>
+                                        <p className={'w-full text-white font-soyuz text-[1.8vh] sm:text-[1vw] text-center'}>{item.name}</p>
                                         <div className={'relative w-[40%] inline-block mx-[2%] ml-[8%]'}>
                                             {item.dex!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/legendary/dex.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[40%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.dex}
                                                     </p>
                                                 </div>
@@ -989,13 +989,13 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.str!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/legendary/str.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[40%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.str}
                                                     </p>
                                                 </div>
@@ -1005,13 +1005,13 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.vit!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/legendary/vit.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[40%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.vit}
                                                     </p>
                                                 </div>
@@ -1021,13 +1021,13 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.int!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/legendary/int.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[40%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.int}
                                                     </p>
                                                 </div>
@@ -1037,13 +1037,13 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.krm!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/legendary/krm.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[40%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.krm}
                                                     </p>
                                                 </div>
@@ -1054,14 +1054,14 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
 
                                         </div>
                                         <div className={'align-top relative w-[40%] inline-block ml-[2%] mr-[8%]'}>
-                                            <p className={'w-full relative text-white text-center font-medium font-josefin text-[1vh] sm:text-[1vw]'}>Requierements</p>
+                                            <p className={'w-full relative text-white text-center font-medium font-josefin text-[1vh] sm:text-[0.7vw]'}>Requierements</p>
                                             {item.requirements?.dex!=0&&item.requirements?.dex!=undefined?
                                                 <div className={'w-full relative flex justify-center items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] mx-[1vh] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] mx-[1vh] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/legendary/dex.svg'} layout={'fill'}></Image>
                                                     </div>
 
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>{item.requirements.dex}
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>{item.requirements.dex}
                                                     </p>
                                                 </div>
                                                 :
@@ -1070,11 +1070,11 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.requirements?.str!=0&&item.requirements?.str!=undefined?
                                                 <div className={'w-full relative flex justify-center items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] mx-[1vh] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] mx-[1vh] relative inline-block'}>
                                                         <Image src={'/images/card_generation/legendary/str.svg'} layout={'fill'}></Image>
                                                     </div>
 
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         {item.requirements.str}
                                                     </p>
                                                 </div>
@@ -1084,11 +1084,11 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.requirements?.vit!=0&&item.requirements?.vit!=undefined?
                                                 <div className={'w-full relative flex justify-center items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] mx-[1vh] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] mx-[1vh] relative inline-block'}>
                                                         <Image src={'/images/card_generation/legendary/vit.svg'} layout={'fill'}></Image>
                                                     </div>
 
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         {item.requirements.vit}
                                                     </p>
                                                 </div>
@@ -1098,11 +1098,11 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.requirements?.int!=0&&item.requirements?.int!=undefined?
                                                 <div className={'w-full relative flex justify-center items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] mx-[1vh] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] mx-[1vh] relative inline-block'}>
                                                         <Image src={'/images/card_generation/legendary/int.svg'} layout={'fill'}></Image>
                                                     </div>
 
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         {item.requirements.int}
                                                     </p>
                                                 </div>
@@ -1112,11 +1112,11 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.requirements?.krm!=0&&item.requirements?.krm!=undefined?
                                                 <div className={'w-full relative flex justify-center items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] mx-[1vh] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] mx-[1vh] relative inline-block'}>
                                                         <Image src={'/images/card_generation/legendary/krm.svg'} layout={'fill'}></Image>
                                                     </div>
 
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         {item.requirements.krm}
                                                     </p>
                                                 </div>
@@ -1124,7 +1124,7 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 <div className={'hidden'}>
 
                                                 </div>}
-                                            <p className={'w-[90%] relative text-white text-[1.2vh] ml-[10%] font-medium font-josefin mt-[0.3vh] sm:text-[1vw]'}>Status: <span className={'font-bold text-[1.5vh] sm:text-[1.5vw]'}>Elite</span> </p>
+                                            <p className={'w-[90%] relative text-white text-[1.2vh] ml-[10%] font-medium font-josefin mt-[0.3vh] sm:text-[0.7vw]'}>Status: <span className={'font-bold text-[1.5vh] sm:text-[1vw]'}>Elite</span> </p>
 
                                         </div>
                                     </div>
@@ -1146,28 +1146,28 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                         if(item.rarity=='common'){
                             if(bunny.equipment.hat?.id==item.id){
                                 return(
-                                    <div className={'w-[48%] sm:w-[23%] sm:h-[23.5vw] mt-[4vw] border-2 border-[#FFF] border-dashed relative h-[23vh] rounded-[2vw] sm:rounded-[1vw]'}  key={item.id}>
+                                    <div className={'w-[48%] sm:w-[45%] sm:h-[14.2vw] mt-[4vw] sm:mt-[2vw] border-2 border-[#FFF] border-dashed relative h-[23vh] rounded-[2vw] sm:rounded-[1vw]'}  key={item.id}>
                                         <div className={'w-full absolute top-0 rounded-[2vw] h-full'}>
                                             <Image src={'/images/card_generation/common/bg.svg'} layout={'fill'}></Image>
                                         </div>
-                                        <div className={'w-[8vh] h-[8vh] sm:w-[8vw] sm:h-[8vw] relative mx-auto mt-[1.5vh]'}>
+                                        <div className={'w-[8vh] h-[8vh] sm:w-[4vw] sm:h-[4vw] relative mx-auto mt-[1.5vh]'}>
                                             <Image src={'/images/miniatures/Hats/'+item.name+'.png'} layout={'fill'}></Image>
                                         </div>
-                                        <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] absolute top-[1vh] left-[1vh]'}>
+                                        <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] absolute top-[1vh] left-[1vh]'}>
                                             <Image src={'/images/equipment_module/'+item.type+'.svg'} layout={'fill'}></Image>
                                         </div>
-                                        <p className={'text-white font-josefin text-[1.8vh] sm:text-[2vw] text-right absolute top-[1vh] right-[1vh]'}>ID: {item.id}</p>
-                                        <p className={'w-full text-white font-soyuz text-[1.8vh] sm:text-[2vw] text-center'}>{item.name}</p>
+                                        <p className={'text-white font-josefin text-[1.8vh] sm:text-[1vw] text-right absolute top-[1vh] right-[1vh]'}>ID: {item.id}</p>
+                                        <p className={'w-full text-white font-soyuz text-[1.8vh] sm:text-[1vw] text-center'}>{item.name}</p>
                                         <div className={'relative w-[70%] mx-auto border-[#000]'}>
                                             {item.dex!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/common/dex.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[60%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.dex}
                                                     </p>
                                                 </div>
@@ -1177,13 +1177,13 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.str!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/common/str.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[60%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.str}
                                                     </p>
                                                 </div>
@@ -1193,13 +1193,13 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.vit!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/common/vit.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[60%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.vit}
                                                     </p>
                                                 </div>
@@ -1209,13 +1209,13 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.int!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/common/int.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[60%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.int}
                                                     </p>
                                                 </div>
@@ -1225,13 +1225,13 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.krm!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/common/krm.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[60%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.krm}
                                                     </p>
                                                 </div>
@@ -1246,28 +1246,28 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                             }
                             else{
                                 return(
-                                    <div className={'w-[48%] sm:w-[23%] sm:h-[23.5vw] mt-[4vw] relative h-[23vh] rounded-[2vw] cursor-pointer'}  key={item.id} onClick={()=>{updateHat(item);updateStats()}}>
+                                    <div className={'w-[48%] sm:w-[45%] sm:h-[14.2vw] mt-[4vw] sm:mt-[2vw] relative h-[23vh] rounded-[2vw] cursor-pointer'}  key={item.id} onClick={()=>{updateHat(item);updateStats()}}>
                                         <div className={'w-full absolute top-0 rounded-[2vw] h-full'}>
                                             <Image src={'/images/card_generation/common/bg.svg'} layout={'fill'}></Image>
                                         </div>
-                                        <div className={'w-[8vh] h-[8vh] sm:w-[8vw] sm:h-[8vw] relative mx-auto mt-[1.5vh]'}>
+                                        <div className={'w-[8vh] h-[8vh] sm:w-[4vw] sm:h-[4vw] relative mx-auto mt-[1.5vh]'}>
                                             <Image src={'/images/miniatures/Hats/'+item.name+'.png'} layout={'fill'}></Image>
                                         </div>
-                                        <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] absolute top-[1vh] left-[1vh]'}>
+                                        <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] absolute top-[1vh] left-[1vh]'}>
                                             <Image src={'/images/equipment_module/'+item.type+'.svg'} layout={'fill'}></Image>
                                         </div>
-                                        <p className={'text-white font-josefin text-[1.8vh] sm:text-[2vw] text-right absolute top-[1vh] right-[1vh]'}>ID: {item.id}</p>
-                                        <p className={'w-full text-white font-soyuz text-[1.8vh] sm:text-[2vw] text-center'}>{item.name}</p>
+                                        <p className={'text-white font-josefin text-[1.8vh] sm:text-[1vw] text-right absolute top-[1vh] right-[1vh]'}>ID: {item.id}</p>
+                                        <p className={'w-full text-white font-soyuz text-[1.8vh] sm:text-[1vw] text-center'}>{item.name}</p>
                                         <div className={'relative w-[70%] mx-auto border-[#000]'}>
                                             {item.dex!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/common/dex.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[60%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.dex}
                                                     </p>
                                                 </div>
@@ -1277,13 +1277,13 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.str!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/common/str.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[60%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.str}
                                                     </p>
                                                 </div>
@@ -1293,13 +1293,13 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.vit!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/common/vit.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[60%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.vit}
                                                     </p>
                                                 </div>
@@ -1309,13 +1309,13 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.int!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/common/int.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[60%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.int}
                                                     </p>
                                                 </div>
@@ -1325,13 +1325,13 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.krm!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/common/krm.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[60%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.krm}
                                                     </p>
                                                 </div>
@@ -1349,28 +1349,28 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                         else if(item.rarity=='uncommon'){
                             if(bunny.equipment.hat?.id==item.id){
                                 return(
-                                    <div className={'w-[48%] sm:w-[23%] sm:h-[23.5vw] mt-[4vw] border-2 border-[#FFF] border-dashed relative h-[23vh] rounded-[2vw] sm:rounded-[1vw]'} key={item.id}>
+                                    <div className={'w-[48%] sm:w-[45%] sm:h-[14.2vw] mt-[4vw] sm:mt-[2vw] border-2 border-[#FFF] border-dashed relative h-[23vh] rounded-[2vw] sm:rounded-[1vw]'} key={item.id}>
                                         <div className={'w-full absolute top-0 rounded-[2vw] h-full'}>
                                             <Image src={'/images/card_generation/uncommon/bg.svg'} layout={'fill'}></Image>
                                         </div>
-                                        <div className={'w-[8vh] h-[8vh] sm:w-[8vw] sm:h-[8vw] relative mx-auto mt-[1.5vh]'}>
+                                        <div className={'w-[8vh] h-[8vh] sm:w-[4vw] sm:h-[4vw] relative mx-auto mt-[1.5vh]'}>
                                             <Image src={'/images/miniatures/Hats/'+item.name+'.png'} layout={'fill'}></Image>
                                         </div>
-                                        <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] absolute top-[1vh] left-[1vh]'}>
+                                        <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] absolute top-[1vh] left-[1vh]'}>
                                             <Image src={'/images/equipment_module/'+item.type+'.svg'} layout={'fill'}></Image>
                                         </div>
-                                        <p className={'text-white font-josefin text-[1.8vh] sm:text-[2vw] text-right absolute top-[1vh] right-[1vh]'}>ID: {item.id}</p>
-                                        <p className={'w-full text-white font-soyuz text-[1.8vh] sm:text-[2vw] text-center'}>{item.name}</p>
+                                        <p className={'text-white font-josefin text-[1.8vh] sm:text-[1vw] text-right absolute top-[1vh] right-[1vh]'}>ID: {item.id}</p>
+                                        <p className={'w-full text-white font-soyuz text-[1.8vh] sm:text-[1vw] text-center'}>{item.name}</p>
                                         <div className={'relative w-[70%] mx-auto border-[#000]'}>
                                             {item.dex!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/uncommon/dex.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[60%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.dex}
                                                     </p>
                                                 </div>
@@ -1380,13 +1380,13 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.str!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/uncommon/str.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[60%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.str}
                                                     </p>
                                                 </div>
@@ -1396,13 +1396,13 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.vit!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/uncommon/vit.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[60%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.vit}
                                                     </p>
                                                 </div>
@@ -1412,13 +1412,13 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.int!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/uncommon/int.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[60%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.int}
                                                     </p>
                                                 </div>
@@ -1428,13 +1428,13 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.krm!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/uncommon/krm.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[60%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.krm}
                                                     </p>
                                                 </div>
@@ -1449,28 +1449,28 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                             }
                             else{
                                 return(
-                                    <div className={'w-[48%] sm:w-[23%] sm:h-[23.5vw] mt-[4vw] relative h-[23vh] rounded-[2vw] cursor-pointer'}  key={item.id} onClick={()=>{updateHat(item);updateStats()}}>
+                                    <div className={'w-[48%] sm:w-[45%] sm:h-[14.2vw] mt-[4vw] sm:mt-[2vw] relative h-[23vh] rounded-[2vw] cursor-pointer'}  key={item.id} onClick={()=>{updateHat(item);updateStats()}}>
                                         <div className={'w-full absolute top-0 rounded-[2vw] h-full'}>
                                             <Image src={'/images/card_generation/uncommon/bg.svg'} layout={'fill'}></Image>
                                         </div>
-                                        <div className={'w-[8vh] h-[8vh] sm:w-[8vw] sm:h-[8vw] relative mx-auto mt-[1.5vh]'}>
+                                        <div className={'w-[8vh] h-[8vh] sm:w-[4vw] sm:h-[4vw] relative mx-auto mt-[1.5vh]'}>
                                             <Image src={'/images/miniatures/Hats/'+item.name+'.png'} layout={'fill'}></Image>
                                         </div>
-                                        <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] absolute top-[1vh] left-[1vh]'}>
+                                        <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] absolute top-[1vh] left-[1vh]'}>
                                             <Image src={'/images/equipment_module/'+item.type+'.svg'} layout={'fill'}></Image>
                                         </div>
-                                        <p className={'text-white font-josefin text-[1.8vh] sm:text-[2vw] text-right absolute top-[1vh] right-[1vh]'}>ID: {item.id}</p>
-                                        <p className={'w-full text-white font-soyuz text-[1.8vh] sm:text-[2vw] text-center'}>{item.name}</p>
+                                        <p className={'text-white font-josefin text-[1.8vh] sm:text-[1vw] text-right absolute top-[1vh] right-[1vh]'}>ID: {item.id}</p>
+                                        <p className={'w-full text-white font-soyuz text-[1.8vh] sm:text-[1vw] text-center'}>{item.name}</p>
                                         <div className={'relative w-[70%] mx-auto border-[#000]'}>
                                             {item.dex!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/uncommon/dex.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[60%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.dex}
                                                     </p>
                                                 </div>
@@ -1480,13 +1480,13 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.str!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/uncommon/str.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[60%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.str}
                                                     </p>
                                                 </div>
@@ -1496,13 +1496,13 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.vit!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/uncommon/vit.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[60%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.vit}
                                                     </p>
                                                 </div>
@@ -1512,13 +1512,13 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.int!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/uncommon/int.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[60%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.int}
                                                     </p>
                                                 </div>
@@ -1528,13 +1528,13 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.krm!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/uncommon/krm.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[60%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.krm}
                                                     </p>
                                                 </div>
@@ -1552,28 +1552,28 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
 
                         else if(item.rarity=='epic'){
                             return(
-                                <div className={'w-[48%] sm:w-[23%] sm:h-[23.5vw] mt-[4vw] relative h-[23vh] rounded-[2vw] cursor-pointer'}  key={item.id}>
+                                <div className={'w-[48%] sm:w-[45%] sm:h-[14.2vw] mt-[4vw] sm:mt-[2vw] relative h-[23vh] rounded-[2vw] cursor-pointer'}  key={item.id}>
                                     <div className={'w-full absolute top-0 rounded-[2vw] h-full'}>
                                         <Image src={'/images/card_generation/epic/bg.svg'} layout={'fill'}></Image>
                                     </div>
-                                    <div className={'w-[8vh] h-[8vh] sm:w-[8vw] sm:h-[8vw] relative mx-auto mt-[1.5vh]'}>
+                                    <div className={'w-[8vh] h-[8vh] sm:w-[4vw] sm:h-[4vw] relative mx-auto mt-[1.5vh]'}>
                                         <Image src={'/images/miniatures/Hats/'+item.name+'.png'} layout={'fill'}></Image>
                                     </div>
-                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] absolute top-[1vh] left-[1vh]'}>
+                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] absolute top-[1vh] left-[1vh]'}>
                                         <Image src={'/images/equipment_module/'+item.type+'.svg'} layout={'fill'}></Image>
                                     </div>
-                                    <p className={'text-white font-josefin text-[1.8vh] sm:text-[2vw] text-right absolute top-[1vh] right-[1vh]'}>ID: {item.id}</p>
-                                    <p className={'w-full text-white font-soyuz text-[1.8vh] sm:text-[2vw] text-center'}>{item.name}</p>
+                                    <p className={'text-white font-josefin text-[1.8vh] sm:text-[1vw] text-right absolute top-[1vh] right-[1vh]'}>ID: {item.id}</p>
+                                    <p className={'w-full text-white font-soyuz text-[1.8vh] sm:text-[1vw] text-center'}>{item.name}</p>
                                     <div className={'relative w-[40%] inline-block mx-[2%] ml-[8%]'}>
                                         {item.dex!=0?
                                             <div className={'w-full relative flex justify-between items-center'}>
-                                                <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                     <Image src={'/images/card_generation/epic/dex.svg'} layout={'fill'}></Image>
                                                 </div>
                                                 <div className={'dashed-line mx-[5%] w-[40%] h-[1px]'}>
 
                                                 </div>
-                                                <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                     +{item.dex}
                                                 </p>
                                             </div>
@@ -1583,13 +1583,13 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                             </div>}
                                         {item.str!=0?
                                             <div className={'w-full relative flex justify-between items-center'}>
-                                                <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                     <Image src={'/images/card_generation/epic/str.svg'} layout={'fill'}></Image>
                                                 </div>
                                                 <div className={'dashed-line mx-[5%] w-[40%] h-[1px]'}>
 
                                                 </div>
-                                                <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                     +{item.str}
                                                 </p>
                                             </div>
@@ -1599,13 +1599,13 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                             </div>}
                                         {item.vit!=0?
                                             <div className={'w-full relative flex justify-between items-center'}>
-                                                <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                     <Image src={'/images/card_generation/epic/vit.svg'} layout={'fill'}></Image>
                                                 </div>
                                                 <div className={'dashed-line mx-[5%] w-[40%] h-[1px]'}>
 
                                                 </div>
-                                                <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                     +{item.vit}
                                                 </p>
                                             </div>
@@ -1615,13 +1615,13 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                             </div>}
                                         {item.int!=0?
                                             <div className={'w-full relative flex justify-between items-center'}>
-                                                <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                     <Image src={'/images/card_generation/epic/int.svg'} layout={'fill'}></Image>
                                                 </div>
                                                 <div className={'dashed-line mx-[5%] w-[40%] h-[1px]'}>
 
                                                 </div>
-                                                <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                     +{item.int}
                                                 </p>
                                             </div>
@@ -1631,13 +1631,13 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                             </div>}
                                         {item.krm!=0?
                                             <div className={'w-full relative flex justify-between items-center'}>
-                                                <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                     <Image src={'/images/card_generation/epic/krm.svg'} layout={'fill'}></Image>
                                                 </div>
                                                 <div className={'dashed-line mx-[5%] w-[40%] h-[1px]'}>
 
                                                 </div>
-                                                <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                     +{item.krm}
                                                 </p>
                                             </div>
@@ -1648,14 +1648,14 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
 
                                     </div>
                                     <div className={'align-top relative w-[40%] inline-block ml-[2%] mr-[8%]'}>
-                                        <p className={'w-full relative text-white text-center font-medium font-josefin text-[1vh] sm:text-[1vw]'}>Requierements</p>
+                                        <p className={'w-full relative text-white text-center font-medium font-josefin text-[1vh] sm:text-[0.7vw]'}>Requierements</p>
                                         {item.requirements?.dex!=0&&item.requirements?.dex!=undefined?
                                             <div className={'w-full relative flex justify-center items-center'}>
-                                                <div className={'w-[2vh] sm:w-[2vw] mx-[1vh] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                <div className={'w-[2vh] sm:w-[1.5vw] mx-[1vh] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                     <Image src={'/images/card_generation/epic/dex.svg'} layout={'fill'}></Image>
                                                 </div>
 
-                                                <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>{item.requirements.dex}
+                                                <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>{item.requirements.dex}
                                                 </p>
                                             </div>
                                             :
@@ -1664,11 +1664,11 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                             </div>}
                                         {item.requirements?.str!=0&&item.requirements?.str!=undefined?
                                             <div className={'w-full relative flex justify-center items-center'}>
-                                                <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] mx-[1vh] relative inline-block'}>
+                                                <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] mx-[1vh] relative inline-block'}>
                                                     <Image src={'/images/card_generation/epic/str.svg'} layout={'fill'}></Image>
                                                 </div>
 
-                                                <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                     {item.requirements.str}
                                                 </p>
                                             </div>
@@ -1678,11 +1678,11 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                             </div>}
                                         {item.requirements?.vit!=0&&item.requirements?.vit!=undefined?
                                             <div className={'w-full relative flex justify-center items-center'}>
-                                                <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] mx-[1vh] relative inline-block'}>
+                                                <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] mx-[1vh] relative inline-block'}>
                                                     <Image src={'/images/card_generation/epic/vit.svg'} layout={'fill'}></Image>
                                                 </div>
 
-                                                <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                     {item.requirements.vit}
                                                 </p>
                                             </div>
@@ -1692,11 +1692,11 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                             </div>}
                                         {item.requirements?.int!=0&&item.requirements?.int!=undefined?
                                             <div className={'w-full relative flex justify-center items-center'}>
-                                                <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] mx-[1vh] relative inline-block'}>
+                                                <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] mx-[1vh] relative inline-block'}>
                                                     <Image src={'/images/card_generation/epic/int.svg'} layout={'fill'}></Image>
                                                 </div>
 
-                                                <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                     {item.requirements.int}
                                                 </p>
                                             </div>
@@ -1706,11 +1706,11 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                             </div>}
                                         {item.requirements?.krm!=0&&item.requirements?.krm!=undefined?
                                             <div className={'w-full relative flex justify-center items-center'}>
-                                                <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] mx-[1vh] relative inline-block'}>
+                                                <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] mx-[1vh] relative inline-block'}>
                                                     <Image src={'/images/card_generation/epic/krm.svg'} layout={'fill'}></Image>
                                                 </div>
 
-                                                <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                     {item.requirements.krm}
                                                 </p>
                                             </div>
@@ -1727,28 +1727,28 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                         else if(item.rarity=='legendary'){
                             if(bunny.equipment.hat?.id==item.id){
                                 return(
-                                    <div className={'w-[48%] sm:w-[23%] sm:h-[23.5vw] mt-[4vw] border-2 border-[#FFF] border-dashed relative h-[23vh] rounded-[2vw] sm:rounded-[1vw]'}  key={item.id}>
+                                    <div className={'w-[48%] sm:w-[45%] sm:h-[14.2vw] mt-[4vw] sm:mt-[2vw] border-2 border-[#FFF] border-dashed relative h-[23vh] rounded-[2vw] sm:rounded-[1vw]'}  key={item.id}>
                                         <div className={'w-full absolute top-0 rounded-[2vw] h-full'}>
                                             <Image src={'/images/card_generation/legendary/bg.svg'} layout={'fill'}></Image>
                                         </div>
-                                        <div className={'w-[8vh] h-[8vh] sm:w-[8vw] sm:h-[8vw] relative mx-auto mt-[1.5vh]'}>
+                                        <div className={'w-[8vh] h-[8vh] sm:w-[4vw] sm:h-[4vw] relative mx-auto mt-[1.5vh]'}>
                                             <Image src={'/images/miniatures/Hats/'+item.name+'.png'} layout={'fill'}></Image>
                                         </div>
-                                        <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] absolute top-[1vh] left-[1vh]'}>
+                                        <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] absolute top-[1vh] left-[1vh]'}>
                                             <Image src={'/images/equipment_module/'+item.type+'.svg'} layout={'fill'}></Image>
                                         </div>
-                                        <p className={'text-white font-josefin text-[1.8vh] sm:text-[2vw] text-right absolute top-[1vh] right-[1vh]'}>ID: {item.id}</p>
-                                        <p className={'w-full text-white font-soyuz text-[1.8vh] sm:text-[2vw] text-center'}>{item.name}</p>
+                                        <p className={'text-white font-josefin text-[1.8vh] sm:text-[1vw] text-right absolute top-[1vh] right-[1vh]'}>ID: {item.id}</p>
+                                        <p className={'w-full text-white font-soyuz text-[1.8vh] sm:text-[1vw] text-center'}>{item.name}</p>
                                         <div className={'relative w-[40%] inline-block mx-[2%] ml-[8%]'}>
                                             {item.dex!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/legendary/dex.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[40%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.dex}
                                                     </p>
                                                 </div>
@@ -1758,13 +1758,13 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.str!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/legendary/str.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[40%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.str}
                                                     </p>
                                                 </div>
@@ -1774,13 +1774,13 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.vit!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/legendary/vit.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[40%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.vit}
                                                     </p>
                                                 </div>
@@ -1790,13 +1790,13 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.int!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/legendary/int.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[40%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.int}
                                                     </p>
                                                 </div>
@@ -1806,13 +1806,13 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.krm!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/legendary/krm.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[40%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.krm}
                                                     </p>
                                                 </div>
@@ -1823,14 +1823,14 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
 
                                         </div>
                                         <div className={'align-top relative w-[40%] inline-block ml-[2%] mr-[8%]'}>
-                                            <p className={'w-full relative text-white text-center font-medium font-josefin text-[1vh] sm:text-[1vw]'}>Requierements</p>
+                                            <p className={'w-full relative text-white text-center font-medium font-josefin text-[1vh] sm:text-[0.7vw]'}>Requierements</p>
                                             {item.requirements?.dex!=0&&item.requirements?.dex!=undefined?
                                                 <div className={'w-full relative flex justify-center items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] mx-[1vh] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] mx-[1vh] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/legendary/dex.svg'} layout={'fill'}></Image>
                                                     </div>
 
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>{item.requirements.dex}
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>{item.requirements.dex}
                                                     </p>
                                                 </div>
                                                 :
@@ -1839,11 +1839,11 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.requirements?.str!=0&&item.requirements?.str!=undefined?
                                                 <div className={'w-full relative flex justify-center items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] mx-[1vh] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] mx-[1vh] relative inline-block'}>
                                                         <Image src={'/images/card_generation/legendary/str.svg'} layout={'fill'}></Image>
                                                     </div>
 
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         {item.requirements.str}
                                                     </p>
                                                 </div>
@@ -1853,11 +1853,11 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.requirements?.vit!=0&&item.requirements?.vit!=undefined?
                                                 <div className={'w-full relative flex justify-center items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] mx-[1vh] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] mx-[1vh] relative inline-block'}>
                                                         <Image src={'/images/card_generation/legendary/vit.svg'} layout={'fill'}></Image>
                                                     </div>
 
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         {item.requirements.vit}
                                                     </p>
                                                 </div>
@@ -1867,11 +1867,11 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.requirements?.int!=0&&item.requirements?.int!=undefined?
                                                 <div className={'w-full relative flex justify-center items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] mx-[1vh] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] mx-[1vh] relative inline-block'}>
                                                         <Image src={'/images/card_generation/legendary/int.svg'} layout={'fill'}></Image>
                                                     </div>
 
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         {item.requirements.int}
                                                     </p>
                                                 </div>
@@ -1881,11 +1881,11 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.requirements?.krm!=0&&item.requirements?.krm!=undefined?
                                                 <div className={'w-full relative flex justify-center items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] mx-[1vh] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] mx-[1vh] relative inline-block'}>
                                                         <Image src={'/images/card_generation/legendary/krm.svg'} layout={'fill'}></Image>
                                                     </div>
 
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         {item.requirements.krm}
                                                     </p>
                                                 </div>
@@ -1893,7 +1893,7 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 <div className={'hidden'}>
 
                                                 </div>}
-                                            <p className={'w-[90%] relative text-white text-[1.2vh] ml-[10%] font-medium font-josefin mt-[0.3vh] sm:text-[1vw]'}>Status: <span className={'font-bold text-[1.5vh] sm:text-[1.5vw]'}>Elite</span> </p>
+                                            <p className={'w-[90%] relative text-white text-[1.2vh] ml-[10%] font-medium font-josefin mt-[0.3vh] sm:text-[0.7vw]'}>Status: <span className={'font-bold text-[1.5vh] sm:text-[1vw]'}>Elite</span> </p>
 
                                         </div>
                                     </div>
@@ -1901,28 +1901,28 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                             }
                             else{
                                 return(
-                                    <div className={'w-[48%] sm:w-[23%] sm:h-[23.5vw] mt-[4vw] relative h-[23vh] rounded-[2vw] cursor-pointer'}  key={item.id} onClick={()=>{updateHat(item);updateStats()}}>
+                                    <div className={'w-[48%] sm:w-[45%] sm:h-[14.2vw] mt-[4vw] sm:mt-[2vw] relative h-[23vh] rounded-[2vw] cursor-pointer'}  key={item.id} onClick={()=>{updateHat(item);updateStats()}}>
                                         <div className={'w-full absolute top-0 rounded-[2vw] h-full'}>
                                             <Image src={'/images/card_generation/legendary/bg.svg'} layout={'fill'}></Image>
                                         </div>
-                                        <div className={'w-[8vh] h-[8vh] sm:w-[8vw] sm:h-[8vw] relative mx-auto mt-[1.5vh]'}>
+                                        <div className={'w-[8vh] h-[8vh] sm:w-[4vw] sm:h-[4vw] relative mx-auto mt-[1.5vh]'}>
                                             <Image src={'/images/miniatures/Hats/'+item.name+'.png'} layout={'fill'}></Image>
                                         </div>
-                                        <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] absolute top-[1vh] left-[1vh]'}>
+                                        <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] absolute top-[1vh] left-[1vh]'}>
                                             <Image src={'/images/equipment_module/'+item.type+'.svg'} layout={'fill'}></Image>
                                         </div>
-                                        <p className={'text-white font-josefin text-[1.8vh] sm:text-[2vw] text-right absolute top-[1vh] right-[1vh]'}>ID: {item.id}</p>
-                                        <p className={'w-full text-white font-soyuz text-[1.8vh] sm:text-[2vw] text-center'}>{item.name}</p>
+                                        <p className={'text-white font-josefin text-[1.8vh] sm:text-[1vw] text-right absolute top-[1vh] right-[1vh]'}>ID: {item.id}</p>
+                                        <p className={'w-full text-white font-soyuz text-[1.8vh] sm:text-[1vw] text-center'}>{item.name}</p>
                                         <div className={'relative w-[40%] inline-block mx-[2%] ml-[8%]'}>
                                             {item.dex!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/legendary/dex.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[40%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.dex}
                                                     </p>
                                                 </div>
@@ -1932,13 +1932,13 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.str!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/legendary/str.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[40%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.str}
                                                     </p>
                                                 </div>
@@ -1948,13 +1948,13 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.vit!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/legendary/vit.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[40%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.vit}
                                                     </p>
                                                 </div>
@@ -1964,13 +1964,13 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.int!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/legendary/int.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[40%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.int}
                                                     </p>
                                                 </div>
@@ -1980,13 +1980,13 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.krm!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/legendary/krm.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[40%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.krm}
                                                     </p>
                                                 </div>
@@ -1997,14 +1997,14 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
 
                                         </div>
                                         <div className={'align-top relative w-[40%] inline-block ml-[2%] mr-[8%]'}>
-                                            <p className={'w-full relative text-white text-center font-medium font-josefin text-[1vh] sm:text-[1vw]'}>Requierements</p>
+                                            <p className={'w-full relative text-white text-center font-medium font-josefin text-[1vh] sm:text-[0.7vw]'}>Requierements</p>
                                             {item.requirements?.dex!=0&&item.requirements?.dex!=undefined?
                                                 <div className={'w-full relative flex justify-center items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] mx-[1vh] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] mx-[1vh] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/legendary/dex.svg'} layout={'fill'}></Image>
                                                     </div>
 
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>{item.requirements.dex}
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>{item.requirements.dex}
                                                     </p>
                                                 </div>
                                                 :
@@ -2013,11 +2013,11 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.requirements?.str!=0&&item.requirements?.str!=undefined?
                                                 <div className={'w-full relative flex justify-center items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] mx-[1vh] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] mx-[1vh] relative inline-block'}>
                                                         <Image src={'/images/card_generation/legendary/str.svg'} layout={'fill'}></Image>
                                                     </div>
 
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         {item.requirements.str}
                                                     </p>
                                                 </div>
@@ -2027,11 +2027,11 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.requirements?.vit!=0&&item.requirements?.vit!=undefined?
                                                 <div className={'w-full relative flex justify-center items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] mx-[1vh] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] mx-[1vh] relative inline-block'}>
                                                         <Image src={'/images/card_generation/legendary/vit.svg'} layout={'fill'}></Image>
                                                     </div>
 
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         {item.requirements.vit}
                                                     </p>
                                                 </div>
@@ -2041,11 +2041,11 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.requirements?.int!=0&&item.requirements?.int!=undefined?
                                                 <div className={'w-full relative flex justify-center items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] mx-[1vh] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] mx-[1vh] relative inline-block'}>
                                                         <Image src={'/images/card_generation/legendary/int.svg'} layout={'fill'}></Image>
                                                     </div>
 
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         {item.requirements.int}
                                                     </p>
                                                 </div>
@@ -2055,11 +2055,11 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.requirements?.krm!=0&&item.requirements?.krm!=undefined?
                                                 <div className={'w-full relative flex justify-center items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] mx-[1vh] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] mx-[1vh] relative inline-block'}>
                                                         <Image src={'/images/card_generation/legendary/krm.svg'} layout={'fill'}></Image>
                                                     </div>
 
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         {item.requirements.krm}
                                                     </p>
                                                 </div>
@@ -2067,7 +2067,7 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 <div className={'hidden'}>
 
                                                 </div>}
-                                            <p className={'w-[90%] relative text-white text-[1.2vh] ml-[10%] font-medium font-josefin mt-[0.3vh] sm:text-[1vw]'}>Status: <span className={'font-bold text-[1.5vh] sm:text-[1.5vw]'}>Elite</span> </p>
+                                            <p className={'w-[90%] relative text-white text-[1.2vh] ml-[10%] font-medium font-josefin mt-[0.3vh] sm:text-[0.7vw]'}>Status: <span className={'font-bold text-[1.5vh] sm:text-[1vw]'}>Elite</span> </p>
 
                                         </div>
                                     </div>
@@ -2089,28 +2089,28 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                         if(item.rarity=='common'){
                             if(bunny.equipment.leftHand?.id==item.id){
                                 return(
-                                    <div className={'w-[48%] sm:w-[23%] sm:h-[23.5vw] mt-[4vw] border-2 border-[#FFF] border-dashed relative h-[23vh] rounded-[2vw] sm:rounded-[1vw]'}  key={item.id}>
+                                    <div className={'w-[48%] sm:w-[45%] sm:h-[14.2vw] mt-[4vw] sm:mt-[2vw] border-2 border-[#FFF] border-dashed relative h-[23vh] rounded-[2vw] sm:rounded-[1vw]'}  key={item.id}>
                                         <div className={'w-full absolute top-0 rounded-[2vw] h-full'}>
                                             <Image src={'/images/card_generation/common/bg.svg'} layout={'fill'}></Image>
                                         </div>
-                                        <div className={'w-[8vh] h-[8vh] sm:w-[8vw] sm:h-[8vw] relative mx-auto mt-[1.5vh]'}>
+                                        <div className={'w-[8vh] h-[8vh] sm:w-[4vw] sm:h-[4vw] relative mx-auto mt-[1.5vh]'}>
                                             <Image src={'/images/miniatures/Left hand/'+item.name+'.png'} layout={'fill'}></Image>
                                         </div>
-                                        <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] absolute top-[1vh] left-[1vh]'}>
+                                        <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] absolute top-[1vh] left-[1vh]'}>
                                             <Image src={'/images/equipment_module/left hand.svg'} layout={'fill'}></Image>
                                         </div>
-                                        <p className={'text-white font-josefin text-[1.8vh] sm:text-[2vw] text-right absolute top-[1vh] right-[1vh]'}>ID: {item.id}</p>
-                                        <p className={'w-full text-white font-soyuz text-[1.8vh] sm:text-[2vw] text-center'}>{item.name}</p>
+                                        <p className={'text-white font-josefin text-[1.8vh] sm:text-[1vw] text-right absolute top-[1vh] right-[1vh]'}>ID: {item.id}</p>
+                                        <p className={'w-full text-white font-soyuz text-[1.8vh] sm:text-[1vw] text-center'}>{item.name}</p>
                                         <div className={'relative w-[70%] mx-auto border-[#000]'}>
                                             {item.dex!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/common/dex.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[60%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.dex}
                                                     </p>
                                                 </div>
@@ -2120,13 +2120,13 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.str!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/common/str.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[60%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.str}
                                                     </p>
                                                 </div>
@@ -2136,13 +2136,13 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.vit!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/common/vit.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[60%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.vit}
                                                     </p>
                                                 </div>
@@ -2152,13 +2152,13 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.int!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/common/int.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[60%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.int}
                                                     </p>
                                                 </div>
@@ -2168,13 +2168,13 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.krm!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/common/krm.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[60%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.krm}
                                                     </p>
                                                 </div>
@@ -2189,28 +2189,28 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                             }
                             else{
                                 return(
-                                    <div className={'w-[48%] sm:w-[23%] sm:h-[23.5vw] mt-[4vw] relative h-[23vh] rounded-[2vw] cursor-pointer'}  key={item.id} onClick={()=>{updateLeftHand(item);updateStats()}}>
+                                    <div className={'w-[48%] sm:w-[45%] sm:h-[14.2vw] mt-[4vw] sm:mt-[2vw] relative h-[23vh] rounded-[2vw] cursor-pointer'}  key={item.id} onClick={()=>{updateLeftHand(item);updateStats()}}>
                                         <div className={'w-full absolute top-0 rounded-[2vw] h-full'}>
                                             <Image src={'/images/card_generation/common/bg.svg'} layout={'fill'}></Image>
                                         </div>
-                                        <div className={'w-[8vh] h-[8vh] sm:w-[8vw] sm:h-[8vw] relative mx-auto mt-[1.5vh]'}>
+                                        <div className={'w-[8vh] h-[8vh] sm:w-[4vw] sm:h-[4vw] relative mx-auto mt-[1.5vh]'}>
                                             <Image src={'/images/miniatures/Left hand/'+item.name+'.png'} layout={'fill'}></Image>
                                         </div>
-                                        <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] absolute top-[1vh] left-[1vh]'}>
+                                        <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] absolute top-[1vh] left-[1vh]'}>
                                             <Image src={'/images/equipment_module/left hand.svg'} layout={'fill'}></Image>
                                         </div>
-                                        <p className={'text-white font-josefin text-[1.8vh] sm:text-[2vw] text-right absolute top-[1vh] right-[1vh]'}>ID: {item.id}</p>
-                                        <p className={'w-full text-white font-soyuz text-[1.8vh] sm:text-[2vw] text-center'}>{item.name}</p>
+                                        <p className={'text-white font-josefin text-[1.8vh] sm:text-[1vw] text-right absolute top-[1vh] right-[1vh]'}>ID: {item.id}</p>
+                                        <p className={'w-full text-white font-soyuz text-[1.8vh] sm:text-[1vw] text-center'}>{item.name}</p>
                                         <div className={'relative w-[70%] mx-auto border-[#000]'}>
                                             {item.dex!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/common/dex.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[60%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.dex}
                                                     </p>
                                                 </div>
@@ -2220,13 +2220,13 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.str!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/common/str.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[60%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.str}
                                                     </p>
                                                 </div>
@@ -2236,13 +2236,13 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.vit!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/common/vit.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[60%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.vit}
                                                     </p>
                                                 </div>
@@ -2252,13 +2252,13 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.int!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/common/int.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[60%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.int}
                                                     </p>
                                                 </div>
@@ -2268,13 +2268,13 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.krm!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/common/krm.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[60%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.krm}
                                                     </p>
                                                 </div>
@@ -2291,28 +2291,28 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                         else if(item.rarity=='uncommon'){
                             if(bunny.equipment.leftHand?.id==item.id){
                                 return(
-                                    <div className={'w-[48%] sm:w-[23%] sm:h-[23.5vw] mt-[4vw] border-2 border-[#FFF] border-dashed relative h-[23vh] rounded-[2vw] sm:rounded-[1vw]'}  key={item.id}>
+                                    <div className={'w-[48%] sm:w-[45%] sm:h-[14.2vw] mt-[4vw] sm:mt-[2vw] border-2 border-[#FFF] border-dashed relative h-[23vh] rounded-[2vw] sm:rounded-[1vw]'}  key={item.id}>
                                         <div className={'w-full absolute top-0 rounded-[2vw] h-full'}>
                                             <Image src={'/images/card_generation/uncommon/bg.svg'} layout={'fill'}></Image>
                                         </div>
-                                        <div className={'w-[8vh] h-[8vh] sm:w-[8vw] sm:h-[8vw] relative mx-auto mt-[1.5vh]'}>
+                                        <div className={'w-[8vh] h-[8vh] sm:w-[4vw] sm:h-[4vw] relative mx-auto mt-[1.5vh]'}>
                                             <Image src={'/images/miniatures/Left hand/'+item.name+'.png'} layout={'fill'}></Image>
                                         </div>
-                                        <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] absolute top-[1vh] left-[1vh]'}>
+                                        <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] absolute top-[1vh] left-[1vh]'}>
                                             <Image src={'/images/equipment_module/left hand.svg'} layout={'fill'}></Image>
                                         </div>
-                                        <p className={'text-white font-josefin text-[1.8vh] sm:text-[2vw] text-right absolute top-[1vh] right-[1vh]'}>ID: {item.id}</p>
-                                        <p className={'w-full text-white font-soyuz text-[1.8vh] sm:text-[2vw] text-center'}>{item.name}</p>
+                                        <p className={'text-white font-josefin text-[1.8vh] sm:text-[1vw] text-right absolute top-[1vh] right-[1vh]'}>ID: {item.id}</p>
+                                        <p className={'w-full text-white font-soyuz text-[1.8vh] sm:text-[1vw] text-center'}>{item.name}</p>
                                         <div className={'relative w-[70%] mx-auto border-[#000]'}>
                                             {item.dex!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/uncommon/dex.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[60%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.dex}
                                                     </p>
                                                 </div>
@@ -2322,13 +2322,13 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.str!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/uncommon/str.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[60%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.str}
                                                     </p>
                                                 </div>
@@ -2338,13 +2338,13 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.vit!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/uncommon/vit.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[60%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.vit}
                                                     </p>
                                                 </div>
@@ -2354,13 +2354,13 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.int!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/uncommon/int.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[60%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.int}
                                                     </p>
                                                 </div>
@@ -2370,13 +2370,13 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.krm!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/uncommon/krm.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[60%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.krm}
                                                     </p>
                                                 </div>
@@ -2391,28 +2391,28 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                             }
                             else{
                                 return(
-                                    <div className={'w-[48%] sm:w-[23%] sm:h-[23.5vw] mt-[4vw] relative h-[23vh] rounded-[2vw] cursor-pointer'}  key={item.id} onClick={()=>{updateLeftHand(item);updateStats()}}>
+                                    <div className={'w-[48%] sm:w-[45%] sm:h-[14.2vw] mt-[4vw] sm:mt-[2vw] relative h-[23vh] rounded-[2vw] cursor-pointer'}  key={item.id} onClick={()=>{updateLeftHand(item);updateStats()}}>
                                         <div className={'w-full absolute top-0 rounded-[2vw] h-full'}>
                                             <Image src={'/images/card_generation/uncommon/bg.svg'} layout={'fill'}></Image>
                                         </div>
-                                        <div className={'w-[8vh] h-[8vh] sm:w-[8vw] sm:h-[8vw] relative mx-auto mt-[1.5vh]'}>
+                                        <div className={'w-[8vh] h-[8vh] sm:w-[4vw] sm:h-[4vw] relative mx-auto mt-[1.5vh]'}>
                                             <Image src={'/images/miniatures/Left hand/'+item.name+'.png'} layout={'fill'}></Image>
                                         </div>
-                                        <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] absolute top-[1vh] left-[1vh]'}>
+                                        <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] absolute top-[1vh] left-[1vh]'}>
                                             <Image src={'/images/equipment_module/left hand.svg'} layout={'fill'}></Image>
                                         </div>
-                                        <p className={'text-white font-josefin text-[1.8vh] sm:text-[2vw] text-right absolute top-[1vh] right-[1vh]'}>ID: {item.id}</p>
-                                        <p className={'w-full text-white font-soyuz text-[1.8vh] sm:text-[2vw] text-center'}>{item.name}</p>
+                                        <p className={'text-white font-josefin text-[1.8vh] sm:text-[1vw] text-right absolute top-[1vh] right-[1vh]'}>ID: {item.id}</p>
+                                        <p className={'w-full text-white font-soyuz text-[1.8vh] sm:text-[1vw] text-center'}>{item.name}</p>
                                         <div className={'relative w-[70%] mx-auto border-[#000]'}>
                                             {item.dex!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/uncommon/dex.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[60%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.dex}
                                                     </p>
                                                 </div>
@@ -2422,13 +2422,13 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.str!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/uncommon/str.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[60%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.str}
                                                     </p>
                                                 </div>
@@ -2438,13 +2438,13 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.vit!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/uncommon/vit.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[60%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.vit}
                                                     </p>
                                                 </div>
@@ -2454,13 +2454,13 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.int!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/uncommon/int.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[60%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.int}
                                                     </p>
                                                 </div>
@@ -2470,13 +2470,13 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.krm!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/uncommon/krm.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[60%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.krm}
                                                     </p>
                                                 </div>
@@ -2495,28 +2495,28 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                         else if(item.rarity=='epic'){
                             if(bunny.equipment.leftHand?.id==item.id){
                                 return(
-                                    <div className={'w-[48%] sm:w-[23%] sm:h-[23.5vw] border-2 border-[#FFF] border-dashed mt-[4vw] relative h-[23vh] roun sm:rounded-[1vw]ded-[2vw]'}  key={item.id}>
+                                    <div className={'w-[48%] sm:w-[45%] sm:h-[14.2vw] border-2 border-[#FFF] border-dashed mt-[4vw] sm:mt-[2vw] relative h-[23vh] roun sm:rounded-[1vw]ded-[2vw]'}  key={item.id}>
                                         <div className={'w-full absolute top-0 rounded-[2vw] h-full'}>
                                             <Image src={'/images/card_generation/epic/bg.svg'} layout={'fill'}></Image>
                                         </div>
-                                        <div className={'w-[8vh] h-[8vh] sm:w-[8vw] sm:h-[8vw] relative mx-auto mt-[1.5vh]'}>
+                                        <div className={'w-[8vh] h-[8vh] sm:w-[4vw] sm:h-[4vw] relative mx-auto mt-[1.5vh]'}>
                                             <Image src={'/images/miniatures/Left hand/'+item.name+'.png'} layout={'fill'}></Image>
                                         </div>
-                                        <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] absolute top-[1vh] left-[1vh]'}>
+                                        <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] absolute top-[1vh] left-[1vh]'}>
                                             <Image src={'/images/equipment_module/left hand.svg'} layout={'fill'}></Image>
                                         </div>
-                                        <p className={'text-white font-josefin text-[1.8vh] sm:text-[2vw] text-right absolute top-[1vh] right-[1vh]'}>ID: {item.id}</p>
-                                        <p className={'w-full text-white font-soyuz text-[1.8vh] sm:text-[2vw] text-center'}>{item.name}</p>
+                                        <p className={'text-white font-josefin text-[1.8vh] sm:text-[1vw] text-right absolute top-[1vh] right-[1vh]'}>ID: {item.id}</p>
+                                        <p className={'w-full text-white font-soyuz text-[1.8vh] sm:text-[1vw] text-center'}>{item.name}</p>
                                         <div className={'relative w-[40%] inline-block mx-[2%] ml-[8%]'}>
                                             {item.dex!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/epic/dex.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[40%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.dex}
                                                     </p>
                                                 </div>
@@ -2526,13 +2526,13 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.str!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/epic/str.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[40%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.str}
                                                     </p>
                                                 </div>
@@ -2542,13 +2542,13 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.vit!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/epic/vit.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[40%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.vit}
                                                     </p>
                                                 </div>
@@ -2558,13 +2558,13 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.int!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/epic/int.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[40%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.int}
                                                     </p>
                                                 </div>
@@ -2574,13 +2574,13 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.krm!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/epic/krm.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[40%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.krm}
                                                     </p>
                                                 </div>
@@ -2591,14 +2591,14 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
 
                                         </div>
                                         <div className={'align-top relative w-[40%] inline-block ml-[2%] mr-[8%]'}>
-                                            <p className={'w-full relative text-white text-center font-medium font-josefin text-[1vh] sm:text-[1vw]'}>Requierements</p>
+                                            <p className={'w-full relative text-white text-center font-medium font-josefin text-[1vh] sm:text-[0.7vw]'}>Requierements</p>
                                             {item.requirements?.dex!=0&&item.requirements?.dex!=undefined?
                                                 <div className={'w-full relative flex justify-center items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] mx-[1vh] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] mx-[1vh] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/epic/dex.svg'} layout={'fill'}></Image>
                                                     </div>
 
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>{item.requirements.dex}
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>{item.requirements.dex}
                                                     </p>
                                                 </div>
                                                 :
@@ -2607,11 +2607,11 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.requirements?.str!=0&&item.requirements?.str!=undefined?
                                                 <div className={'w-full relative flex justify-center items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] mx-[1vh] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] mx-[1vh] relative inline-block'}>
                                                         <Image src={'/images/card_generation/epic/str.svg'} layout={'fill'}></Image>
                                                     </div>
 
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         {item.requirements.str}
                                                     </p>
                                                 </div>
@@ -2621,11 +2621,11 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.requirements?.vit!=0&&item.requirements?.vit!=undefined?
                                                 <div className={'w-full relative flex justify-center items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] mx-[1vh] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] mx-[1vh] relative inline-block'}>
                                                         <Image src={'/images/card_generation/epic/vit.svg'} layout={'fill'}></Image>
                                                     </div>
 
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         {item.requirements.vit}
                                                     </p>
                                                 </div>
@@ -2635,11 +2635,11 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.requirements?.int!=0&&item.requirements?.int!=undefined?
                                                 <div className={'w-full relative flex justify-center items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] mx-[1vh] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] mx-[1vh] relative inline-block'}>
                                                         <Image src={'/images/card_generation/epic/int.svg'} layout={'fill'}></Image>
                                                     </div>
 
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         {item.requirements.int}
                                                     </p>
                                                 </div>
@@ -2649,11 +2649,11 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.requirements?.krm!=0&&item.requirements?.krm!=undefined?
                                                 <div className={'w-full relative flex justify-center items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] mx-[1vh] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] mx-[1vh] relative inline-block'}>
                                                         <Image src={'/images/card_generation/epic/krm.svg'} layout={'fill'}></Image>
                                                     </div>
 
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         {item.requirements.krm}
                                                     </p>
                                                 </div>
@@ -2667,28 +2667,28 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                             }
                             else{
                                 return(
-                                    <div className={'w-[48%] sm:w-[23%] sm:h-[23.5vw] mt-[4vw] relative h-[23vh] rounded-[2vw] cursor-pointer'}  key={item.id} onClick={()=>{updateLeftHand(item);updateStats()}}>
+                                    <div className={'w-[48%] sm:w-[45%] sm:h-[14.2vw] mt-[4vw] sm:mt-[2vw] relative h-[23vh] rounded-[2vw] cursor-pointer'}  key={item.id} onClick={()=>{updateLeftHand(item);updateStats()}}>
                                         <div className={'w-full absolute top-0 rounded-[2vw] h-full'}>
                                             <Image src={'/images/card_generation/epic/bg.svg'} layout={'fill'}></Image>
                                         </div>
-                                        <div className={'w-[8vh] h-[8vh] sm:w-[8vw] sm:h-[8vw] relative mx-auto mt-[1.5vh]'}>
+                                        <div className={'w-[8vh] h-[8vh] sm:w-[4vw] sm:h-[4vw] relative mx-auto mt-[1.5vh]'}>
                                             <Image src={'/images/miniatures/Left hand/'+item.name+'.png'} layout={'fill'}></Image>
                                         </div>
-                                        <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] absolute top-[1vh] left-[1vh]'}>
+                                        <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] absolute top-[1vh] left-[1vh]'}>
                                             <Image src={'/images/equipment_module/left hand.svg'} layout={'fill'}></Image>
                                         </div>
-                                        <p className={'text-white font-josefin text-[1.8vh] sm:text-[2vw] text-right absolute top-[1vh] right-[1vh]'}>ID: {item.id}</p>
-                                        <p className={'w-full text-white font-soyuz text-[1.8vh] sm:text-[2vw] text-center'}>{item.name}</p>
+                                        <p className={'text-white font-josefin text-[1.8vh] sm:text-[1vw] text-right absolute top-[1vh] right-[1vh]'}>ID: {item.id}</p>
+                                        <p className={'w-full text-white font-soyuz text-[1.8vh] sm:text-[1vw] text-center'}>{item.name}</p>
                                         <div className={'relative w-[40%] inline-block mx-[2%] ml-[8%]'}>
                                             {item.dex!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/epic/dex.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[40%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.dex}
                                                     </p>
                                                 </div>
@@ -2698,13 +2698,13 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.str!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/epic/str.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[40%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.str}
                                                     </p>
                                                 </div>
@@ -2714,13 +2714,13 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.vit!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/epic/vit.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[40%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.vit}
                                                     </p>
                                                 </div>
@@ -2730,13 +2730,13 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.int!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/epic/int.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[40%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.int}
                                                     </p>
                                                 </div>
@@ -2746,13 +2746,13 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.krm!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/epic/krm.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[40%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.krm}
                                                     </p>
                                                 </div>
@@ -2763,14 +2763,14 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
 
                                         </div>
                                         <div className={'align-top relative w-[40%] inline-block ml-[2%] mr-[8%]'}>
-                                            <p className={'w-full relative text-white text-center font-medium font-josefin text-[1vh] sm:text-[1vw]'}>Requierements</p>
+                                            <p className={'w-full relative text-white text-center font-medium font-josefin text-[1vh] sm:text-[0.7vw]'}>Requierements</p>
                                             {item.requirements?.dex!=0&&item.requirements?.dex!=undefined?
                                                 <div className={'w-full relative flex justify-center items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] mx-[1vh] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] mx-[1vh] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/epic/dex.svg'} layout={'fill'}></Image>
                                                     </div>
 
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>{item.requirements.dex}
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>{item.requirements.dex}
                                                     </p>
                                                 </div>
                                                 :
@@ -2779,11 +2779,11 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.requirements?.str!=0&&item.requirements?.str!=undefined?
                                                 <div className={'w-full relative flex justify-center items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] mx-[1vh] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] mx-[1vh] relative inline-block'}>
                                                         <Image src={'/images/card_generation/epic/str.svg'} layout={'fill'}></Image>
                                                     </div>
 
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         {item.requirements.str}
                                                     </p>
                                                 </div>
@@ -2793,11 +2793,11 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.requirements?.vit!=0&&item.requirements?.vit!=undefined?
                                                 <div className={'w-full relative flex justify-center items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] mx-[1vh] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] mx-[1vh] relative inline-block'}>
                                                         <Image src={'/images/card_generation/epic/vit.svg'} layout={'fill'}></Image>
                                                     </div>
 
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         {item.requirements.vit}
                                                     </p>
                                                 </div>
@@ -2807,11 +2807,11 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.requirements?.int!=0&&item.requirements?.int!=undefined?
                                                 <div className={'w-full relative flex justify-center items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] mx-[1vh] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] mx-[1vh] relative inline-block'}>
                                                         <Image src={'/images/card_generation/epic/int.svg'} layout={'fill'}></Image>
                                                     </div>
 
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         {item.requirements.int}
                                                     </p>
                                                 </div>
@@ -2821,11 +2821,11 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.requirements?.krm!=0&&item.requirements?.krm!=undefined?
                                                 <div className={'w-full relative flex justify-center items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] mx-[1vh] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] mx-[1vh] relative inline-block'}>
                                                         <Image src={'/images/card_generation/epic/krm.svg'} layout={'fill'}></Image>
                                                     </div>
 
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         {item.requirements.krm}
                                                     </p>
                                                 </div>
@@ -2843,28 +2843,28 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                         else if(item.rarity=='legendary'){
                             if(bunny.equipment.leftHand?.id==item.id){
                                 return(
-                                    <div className={'w-[48%] sm:w-[23%] sm:h-[23.5vw] mt-[4vw] border-2 border-[#FFF] border-dashed relative h-[23vh] rounded-[2vw] sm:rounded-[1vw]'}  key={item.id}>
+                                    <div className={'w-[48%] sm:w-[45%] sm:h-[14.2vw] mt-[4vw] sm:mt-[2vw] border-2 border-[#FFF] border-dashed relative h-[23vh] rounded-[2vw] sm:rounded-[1vw]'}  key={item.id}>
                                         <div className={'w-full absolute top-0 rounded-[2vw] h-full'}>
                                             <Image src={'/images/card_generation/legendary/bg.svg'} layout={'fill'}></Image>
                                         </div>
-                                        <div className={'w-[8vh] h-[8vh] sm:w-[8vw] sm:h-[8vw] relative mx-auto mt-[1.5vh]'}>
+                                        <div className={'w-[8vh] h-[8vh] sm:w-[4vw] sm:h-[4vw] relative mx-auto mt-[1.5vh]'}>
                                             <Image src={'/images/miniatures/Left hand/'+item.name+'.png'} layout={'fill'}></Image>
                                         </div>
-                                        <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] absolute top-[1vh] left-[1vh]'}>
+                                        <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] absolute top-[1vh] left-[1vh]'}>
                                             <Image src={'/images/equipment_module/left hand.svg'} layout={'fill'}></Image>
                                         </div>
-                                        <p className={'text-white font-josefin text-[1.8vh] sm:text-[2vw] text-right absolute top-[1vh] right-[1vh]'}>ID: {item.id}</p>
-                                        <p className={'w-full text-white font-soyuz text-[1.8vh] sm:text-[2vw] text-center'}>{item.name}</p>
+                                        <p className={'text-white font-josefin text-[1.8vh] sm:text-[1vw] text-right absolute top-[1vh] right-[1vh]'}>ID: {item.id}</p>
+                                        <p className={'w-full text-white font-soyuz text-[1.8vh] sm:text-[1vw] text-center'}>{item.name}</p>
                                         <div className={'relative w-[40%] inline-block mx-[2%] ml-[8%]'}>
                                             {item.dex!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/legendary/dex.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[40%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.dex}
                                                     </p>
                                                 </div>
@@ -2874,13 +2874,13 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.str!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/legendary/str.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[40%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.str}
                                                     </p>
                                                 </div>
@@ -2890,13 +2890,13 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.vit!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/legendary/vit.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[40%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.vit}
                                                     </p>
                                                 </div>
@@ -2906,13 +2906,13 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.int!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/legendary/int.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[40%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.int}
                                                     </p>
                                                 </div>
@@ -2922,13 +2922,13 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.krm!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/legendary/krm.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[40%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.krm}
                                                     </p>
                                                 </div>
@@ -2939,14 +2939,14 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
 
                                         </div>
                                         <div className={'align-top relative w-[40%] inline-block ml-[2%] mr-[8%]'}>
-                                            <p className={'w-full relative text-white text-center font-medium font-josefin text-[1vh] sm:text-[1vw]'}>Requierements</p>
+                                            <p className={'w-full relative text-white text-center font-medium font-josefin text-[1vh] sm:text-[0.7vw]'}>Requierements</p>
                                             {item.requirements?.dex!=0&&item.requirements?.dex!=undefined?
                                                 <div className={'w-full relative flex justify-center items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] mx-[1vh] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] mx-[1vh] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/legendary/dex.svg'} layout={'fill'}></Image>
                                                     </div>
 
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>{item.requirements.dex}
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>{item.requirements.dex}
                                                     </p>
                                                 </div>
                                                 :
@@ -2955,11 +2955,11 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.requirements?.str!=0&&item.requirements?.str!=undefined?
                                                 <div className={'w-full relative flex justify-center items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] mx-[1vh] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] mx-[1vh] relative inline-block'}>
                                                         <Image src={'/images/card_generation/legendary/str.svg'} layout={'fill'}></Image>
                                                     </div>
 
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         {item.requirements.str}
                                                     </p>
                                                 </div>
@@ -2969,11 +2969,11 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.requirements?.vit!=0&&item.requirements?.vit!=undefined?
                                                 <div className={'w-full relative flex justify-center items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] mx-[1vh] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] mx-[1vh] relative inline-block'}>
                                                         <Image src={'/images/card_generation/legendary/vit.svg'} layout={'fill'}></Image>
                                                     </div>
 
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         {item.requirements.vit}
                                                     </p>
                                                 </div>
@@ -2983,11 +2983,11 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.requirements?.int!=0&&item.requirements?.int!=undefined?
                                                 <div className={'w-full relative flex justify-center items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] mx-[1vh] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] mx-[1vh] relative inline-block'}>
                                                         <Image src={'/images/card_generation/legendary/int.svg'} layout={'fill'}></Image>
                                                     </div>
 
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         {item.requirements.int}
                                                     </p>
                                                 </div>
@@ -2997,11 +2997,11 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.requirements?.krm!=0&&item.requirements?.krm!=undefined?
                                                 <div className={'w-full relative flex justify-center items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] mx-[1vh] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] mx-[1vh] relative inline-block'}>
                                                         <Image src={'/images/card_generation/legendary/krm.svg'} layout={'fill'}></Image>
                                                     </div>
 
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         {item.requirements.krm}
                                                     </p>
                                                 </div>
@@ -3009,7 +3009,7 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 <div className={'hidden'}>
 
                                                 </div>}
-                                            <p className={'w-[90%] relative text-white text-[1.2vh] ml-[10%] font-medium font-josefin mt-[0.3vh] sm:text-[1vw]'}>Status: <span className={'font-bold text-[1.5vh] sm:text-[1.5vw]'}>Elite</span> </p>
+                                            <p className={'w-[90%] relative text-white text-[1.2vh] ml-[10%] font-medium font-josefin mt-[0.3vh] sm:text-[0.7vw]'}>Status: <span className={'font-bold text-[1.5vh] sm:text-[1vw]'}>Elite</span> </p>
 
                                         </div>
                                     </div>
@@ -3017,28 +3017,28 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                             }
                             else{
                                 return(
-                                    <div className={'w-[48%] sm:w-[23%] sm:h-[23.5vw] mt-[4vw] relative h-[23vh] rounded-[2vw] cursor-pointer'}  key={item.id} onClick={()=>{updateLeftHand(item);updateStats()}}>
+                                    <div className={'w-[48%] sm:w-[45%] sm:h-[14.2vw] mt-[4vw] sm:mt-[2vw] relative h-[23vh] rounded-[2vw] cursor-pointer'}  key={item.id} onClick={()=>{updateLeftHand(item);updateStats()}}>
                                         <div className={'w-full absolute top-0 rounded-[2vw] h-full'}>
                                             <Image src={'/images/card_generation/legendary/bg.svg'} layout={'fill'}></Image>
                                         </div>
-                                        <div className={'w-[8vh] h-[8vh] sm:w-[8vw] sm:h-[8vw] relative mx-auto mt-[1.5vh]'}>
+                                        <div className={'w-[8vh] h-[8vh] sm:w-[4vw] sm:h-[4vw] relative mx-auto mt-[1.5vh]'}>
                                             <Image src={'/images/miniatures/Left hand/'+item.name+'.png'} layout={'fill'}></Image>
                                         </div>
-                                        <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] absolute top-[1vh] left-[1vh]'}>
+                                        <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] absolute top-[1vh] left-[1vh]'}>
                                             <Image src={'/images/equipment_module/left hand.svg'} layout={'fill'}></Image>
                                         </div>
-                                        <p className={'text-white font-josefin text-[1.8vh] sm:text-[2vw] text-right absolute top-[1vh] right-[1vh]'}>ID: {item.id}</p>
-                                        <p className={'w-full text-white font-soyuz text-[1.8vh] sm:text-[2vw] text-center'}>{item.name}</p>
+                                        <p className={'text-white font-josefin text-[1.8vh] sm:text-[1vw] text-right absolute top-[1vh] right-[1vh]'}>ID: {item.id}</p>
+                                        <p className={'w-full text-white font-soyuz text-[1.8vh] sm:text-[1vw] text-center'}>{item.name}</p>
                                         <div className={'relative w-[40%] inline-block mx-[2%] ml-[8%]'}>
                                             {item.dex!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/legendary/dex.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[40%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.dex}
                                                     </p>
                                                 </div>
@@ -3048,13 +3048,13 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.str!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/legendary/str.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[40%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.str}
                                                     </p>
                                                 </div>
@@ -3064,13 +3064,13 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.vit!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/legendary/vit.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[40%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.vit}
                                                     </p>
                                                 </div>
@@ -3080,13 +3080,13 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.int!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/legendary/int.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[40%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.int}
                                                     </p>
                                                 </div>
@@ -3096,13 +3096,13 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.krm!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/legendary/krm.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[40%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.krm}
                                                     </p>
                                                 </div>
@@ -3113,14 +3113,14 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
 
                                         </div>
                                         <div className={'align-top relative w-[40%] inline-block ml-[2%] mr-[8%]'}>
-                                            <p className={'w-full relative text-white text-center font-medium font-josefin text-[1vh] sm:text-[1vw]'}>Requierements</p>
+                                            <p className={'w-full relative text-white text-center font-medium font-josefin text-[1vh] sm:text-[0.7vw]'}>Requierements</p>
                                             {item.requirements?.dex!=0&&item.requirements?.dex!=undefined?
                                                 <div className={'w-full relative flex justify-center items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] mx-[1vh] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] mx-[1vh] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/legendary/dex.svg'} layout={'fill'}></Image>
                                                     </div>
 
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>{item.requirements.dex}
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>{item.requirements.dex}
                                                     </p>
                                                 </div>
                                                 :
@@ -3129,11 +3129,11 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.requirements?.str!=0&&item.requirements?.str!=undefined?
                                                 <div className={'w-full relative flex justify-center items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] mx-[1vh] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] mx-[1vh] relative inline-block'}>
                                                         <Image src={'/images/card_generation/legendary/str.svg'} layout={'fill'}></Image>
                                                     </div>
 
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         {item.requirements.str}
                                                     </p>
                                                 </div>
@@ -3143,11 +3143,11 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.requirements?.vit!=0&&item.requirements?.vit!=undefined?
                                                 <div className={'w-full relative flex justify-center items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] mx-[1vh] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] mx-[1vh] relative inline-block'}>
                                                         <Image src={'/images/card_generation/legendary/vit.svg'} layout={'fill'}></Image>
                                                     </div>
 
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         {item.requirements.vit}
                                                     </p>
                                                 </div>
@@ -3157,11 +3157,11 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.requirements?.int!=0&&item.requirements?.int!=undefined?
                                                 <div className={'w-full relative flex justify-center items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] mx-[1vh] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] mx-[1vh] relative inline-block'}>
                                                         <Image src={'/images/card_generation/legendary/int.svg'} layout={'fill'}></Image>
                                                     </div>
 
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         {item.requirements.int}
                                                     </p>
                                                 </div>
@@ -3171,11 +3171,11 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.requirements?.krm!=0&&item.requirements?.krm!=undefined?
                                                 <div className={'w-full relative flex justify-center items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] mx-[1vh] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] mx-[1vh] relative inline-block'}>
                                                         <Image src={'/images/card_generation/legendary/krm.svg'} layout={'fill'}></Image>
                                                     </div>
 
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         {item.requirements.krm}
                                                     </p>
                                                 </div>
@@ -3183,7 +3183,7 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 <div className={'hidden'}>
 
                                                 </div>}
-                                            <p className={'w-[90%] relative text-white text-[1.2vh] ml-[10%] font-medium font-josefin mt-[0.3vh] sm:text-[1vw]'}>Status: <span className={'font-bold text-[1.5vh] sm:text-[1.5vw]'}>Elite</span> </p>
+                                            <p className={'w-[90%] relative text-white text-[1.2vh] ml-[10%] font-medium font-josefin mt-[0.3vh] sm:text-[0.7vw]'}>Status: <span className={'font-bold text-[1.5vh] sm:text-[1vw]'}>Elite</span> </p>
 
                                         </div>
                                     </div>
@@ -3205,28 +3205,28 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                         if(item.rarity=='common'){
                             if(bunny.equipment.rightHand?.id==item.id){
                                 return(
-                                    <div className={'w-[48%] sm:w-[23%] sm:h-[23.5vw] border-2 border-[#FFF] border-dashed mt-[4vw] relative h-[23vh] roun sm:rounded-[1vw]ded-[2vw]'}  key={item.id}>
+                                    <div className={'w-[48%] sm:w-[45%] sm:h-[14.2vw] border-2 border-[#FFF] border-dashed mt-[4vw] sm:mt-[2vw] relative h-[23vh] roun sm:rounded-[1vw]ded-[2vw]'}  key={item.id}>
                                         <div className={'w-full absolute top-0 rounded-[2vw] h-full'}>
                                             <Image src={'/images/card_generation/common/bg.svg'} layout={'fill'}></Image>
                                         </div>
-                                        <div className={'w-[8vh] h-[8vh] sm:w-[8vw] sm:h-[8vw] relative mx-auto mt-[1.5vh]'}>
+                                        <div className={'w-[8vh] h-[8vh] sm:w-[4vw] sm:h-[4vw] relative mx-auto mt-[1.5vh]'}>
                                             <Image src={'/images/miniatures/Right hand/'+item.name+'.png'} layout={'fill'}></Image>
                                         </div>
-                                        <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] absolute top-[1vh] left-[1vh]'}>
+                                        <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] absolute top-[1vh] left-[1vh]'}>
                                             <Image src={'/images/equipment_module/right hand.svg'} layout={'fill'}></Image>
                                         </div>
-                                        <p className={'text-white font-josefin text-[1.8vh] sm:text-[2vw] text-right absolute top-[1vh] right-[1vh]'}>ID: {item.id}</p>
-                                        <p className={'w-full text-white font-soyuz text-[1.8vh] sm:text-[2vw] text-center'}>{item.name}</p>
+                                        <p className={'text-white font-josefin text-[1.8vh] sm:text-[1vw] text-right absolute top-[1vh] right-[1vh]'}>ID: {item.id}</p>
+                                        <p className={'w-full text-white font-soyuz text-[1.8vh] sm:text-[1vw] text-center'}>{item.name}</p>
                                         <div className={'relative w-[70%] mx-auto border-[#000]'}>
                                             {item.dex!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/common/dex.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[60%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.dex}
                                                     </p>
                                                 </div>
@@ -3236,13 +3236,13 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.str!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/common/str.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[60%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.str}
                                                     </p>
                                                 </div>
@@ -3252,13 +3252,13 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.vit!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/common/vit.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[60%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.vit}
                                                     </p>
                                                 </div>
@@ -3268,13 +3268,13 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.int!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/common/int.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[60%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.int}
                                                     </p>
                                                 </div>
@@ -3284,13 +3284,13 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.krm!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/common/krm.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[60%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.krm}
                                                     </p>
                                                 </div>
@@ -3305,28 +3305,28 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                             }
                             else{
                                 return(
-                                    <div className={'w-[48%] sm:w-[23%] sm:h-[23.5vw] mt-[4vw] relative h-[23vh] rounded-[2vw] cursor-pointer'}  key={item.id} onClick={()=>{updateRightHand(item);updateStats()}}>
+                                    <div className={'w-[48%] sm:w-[45%] sm:h-[14.2vw] mt-[4vw] sm:mt-[2vw] relative h-[23vh] rounded-[2vw] cursor-pointer'}  key={item.id} onClick={()=>{updateRightHand(item);updateStats()}}>
                                         <div className={'w-full absolute top-0 rounded-[2vw] h-full'}>
                                             <Image src={'/images/card_generation/common/bg.svg'} layout={'fill'}></Image>
                                         </div>
-                                        <div className={'w-[8vh] h-[8vh] sm:w-[8vw] sm:h-[8vw] relative mx-auto mt-[1.5vh]'}>
+                                        <div className={'w-[8vh] h-[8vh] sm:w-[4vw] sm:h-[4vw] relative mx-auto mt-[1.5vh]'}>
                                             <Image src={'/images/miniatures/Right hand/'+item.name+'.png'} layout={'fill'}></Image>
                                         </div>
-                                        <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] absolute top-[1vh] left-[1vh]'}>
+                                        <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] absolute top-[1vh] left-[1vh]'}>
                                             <Image src={'/images/equipment_module/right hand.svg'} layout={'fill'}></Image>
                                         </div>
-                                        <p className={'text-white font-josefin text-[1.8vh] sm:text-[2vw] text-right absolute top-[1vh] right-[1vh]'}>ID: {item.id}</p>
-                                        <p className={'w-full text-white font-soyuz text-[1.8vh] sm:text-[2vw] text-center'}>{item.name}</p>
+                                        <p className={'text-white font-josefin text-[1.8vh] sm:text-[1vw] text-right absolute top-[1vh] right-[1vh]'}>ID: {item.id}</p>
+                                        <p className={'w-full text-white font-soyuz text-[1.8vh] sm:text-[1vw] text-center'}>{item.name}</p>
                                         <div className={'relative w-[70%] mx-auto border-[#000]'}>
                                             {item.dex!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/common/dex.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[60%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.dex}
                                                     </p>
                                                 </div>
@@ -3336,13 +3336,13 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.str!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/common/str.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[60%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.str}
                                                     </p>
                                                 </div>
@@ -3352,13 +3352,13 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.vit!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/common/vit.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[60%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.vit}
                                                     </p>
                                                 </div>
@@ -3368,13 +3368,13 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.int!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/common/int.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[60%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.int}
                                                     </p>
                                                 </div>
@@ -3384,13 +3384,13 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.krm!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/common/krm.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[60%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.krm}
                                                     </p>
                                                 </div>
@@ -3407,28 +3407,28 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                         else if(item.rarity=='uncommon'){
                             if(bunny.equipment.rightHand?.id==item.id){
                                 return(
-                                    <div className={'w-[48%] sm:w-[23%] sm:h-[23.5vw] border-2 border-[#FFF] border-dashed mt-[4vw] relative h-[23vh] roun sm:rounded-[1vw]ded-[2vw]'}  key={item.id}>
+                                    <div className={'w-[48%] sm:w-[45%] sm:h-[14.2vw] border-2 border-[#FFF] border-dashed mt-[4vw] sm:mt-[2vw] relative h-[23vh] roun sm:rounded-[1vw]ded-[2vw]'}  key={item.id}>
                                         <div className={'w-full absolute top-0 rounded-[2vw] h-full'}>
                                             <Image src={'/images/card_generation/uncommon/bg.svg'} layout={'fill'}></Image>
                                         </div>
-                                        <div className={'w-[8vh] h-[8vh] sm:w-[8vw] sm:h-[8vw] relative mx-auto mt-[1.5vh]'}>
+                                        <div className={'w-[8vh] h-[8vh] sm:w-[4vw] sm:h-[4vw] relative mx-auto mt-[1.5vh]'}>
                                             <Image src={'/images/miniatures/Right hand/'+item.name+'.png'} layout={'fill'}></Image>
                                         </div>
-                                        <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] absolute top-[1vh] left-[1vh]'}>
+                                        <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] absolute top-[1vh] left-[1vh]'}>
                                             <Image src={'/images/equipment_module/right hand.svg'} layout={'fill'}></Image>
                                         </div>
-                                        <p className={'text-white font-josefin text-[1.8vh] sm:text-[2vw] text-right absolute top-[1vh] right-[1vh]'}>ID: {item.id}</p>
-                                        <p className={'w-full text-white font-soyuz text-[1.8vh] sm:text-[2vw] text-center'}>{item.name}</p>
+                                        <p className={'text-white font-josefin text-[1.8vh] sm:text-[1vw] text-right absolute top-[1vh] right-[1vh]'}>ID: {item.id}</p>
+                                        <p className={'w-full text-white font-soyuz text-[1.8vh] sm:text-[1vw] text-center'}>{item.name}</p>
                                         <div className={'relative w-[70%] mx-auto border-[#000]'}>
                                             {item.dex!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/uncommon/dex.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[60%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.dex}
                                                     </p>
                                                 </div>
@@ -3438,13 +3438,13 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.str!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/uncommon/str.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[60%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.str}
                                                     </p>
                                                 </div>
@@ -3454,13 +3454,13 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.vit!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/uncommon/vit.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[60%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.vit}
                                                     </p>
                                                 </div>
@@ -3470,13 +3470,13 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.int!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/uncommon/int.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[60%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.int}
                                                     </p>
                                                 </div>
@@ -3486,13 +3486,13 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.krm!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/uncommon/krm.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[60%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.krm}
                                                     </p>
                                                 </div>
@@ -3507,28 +3507,28 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                             }
                             else{
                                 return(
-                                    <div className={'w-[48%] sm:w-[23%] sm:h-[23.5vw] mt-[4vw] relative h-[23vh] rounded-[2vw] cursor-pointer'}  key={item.id} onClick={()=>{updateRightHand(item);updateStats()}}>
+                                    <div className={'w-[48%] sm:w-[45%] sm:h-[14.2vw] mt-[4vw] sm:mt-[2vw] relative h-[23vh] rounded-[2vw] cursor-pointer'}  key={item.id} onClick={()=>{updateRightHand(item);updateStats()}}>
                                         <div className={'w-full absolute top-0 rounded-[2vw] h-full'}>
                                             <Image src={'/images/card_generation/uncommon/bg.svg'} layout={'fill'}></Image>
                                         </div>
-                                        <div className={'w-[8vh] h-[8vh] sm:w-[8vw] sm:h-[8vw] relative mx-auto mt-[1.5vh]'}>
+                                        <div className={'w-[8vh] h-[8vh] sm:w-[4vw] sm:h-[4vw] relative mx-auto mt-[1.5vh]'}>
                                             <Image src={'/images/miniatures/Right hand/'+item.name+'.png'} layout={'fill'}></Image>
                                         </div>
-                                        <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] absolute top-[1vh] left-[1vh]'}>
+                                        <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] absolute top-[1vh] left-[1vh]'}>
                                             <Image src={'/images/equipment_module/right hand.svg'} layout={'fill'}></Image>
                                         </div>
-                                        <p className={'text-white font-josefin text-[1.8vh] sm:text-[2vw] text-right absolute top-[1vh] right-[1vh]'}>ID: {item.id}</p>
-                                        <p className={'w-full text-white font-soyuz text-[1.8vh] sm:text-[2vw] text-center'}>{item.name}</p>
+                                        <p className={'text-white font-josefin text-[1.8vh] sm:text-[1vw] text-right absolute top-[1vh] right-[1vh]'}>ID: {item.id}</p>
+                                        <p className={'w-full text-white font-soyuz text-[1.8vh] sm:text-[1vw] text-center'}>{item.name}</p>
                                         <div className={'relative w-[70%] mx-auto border-[#000]'}>
                                             {item.dex!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/uncommon/dex.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[60%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.dex}
                                                     </p>
                                                 </div>
@@ -3538,13 +3538,13 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.str!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/uncommon/str.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[60%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.str}
                                                     </p>
                                                 </div>
@@ -3554,13 +3554,13 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.vit!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/uncommon/vit.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[60%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.vit}
                                                     </p>
                                                 </div>
@@ -3570,13 +3570,13 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.int!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/uncommon/int.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[60%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.int}
                                                     </p>
                                                 </div>
@@ -3586,13 +3586,13 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.krm!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/uncommon/krm.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[60%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.krm}
                                                     </p>
                                                 </div>
@@ -3610,28 +3610,28 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                         else if(item.rarity=='epic'){
                             if(bunny.equipment.rightHand?.id==item.id){
                                 return(
-                                    <div className={'w-[48%] sm:w-[23%] sm:h-[23.5vw] mt-[4vw] border-2 border-[#FFF] border-dashed relative h-[23vh] rounded-[2vw] sm:rounded-[1vw]'}  key={item.id}>
+                                    <div className={'w-[48%] sm:w-[45%] sm:h-[14.2vw] mt-[4vw] sm:mt-[2vw] border-2 border-[#FFF] border-dashed relative h-[23vh] rounded-[2vw] sm:rounded-[1vw]'}  key={item.id}>
                                         <div className={'w-full absolute top-0 rounded-[2vw] h-full'}>
                                             <Image src={'/images/card_generation/epic/bg.svg'} layout={'fill'}></Image>
                                         </div>
-                                        <div className={'w-[8vh] h-[8vh] sm:w-[8vw] sm:h-[8vw] relative mx-auto mt-[1.5vh]'}>
+                                        <div className={'w-[8vh] h-[8vh] sm:w-[4vw] sm:h-[4vw] relative mx-auto mt-[1.5vh]'}>
                                             <Image src={'/images/miniatures/Right hand/'+item.name+'.png'} layout={'fill'}></Image>
                                         </div>
-                                        <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] absolute top-[1vh] left-[1vh]'}>
+                                        <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] absolute top-[1vh] left-[1vh]'}>
                                             <Image src={'/images/equipment_module/right hand.svg'} layout={'fill'}></Image>
                                         </div>
-                                        <p className={'text-white font-josefin text-[1.8vh] sm:text-[2vw] text-right absolute top-[1vh] right-[1vh]'}>ID: {item.id}</p>
-                                        <p className={'w-full text-white font-soyuz text-[1.8vh] sm:text-[2vw] text-center'}>{item.name}</p>
+                                        <p className={'text-white font-josefin text-[1.8vh] sm:text-[1vw] text-right absolute top-[1vh] right-[1vh]'}>ID: {item.id}</p>
+                                        <p className={'w-full text-white font-soyuz text-[1.8vh] sm:text-[1vw] text-center'}>{item.name}</p>
                                         <div className={'relative w-[40%] inline-block mx-[2%] ml-[8%]'}>
                                             {item.dex!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/epic/dex.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[40%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.dex}
                                                     </p>
                                                 </div>
@@ -3641,13 +3641,13 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.str!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/epic/str.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[40%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.str}
                                                     </p>
                                                 </div>
@@ -3657,13 +3657,13 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.vit!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/epic/vit.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[40%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.vit}
                                                     </p>
                                                 </div>
@@ -3673,13 +3673,13 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.int!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/epic/int.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[40%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.int}
                                                     </p>
                                                 </div>
@@ -3689,13 +3689,13 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.krm!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/epic/krm.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[40%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.krm}
                                                     </p>
                                                 </div>
@@ -3706,14 +3706,14 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
 
                                         </div>
                                         <div className={'align-top relative w-[40%] inline-block ml-[2%] mr-[8%]'}>
-                                            <p className={'w-full relative text-white text-center font-medium font-josefin text-[1vh] sm:text-[1vw]'}>Requierements</p>
+                                            <p className={'w-full relative text-white text-center font-medium font-josefin text-[1vh] sm:text-[0.7vw]'}>Requierements</p>
                                             {item.requirements?.dex!=0&&item.requirements?.dex!=undefined?
                                                 <div className={'w-full relative flex justify-center items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] mx-[1vh] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] mx-[1vh] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/epic/dex.svg'} layout={'fill'}></Image>
                                                     </div>
 
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>{item.requirements.dex}
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>{item.requirements.dex}
                                                     </p>
                                                 </div>
                                                 :
@@ -3722,11 +3722,11 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.requirements?.str!=0&&item.requirements?.str!=undefined?
                                                 <div className={'w-full relative flex justify-center items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] mx-[1vh] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] mx-[1vh] relative inline-block'}>
                                                         <Image src={'/images/card_generation/epic/str.svg'} layout={'fill'}></Image>
                                                     </div>
 
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         {item.requirements.str}
                                                     </p>
                                                 </div>
@@ -3736,11 +3736,11 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.requirements?.vit!=0&&item.requirements?.vit!=undefined?
                                                 <div className={'w-full relative flex justify-center items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] mx-[1vh] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] mx-[1vh] relative inline-block'}>
                                                         <Image src={'/images/card_generation/epic/vit.svg'} layout={'fill'}></Image>
                                                     </div>
 
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         {item.requirements.vit}
                                                     </p>
                                                 </div>
@@ -3750,11 +3750,11 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.requirements?.int!=0&&item.requirements?.int!=undefined?
                                                 <div className={'w-full relative flex justify-center items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] mx-[1vh] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] mx-[1vh] relative inline-block'}>
                                                         <Image src={'/images/card_generation/epic/int.svg'} layout={'fill'}></Image>
                                                     </div>
 
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         {item.requirements.int}
                                                     </p>
                                                 </div>
@@ -3764,11 +3764,11 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.requirements?.krm!=0&&item.requirements?.krm!=undefined?
                                                 <div className={'w-full relative flex justify-center items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] mx-[1vh] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] mx-[1vh] relative inline-block'}>
                                                         <Image src={'/images/card_generation/epic/krm.svg'} layout={'fill'}></Image>
                                                     </div>
 
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         {item.requirements.krm}
                                                     </p>
                                                 </div>
@@ -3782,28 +3782,28 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                             }
                             else{
                                 return(
-                                    <div className={'w-[48%] sm:w-[23%] sm:h-[23.5vw] mt-[4vw] relative h-[23vh] rounded-[2vw] cursor-pointer'}  key={item.id} onClick={()=>{updateRightHand(item);updateStats()}}>
+                                    <div className={'w-[48%] sm:w-[45%] sm:h-[14.2vw] mt-[4vw] sm:mt-[2vw] relative h-[23vh] rounded-[2vw] cursor-pointer'}  key={item.id} onClick={()=>{updateRightHand(item);updateStats()}}>
                                         <div className={'w-full absolute top-0 rounded-[2vw] h-full'}>
                                             <Image src={'/images/card_generation/epic/bg.svg'} layout={'fill'}></Image>
                                         </div>
-                                        <div className={'w-[8vh] h-[8vh] sm:w-[8vw] sm:h-[8vw] relative mx-auto mt-[1.5vh]'}>
+                                        <div className={'w-[8vh] h-[8vh] sm:w-[4vw] sm:h-[4vw] relative mx-auto mt-[1.5vh]'}>
                                             <Image src={'/images/miniatures/Right hand/'+item.name+'.png'} layout={'fill'}></Image>
                                         </div>
-                                        <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] absolute top-[1vh] left-[1vh]'}>
+                                        <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] absolute top-[1vh] left-[1vh]'}>
                                             <Image src={'/images/equipment_module/right hand.svg'} layout={'fill'}></Image>
                                         </div>
-                                        <p className={'text-white font-josefin text-[1.8vh] sm:text-[2vw] text-right absolute top-[1vh] right-[1vh]'}>ID: {item.id}</p>
-                                        <p className={'w-full text-white font-soyuz text-[1.8vh] sm:text-[2vw] text-center'}>{item.name}</p>
+                                        <p className={'text-white font-josefin text-[1.8vh] sm:text-[1vw] text-right absolute top-[1vh] right-[1vh]'}>ID: {item.id}</p>
+                                        <p className={'w-full text-white font-soyuz text-[1.8vh] sm:text-[1vw] text-center'}>{item.name}</p>
                                         <div className={'relative w-[40%] inline-block mx-[2%] ml-[8%]'}>
                                             {item.dex!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/epic/dex.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[40%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.dex}
                                                     </p>
                                                 </div>
@@ -3813,13 +3813,13 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.str!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/epic/str.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[40%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.str}
                                                     </p>
                                                 </div>
@@ -3829,13 +3829,13 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.vit!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/epic/vit.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[40%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.vit}
                                                     </p>
                                                 </div>
@@ -3845,13 +3845,13 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.int!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/epic/int.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[40%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.int}
                                                     </p>
                                                 </div>
@@ -3861,13 +3861,13 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.krm!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/epic/krm.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[40%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.krm}
                                                     </p>
                                                 </div>
@@ -3878,14 +3878,14 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
 
                                         </div>
                                         <div className={'align-top relative w-[40%] inline-block ml-[2%] mr-[8%]'}>
-                                            <p className={'w-full relative text-white text-center font-medium font-josefin text-[1vh] sm:text-[1vw]'}>Requierements</p>
+                                            <p className={'w-full relative text-white text-center font-medium font-josefin text-[1vh] sm:text-[0.7vw]'}>Requierements</p>
                                             {item.requirements?.dex!=0&&item.requirements?.dex!=undefined?
                                                 <div className={'w-full relative flex justify-center items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] mx-[1vh] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] mx-[1vh] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/epic/dex.svg'} layout={'fill'}></Image>
                                                     </div>
 
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>{item.requirements.dex}
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>{item.requirements.dex}
                                                     </p>
                                                 </div>
                                                 :
@@ -3894,11 +3894,11 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.requirements?.str!=0&&item.requirements?.str!=undefined?
                                                 <div className={'w-full relative flex justify-center items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] mx-[1vh] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] mx-[1vh] relative inline-block'}>
                                                         <Image src={'/images/card_generation/epic/str.svg'} layout={'fill'}></Image>
                                                     </div>
 
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         {item.requirements.str}
                                                     </p>
                                                 </div>
@@ -3908,11 +3908,11 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.requirements?.vit!=0&&item.requirements?.vit!=undefined?
                                                 <div className={'w-full relative flex justify-center items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] mx-[1vh] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] mx-[1vh] relative inline-block'}>
                                                         <Image src={'/images/card_generation/epic/vit.svg'} layout={'fill'}></Image>
                                                     </div>
 
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         {item.requirements.vit}
                                                     </p>
                                                 </div>
@@ -3922,11 +3922,11 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.requirements?.int!=0&&item.requirements?.int!=undefined?
                                                 <div className={'w-full relative flex justify-center items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] mx-[1vh] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] mx-[1vh] relative inline-block'}>
                                                         <Image src={'/images/card_generation/epic/int.svg'} layout={'fill'}></Image>
                                                     </div>
 
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         {item.requirements.int}
                                                     </p>
                                                 </div>
@@ -3936,11 +3936,11 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.requirements?.krm!=0&&item.requirements?.krm!=undefined?
                                                 <div className={'w-full relative flex justify-center items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] mx-[1vh] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] mx-[1vh] relative inline-block'}>
                                                         <Image src={'/images/card_generation/epic/krm.svg'} layout={'fill'}></Image>
                                                     </div>
 
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         {item.requirements.krm}
                                                     </p>
                                                 </div>
@@ -3958,28 +3958,28 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                         else if(item.rarity=='legendary'){
                             if(bunny.equipment.rightHand?.id==item.id){
                                 return(
-                                    <div className={'w-[48%] sm:w-[23%] sm:h-[23.5vw] border-2 border-[#FFF] border-dashed mt-[4vw] relative h-[23vh] roun sm:rounded-[1vw]ded-[2vw]'}  key={item.id}>
+                                    <div className={'w-[48%] sm:w-[45%] sm:h-[14.2vw] border-2 border-[#FFF] border-dashed mt-[4vw] sm:mt-[2vw] relative h-[23vh] roun sm:rounded-[1vw]ded-[2vw]'}  key={item.id}>
                                         <div className={'w-full absolute top-0 rounded-[2vw] h-full'}>
                                             <Image src={'/images/card_generation/legendary/bg.svg'} layout={'fill'}></Image>
                                         </div>
-                                        <div className={'w-[8vh] h-[8vh] sm:w-[8vw] sm:h-[8vw] relative mx-auto mt-[1.5vh]'}>
+                                        <div className={'w-[8vh] h-[8vh] sm:w-[4vw] sm:h-[4vw] relative mx-auto mt-[1.5vh]'}>
                                             <Image src={'/images/miniatures/Right hand/'+item.name+'.png'} layout={'fill'}></Image>
                                         </div>
-                                        <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] absolute top-[1vh] left-[1vh]'}>
+                                        <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] absolute top-[1vh] left-[1vh]'}>
                                             <Image src={'/images/equipment_module/right hand.svg'} layout={'fill'}></Image>
                                         </div>
-                                        <p className={'text-white font-josefin text-[1.8vh] sm:text-[2vw] text-right absolute top-[1vh] right-[1vh]'}>ID: {item.id}</p>
-                                        <p className={'w-full text-white font-soyuz text-[1.8vh] sm:text-[2vw] text-center'}>{item.name}</p>
+                                        <p className={'text-white font-josefin text-[1.8vh] sm:text-[1vw] text-right absolute top-[1vh] right-[1vh]'}>ID: {item.id}</p>
+                                        <p className={'w-full text-white font-soyuz text-[1.8vh] sm:text-[1vw] text-center'}>{item.name}</p>
                                         <div className={'relative w-[40%] inline-block mx-[2%] ml-[8%]'}>
                                             {item.dex!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/legendary/dex.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[40%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.dex}
                                                     </p>
                                                 </div>
@@ -3989,13 +3989,13 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.str!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/legendary/str.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[40%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.str}
                                                     </p>
                                                 </div>
@@ -4005,13 +4005,13 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.vit!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/legendary/vit.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[40%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.vit}
                                                     </p>
                                                 </div>
@@ -4021,13 +4021,13 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.int!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/legendary/int.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[40%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.int}
                                                     </p>
                                                 </div>
@@ -4037,13 +4037,13 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.krm!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/legendary/krm.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[40%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.krm}
                                                     </p>
                                                 </div>
@@ -4054,14 +4054,14 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
 
                                         </div>
                                         <div className={'align-top relative w-[40%] inline-block ml-[2%] mr-[8%]'}>
-                                            <p className={'w-full relative text-white text-center font-medium font-josefin text-[1vh] sm:text-[1vw]'}>Requierements</p>
+                                            <p className={'w-full relative text-white text-center font-medium font-josefin text-[1vh] sm:text-[0.7vw]'}>Requierements</p>
                                             {item.requirements?.dex!=0&&item.requirements?.dex!=undefined?
                                                 <div className={'w-full relative flex justify-center items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] mx-[1vh] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] mx-[1vh] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/legendary/dex.svg'} layout={'fill'}></Image>
                                                     </div>
 
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>{item.requirements.dex}
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>{item.requirements.dex}
                                                     </p>
                                                 </div>
                                                 :
@@ -4070,11 +4070,11 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.requirements?.str!=0&&item.requirements?.str!=undefined?
                                                 <div className={'w-full relative flex justify-center items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] mx-[1vh] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] mx-[1vh] relative inline-block'}>
                                                         <Image src={'/images/card_generation/legendary/str.svg'} layout={'fill'}></Image>
                                                     </div>
 
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         {item.requirements.str}
                                                     </p>
                                                 </div>
@@ -4084,11 +4084,11 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.requirements?.vit!=0&&item.requirements?.vit!=undefined?
                                                 <div className={'w-full relative flex justify-center items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] mx-[1vh] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] mx-[1vh] relative inline-block'}>
                                                         <Image src={'/images/card_generation/legendary/vit.svg'} layout={'fill'}></Image>
                                                     </div>
 
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         {item.requirements.vit}
                                                     </p>
                                                 </div>
@@ -4098,11 +4098,11 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.requirements?.int!=0&&item.requirements?.int!=undefined?
                                                 <div className={'w-full relative flex justify-center items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] mx-[1vh] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] mx-[1vh] relative inline-block'}>
                                                         <Image src={'/images/card_generation/legendary/int.svg'} layout={'fill'}></Image>
                                                     </div>
 
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         {item.requirements.int}
                                                     </p>
                                                 </div>
@@ -4112,11 +4112,11 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.requirements?.krm!=0&&item.requirements?.krm!=undefined?
                                                 <div className={'w-full relative flex justify-center items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] mx-[1vh] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] mx-[1vh] relative inline-block'}>
                                                         <Image src={'/images/card_generation/legendary/krm.svg'} layout={'fill'}></Image>
                                                     </div>
 
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         {item.requirements.krm}
                                                     </p>
                                                 </div>
@@ -4124,7 +4124,7 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 <div className={'hidden'}>
 
                                                 </div>}
-                                            <p className={'w-[90%] relative text-white text-[1.2vh] ml-[10%] font-medium font-josefin mt-[0.3vh] sm:text-[1vw]'}>Status: <span className={'font-bold text-[1.5vh] sm:text-[1.5vw]'}>Elite</span> </p>
+                                            <p className={'w-[90%] relative text-white text-[1.2vh] ml-[10%] font-medium font-josefin mt-[0.3vh] sm:text-[0.7vw]'}>Status: <span className={'font-bold text-[1.5vh] sm:text-[1vw]'}>Elite</span> </p>
 
                                         </div>
                                     </div>
@@ -4132,28 +4132,28 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                             }
                             else{
                                     return(
-                                        <div className={'w-[48%] sm:w-[23%] sm:h-[23.5vw] mt-[4vw] relative h-[23vh] rounded-[2vw] cursor-pointer'}  key={item.id} onClick={()=>{updateRightHand(item);updateStats()}}>
+                                        <div className={'w-[48%] sm:w-[45%] sm:h-[14.2vw] mt-[4vw] sm:mt-[2vw] relative h-[23vh] rounded-[2vw] cursor-pointer'}  key={item.id} onClick={()=>{updateRightHand(item);updateStats()}}>
                                             <div className={'w-full absolute top-0 rounded-[2vw] h-full'}>
                                                 <Image src={'/images/card_generation/legendary/bg.svg'} layout={'fill'}></Image>
                                             </div>
-                                            <div className={'w-[8vh] h-[8vh] sm:w-[8vw] sm:h-[8vw] relative mx-auto mt-[1.5vh]'}>
+                                            <div className={'w-[8vh] h-[8vh] sm:w-[4vw] sm:h-[4vw] relative mx-auto mt-[1.5vh]'}>
                                                 <Image src={'/images/miniatures/Right hand/'+item.name+'.png'} layout={'fill'}></Image>
                                             </div>
-                                            <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] absolute top-[1vh] left-[1vh]'}>
+                                            <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] absolute top-[1vh] left-[1vh]'}>
                                                 <Image src={'/images/equipment_module/right hand.svg'} layout={'fill'}></Image>
                                             </div>
-                                            <p className={'text-white font-josefin text-[1.8vh] sm:text-[2vw] text-right absolute top-[1vh] right-[1vh]'}>ID: {item.id}</p>
-                                            <p className={'w-full text-white font-soyuz text-[1.8vh] sm:text-[2vw] text-center'}>{item.name}</p>
+                                            <p className={'text-white font-josefin text-[1.8vh] sm:text-[1vw] text-right absolute top-[1vh] right-[1vh]'}>ID: {item.id}</p>
+                                            <p className={'w-full text-white font-soyuz text-[1.8vh] sm:text-[1vw] text-center'}>{item.name}</p>
                                             <div className={'relative w-[40%] inline-block mx-[2%] ml-[8%]'}>
                                                 {item.dex!=0?
                                                     <div className={'w-full relative flex justify-between items-center'}>
-                                                        <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                        <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                             <Image src={'/images/card_generation/legendary/dex.svg'} layout={'fill'}></Image>
                                                         </div>
                                                         <div className={'dashed-line mx-[5%] w-[40%] h-[1px]'}>
 
                                                         </div>
-                                                        <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                        <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                             +{item.dex}
                                                         </p>
                                                     </div>
@@ -4163,13 +4163,13 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                     </div>}
                                                 {item.str!=0?
                                                     <div className={'w-full relative flex justify-between items-center'}>
-                                                        <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                        <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                             <Image src={'/images/card_generation/legendary/str.svg'} layout={'fill'}></Image>
                                                         </div>
                                                         <div className={'dashed-line mx-[5%] w-[40%] h-[1px]'}>
 
                                                         </div>
-                                                        <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                        <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                             +{item.str}
                                                         </p>
                                                     </div>
@@ -4179,13 +4179,13 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                     </div>}
                                                 {item.vit!=0?
                                                     <div className={'w-full relative flex justify-between items-center'}>
-                                                        <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                        <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                             <Image src={'/images/card_generation/legendary/vit.svg'} layout={'fill'}></Image>
                                                         </div>
                                                         <div className={'dashed-line mx-[5%] w-[40%] h-[1px]'}>
 
                                                         </div>
-                                                        <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                        <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                             +{item.vit}
                                                         </p>
                                                     </div>
@@ -4195,13 +4195,13 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                     </div>}
                                                 {item.int!=0?
                                                     <div className={'w-full relative flex justify-between items-center'}>
-                                                        <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                        <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                             <Image src={'/images/card_generation/legendary/int.svg'} layout={'fill'}></Image>
                                                         </div>
                                                         <div className={'dashed-line mx-[5%] w-[40%] h-[1px]'}>
 
                                                         </div>
-                                                        <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                        <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                             +{item.int}
                                                         </p>
                                                     </div>
@@ -4211,13 +4211,13 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                     </div>}
                                                 {item.krm!=0?
                                                     <div className={'w-full relative flex justify-between items-center'}>
-                                                        <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                        <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                             <Image src={'/images/card_generation/legendary/krm.svg'} layout={'fill'}></Image>
                                                         </div>
                                                         <div className={'dashed-line mx-[5%] w-[40%] h-[1px]'}>
 
                                                         </div>
-                                                        <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                        <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                             +{item.krm}
                                                         </p>
                                                     </div>
@@ -4228,14 +4228,14 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
 
                                             </div>
                                             <div className={'align-top relative w-[40%] inline-block ml-[2%] mr-[8%]'}>
-                                                <p className={'w-full relative text-white text-center font-medium font-josefin text-[1vh] sm:text-[1vw]'}>Requierements</p>
+                                                <p className={'w-full relative text-white text-center font-medium font-josefin text-[1vh] sm:text-[0.7vw]'}>Requierements</p>
                                                 {item.requirements?.dex!=0&&item.requirements?.dex!=undefined?
                                                     <div className={'w-full relative flex justify-center items-center'}>
-                                                        <div className={'w-[2vh] sm:w-[2vw] mx-[1vh] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                        <div className={'w-[2vh] sm:w-[1.5vw] mx-[1vh] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                             <Image src={'/images/card_generation/legendary/dex.svg'} layout={'fill'}></Image>
                                                         </div>
 
-                                                        <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>{item.requirements.dex}
+                                                        <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>{item.requirements.dex}
                                                         </p>
                                                     </div>
                                                     :
@@ -4244,11 +4244,11 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                     </div>}
                                                 {item.requirements?.str!=0&&item.requirements?.str!=undefined?
                                                     <div className={'w-full relative flex justify-center items-center'}>
-                                                        <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] mx-[1vh] relative inline-block'}>
+                                                        <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] mx-[1vh] relative inline-block'}>
                                                             <Image src={'/images/card_generation/legendary/str.svg'} layout={'fill'}></Image>
                                                         </div>
 
-                                                        <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                        <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                             {item.requirements.str}
                                                         </p>
                                                     </div>
@@ -4258,11 +4258,11 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                     </div>}
                                                 {item.requirements?.vit!=0&&item.requirements?.vit!=undefined?
                                                     <div className={'w-full relative flex justify-center items-center'}>
-                                                        <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] mx-[1vh] relative inline-block'}>
+                                                        <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] mx-[1vh] relative inline-block'}>
                                                             <Image src={'/images/card_generation/legendary/vit.svg'} layout={'fill'}></Image>
                                                         </div>
 
-                                                        <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                        <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                             {item.requirements.vit}
                                                         </p>
                                                     </div>
@@ -4272,11 +4272,11 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                     </div>}
                                                 {item.requirements?.int!=0&&item.requirements?.int!=undefined?
                                                     <div className={'w-full relative flex justify-center items-center'}>
-                                                        <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] mx-[1vh] relative inline-block'}>
+                                                        <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] mx-[1vh] relative inline-block'}>
                                                             <Image src={'/images/card_generation/legendary/int.svg'} layout={'fill'}></Image>
                                                         </div>
 
-                                                        <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                        <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                             {item.requirements.int}
                                                         </p>
                                                     </div>
@@ -4286,11 +4286,11 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                     </div>}
                                                 {item.requirements?.krm!=0&&item.requirements?.krm!=undefined?
                                                     <div className={'w-full relative flex justify-center items-center'}>
-                                                        <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] mx-[1vh] relative inline-block'}>
+                                                        <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] mx-[1vh] relative inline-block'}>
                                                             <Image src={'/images/card_generation/legendary/krm.svg'} layout={'fill'}></Image>
                                                         </div>
 
-                                                        <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                        <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                             {item.requirements.krm}
                                                         </p>
                                                     </div>
@@ -4298,7 +4298,7 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                     <div className={'hidden'}>
 
                                                     </div>}
-                                                <p className={'w-[90%] relative text-white text-[1.2vh] ml-[10%] font-medium font-josefin mt-[0.3vh] sm:text-[1vw]'}>Status: <span className={'font-bold text-[1.5vh] sm:text-[1.5vw]'}>Elite</span> </p>
+                                                <p className={'w-[90%] relative text-white text-[1.2vh] ml-[10%] font-medium font-josefin mt-[0.3vh] sm:text-[0.7vw]'}>Status: <span className={'font-bold text-[1.5vh] sm:text-[1vw]'}>Elite</span> </p>
 
                                             </div>
                                         </div>
@@ -4319,28 +4319,28 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                         if(item.rarity=='common'){
                             if(bunny.equipment.neck?.id){
                                 return(
-                                    <div className={'w-[48%] sm:w-[23%] sm:h-[23.5vw] border-2 border-[#FFF] border-dashed mt-[4vw] relative h-[23vh] roun sm:rounded-[1vw]ded-[2vw]'}  key={item.id}>
+                                    <div className={'w-[48%] sm:w-[45%] sm:h-[14.2vw] border-2 border-[#FFF] border-dashed mt-[4vw] sm:mt-[2vw] relative h-[23vh] roun sm:rounded-[1vw]ded-[2vw]'}  key={item.id}>
                                         <div className={'w-full absolute top-0 rounded-[2vw] h-full'}>
                                             <Image src={'/images/card_generation/common/bg.svg'} layout={'fill'}></Image>
                                         </div>
-                                        <div className={'w-[8vh] h-[8vh] sm:w-[8vw] sm:h-[8vw] relative mx-auto mt-[1.5vh]'}>
+                                        <div className={'w-[8vh] h-[8vh] sm:w-[4vw] sm:h-[4vw] relative mx-auto mt-[1.5vh]'}>
                                             <Image src={'/images/miniatures/Necklace/'+item.name+'.png'} layout={'fill'}></Image>
                                         </div>
-                                        <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] absolute top-[1vh] left-[1vh]'}>
+                                        <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] absolute top-[1vh] left-[1vh]'}>
                                             <Image src={'/images/equipment_module/neck.svg'} layout={'fill'}></Image>
                                         </div>
-                                        <p className={'text-white font-josefin text-[1.8vh] sm:text-[2vw] text-right absolute top-[1vh] right-[1vh]'}>ID: {item.id}</p>
-                                        <p className={'w-full text-white font-soyuz text-[1.8vh] sm:text-[2vw] text-center'}>{item.name}</p>
+                                        <p className={'text-white font-josefin text-[1.8vh] sm:text-[1vw] text-right absolute top-[1vh] right-[1vh]'}>ID: {item.id}</p>
+                                        <p className={'w-full text-white font-soyuz text-[1.8vh] sm:text-[1vw] text-center'}>{item.name}</p>
                                         <div className={'relative w-[70%] mx-auto border-[#000]'}>
                                             {item.dex!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/common/dex.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[60%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.dex}
                                                     </p>
                                                 </div>
@@ -4350,13 +4350,13 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.str!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/common/str.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[60%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.str}
                                                     </p>
                                                 </div>
@@ -4366,13 +4366,13 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.vit!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/common/vit.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[60%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.vit}
                                                     </p>
                                                 </div>
@@ -4382,13 +4382,13 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.int!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/common/int.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[60%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.int}
                                                     </p>
                                                 </div>
@@ -4398,13 +4398,13 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.krm!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/common/krm.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[60%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.krm}
                                                     </p>
                                                 </div>
@@ -4419,28 +4419,28 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                             }
                             else{
                                 return(
-                                    <div className={'w-[48%] sm:w-[23%] sm:h-[23.5vw] mt-[4vw] relative h-[23vh] rounded-[2vw] cursor-pointer'}  key={item.id} onClick={()=>{updateNeck(item);updateStats()}}>
+                                    <div className={'w-[48%] sm:w-[45%] sm:h-[14.2vw] mt-[4vw] sm:mt-[2vw] relative h-[23vh] rounded-[2vw] cursor-pointer'}  key={item.id} onClick={()=>{updateNeck(item);updateStats()}}>
                                         <div className={'w-full absolute top-0 rounded-[2vw] h-full'}>
                                             <Image src={'/images/card_generation/common/bg.svg'} layout={'fill'}></Image>
                                         </div>
-                                        <div className={'w-[8vh] h-[8vh] sm:w-[8vw] sm:h-[8vw] relative mx-auto mt-[1.5vh]'}>
+                                        <div className={'w-[8vh] h-[8vh] sm:w-[4vw] sm:h-[4vw] relative mx-auto mt-[1.5vh]'}>
                                             <Image src={'/images/miniatures/Necklace/'+item.name+'.png'} layout={'fill'}></Image>
                                         </div>
-                                        <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] absolute top-[1vh] left-[1vh]'}>
+                                        <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] absolute top-[1vh] left-[1vh]'}>
                                             <Image src={'/images/equipment_module/neck.svg'} layout={'fill'}></Image>
                                         </div>
-                                        <p className={'text-white font-josefin text-[1.8vh] sm:text-[2vw] text-right absolute top-[1vh] right-[1vh]'}>ID: {item.id}</p>
-                                        <p className={'w-full text-white font-soyuz text-[1.8vh] sm:text-[2vw] text-center'}>{item.name}</p>
+                                        <p className={'text-white font-josefin text-[1.8vh] sm:text-[1vw] text-right absolute top-[1vh] right-[1vh]'}>ID: {item.id}</p>
+                                        <p className={'w-full text-white font-soyuz text-[1.8vh] sm:text-[1vw] text-center'}>{item.name}</p>
                                         <div className={'relative w-[70%] mx-auto border-[#000]'}>
                                             {item.dex!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/common/dex.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[60%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.dex}
                                                     </p>
                                                 </div>
@@ -4450,13 +4450,13 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.str!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/common/str.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[60%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.str}
                                                     </p>
                                                 </div>
@@ -4466,13 +4466,13 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.vit!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/common/vit.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[60%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.vit}
                                                     </p>
                                                 </div>
@@ -4482,13 +4482,13 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.int!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/common/int.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[60%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.int}
                                                     </p>
                                                 </div>
@@ -4498,13 +4498,13 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.krm!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/common/krm.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[60%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.krm}
                                                     </p>
                                                 </div>
@@ -4522,28 +4522,28 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                         else if(item.rarity=='uncommon'){
                             if(bunny.equipment.neck?.id){
                                 return(
-                                    <div className={'w-[48%] sm:w-[23%] sm:h-[23.5vw] border-2 border-[#FFF] border-dashed mt-[4vw] relative h-[23vh] roun sm:rounded-[1vw]ded-[2vw]'}  key={item.id}>
+                                    <div className={'w-[48%] sm:w-[45%] sm:h-[14.2vw] border-2 border-[#FFF] border-dashed mt-[4vw] sm:mt-[2vw] relative h-[23vh] roun sm:rounded-[1vw]ded-[2vw]'}  key={item.id}>
                                         <div className={'w-full absolute top-0 rounded-[2vw] h-full'}>
                                             <Image src={'/images/card_generation/uncommon/bg.svg'} layout={'fill'}></Image>
                                         </div>
-                                        <div className={'w-[8vh] h-[8vh] sm:w-[8vw] sm:h-[8vw] relative mx-auto mt-[1.5vh]'}>
+                                        <div className={'w-[8vh] h-[8vh] sm:w-[4vw] sm:h-[4vw] relative mx-auto mt-[1.5vh]'}>
                                             <Image src={'/images/miniatures/Necklace/'+item.name+'.png'} layout={'fill'}></Image>
                                         </div>
-                                        <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] absolute top-[1vh] left-[1vh]'}>
+                                        <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] absolute top-[1vh] left-[1vh]'}>
                                             <Image src={'/images/equipment_module/neck.svg'} layout={'fill'}></Image>
                                         </div>
-                                        <p className={'text-white font-josefin text-[1.8vh] sm:text-[2vw] text-right absolute top-[1vh] right-[1vh]'}>ID: {item.id}</p>
-                                        <p className={'w-full text-white font-soyuz text-[1.8vh] sm:text-[2vw] text-center'}>{item.name}</p>
+                                        <p className={'text-white font-josefin text-[1.8vh] sm:text-[1vw] text-right absolute top-[1vh] right-[1vh]'}>ID: {item.id}</p>
+                                        <p className={'w-full text-white font-soyuz text-[1.8vh] sm:text-[1vw] text-center'}>{item.name}</p>
                                         <div className={'relative w-[70%] mx-auto border-[#000]'}>
                                             {item.dex!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/uncommon/dex.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[60%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.dex}
                                                     </p>
                                                 </div>
@@ -4553,13 +4553,13 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.str!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/uncommon/str.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[60%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.str}
                                                     </p>
                                                 </div>
@@ -4569,13 +4569,13 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.vit!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/uncommon/vit.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[60%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.vit}
                                                     </p>
                                                 </div>
@@ -4585,13 +4585,13 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.int!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/uncommon/int.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[60%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.int}
                                                     </p>
                                                 </div>
@@ -4601,13 +4601,13 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.krm!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/uncommon/krm.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[60%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.krm}
                                                     </p>
                                                 </div>
@@ -4622,28 +4622,28 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                             }
                             else{
                                 return(
-                                    <div className={'w-[48%] sm:w-[23%] sm:h-[23.5vw] mt-[4vw] relative h-[23vh] rounded-[2vw] cursor-pointer'}  key={item.id} onClick={()=>{updateNeck(item);updateStats()}}>
+                                    <div className={'w-[48%] sm:w-[45%] sm:h-[14.2vw] mt-[4vw] sm:mt-[2vw] relative h-[23vh] rounded-[2vw] cursor-pointer'}  key={item.id} onClick={()=>{updateNeck(item);updateStats()}}>
                                         <div className={'w-full absolute top-0 rounded-[2vw] h-full'}>
                                             <Image src={'/images/card_generation/uncommon/bg.svg'} layout={'fill'}></Image>
                                         </div>
-                                        <div className={'w-[8vh] h-[8vh] sm:w-[8vw] sm:h-[8vw] relative mx-auto mt-[1.5vh]'}>
+                                        <div className={'w-[8vh] h-[8vh] sm:w-[4vw] sm:h-[4vw] relative mx-auto mt-[1.5vh]'}>
                                             <Image src={'/images/miniatures/Necklace/'+item.name+'.png'} layout={'fill'}></Image>
                                         </div>
-                                        <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] absolute top-[1vh] left-[1vh]'}>
+                                        <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] absolute top-[1vh] left-[1vh]'}>
                                             <Image src={'/images/equipment_module/neck.svg'} layout={'fill'}></Image>
                                         </div>
-                                        <p className={'text-white font-josefin text-[1.8vh] sm:text-[2vw] text-right absolute top-[1vh] right-[1vh]'}>ID: {item.id}</p>
-                                        <p className={'w-full text-white font-soyuz text-[1.8vh] sm:text-[2vw] text-center'}>{item.name}</p>
+                                        <p className={'text-white font-josefin text-[1.8vh] sm:text-[1vw] text-right absolute top-[1vh] right-[1vh]'}>ID: {item.id}</p>
+                                        <p className={'w-full text-white font-soyuz text-[1.8vh] sm:text-[1vw] text-center'}>{item.name}</p>
                                         <div className={'relative w-[70%] mx-auto border-[#000]'}>
                                             {item.dex!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/uncommon/dex.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[60%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.dex}
                                                     </p>
                                                 </div>
@@ -4653,13 +4653,13 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.str!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/uncommon/str.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[60%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.str}
                                                     </p>
                                                 </div>
@@ -4669,13 +4669,13 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.vit!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/uncommon/vit.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[60%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.vit}
                                                     </p>
                                                 </div>
@@ -4685,13 +4685,13 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.int!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/uncommon/int.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[60%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.int}
                                                     </p>
                                                 </div>
@@ -4701,13 +4701,13 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.krm!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/uncommon/krm.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[60%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.krm}
                                                     </p>
                                                 </div>
@@ -4725,28 +4725,28 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                         else if(item.rarity=='epic'){
                             if(bunny.equipment.neck?.id){
                                 return(
-                                    <div className={'w-[48%] sm:w-[23%] sm:h-[23.5vw] mt-[4vw] border-2 border-[#FFF] border-dashed relative h-[23vh] rounded-[2vw] sm:rounded-[1vw]'}  key={item.id}>
+                                    <div className={'w-[48%] sm:w-[45%] sm:h-[14.2vw] mt-[4vw] sm:mt-[2vw] border-2 border-[#FFF] border-dashed relative h-[23vh] rounded-[2vw] sm:rounded-[1vw]'}  key={item.id}>
                                         <div className={'w-full absolute top-0 rounded-[2vw] h-full'}>
                                             <Image src={'/images/card_generation/epic/bg.svg'} layout={'fill'}></Image>
                                         </div>
-                                        <div className={'w-[8vh] h-[8vh] sm:w-[8vw] sm:h-[8vw] relative mx-auto mt-[1.5vh]'}>
+                                        <div className={'w-[8vh] h-[8vh] sm:w-[4vw] sm:h-[4vw] relative mx-auto mt-[1.5vh]'}>
                                             <Image src={'/images/miniatures/Necklace/'+item.name+'.png'} layout={'fill'}></Image>
                                         </div>
-                                        <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] absolute top-[1vh] left-[1vh]'}>
+                                        <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] absolute top-[1vh] left-[1vh]'}>
                                             <Image src={'/images/equipment_module/neck.svg'} layout={'fill'}></Image>
                                         </div>
-                                        <p className={'text-white font-josefin text-[1.8vh] sm:text-[2vw] text-right absolute top-[1vh] right-[1vh]'}>ID: {item.id}</p>
-                                        <p className={'w-full text-white font-soyuz text-[1.8vh] sm:text-[2vw] text-center'}>{item.name}</p>
+                                        <p className={'text-white font-josefin text-[1.8vh] sm:text-[1vw] text-right absolute top-[1vh] right-[1vh]'}>ID: {item.id}</p>
+                                        <p className={'w-full text-white font-soyuz text-[1.8vh] sm:text-[1vw] text-center'}>{item.name}</p>
                                         <div className={'relative w-[40%] inline-block mx-[2%] ml-[8%]'}>
                                             {item.dex!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/epic/dex.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[40%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.dex}
                                                     </p>
                                                 </div>
@@ -4756,13 +4756,13 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.str!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/epic/str.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[40%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.str}
                                                     </p>
                                                 </div>
@@ -4772,13 +4772,13 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.vit!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/epic/vit.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[40%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.vit}
                                                     </p>
                                                 </div>
@@ -4788,13 +4788,13 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.int!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/epic/int.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[40%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.int}
                                                     </p>
                                                 </div>
@@ -4804,13 +4804,13 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.krm!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/epic/krm.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[40%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.krm}
                                                     </p>
                                                 </div>
@@ -4821,14 +4821,14 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
 
                                         </div>
                                         <div className={'align-top relative w-[40%] inline-block ml-[2%] mr-[8%]'}>
-                                            <p className={'w-full relative text-white text-center font-medium font-josefin text-[1vh] sm:text-[1vw]'}>Requierements</p>
+                                            <p className={'w-full relative text-white text-center font-medium font-josefin text-[1vh] sm:text-[0.7vw]'}>Requierements</p>
                                             {item.requirements?.dex!=0&&item.requirements?.dex!=undefined?
                                                 <div className={'w-full relative flex justify-center items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] mx-[1vh] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] mx-[1vh] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/epic/dex.svg'} layout={'fill'}></Image>
                                                     </div>
 
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>{item.requirements.dex}
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>{item.requirements.dex}
                                                     </p>
                                                 </div>
                                                 :
@@ -4837,11 +4837,11 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.requirements?.str!=0&&item.requirements?.str!=undefined?
                                                 <div className={'w-full relative flex justify-center items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] mx-[1vh] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] mx-[1vh] relative inline-block'}>
                                                         <Image src={'/images/card_generation/epic/str.svg'} layout={'fill'}></Image>
                                                     </div>
 
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         {item.requirements.str}
                                                     </p>
                                                 </div>
@@ -4851,11 +4851,11 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.requirements?.vit!=0&&item.requirements?.vit!=undefined?
                                                 <div className={'w-full relative flex justify-center items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] mx-[1vh] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] mx-[1vh] relative inline-block'}>
                                                         <Image src={'/images/card_generation/epic/vit.svg'} layout={'fill'}></Image>
                                                     </div>
 
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         {item.requirements.vit}
                                                     </p>
                                                 </div>
@@ -4865,11 +4865,11 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.requirements?.int!=0&&item.requirements?.int!=undefined?
                                                 <div className={'w-full relative flex justify-center items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] mx-[1vh] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] mx-[1vh] relative inline-block'}>
                                                         <Image src={'/images/card_generation/epic/int.svg'} layout={'fill'}></Image>
                                                     </div>
 
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         {item.requirements.int}
                                                     </p>
                                                 </div>
@@ -4879,11 +4879,11 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.requirements?.krm!=0&&item.requirements?.krm!=undefined?
                                                 <div className={'w-full relative flex justify-center items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] mx-[1vh] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] mx-[1vh] relative inline-block'}>
                                                         <Image src={'/images/card_generation/epic/krm.svg'} layout={'fill'}></Image>
                                                     </div>
 
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         {item.requirements.krm}
                                                     </p>
                                                 </div>
@@ -4897,28 +4897,28 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                             }
                             else{
                                 return(
-                                    <div className={'w-[48%] sm:w-[23%] sm:h-[23.5vw] mt-[4vw] relative h-[23vh] rounded-[2vw] cursor-pointer'}  key={item.id} onClick={()=>{updateNeck(item);updateStats()}}>
+                                    <div className={'w-[48%] sm:w-[45%] sm:h-[14.2vw] mt-[4vw] sm:mt-[2vw] relative h-[23vh] rounded-[2vw] cursor-pointer'}  key={item.id} onClick={()=>{updateNeck(item);updateStats()}}>
                                         <div className={'w-full absolute top-0 rounded-[2vw] h-full'}>
                                             <Image src={'/images/card_generation/epic/bg.svg'} layout={'fill'}></Image>
                                         </div>
-                                        <div className={'w-[8vh] h-[8vh] sm:w-[8vw] sm:h-[8vw] relative mx-auto mt-[1.5vh]'}>
+                                        <div className={'w-[8vh] h-[8vh] sm:w-[4vw] sm:h-[4vw] relative mx-auto mt-[1.5vh]'}>
                                             <Image src={'/images/miniatures/Necklace/'+item.name+'.png'} layout={'fill'}></Image>
                                         </div>
-                                        <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] absolute top-[1vh] left-[1vh]'}>
+                                        <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] absolute top-[1vh] left-[1vh]'}>
                                             <Image src={'/images/equipment_module/neck.svg'} layout={'fill'}></Image>
                                         </div>
-                                        <p className={'text-white font-josefin text-[1.8vh] sm:text-[2vw] text-right absolute top-[1vh] right-[1vh]'}>ID: {item.id}</p>
-                                        <p className={'w-full text-white font-soyuz text-[1.8vh] sm:text-[2vw] text-center'}>{item.name}</p>
+                                        <p className={'text-white font-josefin text-[1.8vh] sm:text-[1vw] text-right absolute top-[1vh] right-[1vh]'}>ID: {item.id}</p>
+                                        <p className={'w-full text-white font-soyuz text-[1.8vh] sm:text-[1vw] text-center'}>{item.name}</p>
                                         <div className={'relative w-[40%] inline-block mx-[2%] ml-[8%]'}>
                                             {item.dex!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/epic/dex.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[40%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.dex}
                                                     </p>
                                                 </div>
@@ -4928,13 +4928,13 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.str!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/epic/str.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[40%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.str}
                                                     </p>
                                                 </div>
@@ -4944,13 +4944,13 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.vit!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/epic/vit.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[40%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.vit}
                                                     </p>
                                                 </div>
@@ -4960,13 +4960,13 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.int!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/epic/int.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[40%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.int}
                                                     </p>
                                                 </div>
@@ -4976,13 +4976,13 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.krm!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/epic/krm.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[40%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.krm}
                                                     </p>
                                                 </div>
@@ -4993,14 +4993,14 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
 
                                         </div>
                                         <div className={'align-top relative w-[40%] inline-block ml-[2%] mr-[8%]'}>
-                                            <p className={'w-full relative text-white text-center font-medium font-josefin text-[1vh] sm:text-[1vw]'}>Requierements</p>
+                                            <p className={'w-full relative text-white text-center font-medium font-josefin text-[1vh] sm:text-[0.7vw]'}>Requierements</p>
                                             {item.requirements?.dex!=0&&item.requirements?.dex!=undefined?
                                                 <div className={'w-full relative flex justify-center items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] mx-[1vh] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] mx-[1vh] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/epic/dex.svg'} layout={'fill'}></Image>
                                                     </div>
 
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>{item.requirements.dex}
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>{item.requirements.dex}
                                                     </p>
                                                 </div>
                                                 :
@@ -5009,11 +5009,11 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.requirements?.str!=0&&item.requirements?.str!=undefined?
                                                 <div className={'w-full relative flex justify-center items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] mx-[1vh] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] mx-[1vh] relative inline-block'}>
                                                         <Image src={'/images/card_generation/epic/str.svg'} layout={'fill'}></Image>
                                                     </div>
 
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         {item.requirements.str}
                                                     </p>
                                                 </div>
@@ -5023,11 +5023,11 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.requirements?.vit!=0&&item.requirements?.vit!=undefined?
                                                 <div className={'w-full relative flex justify-center items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] mx-[1vh] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] mx-[1vh] relative inline-block'}>
                                                         <Image src={'/images/card_generation/epic/vit.svg'} layout={'fill'}></Image>
                                                     </div>
 
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         {item.requirements.vit}
                                                     </p>
                                                 </div>
@@ -5037,11 +5037,11 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.requirements?.int!=0&&item.requirements?.int!=undefined?
                                                 <div className={'w-full relative flex justify-center items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] mx-[1vh] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] mx-[1vh] relative inline-block'}>
                                                         <Image src={'/images/card_generation/epic/int.svg'} layout={'fill'}></Image>
                                                     </div>
 
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         {item.requirements.int}
                                                     </p>
                                                 </div>
@@ -5051,11 +5051,11 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.requirements?.krm!=0&&item.requirements?.krm!=undefined?
                                                 <div className={'w-full relative flex justify-center items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] mx-[1vh] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] mx-[1vh] relative inline-block'}>
                                                         <Image src={'/images/card_generation/epic/krm.svg'} layout={'fill'}></Image>
                                                     </div>
 
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         {item.requirements.krm}
                                                     </p>
                                                 </div>
@@ -5074,28 +5074,28 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                         else if(item.rarity=='legendary'){
                             if(bunny.equipment.neck?.id==item.id){
                                 return(
-                                    <div className={'w-[48%] sm:w-[23%] sm:h-[23.5vw] mt-[4vw] border-2 border-[#FFF] border-dashed relative h-[23vh] rounded-[2vw] sm:rounded-[1vw]'}  key={item.id}>
+                                    <div className={'w-[48%] sm:w-[45%] sm:h-[14.2vw] mt-[4vw] sm:mt-[2vw] border-2 border-[#FFF] border-dashed relative h-[23vh] rounded-[2vw] sm:rounded-[1vw]'}  key={item.id}>
                                         <div className={'w-full absolute top-0 rounded-[2vw] h-full'}>
                                             <Image src={'/images/card_generation/legendary/bg.svg'} layout={'fill'}></Image>
                                         </div>
-                                        <div className={'w-[8vh] h-[8vh] sm:w-[8vw] sm:h-[8vw] relative mx-auto mt-[1.5vh]'}>
+                                        <div className={'w-[8vh] h-[8vh] sm:w-[4vw] sm:h-[4vw] relative mx-auto mt-[1.5vh]'}>
                                             <Image src={'/images/miniatures/Necklace/'+item.name+'.png'} layout={'fill'}></Image>
                                         </div>
-                                        <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] absolute top-[1vh] left-[1vh]'}>
+                                        <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] absolute top-[1vh] left-[1vh]'}>
                                             <Image src={'/images/equipment_module/neck.svg'} layout={'fill'}></Image>
                                         </div>
-                                        <p className={'text-white font-josefin text-[1.8vh] sm:text-[2vw] text-right absolute top-[1vh] right-[1vh]'}>ID: {item.id}</p>
-                                        <p className={'w-full text-white font-soyuz text-[1.8vh] sm:text-[2vw] text-center'}>{item.name}</p>
+                                        <p className={'text-white font-josefin text-[1.8vh] sm:text-[1vw] text-right absolute top-[1vh] right-[1vh]'}>ID: {item.id}</p>
+                                        <p className={'w-full text-white font-soyuz text-[1.8vh] sm:text-[1vw] text-center'}>{item.name}</p>
                                         <div className={'relative w-[40%] inline-block mx-[2%] ml-[8%]'}>
                                             {item.dex!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/legendary/dex.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[40%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.dex}
                                                     </p>
                                                 </div>
@@ -5105,13 +5105,13 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.str!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/legendary/str.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[40%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.str}
                                                     </p>
                                                 </div>
@@ -5121,13 +5121,13 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.vit!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/legendary/vit.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[40%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.vit}
                                                     </p>
                                                 </div>
@@ -5137,13 +5137,13 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.int!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/legendary/int.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[40%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.int}
                                                     </p>
                                                 </div>
@@ -5153,13 +5153,13 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.krm!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/legendary/krm.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[40%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.krm}
                                                     </p>
                                                 </div>
@@ -5170,14 +5170,14 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
 
                                         </div>
                                         <div className={'align-top relative w-[40%] inline-block ml-[2%] mr-[8%]'}>
-                                            <p className={'w-full relative text-white text-center font-medium font-josefin text-[1vh] sm:text-[1vw]'}>Requierements</p>
+                                            <p className={'w-full relative text-white text-center font-medium font-josefin text-[1vh] sm:text-[0.7vw]'}>Requierements</p>
                                             {item.requirements?.dex!=0&&item.requirements?.dex!=undefined?
                                                 <div className={'w-full relative flex justify-center items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] mx-[1vh] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] mx-[1vh] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/legendary/dex.svg'} layout={'fill'}></Image>
                                                     </div>
 
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>{item.requirements.dex}
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>{item.requirements.dex}
                                                     </p>
                                                 </div>
                                                 :
@@ -5186,11 +5186,11 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.requirements?.str!=0&&item.requirements?.str!=undefined?
                                                 <div className={'w-full relative flex justify-center items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] mx-[1vh] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] mx-[1vh] relative inline-block'}>
                                                         <Image src={'/images/card_generation/legendary/str.svg'} layout={'fill'}></Image>
                                                     </div>
 
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         {item.requirements.str}
                                                     </p>
                                                 </div>
@@ -5200,11 +5200,11 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.requirements?.vit!=0&&item.requirements?.vit!=undefined?
                                                 <div className={'w-full relative flex justify-center items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] mx-[1vh] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] mx-[1vh] relative inline-block'}>
                                                         <Image src={'/images/card_generation/legendary/vit.svg'} layout={'fill'}></Image>
                                                     </div>
 
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         {item.requirements.vit}
                                                     </p>
                                                 </div>
@@ -5214,11 +5214,11 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.requirements?.int!=0&&item.requirements?.int!=undefined?
                                                 <div className={'w-full relative flex justify-center items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] mx-[1vh] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] mx-[1vh] relative inline-block'}>
                                                         <Image src={'/images/card_generation/legendary/int.svg'} layout={'fill'}></Image>
                                                     </div>
 
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         {item.requirements.int}
                                                     </p>
                                                 </div>
@@ -5228,11 +5228,11 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.requirements?.krm!=0&&item.requirements?.krm!=undefined?
                                                 <div className={'w-full relative flex justify-center items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] mx-[1vh] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] mx-[1vh] relative inline-block'}>
                                                         <Image src={'/images/card_generation/legendary/krm.svg'} layout={'fill'}></Image>
                                                     </div>
 
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         {item.requirements.krm}
                                                     </p>
                                                 </div>
@@ -5240,7 +5240,7 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 <div className={'hidden'}>
 
                                                 </div>}
-                                            <p className={'w-[90%] relative text-white text-[1.2vh] ml-[10%] font-medium font-josefin mt-[0.3vh] sm:text-[1vw]'}>Status: <span className={'font-bold text-[1.5vh] sm:text-[1.5vw]'}>Elite</span> </p>
+                                            <p className={'w-[90%] relative text-white text-[1.2vh] ml-[10%] font-medium font-josefin mt-[0.3vh] sm:text-[0.7vw]'}>Status: <span className={'font-bold text-[1.5vh] sm:text-[1vw]'}>Elite</span> </p>
 
                                         </div>
                                     </div>
@@ -5248,28 +5248,28 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                             }
                             else{
                                 return(
-                                    <div className={'w-[48%] sm:w-[23%] sm:h-[23.5vw] mt-[4vw] relative h-[23vh] rounded-[2vw] cursor-pointer'}  key={item.id} onClick={()=>{updateNeck(item);updateStats()}}>
+                                    <div className={'w-[48%] sm:w-[45%] sm:h-[14.2vw] mt-[4vw] sm:mt-[2vw] relative h-[23vh] rounded-[2vw] cursor-pointer'}  key={item.id} onClick={()=>{updateNeck(item);updateStats()}}>
                                         <div className={'w-full absolute top-0 rounded-[2vw] h-full'}>
                                             <Image src={'/images/card_generation/legendary/bg.svg'} layout={'fill'}></Image>
                                         </div>
-                                        <div className={'w-[8vh] h-[8vh] sm:w-[8vw] sm:h-[8vw] relative mx-auto mt-[1.5vh]'}>
+                                        <div className={'w-[8vh] h-[8vh] sm:w-[4vw] sm:h-[4vw] relative mx-auto mt-[1.5vh]'}>
                                             <Image src={'/images/miniatures/Necklace/'+item.name+'.png'} layout={'fill'}></Image>
                                         </div>
-                                        <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] absolute top-[1vh] left-[1vh]'}>
+                                        <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] absolute top-[1vh] left-[1vh]'}>
                                             <Image src={'/images/equipment_module/neck.svg'} layout={'fill'}></Image>
                                         </div>
-                                        <p className={'text-white font-josefin text-[1.8vh] sm:text-[2vw] text-right absolute top-[1vh] right-[1vh]'}>ID: {item.id}</p>
-                                        <p className={'w-full text-white font-soyuz text-[1.8vh] sm:text-[2vw] text-center'}>{item.name}</p>
+                                        <p className={'text-white font-josefin text-[1.8vh] sm:text-[1vw] text-right absolute top-[1vh] right-[1vh]'}>ID: {item.id}</p>
+                                        <p className={'w-full text-white font-soyuz text-[1.8vh] sm:text-[1vw] text-center'}>{item.name}</p>
                                         <div className={'relative w-[40%] inline-block mx-[2%] ml-[8%]'}>
                                             {item.dex!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/legendary/dex.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[40%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.dex}
                                                     </p>
                                                 </div>
@@ -5279,13 +5279,13 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.str!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/legendary/str.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[40%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.str}
                                                     </p>
                                                 </div>
@@ -5295,13 +5295,13 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.vit!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/legendary/vit.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[40%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.vit}
                                                     </p>
                                                 </div>
@@ -5311,13 +5311,13 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.int!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/legendary/int.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[40%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.int}
                                                     </p>
                                                 </div>
@@ -5327,13 +5327,13 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.krm!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/legendary/krm.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[40%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.krm}
                                                     </p>
                                                 </div>
@@ -5344,14 +5344,14 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
 
                                         </div>
                                         <div className={'align-top relative w-[40%] inline-block ml-[2%] mr-[8%]'}>
-                                            <p className={'w-full relative text-white text-center font-medium font-josefin text-[1vh] sm:text-[1vw]'}>Requierements</p>
+                                            <p className={'w-full relative text-white text-center font-medium font-josefin text-[1vh] sm:text-[0.7vw]'}>Requierements</p>
                                             {item.requirements?.dex!=0&&item.requirements?.dex!=undefined?
                                                 <div className={'w-full relative flex justify-center items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] mx-[1vh] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] mx-[1vh] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/legendary/dex.svg'} layout={'fill'}></Image>
                                                     </div>
 
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>{item.requirements.dex}
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>{item.requirements.dex}
                                                     </p>
                                                 </div>
                                                 :
@@ -5360,11 +5360,11 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.requirements?.str!=0&&item.requirements?.str!=undefined?
                                                 <div className={'w-full relative flex justify-center items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] mx-[1vh] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] mx-[1vh] relative inline-block'}>
                                                         <Image src={'/images/card_generation/legendary/str.svg'} layout={'fill'}></Image>
                                                     </div>
 
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         {item.requirements.str}
                                                     </p>
                                                 </div>
@@ -5374,11 +5374,11 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.requirements?.vit!=0&&item.requirements?.vit!=undefined?
                                                 <div className={'w-full relative flex justify-center items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] mx-[1vh] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] mx-[1vh] relative inline-block'}>
                                                         <Image src={'/images/card_generation/legendary/vit.svg'} layout={'fill'}></Image>
                                                     </div>
 
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         {item.requirements.vit}
                                                     </p>
                                                 </div>
@@ -5388,11 +5388,11 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.requirements?.int!=0&&item.requirements?.int!=undefined?
                                                 <div className={'w-full relative flex justify-center items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] mx-[1vh] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] mx-[1vh] relative inline-block'}>
                                                         <Image src={'/images/card_generation/legendary/int.svg'} layout={'fill'}></Image>
                                                     </div>
 
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         {item.requirements.int}
                                                     </p>
                                                 </div>
@@ -5402,11 +5402,11 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.requirements?.krm!=0&&item.requirements?.krm!=undefined?
                                                 <div className={'w-full relative flex justify-center items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] mx-[1vh] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] mx-[1vh] relative inline-block'}>
                                                         <Image src={'/images/card_generation/legendary/krm.svg'} layout={'fill'}></Image>
                                                     </div>
 
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         {item.requirements.krm}
                                                     </p>
                                                 </div>
@@ -5414,7 +5414,7 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 <div className={'hidden'}>
 
                                                 </div>}
-                                            <p className={'w-[90%] relative text-white text-[1.2vh] ml-[10%] font-medium font-josefin mt-[0.3vh] sm:text-[1vw]'}>Status: <span className={'font-bold text-[1.5vh] sm:text-[1.5vw]'}>Elite</span> </p>
+                                            <p className={'w-[90%] relative text-white text-[1.2vh] ml-[10%] font-medium font-josefin mt-[0.3vh] sm:text-[0.7vw]'}>Status: <span className={'font-bold text-[1.5vh] sm:text-[1vw]'}>Elite</span> </p>
 
                                         </div>
                                     </div>
@@ -5435,28 +5435,28 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                         if(item.rarity=='common'){
                             if(bunny.equipment.hears?.id==item.id){
                                 return(
-                                    <div className={'w-[48%] sm:w-[23%] sm:h-[23.5vw] mt-[4vw] border-2 border-[#FFF] border-dashed relative h-[23vh] rounded-[2vw] sm:rounded-[1vw]'}  key={item.id}>
+                                    <div className={'w-[48%] sm:w-[45%] sm:h-[14.2vw] mt-[4vw] sm:mt-[2vw] border-2 border-[#FFF] border-dashed relative h-[23vh] rounded-[2vw] sm:rounded-[1vw]'}  key={item.id}>
                                         <div className={'w-full absolute top-0 rounded-[2vw] h-full'}>
                                             <Image src={'/images/card_generation/common/bg.svg'} layout={'fill'}></Image>
                                         </div>
-                                        <div className={'w-[8vh] h-[8vh] sm:w-[8vw] sm:h-[8vw] relative mx-auto mt-[1.5vh]'}>
+                                        <div className={'w-[8vh] h-[8vh] sm:w-[4vw] sm:h-[4vw] relative mx-auto mt-[1.5vh]'}>
                                             <Image src={'/images/miniatures/Ears/'+item.name+'.png'} layout={'fill'}></Image>
                                         </div>
-                                        <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] absolute top-[1vh] left-[1vh]'}>
+                                        <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] absolute top-[1vh] left-[1vh]'}>
                                             <Image src={'/images/equipment_module/ears.svg'} layout={'fill'}></Image>
                                         </div>
-                                        <p className={'text-white font-josefin text-[1.8vh] sm:text-[2vw] text-right absolute top-[1vh] right-[1vh]'}>ID: {item.id}</p>
-                                        <p className={'w-full text-white font-soyuz text-[1.8vh] sm:text-[2vw] text-center'}>{item.name}</p>
+                                        <p className={'text-white font-josefin text-[1.8vh] sm:text-[1vw] text-right absolute top-[1vh] right-[1vh]'}>ID: {item.id}</p>
+                                        <p className={'w-full text-white font-soyuz text-[1.8vh] sm:text-[1vw] text-center'}>{item.name}</p>
                                         <div className={'relative w-[70%] mx-auto border-[#000]'}>
                                             {item.dex!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/common/dex.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[60%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.dex}
                                                     </p>
                                                 </div>
@@ -5466,13 +5466,13 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.str!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/common/str.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[60%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.str}
                                                     </p>
                                                 </div>
@@ -5482,13 +5482,13 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.vit!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/common/vit.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[60%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.vit}
                                                     </p>
                                                 </div>
@@ -5498,13 +5498,13 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.int!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/common/int.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[60%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.int}
                                                     </p>
                                                 </div>
@@ -5514,13 +5514,13 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.krm!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/common/krm.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[60%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.krm}
                                                     </p>
                                                 </div>
@@ -5535,28 +5535,28 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                             }
                             else{
                                 return(
-                                    <div className={'w-[48%] sm:w-[23%] sm:h-[23.5vw] mt-[4vw] relative h-[23vh] rounded-[2vw] cursor-pointer'}  key={item.id} onClick={()=>{updateEars(item);updateStats()}}>
+                                    <div className={'w-[48%] sm:w-[45%] sm:h-[14.2vw] mt-[4vw] sm:mt-[2vw] relative h-[23vh] rounded-[2vw] cursor-pointer'}  key={item.id} onClick={()=>{updateEars(item);updateStats()}}>
                                         <div className={'w-full absolute top-0 rounded-[2vw] h-full'}>
                                             <Image src={'/images/card_generation/common/bg.svg'} layout={'fill'}></Image>
                                         </div>
-                                        <div className={'w-[8vh] h-[8vh] sm:w-[8vw] sm:h-[8vw] relative mx-auto mt-[1.5vh]'}>
+                                        <div className={'w-[8vh] h-[8vh] sm:w-[4vw] sm:h-[4vw] relative mx-auto mt-[1.5vh]'}>
                                             <Image src={'/images/miniatures/Ears/'+item.name+'.png'} layout={'fill'}></Image>
                                         </div>
-                                        <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] absolute top-[1vh] left-[1vh]'}>
+                                        <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] absolute top-[1vh] left-[1vh]'}>
                                             <Image src={'/images/equipment_module/ears.svg'} layout={'fill'}></Image>
                                         </div>
-                                        <p className={'text-white font-josefin text-[1.8vh] sm:text-[2vw] text-right absolute top-[1vh] right-[1vh]'}>ID: {item.id}</p>
-                                        <p className={'w-full text-white font-soyuz text-[1.8vh] sm:text-[2vw] text-center'}>{item.name}</p>
+                                        <p className={'text-white font-josefin text-[1.8vh] sm:text-[1vw] text-right absolute top-[1vh] right-[1vh]'}>ID: {item.id}</p>
+                                        <p className={'w-full text-white font-soyuz text-[1.8vh] sm:text-[1vw] text-center'}>{item.name}</p>
                                         <div className={'relative w-[70%] mx-auto border-[#000]'}>
                                             {item.dex!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/common/dex.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[60%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.dex}
                                                     </p>
                                                 </div>
@@ -5566,13 +5566,13 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.str!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/common/str.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[60%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.str}
                                                     </p>
                                                 </div>
@@ -5582,13 +5582,13 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.vit!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/common/vit.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[60%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.vit}
                                                     </p>
                                                 </div>
@@ -5598,13 +5598,13 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.int!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/common/int.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[60%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.int}
                                                     </p>
                                                 </div>
@@ -5614,13 +5614,13 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.krm!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/common/krm.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[60%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.krm}
                                                     </p>
                                                 </div>
@@ -5638,28 +5638,28 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                         else if(item.rarity=='uncommon'){
                             if(bunny.equipment.hears?.id==item.id){
                                 return(
-                                    <div className={'w-[48%] sm:w-[23%] sm:h-[23.5vw] border-2 border-[#FFF] border-dashed mt-[4vw] relative h-[23vh] roun sm:rounded-[1vw]ded-[2vw]'}  key={item.id}>
+                                    <div className={'w-[48%] sm:w-[45%] sm:h-[14.2vw] border-2 border-[#FFF] border-dashed mt-[4vw] sm:mt-[2vw] relative h-[23vh] roun sm:rounded-[1vw]ded-[2vw]'}  key={item.id}>
                                         <div className={'w-full absolute top-0 rounded-[2vw] h-full'}>
                                             <Image src={'/images/card_generation/uncommon/bg.svg'} layout={'fill'}></Image>
                                         </div>
-                                        <div className={'w-[8vh] h-[8vh] sm:w-[8vw] sm:h-[8vw] relative mx-auto mt-[1.5vh]'}>
+                                        <div className={'w-[8vh] h-[8vh] sm:w-[4vw] sm:h-[4vw] relative mx-auto mt-[1.5vh]'}>
                                             <Image src={'/images/miniatures/Ears/'+item.name+'.png'} layout={'fill'}></Image>
                                         </div>
-                                        <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] absolute top-[1vh] left-[1vh]'}>
+                                        <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] absolute top-[1vh] left-[1vh]'}>
                                             <Image src={'/images/equipment_module/ears.svg'} layout={'fill'}></Image>
                                         </div>
-                                        <p className={'text-white font-josefin text-[1.8vh] sm:text-[2vw] text-right absolute top-[1vh] right-[1vh]'}>ID: {item.id}</p>
-                                        <p className={'w-full text-white font-soyuz text-[1.8vh] sm:text-[2vw] text-center'}>{item.name}</p>
+                                        <p className={'text-white font-josefin text-[1.8vh] sm:text-[1vw] text-right absolute top-[1vh] right-[1vh]'}>ID: {item.id}</p>
+                                        <p className={'w-full text-white font-soyuz text-[1.8vh] sm:text-[1vw] text-center'}>{item.name}</p>
                                         <div className={'relative w-[70%] mx-auto border-[#000]'}>
                                             {item.dex!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/uncommon/dex.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[60%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.dex}
                                                     </p>
                                                 </div>
@@ -5669,13 +5669,13 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.str!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/uncommon/str.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[60%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.str}
                                                     </p>
                                                 </div>
@@ -5685,13 +5685,13 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.vit!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/uncommon/vit.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[60%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.vit}
                                                     </p>
                                                 </div>
@@ -5701,13 +5701,13 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.int!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/uncommon/int.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[60%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.int}
                                                     </p>
                                                 </div>
@@ -5717,13 +5717,13 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.krm!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/uncommon/krm.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[60%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.krm}
                                                     </p>
                                                 </div>
@@ -5737,28 +5737,28 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                             }
                             else{
                                 return(
-                                    <div className={'w-[48%] sm:w-[23%] sm:h-[23.5vw] mt-[4vw] relative h-[23vh] rounded-[2vw] cursor-pointer'}  key={item.id} onClick={()=>{updateEars(item);updateStats()}}>
+                                    <div className={'w-[48%] sm:w-[45%] sm:h-[14.2vw] mt-[4vw] sm:mt-[2vw] relative h-[23vh] rounded-[2vw] cursor-pointer'}  key={item.id} onClick={()=>{updateEars(item);updateStats()}}>
                                         <div className={'w-full absolute top-0 rounded-[2vw] h-full'}>
                                             <Image src={'/images/card_generation/uncommon/bg.svg'} layout={'fill'}></Image>
                                         </div>
-                                        <div className={'w-[8vh] h-[8vh] sm:w-[8vw] sm:h-[8vw] relative mx-auto mt-[1.5vh]'}>
+                                        <div className={'w-[8vh] h-[8vh] sm:w-[4vw] sm:h-[4vw] relative mx-auto mt-[1.5vh]'}>
                                             <Image src={'/images/miniatures/Ears/'+item.name+'.png'} layout={'fill'}></Image>
                                         </div>
-                                        <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] absolute top-[1vh] left-[1vh]'}>
+                                        <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] absolute top-[1vh] left-[1vh]'}>
                                             <Image src={'/images/equipment_module/ears.svg'} layout={'fill'}></Image>
                                         </div>
-                                        <p className={'text-white font-josefin text-[1.8vh] sm:text-[2vw] text-right absolute top-[1vh] right-[1vh]'}>ID: {item.id}</p>
-                                        <p className={'w-full text-white font-soyuz text-[1.8vh] sm:text-[2vw] text-center'}>{item.name}</p>
+                                        <p className={'text-white font-josefin text-[1.8vh] sm:text-[1vw] text-right absolute top-[1vh] right-[1vh]'}>ID: {item.id}</p>
+                                        <p className={'w-full text-white font-soyuz text-[1.8vh] sm:text-[1vw] text-center'}>{item.name}</p>
                                         <div className={'relative w-[70%] mx-auto border-[#000]'}>
                                             {item.dex!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/uncommon/dex.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[60%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.dex}
                                                     </p>
                                                 </div>
@@ -5768,13 +5768,13 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.str!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/uncommon/str.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[60%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.str}
                                                     </p>
                                                 </div>
@@ -5784,13 +5784,13 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.vit!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/uncommon/vit.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[60%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.vit}
                                                     </p>
                                                 </div>
@@ -5800,13 +5800,13 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.int!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/uncommon/int.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[60%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.int}
                                                     </p>
                                                 </div>
@@ -5816,13 +5816,13 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.krm!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/uncommon/krm.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[60%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.krm}
                                                     </p>
                                                 </div>
@@ -5841,28 +5841,28 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                         else if(item.rarity=='epic'){
                             if(bunny.equipment.hears?.id==item.id){
                                 return(
-                                    <div className={'w-[48%] sm:w-[23%] sm:h-[23.5vw] border-2 border-[#FFF] border-dashed mt-[4vw] relative h-[23vh] roun sm:rounded-[1vw]ded-[2vw]'}  key={item.id}>
+                                    <div className={'w-[48%] sm:w-[45%] sm:h-[14.2vw] border-2 border-[#FFF] border-dashed mt-[4vw] sm:mt-[2vw] relative h-[23vh] roun sm:rounded-[1vw]ded-[2vw]'}  key={item.id}>
                                         <div className={'w-full absolute top-0 rounded-[2vw] h-full'}>
                                             <Image src={'/images/card_generation/epic/bg.svg'} layout={'fill'}></Image>
                                         </div>
-                                        <div className={'w-[8vh] h-[8vh] sm:w-[8vw] sm:h-[8vw] relative mx-auto mt-[1.5vh]'}>
+                                        <div className={'w-[8vh] h-[8vh] sm:w-[4vw] sm:h-[4vw] relative mx-auto mt-[1.5vh]'}>
                                             <Image src={'/images/miniatures/Ears/'+item.name+'.png'} layout={'fill'}></Image>
                                         </div>
-                                        <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] absolute top-[1vh] left-[1vh]'}>
+                                        <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] absolute top-[1vh] left-[1vh]'}>
                                             <Image src={'/images/equipment_module/ears.svg'} layout={'fill'}></Image>
                                         </div>
-                                        <p className={'text-white font-josefin text-[1.8vh] sm:text-[2vw] text-right absolute top-[1vh] right-[1vh]'}>ID: {item.id}</p>
-                                        <p className={'w-full text-white font-soyuz text-[1.8vh] sm:text-[2vw] text-center'}>{item.name}</p>
+                                        <p className={'text-white font-josefin text-[1.8vh] sm:text-[1vw] text-right absolute top-[1vh] right-[1vh]'}>ID: {item.id}</p>
+                                        <p className={'w-full text-white font-soyuz text-[1.8vh] sm:text-[1vw] text-center'}>{item.name}</p>
                                         <div className={'relative w-[40%] inline-block mx-[2%] ml-[8%]'}>
                                             {item.dex!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/epic/dex.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[40%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.dex}
                                                     </p>
                                                 </div>
@@ -5872,13 +5872,13 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.str!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/epic/str.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[40%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.str}
                                                     </p>
                                                 </div>
@@ -5888,13 +5888,13 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.vit!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/epic/vit.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[40%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.vit}
                                                     </p>
                                                 </div>
@@ -5904,13 +5904,13 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.int!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/epic/int.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[40%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.int}
                                                     </p>
                                                 </div>
@@ -5920,13 +5920,13 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.krm!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/epic/krm.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[40%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.krm}
                                                     </p>
                                                 </div>
@@ -5937,14 +5937,14 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
 
                                         </div>
                                         <div className={'align-top relative w-[40%] inline-block ml-[2%] mr-[8%]'}>
-                                            <p className={'w-full relative text-white text-center font-medium font-josefin text-[1vh] sm:text-[1vw]'}>Requierements</p>
+                                            <p className={'w-full relative text-white text-center font-medium font-josefin text-[1vh] sm:text-[0.7vw]'}>Requierements</p>
                                             {item.requirements?.dex!=0&&item.requirements?.dex!=undefined?
                                                 <div className={'w-full relative flex justify-center items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] mx-[1vh] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] mx-[1vh] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/epic/dex.svg'} layout={'fill'}></Image>
                                                     </div>
 
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>{item.requirements.dex}
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>{item.requirements.dex}
                                                     </p>
                                                 </div>
                                                 :
@@ -5953,11 +5953,11 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.requirements?.str!=0&&item.requirements?.str!=undefined?
                                                 <div className={'w-full relative flex justify-center items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] mx-[1vh] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] mx-[1vh] relative inline-block'}>
                                                         <Image src={'/images/card_generation/epic/str.svg'} layout={'fill'}></Image>
                                                     </div>
 
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         {item.requirements.str}
                                                     </p>
                                                 </div>
@@ -5967,11 +5967,11 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.requirements?.vit!=0&&item.requirements?.vit!=undefined?
                                                 <div className={'w-full relative flex justify-center items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] mx-[1vh] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] mx-[1vh] relative inline-block'}>
                                                         <Image src={'/images/card_generation/epic/vit.svg'} layout={'fill'}></Image>
                                                     </div>
 
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         {item.requirements.vit}
                                                     </p>
                                                 </div>
@@ -5981,11 +5981,11 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.requirements?.int!=0&&item.requirements?.int!=undefined?
                                                 <div className={'w-full relative flex justify-center items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] mx-[1vh] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] mx-[1vh] relative inline-block'}>
                                                         <Image src={'/images/card_generation/epic/int.svg'} layout={'fill'}></Image>
                                                     </div>
 
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         {item.requirements.int}
                                                     </p>
                                                 </div>
@@ -5995,11 +5995,11 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.requirements?.krm!=0&&item.requirements?.krm!=undefined?
                                                 <div className={'w-full relative flex justify-center items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] mx-[1vh] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] mx-[1vh] relative inline-block'}>
                                                         <Image src={'/images/card_generation/epic/krm.svg'} layout={'fill'}></Image>
                                                     </div>
 
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         {item.requirements.krm}
                                                     </p>
                                                 </div>
@@ -6013,28 +6013,28 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                             }
                             else{
                                 return(
-                                    <div className={'w-[48%] sm:w-[23%] sm:h-[23.5vw] mt-[4vw] relative h-[23vh] rounded-[2vw] cursor-pointer'}  key={item.id} onClick={()=>{updateEars(item);updateStats()}}>
+                                    <div className={'w-[48%] sm:w-[45%] sm:h-[14.2vw] mt-[4vw] sm:mt-[2vw] relative h-[23vh] rounded-[2vw] cursor-pointer'}  key={item.id} onClick={()=>{updateEars(item);updateStats()}}>
                                         <div className={'w-full absolute top-0 rounded-[2vw] h-full'}>
                                             <Image src={'/images/card_generation/epic/bg.svg'} layout={'fill'}></Image>
                                         </div>
-                                        <div className={'w-[8vh] h-[8vh] sm:w-[8vw] sm:h-[8vw] relative mx-auto mt-[1.5vh]'}>
+                                        <div className={'w-[8vh] h-[8vh] sm:w-[4vw] sm:h-[4vw] relative mx-auto mt-[1.5vh]'}>
                                             <Image src={'/images/miniatures/Ears/'+item.name+'.png'} layout={'fill'}></Image>
                                         </div>
-                                        <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] absolute top-[1vh] left-[1vh]'}>
+                                        <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] absolute top-[1vh] left-[1vh]'}>
                                             <Image src={'/images/equipment_module/ears.svg'} layout={'fill'}></Image>
                                         </div>
-                                        <p className={'text-white font-josefin text-[1.8vh] sm:text-[2vw] text-right absolute top-[1vh] right-[1vh]'}>ID: {item.id}</p>
-                                        <p className={'w-full text-white font-soyuz text-[1.8vh] sm:text-[2vw] text-center'}>{item.name}</p>
+                                        <p className={'text-white font-josefin text-[1.8vh] sm:text-[1vw] text-right absolute top-[1vh] right-[1vh]'}>ID: {item.id}</p>
+                                        <p className={'w-full text-white font-soyuz text-[1.8vh] sm:text-[1vw] text-center'}>{item.name}</p>
                                         <div className={'relative w-[40%] inline-block mx-[2%] ml-[8%]'}>
                                             {item.dex!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/epic/dex.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[40%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.dex}
                                                     </p>
                                                 </div>
@@ -6044,13 +6044,13 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.str!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/epic/str.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[40%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.str}
                                                     </p>
                                                 </div>
@@ -6060,13 +6060,13 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.vit!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/epic/vit.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[40%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.vit}
                                                     </p>
                                                 </div>
@@ -6076,13 +6076,13 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.int!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/epic/int.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[40%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.int}
                                                     </p>
                                                 </div>
@@ -6092,13 +6092,13 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.krm!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/epic/krm.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[40%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.krm}
                                                     </p>
                                                 </div>
@@ -6109,14 +6109,14 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
 
                                         </div>
                                         <div className={'align-top relative w-[40%] inline-block ml-[2%] mr-[8%]'}>
-                                            <p className={'w-full relative text-white text-center font-medium font-josefin text-[1vh] sm:text-[1vw]'}>Requierements</p>
+                                            <p className={'w-full relative text-white text-center font-medium font-josefin text-[1vh] sm:text-[0.7vw]'}>Requierements</p>
                                             {item.requirements?.dex!=0&&item.requirements?.dex!=undefined?
                                                 <div className={'w-full relative flex justify-center items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] mx-[1vh] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] mx-[1vh] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/epic/dex.svg'} layout={'fill'}></Image>
                                                     </div>
 
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>{item.requirements.dex}
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>{item.requirements.dex}
                                                     </p>
                                                 </div>
                                                 :
@@ -6125,11 +6125,11 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.requirements?.str!=0&&item.requirements?.str!=undefined?
                                                 <div className={'w-full relative flex justify-center items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] mx-[1vh] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] mx-[1vh] relative inline-block'}>
                                                         <Image src={'/images/card_generation/epic/str.svg'} layout={'fill'}></Image>
                                                     </div>
 
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         {item.requirements.str}
                                                     </p>
                                                 </div>
@@ -6139,11 +6139,11 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.requirements?.vit!=0&&item.requirements?.vit!=undefined?
                                                 <div className={'w-full relative flex justify-center items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] mx-[1vh] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] mx-[1vh] relative inline-block'}>
                                                         <Image src={'/images/card_generation/epic/vit.svg'} layout={'fill'}></Image>
                                                     </div>
 
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         {item.requirements.vit}
                                                     </p>
                                                 </div>
@@ -6153,11 +6153,11 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.requirements?.int!=0&&item.requirements?.int!=undefined?
                                                 <div className={'w-full relative flex justify-center items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] mx-[1vh] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] mx-[1vh] relative inline-block'}>
                                                         <Image src={'/images/card_generation/epic/int.svg'} layout={'fill'}></Image>
                                                     </div>
 
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         {item.requirements.int}
                                                     </p>
                                                 </div>
@@ -6167,11 +6167,11 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.requirements?.krm!=0&&item.requirements?.krm!=undefined?
                                                 <div className={'w-full relative flex justify-center items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] mx-[1vh] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] mx-[1vh] relative inline-block'}>
                                                         <Image src={'/images/card_generation/epic/krm.svg'} layout={'fill'}></Image>
                                                     </div>
 
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         {item.requirements.krm}
                                                     </p>
                                                 </div>
@@ -6189,28 +6189,28 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                         else if(item.rarity=='legendary'){
                             if(bunny.equipment.hears?.id){
                                 return(
-                                    <div className={'w-[48%] sm:w-[23%] sm:h-[23.5vw] mt-[4vw] border-2 border-[#FFF] border-dashed relative h-[23vh] rounded-[2vw] sm:rounded-[1vw]'}  key={item.id}>
+                                    <div className={'w-[48%] sm:w-[45%] sm:h-[14.2vw] mt-[4vw] sm:mt-[2vw] border-2 border-[#FFF] border-dashed relative h-[23vh] rounded-[2vw] sm:rounded-[1vw]'}  key={item.id}>
                                         <div className={'w-full absolute top-0 rounded-[2vw] h-full'}>
                                             <Image src={'/images/card_generation/legendary/bg.svg'} layout={'fill'}></Image>
                                         </div>
-                                        <div className={'w-[8vh] h-[8vh] sm:w-[8vw] sm:h-[8vw] relative mx-auto mt-[1.5vh]'}>
+                                        <div className={'w-[8vh] h-[8vh] sm:w-[4vw] sm:h-[4vw] relative mx-auto mt-[1.5vh]'}>
                                             <Image src={'/images/miniatures/Ears/'+item.name+'.png'} layout={'fill'}></Image>
                                         </div>
-                                        <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] absolute top-[1vh] left-[1vh]'}>
+                                        <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] absolute top-[1vh] left-[1vh]'}>
                                             <Image src={'/images/equipment_module/ears.svg'} layout={'fill'}></Image>
                                         </div>
-                                        <p className={'text-white font-josefin text-[1.8vh] sm:text-[2vw] text-right absolute top-[1vh] right-[1vh]'}>ID: {item.id}</p>
-                                        <p className={'w-full text-white font-soyuz text-[1.8vh] sm:text-[2vw] text-center'}>{item.name}</p>
+                                        <p className={'text-white font-josefin text-[1.8vh] sm:text-[1vw] text-right absolute top-[1vh] right-[1vh]'}>ID: {item.id}</p>
+                                        <p className={'w-full text-white font-soyuz text-[1.8vh] sm:text-[1vw] text-center'}>{item.name}</p>
                                         <div className={'relative w-[40%] inline-block mx-[2%] ml-[8%]'}>
                                             {item.dex!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/legendary/dex.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[40%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.dex}
                                                     </p>
                                                 </div>
@@ -6220,13 +6220,13 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.str!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/legendary/str.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[40%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.str}
                                                     </p>
                                                 </div>
@@ -6236,13 +6236,13 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.vit!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/legendary/vit.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[40%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.vit}
                                                     </p>
                                                 </div>
@@ -6252,13 +6252,13 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.int!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/legendary/int.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[40%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.int}
                                                     </p>
                                                 </div>
@@ -6268,13 +6268,13 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.krm!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/legendary/krm.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[40%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.krm}
                                                     </p>
                                                 </div>
@@ -6285,14 +6285,14 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
 
                                         </div>
                                         <div className={'align-top relative w-[40%] inline-block ml-[2%] mr-[8%]'}>
-                                            <p className={'w-full relative text-white text-center font-medium font-josefin text-[1vh] sm:text-[1vw]'}>Requierements</p>
+                                            <p className={'w-full relative text-white text-center font-medium font-josefin text-[1vh] sm:text-[0.7vw]'}>Requierements</p>
                                             {item.requirements?.dex!=0&&item.requirements?.dex!=undefined?
                                                 <div className={'w-full relative flex justify-center items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] mx-[1vh] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] mx-[1vh] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/legendary/dex.svg'} layout={'fill'}></Image>
                                                     </div>
 
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>{item.requirements.dex}
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>{item.requirements.dex}
                                                     </p>
                                                 </div>
                                                 :
@@ -6301,11 +6301,11 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.requirements?.str!=0&&item.requirements?.str!=undefined?
                                                 <div className={'w-full relative flex justify-center items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] mx-[1vh] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] mx-[1vh] relative inline-block'}>
                                                         <Image src={'/images/card_generation/legendary/str.svg'} layout={'fill'}></Image>
                                                     </div>
 
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         {item.requirements.str}
                                                     </p>
                                                 </div>
@@ -6315,11 +6315,11 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.requirements?.vit!=0&&item.requirements?.vit!=undefined?
                                                 <div className={'w-full relative flex justify-center items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] mx-[1vh] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] mx-[1vh] relative inline-block'}>
                                                         <Image src={'/images/card_generation/legendary/vit.svg'} layout={'fill'}></Image>
                                                     </div>
 
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         {item.requirements.vit}
                                                     </p>
                                                 </div>
@@ -6329,11 +6329,11 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.requirements?.int!=0&&item.requirements?.int!=undefined?
                                                 <div className={'w-full relative flex justify-center items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] mx-[1vh] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] mx-[1vh] relative inline-block'}>
                                                         <Image src={'/images/card_generation/legendary/int.svg'} layout={'fill'}></Image>
                                                     </div>
 
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         {item.requirements.int}
                                                     </p>
                                                 </div>
@@ -6343,11 +6343,11 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.requirements?.krm!=0&&item.requirements?.krm!=undefined?
                                                 <div className={'w-full relative flex justify-center items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] mx-[1vh] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] mx-[1vh] relative inline-block'}>
                                                         <Image src={'/images/card_generation/legendary/krm.svg'} layout={'fill'}></Image>
                                                     </div>
 
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         {item.requirements.krm}
                                                     </p>
                                                 </div>
@@ -6355,7 +6355,7 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 <div className={'hidden'}>
 
                                                 </div>}
-                                            <p className={'w-[90%] relative text-white text-[1.2vh] ml-[10%] font-medium font-josefin mt-[0.3vh] sm:text-[1vw]'}>Status: <span className={'font-bold text-[1.5vh] sm:text-[1.5vw]'}>Elite</span> </p>
+                                            <p className={'w-[90%] relative text-white text-[1.2vh] ml-[10%] font-medium font-josefin mt-[0.3vh] sm:text-[0.7vw]'}>Status: <span className={'font-bold text-[1.5vh] sm:text-[1vw]'}>Elite</span> </p>
 
                                         </div>
                                     </div>
@@ -6363,28 +6363,28 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                             }
                             else{
                                 return(
-                                    <div className={'w-[48%] sm:w-[23%] sm:h-[23.5vw] mt-[4vw] relative h-[23vh] rounded-[2vw] cursor-pointer'}  key={item.id} onClick={()=>{updateEars(item);updateStats()}}>
+                                    <div className={'w-[48%] sm:w-[45%] sm:h-[14.2vw] mt-[4vw] sm:mt-[2vw] relative h-[23vh] rounded-[2vw] cursor-pointer'}  key={item.id} onClick={()=>{updateEars(item);updateStats()}}>
                                         <div className={'w-full absolute top-0 rounded-[2vw] h-full'}>
                                             <Image src={'/images/card_generation/legendary/bg.svg'} layout={'fill'}></Image>
                                         </div>
-                                        <div className={'w-[8vh] h-[8vh] sm:w-[8vw] sm:h-[8vw] relative mx-auto mt-[1.5vh]'}>
+                                        <div className={'w-[8vh] h-[8vh] sm:w-[4vw] sm:h-[4vw] relative mx-auto mt-[1.5vh]'}>
                                             <Image src={'/images/miniatures/Ears/'+item.name+'.png'} layout={'fill'}></Image>
                                         </div>
-                                        <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] absolute top-[1vh] left-[1vh]'}>
+                                        <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] absolute top-[1vh] left-[1vh]'}>
                                             <Image src={'/images/equipment_module/ears.svg'} layout={'fill'}></Image>
                                         </div>
-                                        <p className={'text-white font-josefin text-[1.8vh] sm:text-[2vw] text-right absolute top-[1vh] right-[1vh]'}>ID: {item.id}</p>
-                                        <p className={'w-full text-white font-soyuz text-[1.8vh] sm:text-[2vw] text-center'}>{item.name}</p>
+                                        <p className={'text-white font-josefin text-[1.8vh] sm:text-[1vw] text-right absolute top-[1vh] right-[1vh]'}>ID: {item.id}</p>
+                                        <p className={'w-full text-white font-soyuz text-[1.8vh] sm:text-[1vw] text-center'}>{item.name}</p>
                                         <div className={'relative w-[40%] inline-block mx-[2%] ml-[8%]'}>
                                             {item.dex!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/legendary/dex.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[40%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.dex}
                                                     </p>
                                                 </div>
@@ -6394,13 +6394,13 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.str!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/legendary/str.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[40%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.str}
                                                     </p>
                                                 </div>
@@ -6410,13 +6410,13 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.vit!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/legendary/vit.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[40%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.vit}
                                                     </p>
                                                 </div>
@@ -6426,13 +6426,13 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.int!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/legendary/int.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[40%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.int}
                                                     </p>
                                                 </div>
@@ -6442,13 +6442,13 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.krm!=0?
                                                 <div className={'w-full relative flex justify-between items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/legendary/krm.svg'} layout={'fill'}></Image>
                                                     </div>
                                                     <div className={'dashed-line mx-[5%] w-[40%] h-[1px]'}>
 
                                                     </div>
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         +{item.krm}
                                                     </p>
                                                 </div>
@@ -6459,14 +6459,14 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
 
                                         </div>
                                         <div className={'align-top relative w-[40%] inline-block ml-[2%] mr-[8%]'}>
-                                            <p className={'w-full relative text-white text-center font-medium font-josefin text-[1vh] sm:text-[1vw]'}>Requierements</p>
+                                            <p className={'w-full relative text-white text-center font-medium font-josefin text-[1vh] sm:text-[0.7vw]'}>Requierements</p>
                                             {item.requirements?.dex!=0&&item.requirements?.dex!=undefined?
                                                 <div className={'w-full relative flex justify-center items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] mx-[1vh] h-[2vh] sm:h-[2vw] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] mx-[1vh] h-[2vh] sm:h-[1.5vw] relative inline-block'}>
                                                         <Image src={'/images/card_generation/legendary/dex.svg'} layout={'fill'}></Image>
                                                     </div>
 
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>{item.requirements.dex}
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>{item.requirements.dex}
                                                     </p>
                                                 </div>
                                                 :
@@ -6475,11 +6475,11 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.requirements?.str!=0&&item.requirements?.str!=undefined?
                                                 <div className={'w-full relative flex justify-center items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] mx-[1vh] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] mx-[1vh] relative inline-block'}>
                                                         <Image src={'/images/card_generation/legendary/str.svg'} layout={'fill'}></Image>
                                                     </div>
 
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         {item.requirements.str}
                                                     </p>
                                                 </div>
@@ -6489,11 +6489,11 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.requirements?.vit!=0&&item.requirements?.vit!=undefined?
                                                 <div className={'w-full relative flex justify-center items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] mx-[1vh] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] mx-[1vh] relative inline-block'}>
                                                         <Image src={'/images/card_generation/legendary/vit.svg'} layout={'fill'}></Image>
                                                     </div>
 
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         {item.requirements.vit}
                                                     </p>
                                                 </div>
@@ -6503,11 +6503,11 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.requirements?.int!=0&&item.requirements?.int!=undefined?
                                                 <div className={'w-full relative flex justify-center items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] mx-[1vh] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] mx-[1vh] relative inline-block'}>
                                                         <Image src={'/images/card_generation/legendary/int.svg'} layout={'fill'}></Image>
                                                     </div>
 
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         {item.requirements.int}
                                                     </p>
                                                 </div>
@@ -6517,11 +6517,11 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 </div>}
                                             {item.requirements?.krm!=0&&item.requirements?.krm!=undefined?
                                                 <div className={'w-full relative flex justify-center items-center'}>
-                                                    <div className={'w-[2vh] sm:w-[2vw] h-[2vh] sm:h-[2vw] mx-[1vh] relative inline-block'}>
+                                                    <div className={'w-[2vh] sm:w-[1.5vw] h-[2vh] sm:h-[1.5vw] mx-[1vh] relative inline-block'}>
                                                         <Image src={'/images/card_generation/legendary/krm.svg'} layout={'fill'}></Image>
                                                     </div>
 
-                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[2vw] mt-[-0.4vh] text-center'}>
+                                                    <p className={'text-white font-soyuz text-[2vh] sm:text-[1vw] mt-[-0.4vh] text-center'}>
                                                         {item.requirements.krm}
                                                     </p>
                                                 </div>
@@ -6529,7 +6529,7 @@ const EquipmentCards = ({currentInventoryTab, bunny, closeInventory, updateEars,
                                                 <div className={'hidden'}>
 
                                                 </div>}
-                                            <p className={'w-[90%] relative text-white text-[1.2vh] ml-[10%] font-medium font-josefin mt-[0.3vh] sm:text-[1vw]'}>Status: <span className={'font-bold text-[1.5vh] sm:text-[1.5vw]'}>Elite</span> </p>
+                                            <p className={'w-[90%] relative text-white text-[1.2vh] ml-[10%] font-medium font-josefin mt-[0.3vh] sm:text-[0.7vw]'}>Status: <span className={'font-bold text-[1.5vh] sm:text-[1vw]'}>Elite</span> </p>
 
                                         </div>
                                     </div>

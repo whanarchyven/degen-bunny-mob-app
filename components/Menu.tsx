@@ -8,12 +8,12 @@ const Menu = () => {
     const [balance,setBalance]=useState(135);
 
     return (
-        <div className={'w-full h-full'}>
+        <div className={'w-full h-full sm:w-[35vw] sm:mx-[32.5vw]'}>
 
-            <div className={'w-full h-[80vh] overflow-x-hidden fixed top-0 sm:h-[95vh]'}>
+            <div className={'w-full h-[80vh] overflow-x-hidden fixed top-0 sm:w-[35vw] sm:h-[95vh]'}>
                 <Bunny currentTab={currentTab} balance={balance} changeBalance={setBalance} changeTab={setCurrentTab}></Bunny>
             </div>
-            <div className={'justify-around flex items-center fixed bottom-0 z-[999] w-full h-[10vh] bg-[#A8C500]'}>
+            <div className={'justify-around flex items-center fixed bottom-0 sm:w-[35vw] z-[999] w-full h-[10vh] bg-[#A8C500]'}>
                 <div className={'cursor-pointer align-middle relative inline-block w-[18%] h-[8vh]'} onClick={()=>{setCurrentTab('history')}}>
                     {currentTab=='history'?<Image src={'/images/history_button_active.svg'} layout={'fill'}></Image>:<Image src={'/images/history_button.svg'} layout={'fill'}></Image>}
                 </div>
@@ -30,7 +30,7 @@ const Menu = () => {
                     {currentTab=='job'?<Image src={'/images/job_button_active.svg'} layout={'fill'}></Image>:<Image src={'/images/job_button.svg'} layout={'fill'}></Image>}
                 </div>
             </div>
-            <div className={'w-[30vw] h-[10vw] fixed top-[8vw] right-[6vw] sm:w-[10vw] sm:h-[7vh] sm:right-[2vw] sm:top-[1vh]'}>
+            <div className={'w-[30vw] h-[10vw] fixed top-[8vw] right-[6vw] sm:w-[8vw] sm:h-[3vw] sm:right-[33vw] sm:top-[1vh]'}>
                 <div className={'absolute top-0 w-full h-full rounded-full wallet-shape-down'}>
 
                 </div>
@@ -38,13 +38,13 @@ const Menu = () => {
 
                 </div>
                 <div className={'absolute top-0 flex justify-around justify-items-center items-center w-full h-full'}>
-                    <div className={'w-[8vw] relative h-[8vw] sm:w-[3vw] sm:h-[3vw]'}>
+                    <div className={'w-[8vw] relative h-[8vw] sm:w-[2vw] sm:h-[2vw]'}>
                         <Image src={'/images/wallet_carrot.png'} layout={'fill'}></Image>
                     </div>
-                    <div className={'w-[8vw] relative h-[8vw] sm:w-[3vw] sm:h-[3vw]'}>
-                        <p className={'w-full text-white text-center font-josefin font-light text-[20px] sm:text-[2vw]'}>{balance}</p>
+                    <div className={'w-[8vw] relative h-[8vw] sm:w-[2vw] sm:h-[2vw]'}>
+                        <p className={'w-full text-white text-center font-josefin font-light text-[20px] sm:text-[1.5vw]'}>{balance}</p>
                     </div>
-                    <div className={'w-[8vw] relative h-[5vw] sm:w-[3vw] sm:h-[3vw]'}>
+                    <div className={'w-[8vw] relative h-[5vw] sm:w-[2vw] sm:h-[2vw]'}>
                         <Image src={'/images/wallet_icon.svg'} layout={'fill'}></Image>
                     </div>
                 </div>

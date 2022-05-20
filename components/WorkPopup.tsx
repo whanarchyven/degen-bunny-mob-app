@@ -15,30 +15,30 @@ const WorkPopup = ({workItem,closePop,pushToWork}:workPopUp) => {
         <div className={'w-full h-full absolute bg-cover bg-[url(../public/images/fishbg.png)] z-[99999999]'}>
             <div className={'w-full absolute top-[10vh] flex items-center sm:top-[2vw]'}>
                 <div className={'dashed-line inline-block w-[10%] h-[1px] border-white sm:hidden'}></div>
-                <div className={'mx-[1%] z-[99999] w-[4.8vh] relative h-[4vh] justify-center items-center rounded-full bg-[#FFB800] inline-flex sm:ml-[12%] sm:w-[3.5vw] sm:h-[3.5vw]'} onClick={()=>{closePop()}}>
+                <div className={'mx-[1%] z-[99999] w-[4.8vh] relative h-[4vh] justify-center items-center rounded-full bg-[#FFB800] inline-flex sm:ml-[12%] sm:w-[3.0vw] sm:h-[3.0vw]'} onClick={()=>{closePop()}}>
                     <div className={'w-[1.7vh] cursor-pointer relative h-[1.7vh] sm:w-[2vw] sm:h-[2vw]'}>
                         <Image src={'/images/work_module/work_arrow_back.svg'} layout={'fill'}></Image>
                     </div>
                 </div>
                 <div className={'dashed-line inline-block w-[7%] h-[1px] border-white sm:hidden'}></div>
-                <h2 className={'font-soyuz mx-[1%] text-[3.8vh] w-[60%] text-center sm:text-[3.5vw]'}>{workItem.workName}</h2>
+                <h2 className={'font-soyuz mx-[1%] text-[3.8vh] w-[60%] text-center sm:text-[2.5vw]'}>{workItem.workName}</h2>
                 <div className={'dashed-line inline-block w-[26%] h-[1px] border-white sm:hidden'}></div>
             </div>
-            <p className={'absolute top-[17vh] ml-[12%] font-josefin font-medium w-[80%] text-[1.9vh] sm:text-[1.7vw]'}>{workItem.description}</p>
-            <div className={'w-full absolute top-[47vh] flex items-center sm:ml-[10%] sm:top-[22vw]'}>
+            <p className={'absolute top-[17vh] ml-[12%] font-josefin font-medium w-[80%] text-[1.9vh] sm:text-[1.3vw] sm:top-[6vw]'}>{workItem.description}</p>
+            <div className={'w-full absolute top-[47vh] flex items-center sm:ml-[10%] sm:top-[24vw]'}>
                 <div className={'dashed-line inline-block w-[10%] h-[1px] border-white sm:hidden'}></div>
-                <div className={'mx-[1%] w-[6.5vh] relative h-[6.5vh] justify-center items-center rounded-full inline-flex sm:w-[6vw] sm:h-[6vw]'}>
+                <div className={'mx-[1%] w-[6.5vh] relative h-[6.5vh] justify-center items-center rounded-full inline-flex sm:w-[4vw] sm:h-[4vw]'}>
                     <Image src={'/images/work_module/chiefs/'+workItem.chiefName+'.png'} layout={'fill'}></Image>
                 </div>
-                <h2 className={'font-soyuz mx-[1%] text-[3.0vh] sm:text-[3vw]'}>{workItem.chiefName}</h2>
+                <h2 className={'font-soyuz mx-[1%] text-[3.0vh] sm:text-[2vw]'}>{workItem.chiefName}</h2>
                 <div className={'dashed-line inline-block w-[11%] h-[1px] border-white sm:hidden'}></div>
-                <button className={'font-soyuz font-semibold text-[#000] vitality-bar-positive w-[30%] inline-block rounded-[1vh] h-[5vh] mx-[1%] sm:h-[4vw] sm:text-[2vw]'}>{workItem.task}</button>
+                <button className={'font-soyuz font-semibold text-[#000] vitality-bar-positive w-[30%] inline-block rounded-[1vh] h-[5vh] mx-[1%] sm:h-[3vw] sm:w-auto sm:text-[1.7vw]'}>{workItem.task}</button>
                 <div className={'dashed-line inline-block w-[6%] h-[1px] border-white sm:hidden'}></div>
             </div>
-            <p className={'w-full absolute top-[54vh] text-white text-[2.4vh] font-josefin ml-[12%] font-medium sm:text-[2vw] sm:top-[29vw]'}>requirements</p>
-            <div className={'w-full absolute top-[57vh] flex items-center sm:top-[32vw]'}>
+            <p className={'w-full absolute top-[54vh] text-white text-[2.4vh] font-josefin ml-[12%] font-medium sm:text-[1.5vw] sm:top-[28vw]'}>requirements</p>
+            <div className={'w-full absolute top-[57vh] flex items-center sm:top-[30vw]'}>
                 <div className={'inline-block w-[10%] h-[1px] border-white sm:hidden'}></div>
-                <div className={'w-[80%] h-[4.5vh] sm:w-[30%] sm:ml-[12%]'}>
+                <div className={'w-[80%] h-[4.5vh] sm:w-[78%] sm:ml-[10%]'}>
                     {workItem.requirements.dex!=0?
                         <div className={'items-center relative inline-flex mx-[1%] w-[25%] h-[4vh] sm:h-[3vw] rounded-full mt-[0.5vh] bg-[#FFB800]'}>
                             <p className={'align-middle inline-block w-[38%] ml-[10%] text-[1.5vh] sm:text-[1.5vw]'}>DEX</p>
@@ -88,7 +88,7 @@ const WorkPopup = ({workItem,closePop,pushToWork}:workPopUp) => {
                             </div></div> : <div className={'inline-block'}></div> }
                     {workItem.requirements.skills?.map(item=>{
                         return(
-                            <div key={item.name} className={'w-[4vh]  align-middle h-[4vh] sm:h-[3vw] sm:w-[3vw] relative inline-flex mx-[1%] w-[25%] h-[4vh] sm:h-[3vw] rounded-full mt-[0.5vh] border-4 border-[#'+item.color+']'}>
+                            <div key={item.name} className={'w-[4vh]  align-middle h-[4vh] sm:h-[3vw] sm:w-[3vw] relative inline-flex mx-[1%] w-[25%] h-[4vh] sm:h-[3vw] rounded-full mt-[0.5vh] border-4 border-[#'+item.color+'] sm:align-top'}>
                                 <Image src={'/images/work_module/skills/'+item.name.replace(/\s/g, '_')+'.svg'} layout={'fill'}></Image>
                             </div>
 
@@ -96,19 +96,19 @@ const WorkPopup = ({workItem,closePop,pushToWork}:workPopUp) => {
 
                     })}
                 </div>
-                <div className={'w-full absolute top-[10vh] flex items-center sm:w-[40%] sm:left-[8%]'}>
-                    <div className={'inline-block relative ml-[10%] w-[20%] h-[3vh] sm:h-[3vw]'}>
+                <div className={'w-full absolute top-[10vh] flex items-center sm:w-[90%] sm:left-[8%] sm:mt-[2vw] sm:pl-[1vw]'}>
+                    <div className={'inline-block relative ml-[10%] w-[20%] h-[3vh] sm:h-[3vw] sm:ml-0'}>
                         <Image src={'/images/work_module/profit.svg'} layout={'fill'}></Image>
                     </div>
                     <div className={'w-[15%] h-[4vh] sm:h-[3vw] bg-[#737373] relative inline-flex items-center rounded-full right-[-1vw] sm:w-[25%] sm:h-[3vw]'}>
                         <p className={'absolute left-[5%] text-white font-josefin text-[3vh] uppercase sm:text-[2.5vw]'}>+{workItem.profit}</p>
-                        <div className={'absolute w-[4vw] scale-[2] h-[4vw] right-0 sm:w-[3vw] sm:h-[3vw]'}>
+                        <div className={'absolute w-[4vw] scale-[2] h-[4vw] right-0 sm:w-[2.2vw] sm:h-[2.2vw]'}>
                             <Image src={'/images/wallet_carrot.png'} layout={'fill'}></Image>
                         </div>
                     </div>
                 </div>
             </div>
-            <button className={'font-soyuz right-[8vw] h-[5vh] w-[30vw] top-[64vh] absolute font-semibold text-[#000] green-gradient inline-block rounded-full sm:text-[2vw] sm:left-[31vw] sm:h-[4vw] sm:top-[30vw]'} onClick={()=>{pushToWork(itemToPush);}}>start</button>
+            <button className={'font-soyuz right-[8vw] h-[5vh] w-[30vw] top-[64vh] absolute font-semibold text-[#000] green-gradient inline-block rounded-full sm:text-[2vw] sm:left-[3vw] sm:h-[3vw] sm:bottom-[3vw] sm:top-auto'} onClick={()=>{pushToWork(itemToPush);}}>start</button>
             {/*<div className={'dashed-line absolute inline-block w-[17vw] top-[54vh] left-[36vw] h-[1px] border-white'}></div>*/}
             {/*<div className={'dashed-line absolute inline-block w-[5vw] top-[67vh] left-[48vw] h-[1px] border-white'}></div>*/}
             {/*<div className={'dashed-line rotate-90 absolute inline-block w-[30vw] top-[57vh] left-[38vw] h-[1px] border-white'}></div>*/}

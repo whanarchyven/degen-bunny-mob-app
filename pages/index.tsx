@@ -14,7 +14,7 @@ const Home: NextPage = () => {
       </Head>
 
       <main className={styles.main}>
-          <div className={'w-full h-full'}>
+          <div className={'w-full h-full sm:bg-[url("../public/images/pc_bg.png")]'}>
               <Menu></Menu>
           </div>
 
